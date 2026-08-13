@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <title> Cert Study App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz">
+    <h1>Cert Study App</h1>
+
+    <div id="track-select">
+    <p>Choose a track:</p>
+    <button class="track-btn" data-track="cissp">CISSP</button>   
+    <button class="track-btn" data-track="securityPlus">Security+</button>  
+    <button class="track-btn" data-track="aPlus">A+</button>   
+    <button class="track-btn" data-track="networkPlus">Network+</button> 
+    <button class="track-btn" data-track="microsoft">Microsoft</button>
+    </div> 
+
+    <div id="quiz-area">
+    <p id="progress"></p>
+    <p id="question">Question text loads here</p>
+
+    <div id="answers">
+      <button class="answer-btn">Answer A</button>
+      <button class="answer-btn">Answer B</button>
+      <button class="answer-btn">Answer C</button>
+      <button class="answer-btn">Answer D</button>
+    </div>
+
+    <p id="feedback"></p>
+    <p id="explanation"></p>
+    <button id="next-btn">next</button>
+    <button id="restart-btn" style="display: none;"> Restart Quiz</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
