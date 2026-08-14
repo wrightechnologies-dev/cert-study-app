@@ -261,13 +261,31 @@ restartBtn.addEventListener("click", function () {
 });
 
 // Start the quiz from a chosen path 
-async function startQuiz(trackName) {
+async function startQuiz(trackName, domainId) {
+  domainSelectEl.style.display = "none";   // hide the domain screen if it was showing
   quizArea.style.display = "block";  // sets the display back to visible the moment a track is clicked, so the real question loads into a now-visible area.
   currentTrack = trackName;     //remember which track its on 
-  questions = await loadQuestions(currentTrack);  // fetch from the JSON file, wait for it
+ 
+const allQuestions = await loadQuestions(currentTrack);   // load the whole track
 
-  currentIndex = 0;     //reset to the 1st question
-  score = 0;            //reseyt the score 
+// Filter to one domain, unless "all" (or no domain) was chosen
+  if (domainId && domainId !== "all") {
+    questions = allQuestions.filter(function (q) {
+      return q.domain === domainId;
+    });
+  } else {
+    questions = allQuestions;
+  }
+  // Guard: if this domain has no questions yet, bounce back instead of showing a broken quiz
+  if (questions.length === 0) {
+    quizArea.style.display = "none";
+    domainSelectEl.style.display = "block";
+    alert("No questions available for this domain yet. Check back soon!");
+    return;
+  }
+
+  currentIndex = 0;
+  score = 0;
 
   shuffle(questions); // scramble the question order 
   showQuestion(); //displays the first one 
