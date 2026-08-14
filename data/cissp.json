@@ -208,5 +208,138 @@
     "correctIndex": 1,
     "domain": 5,
     "explanation": "SSO improves usability but concentrates risk: if the single set of credentials is compromised, an attacker may reach every connected application, which is why strong authentication and monitoring of SSO systems are critical."
+  },
+  {
+    "text": "A company hires an outside firm to actively exploit weaknesses in its network to demonstrate real-world impact. How does this differ from a vulnerability scan?",
+    "answers": ["A penetration test actively exploits weaknesses to prove impact, while a vulnerability scan only identifies potential weaknesses", "A penetration test only lists missing patches, while a vulnerability scan exploits them", "They are identical in scope and method", "A vulnerability scan requires physical access, while a penetration test does not"],
+    "correctIndex": 0,
+    "domain": 6,
+    "explanation": "A penetration test goes beyond identification and actively exploits vulnerabilities to demonstrate real impact, whereas a vulnerability scan detects and reports potential weaknesses without exploiting them. The scan is broader but shallower; the pen test is deeper and proves what an attacker could actually achieve."
+  },
+  {
+    "text": "A tester is given no prior knowledge of the target system's internal architecture and must approach it as an external attacker would. Which testing perspective is this?",
+    "answers": ["White-box testing", "Black-box testing", "Gray-box testing", "Regression testing"],
+    "correctIndex": 1,
+    "domain": 6,
+    "explanation": "Black-box testing gives the tester no internal knowledge, simulating an outside attacker's viewpoint. White-box testing provides full internal information, gray-box provides partial knowledge, and regression testing checks that changes have not broken existing functionality."
+  },
+  {
+    "text": "During a control assessment, an auditor reviews system logs to confirm that failed login attempts are being recorded and reviewed. Which security objective does this activity primarily support?",
+    "answers": ["Confidentiality", "Accountability", "Availability", "Non-repudiation of encryption keys"],
+    "correctIndex": 1,
+    "domain": 6,
+    "explanation": "Reviewing logs of events such as failed logins supports accountability by ensuring actions can be traced and monitored. While logging touches several objectives, its assessment here is fundamentally about holding users accountable and detecting misuse, not about confidentiality or availability."
+  },
+  {
+    "text": "An organization wants an independent, formal evaluation of whether its security controls meet a specific regulatory standard, producing an attestation for third parties. Which activity BEST fits this need?",
+    "answers": ["An internal vulnerability scan", "A formal audit against the standard", "A developer code review", "A tabletop incident exercise"],
+    "correctIndex": 1,
+    "domain": 6,
+    "explanation": "A formal audit provides an independent, structured evaluation of controls against a defined standard and can produce attestation for external parties. A vulnerability scan is a technical check, a code review examines source code, and a tabletop exercise rehearses incident response — none produce a formal compliance attestation."
+  },
+  {
+    "text": "A security team runs periodic automated scans that flag missing patches and misconfigurations across hundreds of hosts. What is the PRIMARY value of this activity within an assessment program?",
+    "answers": ["It guarantees the network cannot be breached", "It provides ongoing visibility into known weaknesses so they can be prioritized and remediated", "It replaces the need for patch management", "It certifies the organization as compliant"],
+    "correctIndex": 1,
+    "domain": 6,
+    "explanation": "Regular vulnerability scanning gives ongoing visibility into known weaknesses, enabling the organization to prioritize and remediate them. It cannot guarantee a breach-proof network, does not replace patch management (it informs it), and by itself does not certify compliance."
+  },
+  {
+    "text": "Why is it important that security assessments include testing of the effectiveness of controls, not just their existence?",
+    "answers": ["Because a control that is present but misconfigured or bypassable may provide no real protection", "Because auditors are paid per test performed", "Because existence testing is illegal in most jurisdictions", "Because effectiveness testing removes the need for documentation"],
+    "correctIndex": 0,
+    "domain": 6,
+    "explanation": "A control can exist on paper yet be misconfigured, disabled, or bypassable, offering no genuine protection, so assessments must verify that controls actually work as intended. Confirming mere existence without testing effectiveness can create a false sense of security."
+  },
+  {
+    "text": "Order the core phases of incident response. Which sequence is correct?",
+    "answers": ["Detection → Containment → Eradication → Recovery → Lessons Learned", "Containment → Detection → Recovery → Eradication → Lessons Learned", "Recovery → Detection → Containment → Lessons Learned → Eradication", "Eradication → Recovery → Detection → Containment → Lessons Learned"],
+    "correctIndex": 0,
+    "domain": 7,
+    "explanation": "A common incident response lifecycle proceeds from detection of the incident, to containment to limit spread, to eradication of the root cause, to recovery of normal operations, and finally to lessons learned to improve future response. The other sequences place phases out of their logical order."
+  },
+  {
+    "text": "While responding to a compromised server that may become evidence in a legal case, what is the MOST important practice for handling the data?",
+    "answers": ["Immediately reformat the server to remove the malware", "Preserve a documented chain of custody for all collected evidence", "Share the raw evidence publicly to crowdsource analysis", "Delete logs to protect user privacy"],
+    "correctIndex": 1,
+    "domain": 7,
+    "explanation": "Maintaining a documented chain of custody — who collected, handled, and stored evidence and when — is essential for the evidence to be admissible and trustworthy in legal proceedings. Reformatting destroys evidence, public sharing compromises it, and deleting logs eliminates it."
+  },
+  {
+    "text": "An organization follows a 3-2-1 backup strategy. Which arrangement does this describe?",
+    "answers": ["Three backups, two administrators, one location", "Three copies of data, on two different media types, with one copy offsite", "Three encryption keys, two passwords, one server", "Three restore tests, two auditors, one report"],
+    "correctIndex": 1,
+    "domain": 7,
+    "explanation": "The 3-2-1 rule means keeping three copies of data, stored on two different types of media, with at least one copy kept offsite. This protects against media failure, site-level disasters, and single points of failure in the backup scheme."
+  },
+  {
+    "text": "A business continuity planning team calculates the maximum acceptable time a critical system can be down before the organization suffers unacceptable harm. Which metric is this?",
+    "answers": ["Recovery Point Objective (RPO)", "Recovery Time Objective (RTO)", "Mean Time Between Failures (MTBF)", "Annualized Rate of Occurrence (ARO)"],
+    "correctIndex": 1,
+    "domain": 7,
+    "explanation": "The Recovery Time Objective (RTO) defines the maximum tolerable downtime for a system before harm becomes unacceptable. RPO defines the maximum tolerable data loss measured in time, MTBF estimates reliability, and ARO expresses how often a threat is expected annually."
+  },
+  {
+    "text": "Which pair of metrics BEST distinguishes RPO from RTO in disaster recovery planning?",
+    "answers": ["RPO = how much data loss is tolerable; RTO = how much downtime is tolerable", "RPO = how much downtime is tolerable; RTO = how much data loss is tolerable", "Both measure only downtime", "Both measure only data loss"],
+    "correctIndex": 0,
+    "domain": 7,
+    "explanation": "RPO (Recovery Point Objective) measures the maximum acceptable amount of data loss, expressed as a point in time to which data must be restored, while RTO (Recovery Time Objective) measures the maximum acceptable downtime. Confusing the two is a common error: one is about data, the other about time to restore service."
+  },
+  {
+    "text": "An organization enforces mandatory vacations and job rotation for employees in sensitive financial roles. What is the PRIMARY security purpose of these practices?",
+    "answers": ["To reduce payroll costs", "To detect and deter fraud that depends on one person's continuous, exclusive control", "To improve employee morale only", "To eliminate the need for access controls"],
+    "correctIndex": 1,
+    "domain": 7,
+    "explanation": "Mandatory vacations and job rotation help detect and deter fraud, because schemes that rely on one individual's uninterrupted, exclusive control of a process are more likely to surface when someone else performs the role. These are detective and deterrent controls, not merely morale or cost measures."
+  },
+  {
+    "text": "A SIEM aggregates logs from many systems and generates alerts on suspicious patterns. What is its PRIMARY operational benefit?",
+    "answers": ["It replaces the need for firewalls", "It centralizes monitoring and correlates events to enable faster detection of incidents", "It automatically patches all vulnerabilities", "It encrypts all network traffic by default"],
+    "correctIndex": 1,
+    "domain": 7,
+    "explanation": "A SIEM (Security Information and Event Management) system centralizes log collection and correlates events across sources, enabling faster detection and investigation of incidents. It does not replace firewalls, patch vulnerabilities, or encrypt traffic — its value is unified visibility and correlation."
+  },
+  {
+    "text": "A web application passes unvalidated user input directly into a database query, allowing an attacker to manipulate the query. Which vulnerability is this, and what is the primary defense?",
+    "answers": ["Cross-site scripting; output encoding", "SQL injection; input validation and parameterized queries", "Buffer overflow; increasing memory allocation", "Race condition; adding more threads"],
+    "correctIndex": 1,
+    "domain": 8,
+    "explanation": "Passing unvalidated input into a database query enables SQL injection, best defended with input validation and parameterized queries (prepared statements) that separate code from data. Cross-site scripting targets the browser, buffer overflow involves memory boundaries, and race conditions involve timing — different classes of flaw."
+  },
+  {
+    "text": "Why is integrating security requirements early in the software development lifecycle (SDLC) considered more effective than testing for security only at the end?",
+    "answers": ["It makes the code run faster", "Flaws caught early are far cheaper and easier to fix than those found after release", "It removes the need for any testing later", "It guarantees the software will have no vulnerabilities"],
+    "correctIndex": 1,
+    "domain": 8,
+    "explanation": "Addressing security from the earliest SDLC phases means design flaws are caught when they are far cheaper and easier to correct, rather than after release when fixes are costly and disruptive. Early integration does not speed execution, eliminate later testing, or guarantee flawless software."
+  },
+  {
+    "text": "An application accepts a file upload but does not check the file's type, size, or contents before processing it. Which secure coding practice is MISSING?",
+    "answers": ["Input validation", "Code obfuscation", "Increasing the log verbosity", "Adding more comments to the code"],
+    "correctIndex": 0,
+    "domain": 8,
+    "explanation": "Failing to check a file's type, size, and contents before processing reflects missing input validation, a foundational secure coding practice that prevents malicious or malformed input from causing harm. Obfuscation, logging, and comments do not address the underlying validation gap."
+  },
+  {
+    "text": "A program writes more data into a fixed-length memory buffer than it can hold, overwriting adjacent memory. Which vulnerability class is this, and what is a key mitigation?",
+    "answers": ["SQL injection; parameterized queries", "Buffer overflow; bounds checking and safe memory-handling functions", "Phishing; user training", "Weak encryption; longer keys"],
+    "correctIndex": 1,
+    "domain": 8,
+    "explanation": "Writing beyond a buffer's fixed length is a buffer overflow, mitigated by bounds checking, using memory-safe functions, and languages or compilers that enforce memory safety. SQL injection, phishing, and weak encryption are unrelated vulnerability classes with their own distinct defenses."
+  },
+  {
+    "text": "During code review, a team uses an automated tool to analyze source code for security flaws without executing the program. Which testing method is this?",
+    "answers": ["Dynamic Application Security Testing (DAST)", "Static Application Security Testing (SAST)", "Penetration testing", "Load testing"],
+    "correctIndex": 1,
+    "domain": 8,
+    "explanation": "Analyzing source code for flaws without running the program is Static Application Security Testing (SAST). Dynamic testing (DAST) examines a running application, penetration testing actively exploits weaknesses, and load testing measures performance under demand."
+  },
+  {
+    "text": "A development team wants to ensure third-party libraries and components used in their software do not introduce known vulnerabilities. Which practice BEST addresses this concern?",
+    "answers": ["Ignoring library versions since vendors handle security", "Maintaining a software bill of materials and regularly checking components for known vulnerabilities", "Only reviewing code the team wrote themselves", "Disabling all external libraries after release"],
+    "correctIndex": 1,
+    "domain": 8,
+    "explanation": "Tracking dependencies with a software bill of materials (SBOM) and regularly checking components against known vulnerability databases addresses risk from third-party code. Assuming vendors handle everything, ignoring external code, or disabling libraries post-release are not realistic or effective approaches to supply-chain security."
   }
 ]
