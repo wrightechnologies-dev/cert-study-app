@@ -1,0 +1,20 @@
+[
+  {
+    "text": "Which type of malware disguises itself as legitimate software to trick users into installing it?",
+    "answers": ["Worm", "Trojan", "Rootkit", "Ransomware"],
+    "correctIndex": 1,
+    "explanation": "A Trojan disguises itself as legitimate or desirable software to trick users into installing it, then carries out malicious actions. A worm spreads on its own, and a rootkit hides its presence to maintain access."
+  },
+  {
+    "text": "Which protocol provides encrypted remote command-line access to a device?",
+    "answers": ["Telnet", "SSH", "FTP", "SNMP"],
+    "correctIndex": 1,
+    "explanation": "SSH (Secure Shell) provides encrypted remote command-line access, protecting credentials and session data in transit. Telnet offers similar access but sends everything in plaintext, while FTP transfers files and SNMP manages network devices."
+  },
+  {
+    "text": "What does a firewall primarily use to allow or block traffic?",
+    "answers": ["Rules based on ports, protocols, and addresses", "Antivirus signatures", "User passwords", "CPU usage thresholds"],
+    "correctIndex": 0,
+    "explanation": "A firewall filters traffic using rules based on ports, protocols, and IP addresses, deciding what to allow or block. Antivirus signatures detect malware, not network traffic flow, and passwords and CPU thresholds are unrelated to filtering decisions."
+  }
+]

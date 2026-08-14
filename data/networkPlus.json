@@ -1,0 +1,20 @@
+[
+  {
+    "text": "Which layer of the OSI model is responsible for logical addressing and routing?",
+    "answers": ["Data Link (Layer 2)", "Network (Layer 3)", "Transport (Layer 4)", "Physical (Layer 1)"],
+    "correctIndex": 1,
+    "explanation": "The Network layer (Layer 3) handles logical addressing (IP) and routing between networks. Layer 2 handles physical (MAC) addressing on a local segment, Layer 4 manages end-to-end delivery, and Layer 1 moves raw bits."
+  },
+  {
+    "text": "Which port does HTTPS use by default?",
+    "answers": ["80", "22", "443", "53"],
+    "correctIndex": 2,
+    "explanation": "HTTPS uses port 443 by default. Port 80 is plain HTTP, port 22 is SSH, and port 53 is DNS."
+  },
+  {
+    "text": "Which device forwards traffic between different networks based on IP addresses?",
+    "answers": ["Switch", "Hub", "Router", "Repeater"],
+    "correctIndex": 2,
+    "explanation": "A router forwards traffic between separate networks using IP addresses. A switch forwards frames within a network using MAC addresses, a hub simply repeats signals to all ports, and a repeater extends a signal's range."
+  }
+]

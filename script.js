@@ -123,9 +123,15 @@ function shuffle(array) {
    }
    return array
 }
+//---- Load a track's questions from its JSON file ----
+async function loadQuestions(trackName) {
+  const response = await fetch("data/" + trackName + ".json");
+  const data = await response.json();
+  return data;
+}
 // ---- STATE: what the app needs to remember as you play ----
 let currentTrack = "cissp";  //Which exam track is active 
-let questions = quizzes[currentTrack];
+let questions = [];
 let currentIndex = 0;   // which question we're on (starts at the first)
 let score = 0;          // how many correct so far
 let answered = false;   // has the user answered the current question yet?
@@ -235,10 +241,10 @@ restartBtn.addEventListener("click", function () {
 });
 
 // Start the quiz from a chosen path 
-function startQuiz(trackName) {
+async function startQuiz(trackName) {
   quizArea.style.display = "block";  // sets the display back to visible the moment a track is clicked, so the real question loads into a now-visible area.
   currentTrack = trackName;     //remember which track its on 
-  questions = quizzes[currentTrack];  // point "questions" at that tracks array
+  questions = await loadQuestions(currentTrack);  // fetch from the JSON file, wait for it
   
   currentIndex = 0;     //reset to the 1st question
   score = 0;            //reseyt the score 

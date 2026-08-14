@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Which principle ensures that information is not disclosed to unauthorized individuals?",
+    "answers": ["Integrity", "Confidentiality", "Availability", "Non-repudiation"],
+    "correctIndex": 1,
+    "explanation": "Confidentiality is the CIA triad principle concerned with preventing unauthorized disclosure of information. Integrity addresses unauthorized alteration, and availability addresses access when needed."
+  },
+  {
+    "text": "Which principle ensures that data has not been altered by unauthorized parties?",
+    "answers": ["Confidentiality", "Availability", "Integrity", "Authentication"],
+    "correctIndex": 2,
+    "explanation": "Integrity ensures data has not been modified by unauthorized parties, preserving its accuracy and trustworthiness. Confidentiality concerns disclosure, and availability concerns access — neither addresses unauthorized alteration."
+  },
+  {
+    "text": "A CIA triad component that ensures systems and data are accessible when needed is:",
+    "answers": ["Availability", "Accounting", "Authorization", "Auditing"],
+    "correctIndex": 0,
+    "explanation": "Availability ensures that systems, data, and services are accessible to authorized users when needed. Accounting, authorization, and auditing relate to access control and tracking, not to the CIA triad's guarantee of access."
+  },
+  {
+    "text": "Which access control model uses labels and clearances (e.g., Top Secret) enforced by the system?",
+    "answers": ["Discretionary Access Control (DAC)", "Role-Based Access Control (RBAC)", "Mandatory Access Control (MAC)", "Rule-Based Access Control"],
+    "correctIndex": 2,
+    "explanation": "Mandatory Access Control (MAC) assigns security labels to subjects and objects, and the system — not the data owner — enforces access based on clearance levels. DAC leaves access decisions to the owner, and RBAC grants access based on job roles."
+  },
+  {
+    "text": "What does 'non-repudiation' provide?",
+    "answers": ["Proof that data is encrypted", "Assurance a party cannot deny performing an action", "Guaranteed uptime", "Faster authentication"],
+    "correctIndex": 1,
+    "explanation": "Non-repudiation ensures that a party cannot deny having performed an action, typically achieved through digital signatures and audit logs. It provides accountability, not encryption, uptime, or authentication speed."
+  }
+]

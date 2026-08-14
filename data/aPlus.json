@@ -1,0 +1,20 @@
+[
+  {
+    "text": "Which connector is used to attach a modern internal SATA hard drive's data cable?",
+    "answers": ["7-pin SATA", "40-pin IDE", "15-pin power", "6-pin PCIe"],
+    "correctIndex": 0,
+    "explanation": "SATA data cables use a flat 7-pin connector. The 40-pin IDE connector belongs to older PATA drives, the 15-pin connector is SATA power (not data), and 6-pin PCIe is for graphics card power."
+  },
+  {
+    "text": "A user reports their laptop won't charge. Which component should you check first?",
+    "answers": ["The RAM", "The AC adapter and charging port", "The GPU", "The optical drive"],
+    "correctIndex": 1,
+    "explanation": "For a no-charge symptom, start with the AC adapter and charging port, since those are directly in the power path and the most common failure points. RAM, GPU, and optical drives are unrelated to charging."
+  },
+  {
+    "text": "Which Windows utility lets you view and manage startup programs, running processes, and performance?",
+    "answers": ["Disk Cleanup", "Task Manager", "Device Manager", "Event Viewer"],
+    "correctIndex": 1,
+    "explanation": "Task Manager shows running processes, startup items, and real-time performance. Device Manager handles hardware and drivers, Event Viewer shows logs, and Disk Cleanup frees storage space."
+  }
+]
