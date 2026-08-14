@@ -54,5 +54,159 @@
     "correctIndex": 1,
     "domain": 1,
     "explanation": "Risk acceptance is a legitimate management choice, and once senior management with the proper authority makes it, the professional's job is to document the decision and who signed off — creating an accountable record. Implementing controls against management's decision oversteps authority, escalating to auditors bypasses governance, and re-running the assessment to force a different answer is inappropriate."
+  },
+  {
+    "text": "An organization is assigning responsibilities for a sensitive customer database. Who is ultimately accountable for classifying the data and defining who may access it?",
+    "answers": ["The data custodian", "The data owner", "The database administrator", "The end user"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "The data owner — typically a senior business official — is accountable for classifying data and defining access requirements. The custodian and database administrator implement and maintain the controls the owner specifies but do not set classification, and end users simply operate within the granted permissions."
+  },
+  {
+    "text": "A company must protect payment card data as it moves between its web server and a payment processor. Which data state is the PRIMARY concern in this scenario?",
+    "answers": ["Data at rest", "Data in use", "Data in transit", "Data in archive"],
+    "correctIndex": 2,
+    "domain": 2,
+    "explanation": "Data moving between systems over a network is data in transit, best protected with transport encryption such as TLS. Data at rest is stored data, data in use is data actively being processed in memory, and neither describes information actively crossing a network link."
+  },
+  {
+    "text": "Before donating retired hard drives, a security team must ensure no recoverable data remains. Which concern are they addressing, and what is the MOST appropriate response for drives leaving the organization?",
+    "answers": ["Data remanence; degaussing or physical destruction", "Data in use; full-disk encryption", "Data classification; applying labels", "Data retention; extending the retention period"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Data remanence is the residual data that persists after deletion or formatting, and for media leaving the organization, degaussing or physical destruction reliably prevents recovery. Encryption protects active data but is not a sanitization method, labeling addresses classification not removal, and retention concerns how long data is kept, not its secure disposal."
+  },
+  {
+    "text": "A cloud provider stores and processes personal data strictly according to the written instructions of the organization that collected it. Under common data protection frameworks, what role does the cloud provider play?",
+    "answers": ["Data controller", "Data processor", "Data owner", "Data subject"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "A data processor handles personal data on behalf of, and per the instructions of, the controller. The data controller determines the purposes and means of processing, the data owner is an internal accountability role, and the data subject is the individual the personal data is about."
+  },
+  {
+    "text": "An organization keeps financial records for exactly seven years, then securely destroys them. What is the PRIMARY driver for defining and enforcing this schedule?",
+    "answers": ["Reducing storage hardware costs", "Meeting legal, regulatory, and business retention requirements", "Improving database query performance", "Simplifying the data classification scheme"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "Retention schedules are primarily driven by legal, regulatory, and business requirements that dictate how long records must be kept and when they should be disposed of. Storage cost and performance may be secondary benefits, but they are not the governing reason, and retention is distinct from classification."
+  },
+  {
+    "text": "A security model enforces the rule that a subject cannot read data at a higher classification level (\"no read up\") and cannot write to a lower level (\"no write down\"). Which model is described, and what does it primarily protect?",
+    "answers": ["Biba; integrity", "Bell-LaPadula; confidentiality", "Clark-Wilson; integrity", "Brewer-Nash; conflict of interest"],
+    "correctIndex": 1,
+    "domain": 3,
+    "explanation": "Bell-LaPadula enforces 'no read up' (simple security property) and 'no write down' (star property) to protect confidentiality. Biba protects integrity with the opposite rules ('no write up, no read down'), Clark-Wilson uses well-formed transactions for integrity, and Brewer-Nash addresses conflicts of interest."
+  },
+  {
+    "text": "An application must let two parties who have never communicated before establish an encrypted channel over the internet without pre-sharing a secret key. Which approach makes this possible?",
+    "answers": ["Symmetric encryption with a shared password", "Asymmetric encryption using public/private key pairs", "Hashing the message before sending", "Steganography to hide the message"],
+    "correctIndex": 1,
+    "domain": 3,
+    "explanation": "Asymmetric encryption uses a public/private key pair, allowing parties to exchange public keys openly and communicate securely without a pre-shared secret. Symmetric encryption requires both sides to already hold the same key, hashing provides integrity rather than confidentiality, and steganography conceals a message's existence but does not establish a secure channel."
+  },
+  {
+    "text": "A developer wants to verify that a downloaded file has not been altered in transit, without concern for keeping its contents secret. Which cryptographic tool is MOST appropriate?",
+    "answers": ["A symmetric cipher", "A cryptographic hash function", "A public key certificate", "A one-time pad"],
+    "correctIndex": 1,
+    "domain": 3,
+    "explanation": "A cryptographic hash function produces a fixed-length digest that changes if the input changes, making it ideal for verifying integrity. Symmetric ciphers and one-time pads provide confidentiality, and a public key certificate binds an identity to a key but does not by itself verify file integrity."
+  },
+  {
+    "text": "In a public key infrastructure (PKI), what is the PRIMARY role of a certificate authority (CA)?",
+    "answers": ["To encrypt all traffic between clients and servers", "To issue and digitally sign certificates that bind identities to public keys", "To store users' private keys in escrow", "To generate one-time passwords for authentication"],
+    "correctIndex": 1,
+    "domain": 3,
+    "explanation": "A certificate authority issues and digitally signs certificates that bind an identity to a public key, allowing others to trust that the key belongs to the named party. It does not encrypt all traffic itself, private key escrow is a separate function that CAs generally avoid, and one-time password generation is unrelated to a CA's core role."
+  },
+  {
+    "text": "A design team debates how a new system should behave if its security controls fail unexpectedly. Following the principle of \"fail secure,\" what should happen?",
+    "answers": ["The system should default to allowing access to preserve availability", "The system should default to denying access to preserve protection", "The system should ignore the failure and continue normally", "The system should shut down all logging to save resources"],
+    "correctIndex": 1,
+    "domain": 3,
+    "explanation": "A fail-secure (fail-closed) design defaults to denying access when controls fail, prioritizing protection over availability. Defaulting to allow access is fail-open, which sacrifices security, and ignoring the failure or disabling logging would both undermine the system's security posture."
+  },
+  {
+    "text": "A laptop uses a dedicated hardware chip to securely store cryptographic keys and support full-disk encryption, resisting tampering and key extraction. Which component provides this capability?",
+    "answers": ["GPU (Graphics Processing Unit)", "TPM (Trusted Platform Module)", "NIC (Network Interface Card)", "PSU (Power Supply Unit)"],
+    "correctIndex": 1,
+    "domain": 3,
+    "explanation": "A Trusted Platform Module (TPM) is a dedicated hardware chip that securely stores cryptographic keys and supports features like full-disk encryption while resisting tampering. A GPU handles graphics, a NIC handles network connectivity, and a PSU supplies power — none provide secure key storage."
+  },
+  {
+    "text": "An organization wants to isolate its public-facing web servers from its internal network so that a compromise of a web server does not directly expose internal systems. Which architectural approach BEST accomplishes this?",
+    "answers": ["Placing the web servers in a screened subnet (DMZ)", "Assigning the web servers static IP addresses", "Enabling full-disk encryption on the web servers", "Putting the web servers on the same VLAN as internal hosts"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "A screened subnet, or DMZ, places public-facing servers in a segmented zone between the internet and the internal network, so compromising one does not grant direct access to internal systems. Static IPs and disk encryption do not provide network isolation, and sharing a VLAN with internal hosts would remove the separation entirely."
+  },
+  {
+    "text": "A remote employee must securely access internal corporate resources over the public internet. Which technology is specifically designed to create an encrypted tunnel for this purpose?",
+    "answers": ["VLAN", "VPN", "NAT", "DNS"],
+    "correctIndex": 1,
+    "domain": 4,
+    "explanation": "A VPN (virtual private network) creates an encrypted tunnel across an untrusted network, allowing secure remote access to internal resources. A VLAN segments a local network, NAT translates addresses, and DNS resolves names to IP addresses — none of these provide the encrypted remote-access tunnel a VPN does."
+  },
+  {
+    "text": "During a security review, an analyst finds that a legacy system uses Telnet for administrative access. What is the PRIMARY security concern, and the BEST remediation?",
+    "answers": ["Telnet is slow; upgrade the network hardware", "Telnet sends credentials in plaintext; replace it with SSH", "Telnet uses too many ports; consolidate to one port", "Telnet is incompatible with IPv6; migrate to IPv4"],
+    "correctIndex": 1,
+    "domain": 4,
+    "explanation": "Telnet transmits credentials and session data in plaintext, allowing anyone capturing traffic to read them, and the standard remediation is to replace it with SSH, which encrypts the session. Speed, port count, and IP version are not the core security problem with Telnet."
+  },
+  {
+    "text": "An attacker sends forged ARP messages on a local network to associate their MAC address with the default gateway's IP, intercepting traffic. Which attack is this, and which category does it fall under?",
+    "answers": ["ARP poisoning; on-path (man-in-the-middle) attack", "SYN flood; denial-of-service attack", "DNS tunneling; data exfiltration", "Phishing; social engineering"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "Forging ARP replies to bind the attacker's MAC to another host's IP is ARP poisoning, which enables on-path (man-in-the-middle) interception of traffic. A SYN flood exhausts connection resources, DNS tunneling smuggles data through DNS queries, and phishing targets people rather than the ARP protocol."
+  },
+  {
+    "text": "A company is deploying a wireless network and wants the strongest available protection for the data confidentiality of its Wi-Fi traffic. Which option should it choose?",
+    "answers": ["WEP", "WPA2/WPA3 with strong authentication", "An open (unencrypted) network with a hidden SSID", "MAC address filtering alone"],
+    "correctIndex": 1,
+    "domain": 4,
+    "explanation": "WPA2 or WPA3 with strong authentication provides robust encryption for wireless traffic and is the current best practice. WEP is deprecated and easily broken, hiding an SSID offers no real encryption, and MAC filtering is trivially bypassed by spoofing and does not encrypt traffic."
+  },
+  {
+    "text": "Which statement BEST describes the security benefit of network segmentation using firewalls between zones?",
+    "answers": ["It eliminates the need for endpoint security controls", "It limits an attacker's lateral movement by restricting traffic between zones", "It guarantees that no malware can enter the network", "It increases available bandwidth for all users"],
+    "correctIndex": 1,
+    "domain": 4,
+    "explanation": "Segmentation with firewalls between zones restricts which traffic can flow between them, limiting an attacker's ability to move laterally after an initial compromise. It does not remove the need for endpoint controls, cannot guarantee malware never enters, and is a security control rather than a bandwidth optimization."
+  },
+  {
+    "text": "A user enters a username and is then prompted for a password. In access control terminology, what does the username provide versus the password?",
+    "answers": ["The username authenticates; the password identifies", "The username identifies; the password authenticates", "Both identify the user", "Both authenticate the user"],
+    "correctIndex": 1,
+    "domain": 5,
+    "explanation": "Identification is the claim of an identity — the username asserts who the user claims to be — while authentication proves that claim, which the password does. The two steps are distinct: identification makes the claim, authentication verifies it."
+  },
+  {
+    "text": "A system requires a password and a fingerprint scan to log in. Which authentication factor types are being combined, and does this qualify as multi-factor authentication?",
+    "answers": ["Something you know and something you have; yes", "Something you know and something you are; yes", "Something you have and something you are; no", "Two instances of something you know; no"],
+    "correctIndex": 1,
+    "domain": 5,
+    "explanation": "A password is something you know and a fingerprint is something you are, so combining them uses two different factor types and qualifies as multi-factor authentication. Multi-factor requires factors from different categories; combining two of the same type (for example, two passwords) would not qualify."
+  },
+  {
+    "text": "An organization wants access permissions to be assigned based on job function, so that moving an employee to a new role automatically changes their access. Which access control model BEST supports this?",
+    "answers": ["Discretionary Access Control (DAC)", "Mandatory Access Control (MAC)", "Role-Based Access Control (RBAC)", "Rule-Based Access Control"],
+    "correctIndex": 2,
+    "domain": 5,
+    "explanation": "Role-Based Access Control assigns permissions to roles, so changing a user's role automatically adjusts their access, which scales well with job functions. DAC ties access to owner discretion, MAC uses classification labels, and rule-based control applies conditions like time-of-day rather than job roles."
+  },
+  {
+    "text": "When an employee leaves the company, which access management action is MOST critical to perform promptly, and why?",
+    "answers": ["Deprovisioning their accounts, to prevent unauthorized access by a former insider", "Archiving their email, to preserve records", "Resetting their password, to allow reassignment of the account", "Auditing their past activity, to complete a performance review"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "Promptly deprovisioning a departing employee's accounts removes their ability to access systems, closing a significant insider-threat window. Email archiving and activity auditing may be appropriate follow-ups, and merely resetting a password without disabling access does not reliably prevent misuse."
+  },
+  {
+    "text": "A company implements single sign-on (SSO) so users authenticate once and access many applications. What is a key security consideration introduced by this convenience?",
+    "answers": ["Each application must store its own copy of the password", "A compromised SSO credential can grant access to all connected applications", "SSO eliminates the need for any authentication", "SSO prevents users from ever being locked out"],
+    "correctIndex": 1,
+    "domain": 5,
+    "explanation": "SSO improves usability but concentrates risk: if the single set of credentials is compromised, an attacker may reach every connected application, which is why strong authentication and monitoring of SSO systems are critical."
   }
 ]
