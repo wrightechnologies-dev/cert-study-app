@@ -137,8 +137,24 @@ const trackDomains = {
     { id: 6, name: "Security Assessment & Testing" },
     { id: 7, name: "Security Operations" },
     { id: 8, name: "Software Development Security" }
+  ],
+  securityPlus: [
+    { id: 1, name: "General Security Concepts" },
+    { id: 2, name: "Threats, Vulnerabilities & Mitigations" },
+    { id: 3, name: "Security Architecture" },
+    { id: 4, name: "Security Operations" },
+    { id: 5, name: "Security Program Management & Oversight" }
   ]
+  
 };
+// ---- Optional exam-version label per track ----
+// A track listed here shows its version note on the domain screen.
+// A track not listed here simply shows no label.
+const trackVersions = {
+  cissp: "Based on the current (ISC)² CISSP exam outline",
+  securityPlus: "Based on CompTIA Security+ SY0-701 objectives"
+};
+
 //---- Load a track's questions from its JSON file ----
 async function loadQuestions(trackName) {
   const response = await fetch("data/" + trackName + ".json");
@@ -165,7 +181,8 @@ const trackSelectEl = document.getElementById("track-select");
 const domainSelectEl = document.getElementById("domain-select");
 const domainButtonsEl = document.getElementById("domain-buttons");
 const domainBackBtn = document.getElementById("domain-back-btn");
-
+const versionNoteEl = document.getElementById("version-note");
+const newQuizBtn = document.getElementById("new-quiz-btn");
 
 
 // ---- Show a question on the page ----
@@ -233,7 +250,8 @@ function showResults() {
     button.style.display = "none";   // hide the answer buttons on the results screen
   });
   nextBtn.style.display = "none";   //hide next button on results screen
-  restartBtn.style.display = "inline-block";  // show the restart button
+  restartBtn.style.display = "inline-block"; // show the restart button
+  newQuizBtn.style.display = "inline-block";  //Allow user to go back to the track selection screen
 
 }
 ////When the Next button is clicked, advance the quiz.
@@ -256,6 +274,22 @@ restartBtn.addEventListener("click", function () {
   answerButtons.forEach(function (button) {
     button.style.display = "block";
   });
+ // When "Choose another quiz" is clicked, return to the track-selection screen.
+  newQuizBtn.addEventListener("click", function () {
+  // Hide the quiz area and the results-screen buttons
+  quizArea.style.display = "none";
+  restartBtn.style.display = "none";
+  newQuizBtn.style.display = "none";
+
+  // Restore the quiz UI so it's ready for next time
+  nextBtn.style.display = "inline-block";
+  answerButtons.forEach(function (button) {
+    button.style.display = "block";
+  });
+
+  // Show the track-selection screen
+  trackSelectEl.style.display = "block";
+});
 
   showQuestion();
 });
@@ -310,10 +344,15 @@ domainBackBtn.addEventListener("click", function () {
   trackSelectEl.style.display = "block";   // show the track buttons again
   });
 
-  function showDomainScreen(trackName) {
+  function showDomainScreen(trackName) {     
   currentTrack = trackName;                 // remember which track we're in
   trackSelectEl.style.display = "none";     // hide the track buttons
   domainButtonsEl.innerHTML = "";           // clear any buttons from a previous visit
+    if (trackVersions[trackName]) {
+    versionNoteEl.textContent = trackVersions[trackName];
+    } else {
+    versionNoteEl.textContent = "";          // Show the exam-version note if this track has one, otherwise clear it
+  }
 
   const domains = trackDomains[trackName];  // the array of {id, name} for this track
 

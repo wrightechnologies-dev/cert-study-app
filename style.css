@@ -1,71 +1,188 @@
+/* ---- Base & typography ---- */
+:root {
+  --brand: #2b6cb0;
+  --brand-dark: #234e7d;
+  --ink: #1a202c;
+  --muted: #718096;
+  --line: #e2e8f0;
+  --panel: #f7fafc;
+  --good: #2f855a;
+  --good-bg: #c6f6d5;
+  --bad: #c53030;
+  --bad-bg: #fed7d7;
+}
+
+* { box-sizing: border-box; }
+
 body {
-  font-family: Arial, sans-serif;
-  max-width: 600px;
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  max-width: 640px;
   margin: 40px auto;
   padding: 0 20px;
+  color: var(--ink);
+  line-height: 1.5;
+  background: #ffffff;
+}
+
+h1 {
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  border-bottom: 3px solid var(--brand);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+/* ---- Track & domain selection ---- */
+#track-select p,
+#domain-select > p:first-child {
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+#version-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  margin: -4px 0 16px 0;
+}
+
+.track-btn,
+.domain-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 0 8px 8px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid var(--brand);
+  border-radius: 8px;
+  background: white;
+  color: var(--brand);
+  transition: all 0.15s ease;   /* smooth hover, not instant */
+}
+
+.track-btn:hover,
+.domain-btn:hover {
+  background: var(--brand);
+  color: white;
+  transform: translateY(-1px);  /* subtle lift on hover */
+}
+
+.domain-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+#domain-back-btn {
+  margin-top: 16px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  background: transparent;
+  color: var(--muted);
+  border: none;
+  cursor: pointer;
+}
+#domain-back-btn:hover { color: var(--brand); }
+
+/* ---- Question & answers ---- */
+#progress {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
 }
 
 #question {
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 .answer-btn {
   display: block;
   width: 100%;
-  padding: 12px;
+  padding: 14px 16px;
   margin: 8px 0;
-  font-size: 1em;
+  font-size: 0.95rem;
   text-align: left;
   cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #f9f9f9;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 .answer-btn:hover {
-  background: #ececec;
+  border-color: var(--brand);
+  background: #edf2f7;
 }
 
+/* ---- Feedback & explanation ---- */
 #feedback {
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 20px;
 }
 
-#next-btn {
+#explanation { margin-top: 12px; }
+
+#explanation.has-text {
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--panel);
+  border-left: 4px solid var(--brand);   /* your signature accent border */
+  border-radius: 0 6px 6px 0;
+}
+
+/* ---- Next / Restart (primary filled buttons) ---- */
+#next-btn,
+#restart-btn {
   margin-top: 20px;
   padding: 12px 24px;
-  font-size: 1em;
+  font-size: 0.95rem;
   cursor: pointer;
   border: none;
-  border-radius: 6px;
-  background: #2b6cb0;
+  border-radius: 8px;
+  background: var(--brand);
   color: white;
+  transition: background 0.15s ease;
 }
-.track-btn {
-  padding: 10px 20px;
-  margin: 8px 8px 8px 0;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 6px;
-  background: white;
-  color: #2b6cb0;
+#next-btn:hover,
+#restart-btn:hover { background: var(--brand-dark); }
+
+#next-btn:disabled {
+  background: var(--line);
+  color: var(--muted);
+  cursor: not-allowed;
 }
 
-.track-btn:hover {
-  background: #2b6cb0;
+/* ---- Choose another quiz (secondary outlined button) ---- */
+#new-quiz-btn {
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid var(--brand);
+  border-radius: 8px;
+  background: white;
+  color: var(--brand);
+  transition: all 0.15s ease;
+}
+#new-quiz-btn:hover {
+  background: var(--brand);
   color: white;
 }
-#explanation {
-  margin-top: 12px;
+/* ---- Results screen button row ---- */
+#results-actions {
+  display: flex;                    /* turn on flex layout for the children */
+  justify-content: space-between;   /* push the two buttons to opposite ends */
+  align-items: center;
+  margin-top: 20px;
+  gap: 12px;                        /* minimum breathing room if they ever meet */
 }
-#explanation.has-text {
-  padding: 12px;
-  font-size: 0.95em;
-  line-height: 1.5;
-  color: #2d3748;
-  background: #edf2f7;
-  border-left: 4px solid #2b6cb0;
-  border-radius: 4px;
+#restart-btn {
+  margin-top: 0;   /* container handles spacing; remove stray margin causing misalignment */
 }
