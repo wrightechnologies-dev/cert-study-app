@@ -3,30 +3,56 @@
     "text": "Which principle ensures that information is not disclosed to unauthorized individuals?",
     "answers": ["Integrity", "Confidentiality", "Availability", "Non-repudiation"],
     "correctIndex": 1,
+    "domain": 1,
     "explanation": "Confidentiality is the CIA triad principle concerned with preventing unauthorized disclosure of information. Integrity addresses unauthorized alteration, and availability addresses access when needed."
   },
   {
     "text": "Which principle ensures that data has not been altered by unauthorized parties?",
     "answers": ["Confidentiality", "Availability", "Integrity", "Authentication"],
     "correctIndex": 2,
+    "domain": 1,
     "explanation": "Integrity ensures data has not been modified by unauthorized parties, preserving its accuracy and trustworthiness. Confidentiality concerns disclosure, and availability concerns access — neither addresses unauthorized alteration."
   },
   {
     "text": "A CIA triad component that ensures systems and data are accessible when needed is:",
     "answers": ["Availability", "Accounting", "Authorization", "Auditing"],
     "correctIndex": 0,
+    "domain": 1,
     "explanation": "Availability ensures that systems, data, and services are accessible to authorized users when needed. Accounting, authorization, and auditing relate to access control and tracking, not to the CIA triad's guarantee of access."
   },
   {
     "text": "Which access control model uses labels and clearances (e.g., Top Secret) enforced by the system?",
     "answers": ["Discretionary Access Control (DAC)", "Role-Based Access Control (RBAC)", "Mandatory Access Control (MAC)", "Rule-Based Access Control"],
     "correctIndex": 2,
+    "domain": 1,
     "explanation": "Mandatory Access Control (MAC) assigns security labels to subjects and objects, and the system — not the data owner — enforces access based on clearance levels. DAC leaves access decisions to the owner, and RBAC grants access based on job roles."
   },
   {
     "text": "What does 'non-repudiation' provide?",
     "answers": ["Proof that data is encrypted", "Assurance a party cannot deny performing an action", "Guaranteed uptime", "Faster authentication"],
     "correctIndex": 1,
+    "domain": 1,
     "explanation": "Non-repudiation ensures that a party cannot deny having performed an action, typically achieved through digital signatures and audit logs. It provides accountability, not encryption, uptime, or authentication speed."
+  },
+  {
+    "text": "A company discovers that copying a competitor's trade secret would save two years of research. Before deciding how to respond, which consideration should carry the MOST weight for a security professional bound by the (ISC)² Code of Ethics?",
+    "answers": ["Whether the cost savings justify the legal risk", "Whether acting honorably, honestly, and legally toward all stakeholders is preserved", "Whether the competitor could realistically detect the theft", "Whether company leadership has approved the action"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "The (ISC)² Code of Ethics requires members to act honorably, honestly, justly, responsibly, and legally — that canon governs the decision regardless of cost savings or approval. Cost/benefit and detectability are business calculations that cannot override the ethical obligation, and leadership approval does not make an unethical, illegal act acceptable."
+  },
+  {
+    "text": "During risk analysis, an asset valued at $200,000 has an exposure factor of 25% for a given threat, and that threat is expected once every four years. What is the annualized loss expectancy (ALE)?",
+    "answers": ["$12,500", "$50,000", "$200,000", "$800,000"],
+    "correctIndex": 0,
+    "domain": 1,
+    "explanation": "SLE = asset value × exposure factor = $200,000 × 0.25 = $50,000. ARO = once every four years = 0.25. ALE = SLE × ARO = $50,000 × 0.25 = $12,500. $50,000 is the single loss expectancy (one occurrence), and $200,000 is the full asset value — neither accounts for frequency."
+  },
+  {
+    "text": "Senior management formally accepts a residual risk rather than spending on further controls. What is the security professional's PRIMARY responsibility once this decision is made?",
+    "answers": ["Implement compensating controls anyway to reduce liability", "Document the risk acceptance decision and the authority who approved it", "Escalate the decision to external auditors", "Re-run the risk assessment until management changes course"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "Risk acceptance is a legitimate management choice, and once senior management with the proper authority makes it, the professional's job is to document the decision and who signed off — creating an accountable record. Implementing controls against management's decision oversteps authority, escalating to auditors bypasses governance, and re-running the assessment to force a different answer is inappropriate."
   }
 ]

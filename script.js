@@ -2,40 +2,41 @@
 // Add as many as you want here — just keep the same shape.
 const quizzes = {
   cissp: [
-  {
-    text: "Which principle ensures that information is not disclosed to unauthorized individuals?",
-    answers: ["Integrity", "Confidentiality", "Availability", "Non-repudiation"],
-    correctIndex: 1,
-    explanation: "Confidentiality is the CIA triad principle concerned with preventing unauthorized disclosure of information. Integrity addresses unauthorized alteration, and availability addresses access when needed."
-  },
-  {
-    text: "Which principle ensures that data has not been altered by unauthorized parties?",
-    answers: ["Confidentiality", "Availability", "Integrity", "Authentication"],
-    correctIndex: 2,
-    explanation: "Integrity ensures data has not been modified by unauthorized parties, preserving its accuracy and trustworthiness. Confidentiality concerns disclosure, and availability concerns access — neither addresses unauthorized alteration."
-  },
-  {
-    text: "A CIA triad component that ensures systems and data are accessible when needed is:",
-    answers: ["Availability", "Accounting", "Authorization", "Auditing"],
-    correctIndex: 0,
-    explanation: "Availability ensures that systems, data, and services are accessible to authorized users when needed. Accounting, authorization, and auditing relate to access control and tracking, not to the CIA triad's guarantee of access."
-  },
-  {
-    text: "Which access control model uses labels and clearances (e.g., Top Secret) enforced by the system?",
-    answers: ["Discretionary Access Control (DAC)", "Role-Based Access Control (RBAC)", "Mandatory Access Control (MAC)", "Rule-Based Access Control"],
-    correctIndex: 2,
-    explanation: "Mandatory Access Control (MAC) assigns security labels to subjects and objects, and the system — not the data owner — enforces access based on clearance levels. DAC leaves access decisions to the owner, and RBAC grants access based on job roles."
- 
-  },
-  {
-    text: "What does 'non-repudiation' provide?",
-    answers: ["Proof that data is encrypted", "Assurance a party cannot deny performing an action", "Guaranteed uptime", "Faster authentication"],
-    correctIndex: 1,
-    explanation: "Non-repudiation ensures that a party cannot deny having performed an action, typically achieved through digital signatures and audit logs. It provides accountability, not encryption, uptime, or authentication speed."
-  }
+    {
+      text: "Which principle ensures that information is not disclosed to unauthorized individuals?",
+      answers: ["Integrity", "Confidentiality", "Availability", "Non-repudiation"],
+      correctIndex: 1,
+      explanation: "Confidentiality is the CIA triad principle concerned with preventing unauthorized disclosure of information. Integrity addresses unauthorized alteration, and availability addresses access when needed."
+    },
+    {
+      text: "Which principle ensures that data has not been altered by unauthorized parties?",
+      answers: ["Confidentiality", "Availability", "Integrity", "Authentication"],
+      correctIndex: 2,
+      explanation: "Integrity ensures data has not been modified by unauthorized parties, preserving its accuracy and trustworthiness. Confidentiality concerns disclosure, and availability concerns access — neither addresses unauthorized alteration."
+    },
+    {
+      text: "A CIA triad component that ensures systems and data are accessible when needed is:",
+      answers: ["Availability", "Accounting", "Authorization", "Auditing"],
+      correctIndex: 0,
+      explanation: "Availability ensures that systems, data, and services are accessible to authorized users when needed. Accounting, authorization, and auditing relate to access control and tracking, not to the CIA triad's guarantee of access."
+    },
+    {
+      text: "Which access control model uses labels and clearances (e.g., Top Secret) enforced by the system?",
+      answers: ["Discretionary Access Control (DAC)", "Role-Based Access Control (RBAC)", "Mandatory Access Control (MAC)", "Rule-Based Access Control"],
+      correctIndex: 2,
+      explanation: "Mandatory Access Control (MAC) assigns security labels to subjects and objects, and the system — not the data owner — enforces access based on clearance levels. DAC leaves access decisions to the owner, and RBAC grants access based on job roles."
+
+    },
+    {
+      text: "What does 'non-repudiation' provide?",
+      answers: ["Proof that data is encrypted", "Assurance a party cannot deny performing an action", "Guaranteed uptime", "Faster authentication"],
+      correctIndex: 1,
+      explanation: "Non-repudiation ensures that a party cannot deny having performed an action, typically achieved through digital signatures and audit logs. It provides accountability, not encryption, uptime, or authentication speed."
+    }
   ],
   securityPlus: [
-    {text: "Which type of malware disguises itself as legitimate software to trick users into installing it?",
+    {
+      text: "Which type of malware disguises itself as legitimate software to trick users into installing it?",
       answers: ["Worm", "Trojan", "Rootkit", "Ransomware"],
       correctIndex: 1,
       explanation: "A Trojan disguises itself as legitimate or desirable software to trick users into installing it, then carries out malicious actions. A worm spreads on its own, and a rootkit hides its presence to maintain access."
@@ -115,14 +116,29 @@ const quizzes = {
   ]
 };
 function shuffle(array) {
-  for (let i = array.length -1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i +1)); //pick a random spot from 0..i
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1)); //pick a random spot from 0..i
     const temp = array[i];
-    array[i] =array[j];
+    array[i] = array[j];
     array[j] = temp;
-   }
-   return array
+  }
+  return array
 }
+// ---- Which tracks have domains, and what they're called ----
+// A track listed here gets a domain-selection screen.
+// A track NOT listed here just starts its quiz normally.
+const trackDomains = {
+  cissp: [
+    { id: 1, name: "Security & Risk Management" },
+    { id: 2, name: "Asset Security" },
+    { id: 3, name: "Security Architecture & Engineering" },
+    { id: 4, name: "Communication & Network Security" },
+    { id: 5, name: "Identity & Access Management" },
+    { id: 6, name: "Security Assessment & Testing" },
+    { id: 7, name: "Security Operations" },
+    { id: 8, name: "Software Development Security" }
+  ]
+};
 //---- Load a track's questions from its JSON file ----
 async function loadQuestions(trackName) {
   const response = await fetch("data/" + trackName + ".json");
@@ -145,6 +161,10 @@ const explanationEl = document.getElementById("explanation");
 const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
 const quizArea = document.getElementById("quiz-area");
+const trackSelectEl = document.getElementById("track-select");
+const domainSelectEl = document.getElementById("domain-select");
+const domainButtonsEl = document.getElementById("domain-buttons");
+const domainBackBtn = document.getElementById("domain-back-btn");
 
 
 
@@ -192,13 +212,13 @@ answerButtons.forEach(function (button, index) {
       feedbackEl.textContent = "Not quite — the answer is: " + q.answers[q.correctIndex];
       feedbackEl.style.color = "red";
       button.style.background = "#fed7d7";
-      answerButtons[q.correctIndex].style.background = "#c6f6d5"; 
+      answerButtons[q.correctIndex].style.background = "#c6f6d5";
     }
-      explanationEl.textContent = q.explanation || "";
-      if (q.explanation) {
+    explanationEl.textContent = q.explanation || "";
+    if (q.explanation) {
       explanationEl.classList.add("has-text");
-      }
-    });
+    }
+  });
 });
 
 // ---- Show the final score ----
@@ -211,13 +231,13 @@ function showResults() {
   feedbackEl.textContent = "You scored " + score + " out of " + questions.length + ".";
   answerButtons.forEach(function (button) {
     button.style.display = "none";   // hide the answer buttons on the results screen
- });
-    nextBtn.style.display = "none";   //hide next button on results screen
-    restartBtn.style.display = "inline-block";  // show the restart button
- 
+  });
+  nextBtn.style.display = "none";   //hide next button on results screen
+  restartBtn.style.display = "inline-block";  // show the restart button
+
 }
 ////When the Next button is clicked, advance the quiz.
-nextBtn.addEventListener("click", function(){
+nextBtn.addEventListener("click", function () {
   currentIndex = currentIndex + 1;
   if (currentIndex < questions.length) {
     showQuestion();
@@ -245,12 +265,12 @@ async function startQuiz(trackName) {
   quizArea.style.display = "block";  // sets the display back to visible the moment a track is clicked, so the real question loads into a now-visible area.
   currentTrack = trackName;     //remember which track its on 
   questions = await loadQuestions(currentTrack);  // fetch from the JSON file, wait for it
-  
+
   currentIndex = 0;     //reset to the 1st question
   score = 0;            //reseyt the score 
 
-shuffle(questions); // scramble the question order 
-showQuestion(); //displays the first one 
+  shuffle(questions); // scramble the question order 
+  showQuestion(); //displays the first one 
 }
 // --- Wire each track to start its quiz---
 const trackButtons = document.querySelectorAll(".track-btn");
@@ -258,7 +278,47 @@ const trackButtons = document.querySelectorAll(".track-btn");
 trackButtons.forEach(function (button) {
   button.addEventListener("click", function () {
     const chosenTrack = button.dataset.track;   //read the data-track value 
-    startQuiz(chosenTrack); //start the quiz for that value
-  });
+
+    if (trackDomains[chosenTrack]) {  // This track HAS domains — show the domain screen.
+      showDomainScreen(chosenTrack);
+    } else {  // No domains — start the quiz directly, like before.
+      startQuiz(chosenTrack); //start the quiz for that value
+    }
+    });
 });
+    // ---- Back button: return from domain screen to track screen ----
+domainBackBtn.addEventListener("click", function () {
+  domainSelectEl.style.display = "none";   // hide the domain screen
+  trackSelectEl.style.display = "block";   // show the track buttons again
+  });
+
+  function showDomainScreen(trackName) {
+  currentTrack = trackName;                 // remember which track we're in
+  trackSelectEl.style.display = "none";     // hide the track buttons
+  domainButtonsEl.innerHTML = "";           // clear any buttons from a previous visit
+
+  const domains = trackDomains[trackName];  // the array of {id, name} for this track
+
+  // Build one button per domain, from the config data
+  domains.forEach(function (domain) {
+    const btn = document.createElement("button");
+    btn.className = "domain-btn";
+    btn.textContent = domain.id + ". " + domain.name;
+    btn.addEventListener("click", function () {
+      startQuiz(trackName, domain.id);      // start quiz filtered to this domain
+    });
+    domainButtonsEl.appendChild(btn);
+  });
+
+  // Add the "All Domains" button
+  const allBtn = document.createElement("button");
+  allBtn.className = "domain-btn";
+  allBtn.textContent = "All Domains (full quiz)";
+  allBtn.addEventListener("click", function () {
+    startQuiz(trackName, "all");            // "all" = no filter
+  });
+  domainButtonsEl.appendChild(allBtn);
+
+  domainSelectEl.style.display = "block";   // reveal the domain screen
+}
 quizArea.style.display = "none";
