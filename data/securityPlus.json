@@ -3,18 +3,63 @@
     "text": "Which type of malware disguises itself as legitimate software to trick users into installing it?",
     "answers": ["Worm", "Trojan", "Rootkit", "Ransomware"],
     "correctIndex": 1,
+    "domain": 1,
     "explanation": "A Trojan disguises itself as legitimate or desirable software to trick users into installing it, then carries out malicious actions. A worm spreads on its own, and a rootkit hides its presence to maintain access."
   },
   {
     "text": "Which protocol provides encrypted remote command-line access to a device?",
     "answers": ["Telnet", "SSH", "FTP", "SNMP"],
     "correctIndex": 1,
+    "domain": 1,
     "explanation": "SSH (Secure Shell) provides encrypted remote command-line access, protecting credentials and session data in transit. Telnet offers similar access but sends everything in plaintext, while FTP transfers files and SNMP manages network devices."
   },
   {
     "text": "What does a firewall primarily use to allow or block traffic?",
     "answers": ["Rules based on ports, protocols, and addresses", "Antivirus signatures", "User passwords", "CPU usage thresholds"],
     "correctIndex": 0,
+    "domain": 1,
     "explanation": "A firewall filters traffic using rules based on ports, protocols, and IP addresses, deciding what to allow or block. Antivirus signatures detect malware, not network traffic flow, and passwords and CPU thresholds are unrelated to filtering decisions."
+  },
+  {
+    "text": "A company installs security cameras in its server room. When classifying this control by both its type and its function, how is it BEST described?",
+    "answers": ["A technical, preventive control", "A physical, detective control", "A managerial, corrective control", "An operational, compensating control"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "Security cameras are a physical control (a tangible, real-world safeguard) and function as a detective control, because they record activity for later review rather than blocking it. They don't prevent an intruder from entering, which is what a preventive control would do."
+  },
+  {
+    "text": "A security model assumes no user or device is trusted by default, even inside the corporate network, and verifies every access request. Which concept does this describe?",
+    "answers": ["Defense in depth", "Zero trust", "Implicit allow", "Perimeter-based security"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "Zero trust assumes no implicit trust based on network location and continuously verifies every request. Defense in depth layers multiple controls, implicit allow is the opposite of zero trust's default-deny stance, and perimeter-based security trusts anything inside the network — exactly what zero trust rejects."
+  },
+  {
+    "text": "In the AAA framework, a system records which files a user accessed and when, for later review. Which component of AAA does this represent?",
+    "answers": ["Authentication", "Authorization", "Accounting", "Availability"],
+    "correctIndex": 2,
+    "domain": 1,
+    "explanation": "Accounting tracks and records what an authenticated user does, such as files accessed and actions taken, supporting auditing and accountability. Authentication verifies identity, authorization determines permitted actions, and availability is a CIA triad property, not part of AAA."
+  },
+  {
+    "text": "An organization requires that all changes to production systems be reviewed and approved before implementation, with a documented rollback plan. What is the PRIMARY security purpose of this change management process?",
+    "answers": ["To slow down the IT department intentionally", "To reduce the risk that unplanned or untested changes introduce vulnerabilities or outages", "To eliminate the need for backups", "To ensure only one person understands each system"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "Formal change management reduces the risk that unreviewed or untested changes cause security gaps or outages, and a rollback plan enables quick recovery if a change fails. It is not meant to slow work needlessly, replace backups, or concentrate knowledge in one person."
+  },
+  {
+    "text": "A digital signature on an email allows the recipient to confirm the message truly came from the claimed sender and was not altered. Which two security properties does this PRIMARILY provide?",
+    "answers": ["Confidentiality and availability", "Authenticity and integrity", "Anonymity and redundancy", "Availability and scalability"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "A digital signature provides authenticity (verifying the sender's identity) and integrity (confirming the message was not altered). It does not by itself provide confidentiality, since the message content is not necessarily encrypted, nor does it address availability."
+  },
+  {
+    "text": "A policy requiring employees to complete annual security awareness training is BEST categorized as which type of control?",
+    "answers": ["A technical control", "A managerial (administrative) control", "A physical control", "A cryptographic control"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "Security awareness training driven by policy is a managerial (administrative) control, because it involves governance, policy, and human processes rather than technology or physical barriers. Technical controls are enforced by systems, and physical controls are tangible barriers."
   }
 ]

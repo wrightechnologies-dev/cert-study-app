@@ -139,13 +139,20 @@ const trackDomains = {
     { id: 8, name: "Software Development Security" }
   ],
   securityPlus: [
-    { id: 1, name: "General Security Concepts" },
+    {
+      id: 1, name: "General Security Concepts",
+      intro: {
+        overview: "This domain sets the vocabulary the rest of the exam relies on: the types and functions of security controls, the CIA triad plus authenticity and non-repudiation, the AAA framework, zero trust, physical security, and change management.",
+        why: "It's weighted at 12% — the smallest domain by percentage, but the widest in scope. The terms defined here show up in questions across every other domain, so a shaky grasp here quietly costs you points everywhere.",
+        tips: "Master the two-axis control classification: every control has a type (technical, managerial, operational, physical) AND a function (preventive, detective, corrective, deterrent, compensating). Also expect zero trust — it's new emphasis in SY0-701 — and remember the third A in AAA is Accounting, not Availability."
+      }
+    },
     { id: 2, name: "Threats, Vulnerabilities & Mitigations" },
     { id: 3, name: "Security Architecture" },
     { id: 4, name: "Security Operations" },
     { id: 5, name: "Security Program Management & Oversight" }
   ]
-  
+
 };
 // ---- Optional exam-version label per track ----
 // A track listed here shows its version note on the domain screen.
@@ -163,6 +170,8 @@ async function loadQuestions(trackName) {
 }
 // ---- STATE: what the app needs to remember as you play ----
 let currentTrack = "cissp";  //Which exam track is active 
+let pendingTrack = null;   // track chosen, waiting for primer "Start quiz"
+let pendingDomain = null;  // domain chosen, waiting for primer "Start quiz"
 let questions = [];
 let currentIndex = 0;   // which question we're on (starts at the first)
 let score = 0;          // how many correct so far
@@ -183,6 +192,13 @@ const domainButtonsEl = document.getElementById("domain-buttons");
 const domainBackBtn = document.getElementById("domain-back-btn");
 const versionNoteEl = document.getElementById("version-note");
 const newQuizBtn = document.getElementById("new-quiz-btn");
+const primerScreenEl = document.getElementById("primer-screen");
+const primerTitleEl = document.getElementById("primer-title");
+const primerOverviewEl = document.getElementById("primer-overview");
+const primerWhyEl = document.getElementById("primer-why");
+const primerTipsEl = document.getElementById("primer-tips");
+const primerStartBtn = document.getElementById("primer-start-btn");
+const primerBackBtn = document.getElementById("primer-back-btn");
 
 
 // ---- Show a question on the page ----
@@ -274,22 +290,22 @@ restartBtn.addEventListener("click", function () {
   answerButtons.forEach(function (button) {
     button.style.display = "block";
   });
- // When "Choose another quiz" is clicked, return to the track-selection screen.
+  // When "Choose another quiz" is clicked, return to the track-selection screen.
   newQuizBtn.addEventListener("click", function () {
-  // Hide the quiz area and the results-screen buttons
-  quizArea.style.display = "none";
-  restartBtn.style.display = "none";
-  newQuizBtn.style.display = "none";
+    // Hide the quiz area and the results-screen buttons
+    quizArea.style.display = "none";
+    restartBtn.style.display = "none";
+    newQuizBtn.style.display = "none";
 
-  // Restore the quiz UI so it's ready for next time
-  nextBtn.style.display = "inline-block";
-  answerButtons.forEach(function (button) {
-    button.style.display = "block";
+    // Restore the quiz UI so it's ready for next time
+    nextBtn.style.display = "inline-block";
+    answerButtons.forEach(function (button) {
+      button.style.display = "block";
+    });
+
+    // Show the track-selection screen
+    trackSelectEl.style.display = "block";
   });
-
-  // Show the track-selection screen
-  trackSelectEl.style.display = "block";
-});
 
   showQuestion();
 });
@@ -299,10 +315,10 @@ async function startQuiz(trackName, domainId) {
   domainSelectEl.style.display = "none";   // hide the domain screen if it was showing
   quizArea.style.display = "block";  // sets the display back to visible the moment a track is clicked, so the real question loads into a now-visible area.
   currentTrack = trackName;     //remember which track its on 
- 
-const allQuestions = await loadQuestions(currentTrack);   // load the whole track
 
-// Filter to one domain, unless "all" (or no domain) was chosen
+  const allQuestions = await loadQuestions(currentTrack);   // load the whole track
+
+  // Filter to one domain, unless "all" (or no domain) was chosen
   if (domainId && domainId !== "all") {
     questions = allQuestions.filter(function (q) {
       return q.domain === domainId;
@@ -336,21 +352,58 @@ trackButtons.forEach(function (button) {
     } else {  // No domains — start the quiz directly, like before.
       startQuiz(chosenTrack); //start the quiz for that value
     }
-    });
+  });
 });
-    // ---- Back button: return from domain screen to track screen ----
+// find the chosen domain's config object
+function showPrimer(trackName, domainId) {
+  const domains = trackDomains[trackName];
+  const domainObj = domains.find(function (d) {
+    return d.id === domainId;
+  });
+  // If this domain has no primer, skip straight to the quiz
+  if (!domainObj || !domainObj.intro) {
+    startQuiz(trackName, domainId);
+    return;
+  }
+
+  // Remember the selection so "Start quiz" knows what to launch
+  pendingTrack = trackName;
+  pendingDomain = domainId;
+
+  // Fill the primer screen from the intro object
+  primerTitleEl.textContent = domainObj.name;
+  primerOverviewEl.textContent = domainObj.intro.overview;
+  primerWhyEl.textContent = domainObj.intro.why;
+  primerTipsEl.textContent = domainObj.intro.tips;
+
+  // Show the primer, hide the domain screen
+  domainSelectEl.style.display = "none";
+  primerScreenEl.style.display = "block";
+}
+// "Start quiz" on the primer launches the pending selection
+primerStartBtn.addEventListener("click", function () {
+  primerScreenEl.style.display = "none";
+  startQuiz(pendingTrack, pendingDomain);
+});
+
+// "Back to domains" returns to the domain screen
+primerBackBtn.addEventListener("click", function () {
+  primerScreenEl.style.display = "none";
+  domainSelectEl.style.display = "block";
+});
+// ---- Back button: return from domain screen to track screen ----
 domainBackBtn.addEventListener("click", function () {
   domainSelectEl.style.display = "none";   // hide the domain screen
   trackSelectEl.style.display = "block";   // show the track buttons again
-  });
+});
 
-  function showDomainScreen(trackName) {     
+function showDomainScreen(trackName) {
   currentTrack = trackName;                 // remember which track we're in
   trackSelectEl.style.display = "none";     // hide the track buttons
   domainButtonsEl.innerHTML = "";           // clear any buttons from a previous visit
-    if (trackVersions[trackName]) {
+  if (trackVersions[trackName]) {
     versionNoteEl.textContent = trackVersions[trackName];
-    } else {
+  } else {
     versionNoteEl.textContent = "";          // Show the exam-version note if this track has one, otherwise clear it
   }
 
@@ -362,7 +415,7 @@ domainBackBtn.addEventListener("click", function () {
     btn.className = "domain-btn";
     btn.textContent = domain.id + ". " + domain.name;
     btn.addEventListener("click", function () {
-      startQuiz(trackName, domain.id);      // start quiz filtered to this domain
+      showPrimer(trackName, domain.id);      // start quiz filtered to this domain
     });
     domainButtonsEl.appendChild(btn);
   });
