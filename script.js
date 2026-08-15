@@ -290,7 +290,12 @@ restartBtn.addEventListener("click", function () {
   answerButtons.forEach(function (button) {
     button.style.display = "block";
   });
-  // When "Choose another quiz" is clicked, return to the track-selection screen.
+  
+
+  showQuestion();
+});
+
+// When "Choose another quiz" is clicked, return to the track-selection screen.
   newQuizBtn.addEventListener("click", function () {
     // Hide the quiz area and the results-screen buttons
     quizArea.style.display = "none";
@@ -306,9 +311,6 @@ restartBtn.addEventListener("click", function () {
     // Show the track-selection screen
     trackSelectEl.style.display = "block";
   });
-
-  showQuestion();
-});
 
 // Start the quiz from a chosen path 
 async function startQuiz(trackName, domainId) {
