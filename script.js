@@ -1,120 +1,5 @@
 // A LIST (array) of questions. Each one is an object like before.
 // Add as many as you want here — just keep the same shape.
-const quizzes = {
-  cissp: [
-    {
-      text: "Which principle ensures that information is not disclosed to unauthorized individuals?",
-      answers: ["Integrity", "Confidentiality", "Availability", "Non-repudiation"],
-      correctIndex: 1,
-      explanation: "Confidentiality is the CIA triad principle concerned with preventing unauthorized disclosure of information. Integrity addresses unauthorized alteration, and availability addresses access when needed."
-    },
-    {
-      text: "Which principle ensures that data has not been altered by unauthorized parties?",
-      answers: ["Confidentiality", "Availability", "Integrity", "Authentication"],
-      correctIndex: 2,
-      explanation: "Integrity ensures data has not been modified by unauthorized parties, preserving its accuracy and trustworthiness. Confidentiality concerns disclosure, and availability concerns access — neither addresses unauthorized alteration."
-    },
-    {
-      text: "A CIA triad component that ensures systems and data are accessible when needed is:",
-      answers: ["Availability", "Accounting", "Authorization", "Auditing"],
-      correctIndex: 0,
-      explanation: "Availability ensures that systems, data, and services are accessible to authorized users when needed. Accounting, authorization, and auditing relate to access control and tracking, not to the CIA triad's guarantee of access."
-    },
-    {
-      text: "Which access control model uses labels and clearances (e.g., Top Secret) enforced by the system?",
-      answers: ["Discretionary Access Control (DAC)", "Role-Based Access Control (RBAC)", "Mandatory Access Control (MAC)", "Rule-Based Access Control"],
-      correctIndex: 2,
-      explanation: "Mandatory Access Control (MAC) assigns security labels to subjects and objects, and the system — not the data owner — enforces access based on clearance levels. DAC leaves access decisions to the owner, and RBAC grants access based on job roles."
-
-    },
-    {
-      text: "What does 'non-repudiation' provide?",
-      answers: ["Proof that data is encrypted", "Assurance a party cannot deny performing an action", "Guaranteed uptime", "Faster authentication"],
-      correctIndex: 1,
-      explanation: "Non-repudiation ensures that a party cannot deny having performed an action, typically achieved through digital signatures and audit logs. It provides accountability, not encryption, uptime, or authentication speed."
-    }
-  ],
-  securityPlus: [
-    {
-      text: "Which type of malware disguises itself as legitimate software to trick users into installing it?",
-      answers: ["Worm", "Trojan", "Rootkit", "Ransomware"],
-      correctIndex: 1,
-      explanation: "A Trojan disguises itself as legitimate or desirable software to trick users into installing it, then carries out malicious actions. A worm spreads on its own, and a rootkit hides its presence to maintain access."
-    },
-    {
-      text: "Which protocol provides encrypted remote command-line access to a device?",
-      answers: ["Telnet", "SSH", "FTP", "SNMP"],
-      correctIndex: 1,
-      explanation: "SSH (Secure Shell) provides encrypted remote command-line access, protecting credentials and session data in transit. Telnet offers similar access but sends everything in plaintext, while FTP transfers files and SNMP manages network devices."
-    },
-    {
-      text: "What does a firewall primarily use to allow or block traffic?",
-      answers: ["Rules based on ports, protocols, and addresses", "Antivirus signatures", "User passwords", "CPU usage thresholds"],
-      correctIndex: 0,
-      explanation: "A firewall filters traffic using rules based on ports, protocols, and IP addresses, deciding what to allow or block. Antivirus signatures detect malware, not network traffic flow, and passwords and CPU thresholds are unrelated to filtering decisions."
-    }
-  ],
-  aPlus: [
-    {
-      text: "Which connector is used to attach a modern internal SATA hard drive's data cable?",
-      answers: ["7-pin SATA", "40-pin IDE", "15-pin power", "6-pin PCIe"],
-      correctIndex: 0,
-      explanation: "SATA data cables use a flat 7-pin connector. The 40-pin IDE connector belongs to older PATA drives, the 15-pin connector is SATA power (not data), and 6-pin PCIe is for graphics card power."
-    },
-    {
-      text: "A user reports their laptop won't charge. Which component should you check first?",
-      answers: ["The RAM", "The AC adapter and charging port", "The GPU", "The optical drive"],
-      correctIndex: 1,
-      explanation: "For a no-charge symptom, start with the AC adapter and charging port, since those are directly in the power path and the most common failure points. RAM, GPU, and optical drives are unrelated to charging."
-    },
-    {
-      text: "Which Windows utility lets you view and manage startup programs, running processes, and performance?",
-      answers: ["Disk Cleanup", "Task Manager", "Device Manager", "Event Viewer"],
-      correctIndex: 1,
-      explanation: "Task Manager shows running processes, startup items, and real-time performance. Device Manager handles hardware and drivers, Event Viewer shows logs, and Disk Cleanup frees storage space."
-    }
-  ],
-  networkPlus: [
-    {
-      text: "Which layer of the OSI model is responsible for logical addressing and routing?",
-      answers: ["Data Link (Layer 2)", "Network (Layer 3)", "Transport (Layer 4)", "Physical (Layer 1)"],
-      correctIndex: 1,
-      explanation: "The Network layer (Layer 3) handles logical addressing (IP) and routing between networks. Layer 2 handles physical (MAC) addressing on a local segment, Layer 4 manages end-to-end delivery, and Layer 1 moves raw bits."
-    },
-    {
-      text: "Which port does HTTPS use by default?",
-      answers: ["80", "22", "443", "53"],
-      correctIndex: 2,
-      explanation: "HTTPS uses port 443 by default. Port 80 is plain HTTP, port 22 is SSH, and port 53 is DNS."
-    },
-    {
-      text: "Which device forwards traffic between different networks based on IP addresses?",
-      answers: ["Switch", "Hub", "Router", "Repeater"],
-      correctIndex: 2,
-      explanation: "A router forwards traffic between separate networks using IP addresses. A switch forwards frames within a network using MAC addresses, a hub simply repeats signals to all ports, and a repeater extends a signal's range."
-    }
-  ],
-  microsoft: [
-    {
-      text: "In Microsoft's cloud model, which service type provides virtual machines where you manage the OS and applications?",
-      answers: ["SaaS", "PaaS", "IaaS", "FaaS"],
-      correctIndex: 2,
-      explanation: "Infrastructure as a Service (IaaS) provides virtualized compute like VMs, where you manage the OS and applications while the provider manages the hardware. PaaS abstracts the OS away, and SaaS delivers finished applications."
-    },
-    {
-      text: "Which Microsoft Entra (Azure AD) feature adds a second verification step at sign-in?",
-      answers: ["Single Sign-On", "Multi-Factor Authentication", "Conditional Access", "Self-Service Password Reset"],
-      correctIndex: 1,
-      explanation: "Multi-Factor Authentication (MFA) requires a second verification step beyond the password, such as a phone approval or code. Single Sign-On reduces repeated logins, and Conditional Access sets policies for when access is granted."
-    },
-    {
-      text: "Which Microsoft 365 tool is primarily used for team chat, meetings, and collaboration?",
-      answers: ["SharePoint", "Microsoft Teams", "OneDrive", "Outlook"],
-      correctIndex: 1,
-      explanation: "Microsoft Teams is the hub for chat, meetings, and collaboration. SharePoint manages sites and documents, OneDrive handles personal file storage, and Outlook is for email and calendar."
-    }
-  ]
-};
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1)); //pick a random spot from 0..i
@@ -235,6 +120,40 @@ const trackDomains = {
         tips: "Get comfortable with risk management vocabulary — risk appetite, tolerance, and the four responses (mitigate, transfer, accept, avoid). Know the governance hierarchy: policies (high-level intent) → standards (mandatory rules) → procedures (step-by-step). Third-party/vendor risk and compliance auditing are recurring themes, so understand due diligence and the purpose of an audit."
       }
     }
+  ],
+    microsoft: [
+    {
+      id: 1, name: "Security, Compliance & Identity Concepts",
+      intro: {
+        overview: "The conceptual foundation: the shared responsibility model, defense in depth, the Zero Trust model, encryption and hashing, and Governance/Risk/Compliance (GRC) concepts — plus core identity concepts including authentication, authorization, identity providers, directory services, and federation.",
+        why: "Weighted at 10–15% — the smallest domain, but it establishes the vocabulary every later domain reuses. Zero Trust in particular threads through the entire exam, so a shaky grasp here quietly costs points elsewhere.",
+        tips: "Know that identity is the primary security perimeter in cloud thinking, and keep authentication (proving who you are) separate from authorization (what you're allowed to do). Understand the three Zero Trust principles (verify explicitly, use least privilege, assume breach) and that the shared responsibility split shifts across IaaS, PaaS, and SaaS."
+      }
+    },
+    {
+      id: 2, name: "Capabilities of Microsoft Entra",
+      intro: {
+        overview: "Microsoft's identity platform: Microsoft Entra ID and its identity types (including agent ID), hybrid identity, authentication methods and MFA, password protection, Conditional Access, Entra roles and RBAC, and identity protection and governance features like access reviews, Privileged Identity Management, and ID Protection.",
+        why: "Weighted at 25–30%. This is the identity heart of the exam and the gateway to the role-based SC-300 and AZ-500 tracks. Expect heavy emphasis on how Entra enforces access.",
+        tips: "Distinguish the access-management tools: Conditional Access sets the policies that decide when access is granted, MFA adds a second verification factor, and RBAC assigns permissions by role. Know that Privileged Identity Management provides just-in-time elevated access, and that Entra ID is the rebranded Azure AD."
+      }
+    },
+    {
+      id: 3, name: "Capabilities of Microsoft Security Solutions",
+      intro: {
+        overview: "Microsoft's security product portfolio: core Azure infrastructure security (DDoS Protection, Azure Firewall, WAF, NSGs, Bastion, Key Vault, network segmentation), security management via Microsoft Defender for Cloud and CSPM, Microsoft Sentinel (SIEM/SOAR), and threat protection across the Microsoft Defender XDR family.",
+        why: "The largest domain at 35–40% — roughly a third of the exam. It's the most product-name-heavy section, and most candidates lose marks here by confusing which Defender product covers what.",
+        tips: "Build a mental map of the Defender family: Defender for Endpoint (devices), for Office 365 (email/collaboration), for Identity (on-prem AD signals), for Cloud Apps (SaaS). Know that Sentinel is the cloud-native SIEM/SOAR for collection and correlation, while Defender for Cloud handles posture management (CSPM). Match each Azure tool to its job — Key Vault for secrets, NSGs for subnet traffic rules, Bastion for secure VM access."
+      }
+    },
+    {
+      id: 4, name: "Capabilities of Microsoft Compliance Solutions",
+      intro: {
+        overview: "Microsoft's compliance and data-governance tooling: the Service Trust Portal and Microsoft's privacy principles, compliance management through Microsoft Purview (Compliance Manager and compliance score), information protection and data lifecycle management (classification, sensitivity labels, DLP, records and retention), and insider risk, eDiscovery, and audit capabilities.",
+        why: "Weighted at 20–25%. This domain is underrepresented in a lot of study material, so it's where prepared candidates gain an edge. It's Purview-centric and concept-focused rather than configuration-focused.",
+        tips: "Anchor everything to Microsoft Purview: Compliance Manager measures your posture and produces a compliance score, sensitivity labels classify and protect data, and DLP prevents unauthorized sharing. Know that retention policies govern how long data is kept, and keep insider risk management, eDiscovery, and audit as three distinct Purview capabilities."
+      }
+    }
   ]
 };
 
@@ -243,7 +162,8 @@ const trackDomains = {
 // A track not listed here simply shows no label.
 const trackVersions = {
   cissp: "Based on the current (ISC)² CISSP exam outline",
-  securityPlus: "Based on CompTIA Security+ SY0-701 objectives"
+  securityPlus: "Based on CompTIA Security+ SY0-701 objectives",
+  microsoft: "Based on Microsoft SC-900 exam objectives (updated July 2026)"
 };
 
 //---- Load a track's questions from its JSON file ----

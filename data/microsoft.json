@@ -3,18 +3,14 @@
     "text": "In Microsoft's cloud model, which service type provides virtual machines where you manage the OS and applications?",
     "answers": ["SaaS", "PaaS", "IaaS", "FaaS"],
     "correctIndex": 2,
+    "domain": 1,
     "explanation": "Infrastructure as a Service (IaaS) provides virtualized compute like VMs, where you manage the OS and applications while the provider manages the hardware. PaaS abstracts the OS away, and SaaS delivers finished applications."
   },
   {
     "text": "Which Microsoft Entra (Azure AD) feature adds a second verification step at sign-in?",
     "answers": ["Single Sign-On", "Multi-Factor Authentication", "Conditional Access", "Self-Service Password Reset"],
     "correctIndex": 1,
+    "domain": 2,
     "explanation": "Multi-Factor Authentication (MFA) requires a second verification step beyond the password, such as a phone approval or code. Single Sign-On reduces repeated logins, and Conditional Access sets policies for when access is granted."
-  },
-  {
-    "text": "Which Microsoft 365 tool is primarily used for team chat, meetings, and collaboration?",
-    "answers": ["SharePoint", "Microsoft Teams", "OneDrive", "Outlook"],
-    "correctIndex": 1,
-    "explanation": "Microsoft Teams is the hub for chat, meetings, and collaboration. SharePoint manages sites and documents, OneDrive handles personal file storage, and Outlook is for email and calendar."
   }
 ]
