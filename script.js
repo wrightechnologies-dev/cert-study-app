@@ -194,7 +194,7 @@ const trackDomains = {
       }
     }
   ],
-  securityPlus: [
+ securityPlus: [
     {
       id: 1, name: "General Security Concepts",
       intro: {
@@ -203,13 +203,41 @@ const trackDomains = {
         tips: "Master the two-axis control classification: every control has a type (technical, managerial, operational, physical) AND a function (preventive, detective, corrective, deterrent, compensating). Also expect zero trust — it's new emphasis in SY0-701 — and remember the third A in AAA is Accounting, not Availability."
       }
     },
-    { id: 2, name: "Threats, Vulnerabilities & Mitigations" },
-    { id: 3, name: "Security Architecture" },
-    { id: 4, name: "Security Operations" },
-    { id: 5, name: "Security Program Management & Oversight" }
+    {
+      id: 2, name: "Threats, Vulnerabilities & Mitigations",
+      intro: {
+        overview: "The threat landscape in depth: threat actors and their motivations, attack vectors and surfaces, the full range of vulnerability types (application, hardware, cloud, supply-chain, cryptographic), indicators of malicious activity, and the mitigation techniques used to reduce risk.",
+        why: "This is the second-largest domain on the exam at 22%. It's also the most scenario-heavy, expecting you to recognize an attack or vulnerability from a described situation and pick the right defense, not just define terms.",
+        tips: "Learn to profile threat actors by motivation and resources — an APT is nation-state and stealthy; a script kiddie uses tools they don't understand. Match each attack to its primary mitigation (DDoS → availability defenses, on-path → encryption, privilege escalation → least privilege). Know your mitigation toolkit cold: segmentation, hardening, patching, and least privilege recur constantly."
+      }
+    },
+    {
+      id: 3, name: "Security Architecture",
+      intro: {
+        overview: "Designing secure systems across environments: cloud, on-premises, and hybrid architectures; the security implications of different infrastructure models; data protection strategies including encryption and classification; and resilience concepts like high availability and recovery.",
+        why: "Weighted at 18%. This domain tests architectural judgment — choosing the right protection for the right environment and understanding the tradeoffs of each design, rather than memorizing isolated facts.",
+        tips: "Understand the shared responsibility model — what the cloud provider secures versus what you secure — since it shifts across IaaS, PaaS, and SaaS. Match data protection to state and context: encryption for data at rest and in transit, classification to drive handling. Know resilience terms (high availability, redundancy, RTO/RPO) and how architecture choices affect them."
+      }
+    },
+    {
+      id: 4, name: "Security Operations",
+      intro: {
+        overview: "Security in day-to-day practice: applying hardening and secure configurations, identity and access management, vulnerability management, monitoring and alerting, incident response, and the automation that ties it together.",
+        why: "This is the heaviest domain on the exam at 28% — roughly a quarter of your questions, and the biggest single shift when CompTIA moved to SY0-701. It's operations-focused and heavily scenario-based, testing what security teams actually do day to day.",
+        tips: "Know the identity and access controls — MFA factor types, least privilege, provisioning and deprovisioning. Understand the vulnerability management cycle (identify, analyze, remediate, validate) and the phases of incident response (preparation, detection, containment, eradication, recovery, lessons learned). Recognize what a SIEM does and why centralized monitoring matters."
+      }
+    },
+    {
+      id: 5, name: "Security Program Management & Oversight",
+      intro: {
+        overview: "The governance layer: security policies, standards, and procedures; risk management processes; third-party and vendor risk; compliance and audits; and security awareness practices that shape organizational behavior.",
+        why: "Weighted at 20% — the third-largest domain, and the most managerial in tone. It asks you to think like a security leader making risk and governance decisions, not a technician configuring a device.",
+        tips: "Get comfortable with risk management vocabulary — risk appetite, tolerance, and the four responses (mitigate, transfer, accept, avoid). Know the governance hierarchy: policies (high-level intent) → standards (mandatory rules) → procedures (step-by-step). Third-party/vendor risk and compliance auditing are recurring themes, so understand due diligence and the purpose of an audit."
+      }
+    }
   ]
-
 };
+
 // ---- Optional exam-version label per track ----
 // A track listed here shows its version note on the domain screen.
 // A track not listed here simply shows no label.
