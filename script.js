@@ -154,6 +154,26 @@ const trackDomains = {
         tips: "Anchor everything to Microsoft Purview: Compliance Manager measures your posture and produces a compliance score, sensitivity labels classify and protect data, and DLP prevents unauthorized sharing. Know that retention policies govern how long data is kept, and keep insider risk management, eDiscovery, and audit as three distinct Purview capabilities."
       }
     }
+  ],
+  networkPlus: [
+    { id: 1, name: "Networking Concepts" },
+    { id: 2, name: "Network Implementation" },
+    { id: 3, name: "Network Operations" },
+    { id: 4, name: "Network Security" },
+    { id: 5, name: "Network Troubleshooting" }
+  ],
+  aPlusCore1: [
+    { id: 1, name: "Mobile Devices" },
+    { id: 2, name: "Networking" },
+    { id: 3, name: "Hardware" },
+    { id: 4, name: "Virtualization & Cloud Computing" },
+    { id: 5, name: "Hardware & Network Troubleshooting" }
+  ],
+  aPlusCore2: [
+    { id: 1, name: "Operating Systems" },
+    { id: 2, name: "Security" },
+    { id: 3, name: "Software Troubleshooting" },
+    { id: 4, name: "Operational Procedures" }
   ]
 };
 
@@ -163,7 +183,10 @@ const trackDomains = {
 const trackVersions = {
   cissp: "Based on the current (ISC)² CISSP exam outline",
   securityPlus: "Based on CompTIA Security+ SY0-701 objectives",
-  microsoft: "Based on Microsoft SC-900 exam objectives (updated July 2026)"
+  microsoft: "Based on Microsoft SC-900 exam objectives (updated July 2026)",
+  networkPlus: "Based on CompTIA Network+ N10-009 objectives",
+  aPlusCore1: "Based on CompTIA A+ Core 1 (220-1201) objectives",
+  aPlusCore2: "Based on CompTIA A+ Core 2 (220-1202) objectives"
 };
 
 //---- Load a track's questions from its JSON file ----

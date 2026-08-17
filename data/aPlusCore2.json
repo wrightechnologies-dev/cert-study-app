@@ -1,0 +1,9 @@
+[
+  {
+    "text": "Which Windows utility lets you view and manage startup programs, running processes, and performance?",
+    "answers": ["Disk Cleanup", "Task Manager", "Device Manager", "Event Viewer"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "Task Manager shows running processes, startup items, and real-time performance. Device Manager handles hardware and drivers, Event Viewer shows logs, and Disk Cleanup frees storage space."
+  }
+]
