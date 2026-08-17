@@ -62,4 +62,89 @@
     "domain": 1,
     "explanation": "Security awareness training driven by policy is a managerial (administrative) control, because it involves governance, policy, and human processes rather than technology or physical barriers. Technical controls are enforced by systems, and physical controls are tangible barriers."
   }
+  ,
+{
+    "text": "A group of skilled attackers backed by a nation-state maintains covert, long-term access to a network to steal intelligence over months. Which threat actor type BEST describes them?",
+    "answers": ["Script kiddie", "Advanced Persistent Threat (APT)", "Hacktivist", "Insider threat"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "An Advanced Persistent Threat (APT) is a well-resourced, often nation-state-backed actor that establishes stealthy, long-term access to pursue strategic goals. Script kiddies lack skill and use others' tools, hacktivists act for ideological causes and usually seek visibility, and insider threats originate from within the organization."
+  },
+  {
+    "text": "Which characteristic MOST distinguishes an unskilled attacker (script kiddie) from other threat actors?",
+    "answers": ["Nation-state funding", "Reliance on existing tools and scripts without deep technical understanding", "A political or social motivation", "Authorized access to internal systems"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "The defining trait of a script kiddie is using pre-built tools and scripts they did not create and do not fully understand. Nation-state funding describes APTs, political motivation describes hacktivists, and authorized internal access describes insider threats."
+  },
+  {
+    "text": "An employee receives a phone call from someone claiming to be IT support, who urgently pressures them to reveal their password to 'fix an account lockout.' Which attack vector is being used?",
+    "answers": ["Social engineering (vishing)", "SQL injection", "Cross-site scripting", "Buffer overflow"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "This is social engineering carried out by voice call, known as vishing, exploiting human trust and urgency rather than a technical flaw. SQL injection, cross-site scripting, and buffer overflow are all technical attacks against software, not manipulation of a person."
+  },
+  {
+    "text": "An attacker registers a domain named 'micros0ft-support.com' to trick users into believing it is legitimate. Which technique does this represent?",
+    "answers": ["Typosquatting", "Watering hole attack", "Privilege escalation", "Pretexting"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Registering a lookalike domain that relies on misreading or mistyping is typosquatting (a form of URL hijacking). A watering hole attack compromises a site the target already visits, privilege escalation gains higher rights on a system, and pretexting invents a false scenario to extract information."
+  },
+  {
+    "text": "A vulnerability scan reveals that a production server is running software with a publicly known flaw for which the vendor has released no fix. What type of exposure is the UNPATCHABLE nature of this flaw BEST associated with when no patch yet exists at time of discovery?",
+    "answers": ["Zero-day vulnerability", "Weak configuration", "End-of-life vulnerability", "Race condition"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "A zero-day is a vulnerability known to attackers (or newly disclosed) before a vendor patch is available, leaving defenders no immediate fix. A weak configuration is a hardening gap, an end-of-life vulnerability affects unsupported software, and a race condition is a timing flaw in concurrent operations."
+  },
+  {
+    "text": "A company continues running an operating system that the vendor no longer supports with security updates. Which vulnerability category does this create?",
+    "answers": ["Zero-day", "Legacy / end-of-life system vulnerability", "Cryptographic weakness", "Injection flaw"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "Running unsupported, end-of-life software means no further security patches are issued, leaving known flaws permanently unaddressed — a legacy system vulnerability. Zero-days involve unpatched-but-new flaws, cryptographic weaknesses involve flawed encryption, and injection flaws involve unvalidated input."
+  },
+  {
+    "text": "An attacker floods a web server with traffic from thousands of compromised devices simultaneously, making the service unavailable to legitimate users. Which attack is this?",
+    "answers": ["Distributed Denial of Service (DDoS)", "On-path (man-in-the-middle) attack", "SQL injection", "Privilege escalation"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Overwhelming a service with traffic from many compromised hosts (a botnet) to deny availability is a Distributed Denial of Service (DDoS) attack. An on-path attack intercepts communications, SQL injection manipulates database queries, and privilege escalation gains elevated rights — none of which target availability by flooding."
+  },
+  {
+    "text": "After gaining access to a standard user account, an attacker exploits a flaw to gain administrator-level rights on the same system. Which activity is this?",
+    "answers": ["Lateral movement", "Privilege escalation", "Data exfiltration", "Phishing"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "Gaining higher permissions than originally granted on a system is privilege escalation. Lateral movement is spreading to other systems, data exfiltration is unauthorized data removal, and phishing is a social-engineering method to gain initial access — not the elevation of rights itself."
+  },
+  {
+    "text": "Users report that a website is redirecting them to a malicious page. Investigation shows the attacker altered responses between the user and server in real time. Which attack does this describe?",
+    "answers": ["On-path (man-in-the-middle) attack", "Brute-force attack", "Watering hole attack", "Logic bomb"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Intercepting and altering communications between two parties in transit is an on-path (man-in-the-middle) attack. A brute-force attack guesses credentials, a watering hole compromises a trusted site the target visits, and a logic bomb is malicious code triggered by a condition."
+  },
+  {
+    "text": "An organization divides its network so that the finance systems reside on a separate segment isolated from general user workstations. Which mitigation technique is this?",
+    "answers": ["Network segmentation", "Patch management", "Input validation", "Full-disk encryption"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Isolating systems into separate network zones to limit access and contain breaches is network segmentation. Patch management addresses software flaws, input validation defends applications against malicious input, and full-disk encryption protects data at rest — none of which isolate network segments."
+  },
+  {
+    "text": "A security team removes unnecessary services, closes unused ports, and disables default accounts on a new server before deployment. Which mitigation practice are they performing?",
+    "answers": ["System hardening", "Threat hunting", "Social engineering", "Data classification"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Reducing a system's attack surface by removing unneeded services, ports, and default accounts is system hardening. Threat hunting proactively searches for hidden threats, social engineering is an attack method, and data classification labels information by sensitivity — none describe reducing the attack surface."
+  },
+  {
+    "text": "A newly discovered indicator of compromise on a workstation is an unexpected outbound connection to an unfamiliar external IP address at 3 a.m. What does this MOST likely suggest?",
+    "answers": ["Normal scheduled Windows updates", "Possible command-and-control or data exfiltration activity", "A hardware failure in the network card", "An expired TLS certificate"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "Unexpected outbound traffic to an unknown external address, especially at unusual hours, is a classic indicator of compromise suggesting command-and-control communication or data exfiltration. Scheduled updates go to known vendor endpoints, and hardware failures or certificate errors do not generate covert outbound connections to unfamiliar IPs."
+  }
 ]

@@ -129,14 +129,70 @@ function shuffle(array) {
 // A track NOT listed here just starts its quiz normally.
 const trackDomains = {
   cissp: [
-    { id: 1, name: "Security & Risk Management" },
-    { id: 2, name: "Asset Security" },
-    { id: 3, name: "Security Architecture & Engineering" },
-    { id: 4, name: "Communication & Network Security" },
-    { id: 5, name: "Identity & Access Management" },
-    { id: 6, name: "Security Assessment & Testing" },
-    { id: 7, name: "Security Operations" },
-    { id: 8, name: "Software Development Security" }
+    {
+      id: 1, name: "Security & Risk Management",
+      intro: {
+        overview: "The governance backbone of the exam: the CIA triad, security control types, the (ISC)² Code of Ethics, risk management concepts (quantitative and qualitative analysis, risk treatment), compliance and legal considerations, and business continuity planning fundamentals.",
+        why: "It's the largest domain at 15% — and the most conceptual. The mindset it establishes (manage risk, think like a manager, ethics and legality override convenience) is the lens the entire exam expects you to reason through. Weakness here shows up everywhere.",
+        tips: "Memorize the quantitative risk formulas cold: SLE = Asset Value × Exposure Factor, ALE = SLE × ARO. Know the four risk responses (mitigate, transfer, accept, avoid) and that risk acceptance is a legitimate management decision you document rather than override. When ethics and business advantage conflict, the (ISC)² canons always win."
+      }
+    },
+    {
+      id: 2, name: "Asset Security",
+      intro: {
+        overview: "Protecting data across its lifecycle: classification and labeling, ownership roles (owner, custodian, processor), data states (at rest, in transit, in use), data remanence and secure disposal, and retention requirements.",
+        why: "Weighted at 10%. This domain is where abstract policy meets concrete handling — it tests whether you can assign the right responsibility to the right role and choose the right protection for the right data state.",
+        tips: "Nail the roles: the data owner (a senior business official) is accountable for classification and access decisions; the custodian merely implements what the owner specifies. Match protection to state — TLS for data in transit, encryption for data at rest. For media leaving the organization, remember data remanence means degaussing or physical destruction, not just deletion or formatting."
+      }
+    },
+    {
+      id: 3, name: "Security Architecture & Engineering",
+      intro: {
+        overview: "The engineering core: security models (Bell-LaPadula, Biba, Clark-Wilson), secure design principles, cryptography (symmetric vs. asymmetric, hashing, PKI, digital signatures), and the security capabilities of systems and their vulnerabilities.",
+        why: "Weighted at 13% and one of the most technically demanding domains. Cryptography alone accounts for a heavy share of questions, and the concepts here (least privilege, defense in depth, trust models) recur across the network and IAM domains.",
+        tips: "For security models, remember the direction of protection: Bell-LaPadula protects confidentiality (no read up, no write down), Biba protects integrity (no read down, no write up). Distinguish what each crypto tool provides — a digital signature gives authenticity and integrity, not confidentiality. Know the tradeoffs of symmetric (fast, key distribution problem) vs. asymmetric (slow, solves key exchange)."
+      }
+    },
+    {
+      id: 4, name: "Communication & Network Security",
+      intro: {
+        overview: "Securing networks and their transmissions: the OSI and TCP/IP models, secure protocols, network segmentation, common network attacks, and the design of secure network architectures including wireless and remote access.",
+        why: "Weighted at 13%. Network fundamentals underpin much of security operations and architecture — you're expected to map threats and controls to the right layer of the model and reason about where a control belongs.",
+        tips: "Be fluent in the OSI layers and what operates at each — logical addressing and routing at Layer 3, transport and end-to-end delivery at Layer 4. Know your secure-vs-insecure protocol pairs (SSH over Telnet, TLS-protected services over their plaintext equivalents). Understand segmentation and zero-trust concepts as network design choices, not just buzzwords."
+      }
+    },
+    {
+      id: 5, name: "Identity & Access Management",
+      intro: {
+        overview: "Controlling who can access what: identification, authentication, authorization, and accountability; the access control models (DAC, MAC, RBAC, ABAC); federation and single sign-on; and the identity lifecycle from provisioning to deprovisioning.",
+        why: "Weighted at 13%. IAM is where access decisions are actually enforced, and the exam leans hard on distinguishing the access control models and understanding multi-factor authentication factors.",
+        tips: "Keep the access control models straight: MAC uses system-enforced labels and clearances (the owner can't override), DAC leaves decisions to the data owner, RBAC grants by job role. Know the three authentication factor types (something you know / have / are) and that true MFA combines different types, not two of the same. Don't confuse authentication (proving identity) with authorization (what you're permitted to do)."
+      }
+    },
+    {
+      id: 6, name: "Security Assessment & Testing",
+      intro: {
+        overview: "Verifying that controls work: assessment and test strategies, vulnerability assessments and penetration testing, log reviews and analysis, code review and testing methods (SAST vs. DAST), and reporting to management.",
+        why: "Weighted at 12%. This domain tests whether you can choose the right assessment technique for the goal and interpret results — distinguishing, for example, a scan that finds known weaknesses from a test that actively exploits them.",
+        tips: "Separate the testing methods clearly: SAST analyzes source code without running it, DAST tests a running application, and penetration testing actively exploits weaknesses to prove impact. Know the difference between a vulnerability assessment (identifies) and a penetration test (exploits). Understand why independent, objective assessment matters for trustworthy results."
+      }
+    },
+    {
+      id: 7, name: "Security Operations",
+      intro: {
+        overview: "Running security day to day: incident response, logging and monitoring (SIEM), the principles of least privilege and separation of duties, personnel controls like mandatory vacations and job rotation, backup strategies, and disaster recovery metrics.",
+        why: "Weighted at 13% and one of the broadest domains in practice. It's where governance concepts become operational reality — you're expected to know both the people-and-process controls and the recovery metrics that drive continuity planning.",
+        tips: "Memorize the recovery metrics and don't swap them: RTO is maximum tolerable downtime (time to restore), RPO is maximum tolerable data loss (measured as a point in time). Know the 3-2-1 backup rule (three copies, two media types, one offsite). Understand why mandatory vacations and job rotation are detective/deterrent controls against fraud that depends on one person's exclusive control."
+      }
+    },
+    {
+      id: 8, name: "Software Development Security",
+      intro: {
+        overview: "Building security into software: the secure SDLC, common application vulnerabilities (SQL injection, buffer overflow, XSS), secure coding practices like input validation, and managing third-party and supply-chain risk with tools like a software bill of materials.",
+        why: "Weighted at 11% — the second-smallest domain, but increasingly emphasized. It rewards understanding why security belongs early in development rather than bolted on at the end.",
+        tips: "Match each vulnerability to its primary defense: SQL injection → input validation and parameterized queries; buffer overflow → bounds checking and memory-safe functions; unchecked file uploads → input validation. Remember the economic argument — flaws caught early in the SDLC are far cheaper to fix than those found after release. Know that an SBOM plus regular vulnerability checks addresses third-party/supply-chain risk."
+      }
+    }
   ],
   securityPlus: [
     {
