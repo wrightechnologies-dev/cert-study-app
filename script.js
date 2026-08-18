@@ -156,11 +156,46 @@ const trackDomains = {
     }
   ],
   networkPlus: [
-    { id: 1, name: "Networking Concepts" },
-    { id: 2, name: "Network Implementation" },
-    { id: 3, name: "Network Operations" },
-    { id: 4, name: "Network Security" },
-    { id: 5, name: "Network Troubleshooting" }
+    {
+      id: 1, name: "Networking Concepts",
+      intro: {
+        overview: "The theory foundation: the OSI reference model, common ports and protocols, IP addressing and subnetting, cabling and connector types, network topologies and appliances, cloud concepts, and traffic types (unicast, broadcast, multicast).",
+        why: "Weighted at 23% — the second-largest domain and the vocabulary the rest of the exam is built on. Ports, the OSI layers, and subnetting recur constantly in the implementation and troubleshooting domains, so gaps here quietly cost points everywhere.",
+        tips: "Memorize the common ports cold (SSH 22, DNS 53, HTTP 80, HTTPS 443, RDP 3389, SNMP 161, Syslog 514) and which OSI layer each function lives at — logical addressing and routing at Layer 3, end-to-end delivery at Layer 4. Drill CIDR and subnetting daily until network, broadcast, and usable host ranges are automatic. Know the RFC 1918 private ranges and the 169.254.0.0/16 APIPA block on sight."
+      }
+    },
+    {
+      id: 2, name: "Network Implementation",
+      intro: {
+        overview: "Building the network: configuring switches and routers, VLANs and 802.1Q trunking, spanning tree, static and dynamic routing, wireless standards and deployment (SSIDs, bands, antennas), and choosing the right cabling and connectors for the job.",
+        why: "Weighted at 20%. This is the hands-on configuration domain — it tests whether you can turn concepts into working infrastructure and pick the correct technology for a given requirement.",
+        tips: "Know the difference between an access port (one VLAN, untagged) and a trunk port (many VLANs, 802.1Q-tagged). Understand when static routing fits (small/edge) versus a dynamic protocol like OSPF (adapts automatically). For wireless, match the scenario to the fix — a single SSID across APs for seamless roaming, fiber over copper for distance or EMI immunity. Remember PoE (802.3af/at) powers devices over the data cable."
+      }
+    },
+    {
+      id: 3, name: "Network Operations",
+      intro: {
+        overview: "Keeping the network running: monitoring with SNMP and Syslog, performance baselines, documentation and configuration management, high availability and failover, link aggregation, disaster-recovery metrics (RTO/RPO/MTBF), and port mirroring for analysis.",
+        why: "Weighted at 19%. Operations gained weight in the N10-009 revision — it's where day-to-day management, redundancy, and business-continuity thinking are tested, not just device setup.",
+        tips: "Separate the monitoring tools: SNMP (161) polls device health and sends traps, Syslog (514) centralizes log messages. Don't swap the recovery metrics — RTO is time to restore, RPO is tolerable data loss measured backward in time. Understand that a baseline is your reference for 'normal,' link aggregation (LACP) bundles links for bandwidth and redundancy, and failover provides automatic takeover for high availability."
+      }
+    },
+    {
+      id: 4, name: "Network Security",
+      intro: {
+        overview: "Defending the network: wireless security standards (WPA2/WPA3), access control lists, port security and 802.1X authentication, firewall rule design, network segmentation, and recognizing common Layer 2 attacks like MAC flooding, ARP poisoning, and DHCP starvation.",
+        why: "Weighted at 14% — the smallest domain, and it lost a little weight in the N10-009 revision. But it overlaps heavily with Security+ concepts, so the payoff for studying it is high if you're pursuing both certs.",
+        tips: "Know that WPA3 is the current strongest wireless standard and WEP is obsolete. Design firewall rules around implicit deny — block by default, permit only what's needed. Understand that 802.1X authenticates devices at the port (often via RADIUS) before granting access, and be able to name the common Layer 2 attacks and the switch features that mitigate them (port security, DHCP snooping, dynamic ARP inspection)."
+      }
+    },
+    {
+      id: 5, name: "Network Troubleshooting",
+      intro: {
+        overview: "Diagnosing and fixing problems: the CompTIA troubleshooting methodology, hardware and cabling tools (cable testers, toner probes), command-line utilities (ping, nslookup, ipconfig), and isolating connectivity, addressing, DNS, duplex, and wireless-interference faults.",
+        why: "The largest domain on the exam at 24% — nearly a quarter of your questions, and heavily scenario- and PBQ-based. It rewards a disciplined, methodical approach over guessing.",
+        tips: "Memorize the methodology in order: identify the problem, establish a theory, test the theory, establish a plan, implement, verify full functionality, then document — and know that documentation is always the final step. Learn the diagnostic signatures: works by IP but not by name = DNS; APIPA (169.254.x.x) = no DHCP response; on-subnet works but off-subnet fails = wrong default gateway; intermittent drops with duplicate IPs = address conflict."
+      }
+    }
   ],
   aPlusCore1: [
     { id: 1, name: "Mobile Devices" },
