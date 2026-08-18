@@ -197,18 +197,81 @@ const trackDomains = {
       }
     }
   ],
-  aPlusCore1: [
-    { id: 1, name: "Mobile Devices" },
-    { id: 2, name: "Networking" },
-    { id: 3, name: "Hardware" },
-    { id: 4, name: "Virtualization & Cloud Computing" },
-    { id: 5, name: "Hardware & Network Troubleshooting" }
+aPlusCore1: [
+    {
+      id: 1, name: "Mobile Devices",
+      intro: {
+        overview: "Laptop and mobile hardware: display components (LCD/OLED, backlight), batteries, storage upgrades, and the connectors and accessories that link devices together — USB-C, Lightning, docking stations, and short-range wireless like NFC and Bluetooth.",
+        why: "Weighted at 13% — the smallest Core 1 domain, but it's quick-win territory. The concepts are concrete and physical, and much of it overlaps with everyday device support you likely already do.",
+        tips: "Know your connectors on sight: USB-C is reversible and now standard, Micro/Mini-USB are the older non-reversible types, Lightning is Apple's legacy connector. Recognize the display fault signatures — a faint image means the backlight failed, not the whole panel. Treat a swollen lithium-ion battery as a safety hazard: never puncture it. Match short-range wireless to use: NFC for tap-to-pay, Bluetooth for peripherals."
+      }
+    },
+    {
+      id: 2, name: "Networking",
+      intro: {
+        overview: "Networking fundamentals from a support technician's angle: Wi-Fi standards and frequency bands, common ports and protocols, cabling and connectors (RJ45, fiber, coax), SOHO routers, DHCP and DNS, and connection types like DSL, cable, and fiber.",
+        why: "Weighted at 23% — the third-largest domain, tied closely to real help-desk work. It overlaps with Network+ but stays at a practical, device-facing level rather than deep protocol theory.",
+        tips: "Memorize the wireless bands and standards: 802.11ac is 5 GHz only, 802.11ax (Wi-Fi 6) adds 2.4/5 GHz with 6 GHz in Wi-Fi 6E; 2.4 GHz travels farther, 5/6 GHz go faster. Keep the common ports sharp (HTTPS 443, HTTP 80, DNS 53). Recognize a 169.254.x.x address as a DHCP failure (APIPA). Know the connectors — RJ45 for Ethernet, RJ11 for phone, SC/LC/ST for fiber."
+      }
+    },
+    {
+      id: 3, name: "Hardware",
+      intro: {
+        overview: "The physical PC: motherboards, CPUs and cooling, RAM types and form factors, power supplies, storage (HDD, SSD, NVMe) and RAID levels, expansion cards, display and power connectors, and printers (laser, inkjet, thermal, impact) with their maintenance.",
+        why: "Weighted at 25% — the second-largest domain and the heart of A+. Hardware plus troubleshooting together make up more than half of Core 1, so this is where the bulk of your study hours belong.",
+        tips: "Lock down the RAID levels: 0 is striping (speed, no redundancy), 1 is mirroring, 5 is striping with parity (min 3 drives), 10 is stripe+mirror (min 4). Match RAM to the system — SODIMM for laptops, DIMM for desktops, ECC for servers. Pair each printer type with its symptom and consumable (faded laser = toner, streaky inkjet = clogged nozzles). Always name the ESD wrist strap for static safety."
+      }
+    },
+    {
+      id: 4, name: "Virtualization & Cloud Computing",
+      intro: {
+        overview: "Cloud service models (IaaS, PaaS, SaaS) and deployment models (public, private, hybrid, community), plus local virtualization: hypervisor types, creating VMs, allocating resources, and using snapshots to save and restore VM state.",
+        why: "Weighted at 11% — the smallest domain, but conceptually distinct and easy to score on once the models click. It also builds directly toward Cloud+ and other certs if you continue.",
+        tips: "Order the cloud models by how much you manage: IaaS (you handle OS and up), PaaS (you handle just the app/code), SaaS (you handle nothing but using it). Distinguish hypervisor types — Type 1 runs bare-metal on hardware, Type 2 runs as an app on a host OS (VirtualBox, VMware Workstation). Remember a snapshot captures VM state so you can roll back after a risky change."
+      }
+    },
+    {
+      id: 5, name: "Hardware & Network Troubleshooting",
+      intro: {
+        overview: "Diagnosing physical and connectivity failures: POST beep codes, no-boot and no-power scenarios, overheating, RAM and drive faults, RAID recovery, display and projector issues, printer problems, and mobile-device symptoms — all approached through a structured methodology.",
+        why: "The largest Core 1 domain at 28% — more than a quarter of the exam and heavily performance-based. It rewards a disciplined, change-first diagnostic approach over guessing.",
+        tips: "Isolate by swapping the variable: if an external monitor works but the laptop screen is dark, the fault is the internal panel/backlight, not shared components. When a problem starts right after a change (new RAM won't boot), revert that change first. Learn the signatures — clicking drive = imminent mechanical failure, random errors with no pattern = failing RAM, thermal shutdowns = clogged cooling. RAID 5 survives one drive; replace and rebuild promptly."
+      }
+    }
   ],
   aPlusCore2: [
-    { id: 1, name: "Operating Systems" },
-    { id: 2, name: "Security" },
-    { id: 3, name: "Software Troubleshooting" },
-    { id: 4, name: "Operational Procedures" }
+    {
+      id: 1, name: "Operating Systems",
+      intro: {
+        overview: "Working with Windows, macOS, and Linux: file systems (NTFS, FAT32, exFAT, ext4, APFS), partitioning (GPT vs MBR), installation and upgrade methods, command-line tools, Windows features and settings, and the difference between domain and workgroup environments.",
+        why: "Weighted at 28% — tied for the largest Core 2 domain. Windows administration is the backbone of help-desk work, and the command-line tools and file-system knowledge here reappear throughout the troubleshooting domain.",
+        tips: "Match each file system to its use: NTFS is the Windows default (permissions, encryption, journaling), exFAT for large files across OSes, FAT32 for broad compatibility with a 4 GB file limit, ext4 for Linux. Know GPT (large drives, many partitions, UEFI) versus legacy MBR. Memorize the key commands — chkdsk (disk errors), sfc (system files), ipconfig (network/DNS), and the Linux basics ls, cd, sudo, chmod. Remember that combined NTFS and share permissions resolve to the most restrictive."
+      }
+    },
+    {
+      id: 2, name: "Security",
+      intro: {
+        overview: "Endpoint and account security: malware types and the SOHO removal process, authentication and MFA, the principle of least privilege, social engineering attacks, physical and logical controls, full-disk encryption (BitLocker), data destruction, and wireless security.",
+        why: "Weighted at 28% — tied for the largest Core 2 domain, and the one that overlaps most directly with Security+ and your CISSP work. Time invested here pays off across multiple certs.",
+        tips: "Be able to name each malware type by its behavior — ransomware encrypts for payment, a Trojan hides in legitimate-looking software, a rootkit conceals itself at a deep level, a keylogger captures keystrokes. Know the SOHO removal order: identify/verify symptoms, quarantine, disable System Restore, remediate, then re-enable System Restore. Recognize the social-engineering variants (phishing/vishing/smishing, tailgating) and pair MFA with 'something you know/have/are.'"
+      }
+    },
+    {
+      id: 3, name: "Software Troubleshooting",
+      intro: {
+        overview: "Diagnosing OS and application failures: blue screens and boot problems, application crashes and missing DLLs, performance issues from runaway processes, browser hijacking and pop-ups, driver rollback, and mobile app and OS troubleshooting — all approached methodically.",
+        why: "Weighted at 23%. This domain is heavily scenario-based, testing whether you can pick the correct FIRST step and least-invasive fix rather than jumping straight to reinstalling or replacing.",
+        tips: "Prefer the least drastic fix that fits the symptom: repair/reinstall the one failing app rather than the whole OS, roll back a bad driver rather than reimage. Learn the tools by scenario — Safe Mode to isolate driver/software issues, System Restore to undo a bad change, Startup Repair for boot failures, Task Manager to find a runaway process. Persistent browser redirects and pop-ups point to malware or a hijacker, not hardware."
+      }
+    },
+    {
+      id: 4, name: "Operational Procedures",
+      intro: {
+        overview: "The professional side of IT: backup types and rotation schemes (3-2-1, GFS), ESD and electrical safety, change management, documentation and policies (AUP, SDS), secure data disposal, environmental controls, communication, and professionalism.",
+        why: "Weighted at 21% — the smallest Core 2 domain, but full of quick wins built on definitions and best practices rather than deep troubleshooting. It also reinforces the governance mindset shared with Security+ and CISSP.",
+        tips: "Keep the backup concepts straight: 3-2-1 means three copies, two media types, one off-site; GFS rotates daily/weekly/monthly sets; differential grows from the last full, incremental captures changes since any last backup. Always test restores — an untested backup isn't a backup. For safety, name the ESD wrist strap and grounding, and lift with the legs. Change management means request, approve, document, and keep a rollback plan."
+      }
+    }
   ]
 };
 

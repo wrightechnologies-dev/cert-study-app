@@ -146,5 +146,208 @@
     "correctIndex": 1,
     "domain": 2,
     "explanation": "Unexpected outbound traffic to an unknown external address, especially at unusual hours, is a classic indicator of compromise suggesting command-and-control communication or data exfiltration. Scheduled updates go to known vendor endpoints, and hardware failures or certificate errors do not generate covert outbound connections to unfamiliar IPs."
+  }  ,
+  {
+    "text": "Which system aggregates and correlates log data from many sources to provide centralized monitoring, alerting, and analysis for a security team?",
+    "answers": ["SIEM", "VPN", "DLP", "CASB"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "A SIEM (Security Information and Event Management) system collects, aggregates, and correlates logs from across the environment to enable centralized monitoring and alerting. A VPN secures connections, DLP prevents data exfiltration, and a CASB governs cloud service access."
+  },
+  {
+    "text": "During which incident response phase does the team take action to stop an active threat from spreading further, such as isolating an infected host?",
+    "answers": ["Containment", "Preparation", "Lessons learned", "Recovery"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "Containment focuses on limiting the damage and preventing an active incident from spreading, for example by isolating affected systems. Preparation happens before an incident, recovery restores normal operations afterward, and lessons learned reviews the response after resolution."
+  },
+  {
+    "text": "What is the PRIMARY purpose of the 'lessons learned' phase of incident response?",
+    "answers": ["To review the incident and improve future response and defenses", "To immediately re-image all affected systems", "To assign blame to individuals", "To notify attackers of the response"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "The lessons learned (post-incident) phase analyzes what happened and how the response performed, feeding improvements back into preparation and defenses. It is not about blame, re-imaging, or contacting attackers."
+  },
+  {
+    "text": "A technology automates repetitive security tasks and coordinates responses across tools using playbooks, freeing analysts from manual work. What is it called?",
+    "answers": ["SOAR", "SIEM", "IDS", "PKI"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "SOAR (Security Orchestration, Automation, and Response) automates repetitive tasks and orchestrates responses across tools via playbooks. A SIEM aggregates and correlates logs, an IDS detects intrusions, and PKI manages digital certificates."
+  },
+  {
+    "text": "A vulnerability scanner assigns a numerical severity score to each finding so teams can prioritize remediation. Which scoring system provides this?",
+    "answers": ["CVSS", "CVE", "OWASP", "MITRE ATT&CK"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "The Common Vulnerability Scoring System (CVSS) produces a numeric severity score used to prioritize remediation. CVE is the identifier catalog for known vulnerabilities, OWASP publishes web-security guidance, and MITRE ATT&CK catalogs adversary tactics and techniques."
+  },
+  {
+    "text": "A security team reduces a new server's attack surface by disabling unneeded services, closing unused ports, and changing default credentials. What is this practice called?",
+    "answers": ["System hardening", "Threat hunting", "Fuzzing", "Tokenization"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "Reducing the attack surface by removing unnecessary services, ports, and default settings is system hardening. Threat hunting proactively searches for hidden threats, fuzzing tests software with malformed input, and tokenization substitutes sensitive data with tokens."
+  },
+  {
+    "text": "An analyst wants network traffic metadata — source, destination, ports, and volume — without full packet contents, to spot unusual flows. Which data source is BEST?",
+    "answers": ["NetFlow", "Full packet capture", "BIOS logs", "SMTP headers"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "NetFlow provides traffic metadata (addresses, ports, byte counts) ideal for spotting anomalous flows without storing full payloads. Full packet capture records complete contents but is far larger, while BIOS logs and SMTP headers do not summarize network flows."
+  },
+  {
+    "text": "Which access control principle grants users only the minimum permissions required to perform their job duties?",
+    "answers": ["Least privilege", "Separation of duties", "Implicit allow", "Transitive trust"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "Least privilege limits each user to the minimum access needed, reducing the impact of compromise or misuse. Separation of duties splits sensitive tasks among people, implicit allow is an insecure default, and transitive trust passes trust between domains."
+  },
+  {
+    "text": "A company implements a system that requires special approval and time-limited elevated access for administrators to perform sensitive tasks. Which solution provides this?",
+    "answers": ["Privileged Access Management (PAM)", "Single Sign-On (SSO)", "A CAPTCHA", "A honeypot"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "Privileged Access Management (PAM) controls, monitors, and time-limits elevated administrative access, often with just-in-time approval. SSO streamlines authentication across apps, a CAPTCHA distinguishes humans from bots, and a honeypot is a decoy for attackers."
+  },
+  {
+    "text": "An organization wants to ensure former employees' accounts are promptly disabled when they leave. Which process addresses this?",
+    "answers": ["Account (identity) lifecycle management — deprovisioning", "Penetration testing", "Data masking", "Load balancing"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "Deprovisioning as part of account lifecycle management ensures accounts are disabled or removed when no longer needed, closing a common access gap. Penetration testing probes defenses, data masking obscures data, and load balancing distributes traffic."
+  },
+  {
+    "text": "A vulnerability cannot be immediately patched because the fix would break a critical application. The team adds extra monitoring and network restrictions to reduce risk in the meantime. What is this called?",
+    "answers": ["A compensating control", "A corrective control", "Risk acceptance with no action", "A detective-only control"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "A compensating control is an alternative safeguard used when the primary control (patching) isn't feasible, reducing risk until the real fix can be applied. Simply accepting the risk would involve no additional safeguards, which is not what is happening here."
+  },
+  {
+    "text": "A SIEM generates many alerts that turn out not to be real threats, wasting analyst time. What are these called, and what is the appropriate response?",
+    "answers": ["False positives; tune the correlation rules", "True positives; ignore them", "False negatives; disable logging", "True negatives; escalate immediately"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "Alerts that fire on non-malicious activity are false positives, and the fix is tuning the rules to reduce noise without missing real threats. A false negative is a missed real threat, and true positives/negatives are correct detections."
+  },
+  {
+    "text": "When collecting digital evidence during an investigation, which practice ensures the evidence remains admissible by documenting who handled it and when?",
+    "answers": ["Maintaining chain of custody", "Encrypting the evidence with a personal key", "Deleting duplicate copies", "Editing timestamps for clarity"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "Chain of custody documents every person who handled evidence and when, preserving its integrity and admissibility. Editing timestamps or deleting copies would compromise integrity, and encrypting with a personal key does not establish handling accountability."
+  },
+  {
+    "text": "During forensic collection, which data should be captured FIRST according to the order of volatility?",
+    "answers": ["Contents of RAM and running processes", "Data on backup tapes", "Files on a powered-off hard drive", "Archived email on a remote server"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "The order of volatility dictates capturing the most ephemeral data first — RAM and running process state disappear when power is lost. Disk files, backups, and archived data are far more persistent and can be collected afterward."
+  }  ,
+  {
+    "text": "A security model requires every access request to be authenticated and authorized regardless of whether it originates inside or outside the network perimeter. Which architecture is this?",
+    "answers": ["Zero trust", "Perimeter-based security", "Flat network", "Implicit trust"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "Zero trust follows 'never trust, always verify,' authenticating and authorizing each request regardless of network location. Perimeter-based and implicit-trust models trust internal traffic by default, and a flat network lacks segmentation entirely."
+  },
+  {
+    "text": "In a zero trust architecture, which component makes the decision to grant or deny an access request based on policy?",
+    "answers": ["The policy engine", "The load balancer", "The DHCP server", "The switch"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "The policy engine evaluates each request against policy and decides to grant or deny access, with the policy administrator enforcing that decision. Load balancers, DHCP servers, and switches handle traffic distribution and connectivity, not access decisions."
+  },
+  {
+    "text": "Which cryptographic approach uses a single shared key for both encryption and decryption, making it fast and suited to bulk data?",
+    "answers": ["Symmetric encryption", "Asymmetric encryption", "Hashing", "Digital signatures"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "Symmetric encryption (e.g., AES) uses one shared key for both operations and is efficient for large volumes of data. Asymmetric encryption uses a public/private key pair, hashing is one-way, and digital signatures combine hashing with asymmetric keys."
+  },
+  {
+    "text": "A secure web connection uses asymmetric encryption to exchange a key, then switches to symmetric encryption for the session. Why?",
+    "answers": ["Symmetric encryption is faster for bulk data, while asymmetric safely handles key exchange", "Asymmetric encryption cannot encrypt anything", "Symmetric encryption is more secure than any alternative", "Hashing replaces both during the session"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "This hybrid approach uses slower asymmetric encryption only to exchange the key securely, then fast symmetric encryption for the bulk session data — the pattern behind TLS. Asymmetric encryption can encrypt data but is too slow for large volumes."
+  },
+  {
+    "text": "In a public key infrastructure (PKI), which entity issues and digitally signs certificates to vouch for their authenticity?",
+    "answers": ["Certificate Authority (CA)", "Domain Name Server", "Load balancer", "Proxy server"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "A Certificate Authority (CA) issues and signs digital certificates, establishing the chain of trust in a PKI. DNS resolves names, load balancers distribute traffic, and proxies mediate connections — none issue certificates."
+  },
+  {
+    "text": "Which mechanism allows a client to check in real time whether a specific certificate has been revoked?",
+    "answers": ["OCSP (Online Certificate Status Protocol)", "DHCP", "NTP", "SNMP"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "OCSP lets a client query a responder for the real-time revocation status of a certificate, an alternative to downloading a full Certificate Revocation List (CRL). DHCP assigns addresses, NTP synchronizes time, and SNMP monitors devices."
+  },
+  {
+    "text": "A payment system must store a non-sensitive stand-in value for each credit card number, with the real number retrievable only from a separate secure vault. Which technique fits BEST?",
+    "answers": ["Tokenization", "Hashing", "Data masking", "Compression"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "Tokenization replaces sensitive data with a random surrogate token, keeping the real value in a separate secure vault for authorized retrieval. Hashing is one-way (not reversible), masking only hides characters for display, and compression reduces size without protecting the data."
+  },
+  {
+    "text": "An organization deploys servers across two geographically separate data centers so that if one site fails, the other continues serving users. Which principle does this support?",
+    "answers": ["High availability and resilience", "Least privilege", "Non-repudiation", "Steganography"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "Geographic redundancy across sites supports high availability and resilience, keeping services running through a site failure or disaster. Least privilege limits access, non-repudiation proves actions, and steganography hides data within other data."
+  },
+  {
+    "text": "Remote employees need encrypted access to only a few specific internal web applications, without exposing the rest of the internal network. Which approach BEST meets both requirements?",
+    "answers": ["A clientless TLS reverse proxy publishing only those applications", "A full-tunnel VPN routing all traffic into the network", "Opening the applications directly to the public internet", "Disabling authentication for convenience"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "A clientless TLS reverse proxy exposes only the specific published applications over an encrypted channel, avoiding broad network access. A full-tunnel VPN grants wider reachability than needed, and exposing apps publicly or removing authentication increases risk."
+  }  ,
+  {
+    "text": "An organization formally identifies a risk and decides to purchase cyber insurance to offset potential financial loss. Which risk management strategy is this?",
+    "answers": ["Risk transference", "Risk avoidance", "Risk acceptance", "Risk mitigation"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "Shifting the financial impact of a risk to a third party, such as through insurance, is risk transference. Avoidance eliminates the risky activity, acceptance takes on the risk without further action, and mitigation reduces the likelihood or impact directly."
+  },
+  {
+    "text": "Which metric estimates the expected monetary loss from a single occurrence of a specific risk event?",
+    "answers": ["Single Loss Expectancy (SLE)", "Annualized Rate of Occurrence (ARO)", "Annualized Loss Expectancy (ALE)", "Mean Time to Repair (MTTR)"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "Single Loss Expectancy (SLE) is the expected loss from one occurrence of a risk (asset value × exposure factor). ARO is how often it's expected per year, ALE is SLE × ARO, and MTTR measures repair time, not loss."
+  },
+  {
+    "text": "A company hires an outside firm to evaluate whether its security controls comply with a required regulation. What is this activity called?",
+    "answers": ["A third-party (external) audit", "Penetration testing", "Threat modeling", "Fuzzing"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "An external party evaluating controls against a standard or regulation is a third-party audit, providing independent assurance of compliance. Penetration testing probes for exploitable weaknesses, threat modeling anticipates attacks in design, and fuzzing tests software with malformed input."
+  },
+  {
+    "text": "Before granting a new vendor access to sensitive data, an organization reviews the vendor's security practices, financial stability, and history. What is this process called?",
+    "answers": ["Vendor due diligence", "Change management", "Data classification", "Incident response"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "Assessing a vendor's security, financial, and reputational posture before engagement is due diligence, a core part of third-party risk management. Change management governs system changes, data classification labels information sensitivity, and incident response handles security events."
+  },
+  {
+    "text": "Which document is a legally binding contract that defines the expected level of service, including uptime and response times, between a provider and a customer?",
+    "answers": ["Service Level Agreement (SLA)", "Memorandum of Understanding (MOU)", "Acceptable Use Policy (AUP)", "Business Impact Analysis (BIA)"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "A Service Level Agreement (SLA) is a binding contract specifying measurable service expectations such as uptime and response times. An MOU expresses non-binding intent, an AUP governs acceptable resource use, and a BIA assesses the impact of disruptions."
+  },
+  {
+    "text": "A business analysis identifies which processes are most critical and how long the organization can tolerate their disruption. Which activity is this?",
+    "answers": ["Business Impact Analysis (BIA)", "Penetration test", "Vulnerability scan", "Access review"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "A Business Impact Analysis (BIA) identifies critical processes and defines tolerances such as maximum acceptable downtime, informing continuity planning. Penetration tests and vulnerability scans assess technical weaknesses, and access reviews verify user permissions."
   }
 ]
