@@ -19,5 +19,334 @@
     "correctIndex": 2,
     "domain": 1,
     "explanation": "A router forwards traffic between separate networks using IP addresses. A switch forwards frames within a network using MAC addresses, a hub simply repeats signals to all ports, and a repeater extends a signal's range."
+  },
+  {
+    "text": "A switch port must carry traffic for several VLANs to another switch. How should the port be configured?",
+    "answers": ["As an access port assigned to one VLAN", "As a trunk port", "As a routed port with a static IP", "In half-duplex mode"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "A trunk port carries traffic for multiple VLANs between switches, tagging frames (commonly with 802.1Q) so the receiving switch knows which VLAN each frame belongs to. An access port belongs to a single VLAN and carries untagged traffic for one host or segment."
+  },
+  {
+    "text": "Which address would a host use as its default gateway?",
+    "answers": ["The IP address of the router interface on its local subnet", "The MAC address of the DNS server", "Its own loopback address", "The broadcast address of the subnet"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "The default gateway is the IP address of the router interface on the host's own subnet — the exit point for traffic destined outside the local network. The loopback refers to the host itself, and the broadcast address reaches all hosts on the segment, not another network."
+  },
+  {
+    "text": "A network administrator wants a router to learn routes automatically and adjust when a link fails, without manual updates. Which approach fits BEST?",
+    "answers": ["Static routing", "A dynamic routing protocol such as OSPF", "A default route only", "Manually editing the ARP table"],
+    "correctIndex": 1,
+    "domain": 3,
+    "explanation": "A dynamic routing protocol like OSPF lets routers exchange reachability information and recalculate paths automatically when the topology changes. Static routes are entered by hand and don't adapt on their own, and the ARP table maps IPs to MACs on a local segment rather than choosing routes."
+  },
+  {
+    "text": "A company wants only devices that successfully authenticate to gain access to switch ports in its offices. Which standard provides this port-based access control?",
+    "answers": ["802.11ac", "802.1X", "802.3af", "802.1Q"],
+    "correctIndex": 1,
+    "domain": 4,
+    "explanation": "802.1X provides port-based network access control, requiring a device to authenticate (typically against a RADIUS server) before the port grants network access. 802.11ac is a Wi-Fi standard, 802.3af is Power over Ethernet, and 802.1Q defines VLAN tagging."
+  },
+  {
+    "text": "Following CompTIA's troubleshooting methodology, what is the FIRST step when addressing a reported network problem?",
+    "answers": ["Establish a plan of action", "Identify the problem", "Verify full system functionality", "Document findings and outcomes"],
+    "correctIndex": 1,
+    "domain": 5,
+    "explanation": "The methodology begins with identifying the problem — gathering information, questioning users, and determining what changed. Establishing a plan, verifying functionality, and documenting all come later, and acting before the problem is understood risks fixing the wrong thing."
+  },
+  {
+    "text": "Several users on one floor lose network connectivity, while users on other floors are unaffected. Where should troubleshooting MOST logically begin?",
+    "answers": ["Each individual user's NIC settings", "The switch or wiring closet serving that floor", "The public DNS servers", "The users' web browsers"],
+    "correctIndex": 1,
+    "domain": 5,
+    "explanation": "When one group of users on a shared segment loses connectivity together, the common point they share — the floor's switch or wiring closet uplink — is the most efficient place to start. A single user's NIC or browser wouldn't explain a whole floor going down, and DNS problems typically affect name resolution broadly, not one floor's connectivity."
+  },
+  {
+    "text": "A host is configured with the IP address 10.15.0.5. Which address class range does this fall into, and what does it indicate?",
+    "answers": ["A public Class C address", "A private (RFC 1918) address", "A loopback address", "An APIPA address"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "The 10.0.0.0/8 range is one of the three private address blocks defined by RFC 1918 and is not routable on the public internet. Loopback is 127.0.0.0/8, and APIPA self-assigned addresses fall in 169.254.0.0/16."
+  },
+  {
+    "text": "Which protocol automatically assigns IP addresses, subnet masks, and default gateways to hosts on a network?",
+    "answers": ["DNS", "DHCP", "SNMP", "ICMP"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "DHCP (Dynamic Host Configuration Protocol) automatically leases IP configuration — address, subnet mask, gateway, and DNS servers — to hosts. DNS resolves names to addresses, SNMP monitors and manages devices, and ICMP carries diagnostic and error messages like those used by ping."
+  },
+  {
+    "text": "A wireless network needs to cover a large office with a single seamless network name, letting devices roam between access points without reconnecting. What should be configured?",
+    "answers": ["Multiple SSIDs, one per access point", "A single SSID across all access points", "Ad hoc mode on each device", "A separate VLAN for every access point"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "Configuring the same SSID across all access points lets client devices roam seamlessly, associating with whichever AP has the strongest signal without the user reconnecting. Giving each AP its own SSID would force manual reconnection, and ad hoc mode is peer-to-peer with no infrastructure."
+  },
+  {
+    "text": "An administrator wants centralized, real-time monitoring of device health and wants to be alerted when a router's interface goes down. Which protocol is designed for this?",
+    "answers": ["SMTP", "SNMP", "FTP", "RDP"],
+    "correctIndex": 1,
+    "domain": 3,
+    "explanation": "SNMP (Simple Network Management Protocol) lets a management system poll devices for health data and receive trap notifications when events like an interface failure occur. SMTP sends email, FTP transfers files, and RDP provides remote desktop access."
+  },
+  {
+    "text": "A guest wireless network should let visitors reach the internet but never reach the company's internal servers. Which control accomplishes this MOST directly?",
+    "answers": ["Placing guest traffic on a separate, isolated VLAN", "Increasing the Wi-Fi transmit power", "Disabling SSID broadcast", "Shortening the DHCP lease time"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "Placing guest traffic on a separate VLAN isolated from internal resources segments it so visitors can reach the internet without touching internal servers. Hiding the SSID and adjusting transmit power or lease times don't enforce isolation between guest and internal networks."
+  },
+  {
+    "text": "A user can reach internal file servers by IP address but cannot open any website by name, though the sites load when typed as raw IP addresses. What is the MOST likely cause?",
+    "answers": ["A failed network cable", "A DNS resolution problem", "A duplicate IP address", "A disabled network adapter"],
+    "correctIndex": 1,
+    "domain": 5,
+    "explanation": "Connectivity working by IP address but failing by name points squarely to DNS, the service that resolves names to addresses. A bad cable or disabled adapter would break connectivity entirely, and a duplicate IP would cause intermittent conflicts rather than a clean name-only failure."
+  },
+  {
+    "text": "Which OSI layer is responsible for establishing, managing, and terminating sessions between two communicating hosts?",
+    "answers": ["Session (Layer 5)", "Transport (Layer 4)", "Presentation (Layer 6)", "Application (Layer 7)"],
+    "correctIndex": 0,
+    "domain": 1,
+    "explanation": "The Session layer (Layer 5) sets up, coordinates, and tears down the dialogue between applications on two hosts. Layer 4 handles reliable delivery, Layer 6 handles translation and encryption formatting, and Layer 7 is where user-facing application protocols operate."
+  },
+  {
+    "text": "Which DNS record type maps a hostname to an IPv6 address?",
+    "answers": ["A", "AAAA", "MX", "CNAME"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "An AAAA (quad-A) record maps a hostname to a 128-bit IPv6 address. An A record maps to an IPv4 address, MX identifies a mail server for a domain, and CNAME creates an alias pointing one name to another."
+  },
+  {
+    "text": "Which port does the Remote Desktop Protocol (RDP) use by default?",
+    "answers": ["22", "3389", "443", "23"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "RDP uses TCP port 3389 by default to provide graphical remote access to Windows systems. Port 22 is SSH, port 443 is HTTPS, and port 23 is Telnet."
+  },
+  {
+    "text": "Which protocol keeps clocks synchronized across network devices, and on which port does it operate?",
+    "answers": ["NTP on port 123", "SNMP on port 161", "Syslog on port 514", "LDAP on port 389"],
+    "correctIndex": 0,
+    "domain": 1,
+    "explanation": "Network Time Protocol (NTP) synchronizes device clocks and uses UDP port 123. SNMP (161) manages devices, Syslog (514) centralizes log messages, and LDAP (389) provides directory lookups — none of which handle time synchronization."
+  },
+  {
+    "text": "A company is assigned the address block 192.168.10.0/24 and needs to divide it into smaller subnets. What does the /24 indicate?",
+    "answers": ["24 usable hosts", "The first 24 bits are the network portion", "24 separate subnets", "A 24-byte maximum frame size"],
+    "correctIndex": 1,
+    "domain": 1,
+    "explanation": "In CIDR notation, /24 means the first 24 bits of the address identify the network, leaving the remaining 8 bits for host addresses (254 usable hosts). It is not a count of hosts or subnets, nor a frame size."
+  },
+  {
+    "text": "Which IPv4 address range is reserved for automatic private addressing (APIPA) when a host fails to obtain a DHCP lease?",
+    "answers": ["10.0.0.0/8", "172.16.0.0/12", "169.254.0.0/16", "192.168.0.0/16"],
+    "correctIndex": 2,
+    "domain": 1,
+    "explanation": "APIPA assigns an address from 169.254.0.0/16 when a host cannot reach a DHCP server, allowing limited local communication. The other three ranges are the RFC 1918 private blocks that DHCP or static assignment would normally use."
+  },
+  {
+    "text": "Which type of network transmission sends a single stream of data to a specific group of interested receivers simultaneously, rather than to all hosts or just one?",
+    "answers": ["Unicast", "Broadcast", "Multicast", "Anycast"],
+    "correctIndex": 2,
+    "domain": 1,
+    "explanation": "Multicast delivers traffic to a defined group of subscribed receivers at once, efficient for things like streaming media. Unicast is one-to-one, broadcast reaches every host on a segment, and anycast routes to the nearest of several possible destinations."
+  },
+  {
+    "text": "Two switches are connected and an administrator wants VLAN 10 and VLAN 20 to traverse the single link between them. Which protocol tags the frames so each switch identifies the correct VLAN?",
+    "answers": ["802.1Q", "802.3af", "802.1X", "802.11ax"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "802.1Q inserts a VLAN tag into Ethernet frames so trunk links can carry traffic for multiple VLANs while preserving VLAN separation. 802.3af is Power over Ethernet, 802.1X is port-based authentication, and 802.11ax is a Wi-Fi standard."
+  },
+  {
+    "text": "An administrator wants to prevent switching loops in a network with redundant links between switches. Which protocol is designed for this?",
+    "answers": ["Spanning Tree Protocol (STP)", "Border Gateway Protocol (BGP)", "Dynamic Host Configuration Protocol (DHCP)", "Address Resolution Protocol (ARP)"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Spanning Tree Protocol (STP) prevents Layer 2 loops by blocking redundant paths while keeping a loop-free active topology, reactivating backups if a link fails. BGP is a routing protocol, DHCP assigns addresses, and ARP resolves IP addresses to MAC addresses."
+  },
+  {
+    "text": "A technician needs to connect a device 300 meters away and requires immunity to electromagnetic interference. Which cabling is the BEST choice?",
+    "answers": ["Cat 6 UTP copper", "Fiber optic", "Coaxial", "Cat 5e copper"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "Fiber optic carries signals as light, making it immune to electromagnetic interference and capable of far exceeding copper's 100-meter limit. Twisted-pair copper (Cat 5e/Cat 6) is limited to about 100 meters and susceptible to EMI, and coaxial is not suited to this scenario."
+  },
+  {
+    "text": "Which technology allows multiple internal hosts using private addresses to share a single public IP address when accessing the internet?",
+    "answers": ["Port Address Translation (PAT)", "Dynamic routing", "Subnetting", "VLAN trunking"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Port Address Translation (PAT), a form of NAT overload, maps many private addresses to one public address by tracking unique source ports. Dynamic routing chooses paths, subnetting divides address space, and trunking carries multiple VLANs — none translate addresses."
+  },
+  {
+    "text": "An access point needs to power on using only its Ethernet cable, with no separate power adapter. Which standard makes this possible?",
+    "answers": ["Power over Ethernet (802.3af/at)", "802.1Q", "802.11ac", "Quality of Service (QoS)"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Power over Ethernet (802.3af and the higher-power 802.3at) delivers electrical power over the same twisted-pair cable that carries data, powering devices like APs and IP phones. 802.1Q is VLAN tagging, 802.11ac is Wi-Fi, and QoS prioritizes traffic."
+  },
+  {
+    "text": "A technician terminates a network cable so that one end uses the T568A wiring standard and the other uses T568B. What has been created?",
+    "answers": ["A straight-through cable", "A crossover cable", "A rollover (console) cable", "A loopback cable"],
+    "correctIndex": 1,
+    "domain": 2,
+    "explanation": "Mixing T568A on one end and T568B on the other produces a crossover cable, historically used to connect like devices directly. A straight-through uses the same standard on both ends, while rollover and loopback serve console access and testing respectively."
+  },
+  {
+    "text": "An administrator wants to guarantee that voice-over-IP traffic is prioritized over bulk file transfers on a congested link. Which mechanism accomplishes this?",
+    "answers": ["Quality of Service (QoS)", "Network Address Translation (NAT)", "Spanning Tree Protocol (STP)", "DHCP snooping"],
+    "correctIndex": 0,
+    "domain": 2,
+    "explanation": "Quality of Service (QoS) classifies and prioritizes latency-sensitive traffic like VoIP so it is handled ahead of less time-critical data during congestion. NAT translates addresses, STP prevents loops, and DHCP snooping filters untrusted DHCP messages — none manage traffic priority."
+  },
+  {
+    "text": "Which wireless security standard is the most current and provides the strongest encryption for a modern Wi-Fi network?",
+    "answers": ["WEP", "WPA", "WPA2", "WPA3"],
+    "correctIndex": 3,
+    "domain": 4,
+    "explanation": "WPA3 is the newest Wi-Fi security standard and offers the strongest protection, including improved handshake security over its predecessors. WEP is obsolete and easily broken, WPA is deprecated, and WPA2 remains common but is weaker than WPA3."
+  },
+  {
+    "text": "A network administrator wants to filter traffic on a router by permitting or denying packets based on source and destination IP addresses and ports. Which tool is used?",
+    "answers": ["An access control list (ACL)", "A DHCP reservation", "An NTP server", "A DNS zone"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "An access control list (ACL) is an ordered set of permit/deny rules that filters traffic based on criteria such as source and destination addresses and ports. DHCP reservations assign fixed addresses, NTP synchronizes time, and DNS zones hold name records."
+  },
+  {
+    "text": "An attacker connects a rogue device that floods a switch with fake MAC addresses to fill its MAC address table and force it to broadcast traffic. Which attack is this?",
+    "answers": ["MAC flooding", "ARP poisoning", "DNS spoofing", "DHCP starvation"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "MAC flooding overwhelms a switch's MAC address table so it fails open and floods frames out all ports, letting the attacker capture traffic. ARP poisoning corrupts IP-to-MAC mappings, DNS spoofing falsifies name resolution, and DHCP starvation exhausts the address pool."
+  },
+  {
+    "text": "Which port-security feature allows a switch port to authenticate a connected device against a RADIUS server before granting network access?",
+    "answers": ["802.1X", "Port mirroring", "Spanning Tree Protocol", "Jumbo frames"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "802.1X provides port-based network access control, requiring the connecting device to authenticate (commonly via RADIUS) before the port is opened. Port mirroring copies traffic for analysis, STP prevents loops, and jumbo frames increase payload size — none authenticate devices."
+  },
+  {
+    "text": "An administrator wants to collect log messages from many devices into one central server for review and correlation. Which protocol and port are typically used?",
+    "answers": ["Syslog on port 514", "SNMP on port 161", "NTP on port 123", "RDP on port 3389"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "Syslog centralizes log messages from network devices to a collector, using UDP port 514 by default. SNMP monitors device health, NTP synchronizes clocks, and RDP provides remote desktop access — none aggregate logs."
+  },
+  {
+    "text": "A network team documents the expected normal traffic levels and performance of the network so future readings can be compared against it. What is this reference point called?",
+    "answers": ["A baseline", "A honeypot", "A broadcast domain", "A default gateway"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "A baseline captures normal performance and traffic metrics, providing a reference to detect anomalies or degradation later. A honeypot is a decoy for attackers, a broadcast domain is a network segment scope, and a default gateway is an exit router."
+  },
+  {
+    "text": "An organization wants to ensure that if the primary internet circuit fails, a second circuit automatically takes over with no manual intervention. Which concept does this describe?",
+    "answers": ["High availability / failover", "Port forwarding", "Subnetting", "Link aggregation for speed only"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "Automatic takeover by a redundant circuit when the primary fails is failover, a core element of high availability. Port forwarding directs inbound traffic to internal hosts, subnetting divides address space, and link aggregation combines links (primarily for throughput) rather than providing circuit-level failover."
+  },
+  {
+    "text": "A company must document how long it should take to restore a failed service after an outage. Which metric captures this target?",
+    "answers": ["Recovery Time Objective (RTO)", "Mean Time Between Failures (MTBF)", "Recovery Point Objective (RPO)", "Maximum Transmission Unit (MTU)"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "The Recovery Time Objective (RTO) defines the target time to restore a service after disruption. MTBF estimates reliability between failures, RPO defines tolerable data loss measured backward in time, and MTU is a frame-size setting unrelated to recovery."
+  },
+  {
+    "text": "An administrator combines two physical switch ports into a single logical link to increase bandwidth and add redundancy between switches. What is this called?",
+    "answers": ["Link aggregation (LACP)", "Port mirroring", "VLAN pruning", "Spanning tree blocking"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "Link aggregation, often negotiated with LACP, bundles multiple physical links into one logical connection for greater bandwidth and redundancy. Port mirroring copies traffic for monitoring, VLAN pruning limits VLANs on trunks, and spanning tree blocking disables loops."
+  },
+  {
+    "text": "Which tool copies traffic passing through a switch port to another port so a monitoring device can analyze it?",
+    "answers": ["Port mirroring (SPAN)", "DHCP relay", "NAT", "Trunking"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "Port mirroring (also called SPAN) copies frames from one or more ports to a designated monitoring port for analysis by a sniffer or IDS. DHCP relay forwards DHCP requests across subnets, NAT translates addresses, and trunking carries multiple VLANs."
+  },
+  {
+    "text": "An administrator wants each network device configuration to be stored and version-controlled so changes can be tracked and rolled back. Which practice supports this?",
+    "answers": ["Configuration management", "Broadcast storm control", "Wardriving", "Half-duplex operation"],
+    "correctIndex": 0,
+    "domain": 3,
+    "explanation": "Configuration management stores, tracks, and versions device configurations so changes are auditable and reversible. Broadcast storm control limits excessive broadcasts, wardriving is an attack reconnaissance activity, and half-duplex is a transmission mode."
+  },
+  {
+    "text": "A firewall should permit inbound web traffic to a public server while blocking everything else from the internet. Which principle should guide the rule set?",
+    "answers": ["Implicit deny (allow only what is explicitly needed)", "Allow all, then block known bad", "Disable logging to improve speed", "Open all high-numbered ports by default"],
+    "correctIndex": 0,
+    "domain": 4,
+    "explanation": "A secure firewall policy follows implicit deny: block everything by default and explicitly permit only required traffic, such as inbound HTTPS to the web server. Allowing everything first, disabling logging, or opening ports broadly all widen the attack surface unnecessarily."
+  },
+  {
+    "text": "A user reports no network connectivity. The technician finds the link light on the NIC is off and the cable is loose in the port. Following the troubleshooting methodology, what should be done at the 'establish a theory' stage?",
+    "answers": ["Immediately replace the entire switch", "Consider that the loose cable is the likely cause", "Document the outcome before testing", "Escalate to the vendor without investigation"],
+    "correctIndex": 1,
+    "domain": 5,
+    "explanation": "After identifying the problem, establishing a probable theory means proposing the most likely cause — here, the loose cable and dead link light. Replacing hardware or escalating skips testing the simplest explanation, and documentation belongs at the final stage, not before testing."
+  },
+  {
+    "text": "Two devices on the same subnet intermittently lose connectivity, and both are configured with the same static IP address. What is this problem called?",
+    "answers": ["Duplicate IP address conflict", "DNS misconfiguration", "Broadcast storm", "Incorrect default gateway"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "Two hosts sharing one IP address cause a duplicate IP conflict, producing intermittent connectivity as the address contends between them. DNS issues affect name resolution, a broadcast storm floods the segment, and a wrong gateway blocks off-subnet traffic — none match identical static IPs."
+  },
+  {
+    "text": "A user can ping devices by IP address but cannot reach any host by name. Which command would BEST help confirm a DNS problem?",
+    "answers": ["nslookup", "ipconfig /release", "arp -d", "route print"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "nslookup queries DNS directly, confirming whether name resolution is working and which server is responding. Releasing the IP lease, clearing the ARP cache, or printing the routing table address other layers and would not isolate a name-resolution failure."
+  },
+  {
+    "text": "Users on a gigabit network report unusually slow transfers. A technician discovers a switch port has negotiated to 100 Mbps half-duplex. What is the MOST likely underlying issue?",
+    "answers": ["A duplex/speed mismatch or faulty cabling on that link", "A DNS server outage", "An expired DHCP scope", "An incorrect VLAN tag"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "A link falling back to 100 Mbps half-duplex on a gigabit network typically indicates a speed/duplex mismatch or a cabling fault forcing lower negotiation. DNS, DHCP, and VLAN tagging problems cause name, addressing, or segmentation failures rather than degraded link negotiation."
+  },
+  {
+    "text": "A technician suspects a specific cable run is bad. Which tool identifies wiring faults such as opens, shorts, and miswires in a twisted-pair cable?",
+    "answers": ["A cable tester", "A protocol analyzer", "A spectrum analyzer", "A toner probe used alone"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "A cable tester checks a twisted-pair run for opens, shorts, and incorrect pinouts. A protocol analyzer inspects packet contents, a spectrum analyzer examines wireless RF interference, and a toner probe alone locates or traces a cable rather than diagnosing wiring faults."
+  },
+  {
+    "text": "A user cannot reach hosts on other subnets but can reach devices on their own subnet. Which misconfiguration is the MOST likely cause?",
+    "answers": ["Incorrect or missing default gateway", "A bad DNS record", "A duplicate MAC address", "An untrusted TLS certificate"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "Local connectivity working while off-subnet traffic fails points to a wrong or missing default gateway, the router the host needs to reach other networks. DNS problems affect name resolution, and MAC duplication or certificate errors don't produce this clean on-subnet/off-subnet split."
+  },
+  {
+    "text": "Intermittent wireless drops are reported in an office near several microwave ovens and cordless phones. Which cause should the technician investigate FIRST?",
+    "answers": ["RF interference on the 2.4 GHz band", "A failed DNS server", "An expired SSL certificate", "An overloaded DHCP scope"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "Microwaves and cordless phones commonly emit in the 2.4 GHz range, causing RF interference that disrupts Wi-Fi on that band. DNS, certificate, and DHCP issues would produce resolution, trust, or addressing errors rather than signal-level intermittent drops tied to nearby appliances."
+  },
+  {
+    "text": "After a technician resolves a connectivity issue, what is the correct FINAL step in the troubleshooting methodology?",
+    "answers": ["Document findings, actions, and outcomes", "Immediately close the ticket without notes", "Establish a new theory", "Reboot every device on the network"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "The methodology ends with documenting findings, actions, and outcomes so the knowledge aids future troubleshooting. Closing without notes loses that value, establishing a theory belongs earlier, and rebooting everything is neither a documentation step nor good practice."
+  },
+  {
+    "text": "A newly connected device fails to obtain an IP address and self-assigns 169.254.12.44. What does this MOST strongly indicate?",
+    "answers": ["The device could not reach a DHCP server", "DNS resolution has failed", "The default gateway is misconfigured", "The cable is a crossover type"],
+    "correctIndex": 0,
+    "domain": 5,
+    "explanation": "A 169.254.x.x APIPA address means the host requested a DHCP lease but got no response, so it self-assigned a link-local address. DNS and gateway misconfigurations don't trigger APIPA, and cable type wouldn't produce a link-local self-assignment when the link is otherwise up."
   }
 ]
