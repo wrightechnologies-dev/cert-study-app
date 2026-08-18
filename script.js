@@ -9,6 +9,14 @@ function shuffle(array) {
   }
   return array
 }
+// ---- localStorage helpers: wrap the stringify/parse so we don't repeat it ----
+function saveData(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+function loadData(key) {
+  const raw = localStorage.getItem(key);
+  return raw ? JSON.parse(raw) : null;
+}
 // ---- Which tracks have domains, and what they're called ----
 // A track listed here gets a domain-selection screen.
 // A track NOT listed here just starts its quiz normally.
@@ -79,7 +87,7 @@ const trackDomains = {
       }
     }
   ],
- securityPlus: [
+  securityPlus: [
     {
       id: 1, name: "General Security Concepts",
       intro: {
@@ -121,7 +129,7 @@ const trackDomains = {
       }
     }
   ],
-    microsoft: [
+  microsoft: [
     {
       id: 1, name: "Security, Compliance & Identity Concepts",
       intro: {
@@ -197,7 +205,7 @@ const trackDomains = {
       }
     }
   ],
-aPlusCore1: [
+  aPlusCore1: [
     {
       id: 1, name: "Mobile Devices",
       intro: {
@@ -295,6 +303,7 @@ async function loadQuestions(trackName) {
 }
 // ---- STATE: what the app needs to remember as you play ----
 let currentTrack = "cissp";  //Which exam track is active 
+let currentDomain = "all";   // which domain is active (or "all"); used for saving scores
 let pendingTrack = null;   // track chosen, waiting for primer "Start quiz"
 let pendingDomain = null;  // domain chosen, waiting for primer "Start quiz"
 let questions = [];
@@ -308,6 +317,7 @@ const progressE1 = document.getElementById("progress");
 const answerButtons = document.querySelectorAll(".answer-btn");
 const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
+const bestScoreEl = document.getElementById("best-score");
 const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
 const quizArea = document.getElementById("quiz-area");
@@ -331,6 +341,7 @@ function showQuestion() {
   answered = false;
   nextBtn.disabled = true;
   feedbackEl.textContent = "";
+  bestScoreEl.textContent = "";
   explanationEl.textContent = "";
   explanationEl.classList.remove("has-text");
 
@@ -393,34 +404,48 @@ function showResults() {
   nextBtn.style.display = "none";   //hide next button on results screen
   restartBtn.style.display = "inline-block"; // show the restart button
   newQuizBtn.style.display = "inline-block";  //Allow user to go back to the track selection screen
+  // ---- Save best score for this track + domain ----
+  const scoreKey = "best-" + currentTrack + "-" + currentDomain;   // e.g. "best-cissp-3"
+  const previousBest = loadData(scoreKey);   // null if we've never saved one here
 
-}
-////When the Next button is clicked, advance the quiz.
-nextBtn.addEventListener("click", function () {
-  currentIndex = currentIndex + 1;
-  if (currentIndex < questions.length) {
-    showQuestion();
-  } else {
-    showResults();
+  if (previousBest === null || score > previousBest) {
+    saveData(scoreKey, score);   // first time here, or a new personal best
+    isNewBest = true;
   }
-});
-// When Restart is clicked, reset everything and start over.
-restartBtn.addEventListener("click", function () {
-  currentIndex = 0;
-  score = 0;
-
-  restartBtn.style.display = "none";
-  nextBtn.style.display = "inline-block";
-
-  answerButtons.forEach(function (button) {
-    button.style.display = "block";
+  // ---- Show the best score under the result ----
+  const bestNow = loadData(scoreKey);   // re-read so it reflects any save we just made
+  if (isNewBest) {
+    bestScoreEl.textContent = "🎉 New best score! (" + bestNow + " of " + questions.length + ")";
+  } else {
+    bestScoreEl.textContent = "Your best here: " + bestNow + " of " + questions.length;
+  }
+ }
+  ////When the Next button is clicked, advance the quiz.
+  nextBtn.addEventListener("click", function () {
+    currentIndex = currentIndex + 1;
+    if (currentIndex < questions.length) {
+      showQuestion();
+    } else {
+      showResults();
+    }
   });
-  
+  // When Restart is clicked, reset everything and start over.
+  restartBtn.addEventListener("click", function () {
+    currentIndex = 0;
+    score = 0;
 
-  showQuestion();
-});
+    restartBtn.style.display = "none";
+    nextBtn.style.display = "inline-block";
 
-// When "Choose another quiz" is clicked, return to the track-selection screen.
+    answerButtons.forEach(function (button) {
+      button.style.display = "block";
+    });
+
+
+    showQuestion();
+  });
+
+  // When "Choose another quiz" is clicked, return to the track-selection screen.
   newQuizBtn.addEventListener("click", function () {
     // Hide the quiz area and the results-screen buttons
     quizArea.style.display = "none";
@@ -437,125 +462,126 @@ restartBtn.addEventListener("click", function () {
     trackSelectEl.style.display = "block";
   });
 
-// Start the quiz from a chosen path 
-async function startQuiz(trackName, domainId) {
-  domainSelectEl.style.display = "none";   // hide the domain screen if it was showing
-  quizArea.style.display = "block";  // sets the display back to visible the moment a track is clicked, so the real question loads into a now-visible area.
-  currentTrack = trackName;     //remember which track its on 
+  // Start the quiz from a chosen path 
+  async function startQuiz(trackName, domainId) {
+    domainSelectEl.style.display = "none";   // hide the domain screen if it was showing
+    quizArea.style.display = "block";  // sets the display back to visible the moment a track is clicked, so the real question loads into a now-visible area.
+    currentTrack = trackName;     //remember which track its on 
+    currentDomain = domainId || "all";  // remember the domain too, defaulting to "all"
 
-  const allQuestions = await loadQuestions(currentTrack);   // load the whole track
+    const allQuestions = await loadQuestions(currentTrack);   // load the whole track
 
-  // Filter to one domain, unless "all" (or no domain) was chosen
-  if (domainId && domainId !== "all") {
-    questions = allQuestions.filter(function (q) {
-      return q.domain === domainId;
-    });
-  } else {
-    questions = allQuestions;
-  }
-  // Guard: if this domain has no questions yet, bounce back instead of showing a broken quiz
-  if (questions.length === 0) {
-    quizArea.style.display = "none";
-    domainSelectEl.style.display = "block";
-    alert("No questions available for this domain yet. Check back soon!");
-    return;
-  }
-
-  currentIndex = 0;
-  score = 0;
-
-  shuffle(questions); // scramble the question order 
-  showQuestion(); //displays the first one 
-}
-// --- Wire each track to start its quiz---
-const trackButtons = document.querySelectorAll(".track-btn");
-
-trackButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    const chosenTrack = button.dataset.track;   //read the data-track value 
-
-    if (trackDomains[chosenTrack]) {  // This track HAS domains — show the domain screen.
-      showDomainScreen(chosenTrack);
-    } else {  // No domains — start the quiz directly, like before.
-      startQuiz(chosenTrack); //start the quiz for that value
+    // Filter to one domain, unless "all" (or no domain) was chosen
+    if (domainId && domainId !== "all") {
+      questions = allQuestions.filter(function (q) {
+        return q.domain === domainId;
+      });
+    } else {
+      questions = allQuestions;
     }
-  });
-});
-// find the chosen domain's config object
-function showPrimer(trackName, domainId) {
-  const domains = trackDomains[trackName];
-  const domainObj = domains.find(function (d) {
-    return d.id === domainId;
-  });
-  // If this domain has no primer, skip straight to the quiz
-  if (!domainObj || !domainObj.intro) {
-    startQuiz(trackName, domainId);
-    return;
+    // Guard: if this domain has no questions yet, bounce back instead of showing a broken quiz
+    if (questions.length === 0) {
+      quizArea.style.display = "none";
+      domainSelectEl.style.display = "block";
+      alert("No questions available for this domain yet. Check back soon!");
+      return;
+    }
+
+    currentIndex = 0;
+    score = 0;
+
+    shuffle(questions); // scramble the question order 
+    showQuestion(); //displays the first one 
   }
+  // --- Wire each track to start its quiz---
+  const trackButtons = document.querySelectorAll(".track-btn");
 
-  // Remember the selection so "Start quiz" knows what to launch
-  pendingTrack = trackName;
-  pendingDomain = domainId;
+  trackButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const chosenTrack = button.dataset.track;   //read the data-track value 
 
-  // Fill the primer screen from the intro object
-  primerTitleEl.textContent = domainObj.name;
-  primerOverviewEl.textContent = domainObj.intro.overview;
-  primerWhyEl.textContent = domainObj.intro.why;
-  primerTipsEl.textContent = domainObj.intro.tips;
-
-  // Show the primer, hide the domain screen
-  domainSelectEl.style.display = "none";
-  primerScreenEl.style.display = "block";
-}
-// "Start quiz" on the primer launches the pending selection
-primerStartBtn.addEventListener("click", function () {
-  primerScreenEl.style.display = "none";
-  startQuiz(pendingTrack, pendingDomain);
-});
-
-// "Back to domains" returns to the domain screen
-primerBackBtn.addEventListener("click", function () {
-  primerScreenEl.style.display = "none";
-  domainSelectEl.style.display = "block";
-});
-// ---- Back button: return from domain screen to track screen ----
-domainBackBtn.addEventListener("click", function () {
-  domainSelectEl.style.display = "none";   // hide the domain screen
-  trackSelectEl.style.display = "block";   // show the track buttons again
-});
-
-function showDomainScreen(trackName) {
-  currentTrack = trackName;                 // remember which track we're in
-  trackSelectEl.style.display = "none";     // hide the track buttons
-  domainButtonsEl.innerHTML = "";           // clear any buttons from a previous visit
-  if (trackVersions[trackName]) {
-    versionNoteEl.textContent = trackVersions[trackName];
-  } else {
-    versionNoteEl.textContent = "";          // Show the exam-version note if this track has one, otherwise clear it
-  }
-
-  const domains = trackDomains[trackName];  // the array of {id, name} for this track
-
-  // Build one button per domain, from the config data
-  domains.forEach(function (domain) {
-    const btn = document.createElement("button");
-    btn.className = "domain-btn";
-    btn.textContent = domain.id + ". " + domain.name;
-    btn.addEventListener("click", function () {
-      showPrimer(trackName, domain.id);      // start quiz filtered to this domain
+      if (trackDomains[chosenTrack]) {  // This track HAS domains — show the domain screen.
+        showDomainScreen(chosenTrack);
+      } else {  // No domains — start the quiz directly, like before.
+        startQuiz(chosenTrack); //start the quiz for that value
+      }
     });
-    domainButtonsEl.appendChild(btn);
+  });
+  // find the chosen domain's config object
+  function showPrimer(trackName, domainId) {
+    const domains = trackDomains[trackName];
+    const domainObj = domains.find(function (d) {
+      return d.id === domainId;
+    });
+    // If this domain has no primer, skip straight to the quiz
+    if (!domainObj || !domainObj.intro) {
+      startQuiz(trackName, domainId);
+      return;
+    }
+
+    // Remember the selection so "Start quiz" knows what to launch
+    pendingTrack = trackName;
+    pendingDomain = domainId;
+
+    // Fill the primer screen from the intro object
+    primerTitleEl.textContent = domainObj.name;
+    primerOverviewEl.textContent = domainObj.intro.overview;
+    primerWhyEl.textContent = domainObj.intro.why;
+    primerTipsEl.textContent = domainObj.intro.tips;
+
+    // Show the primer, hide the domain screen
+    domainSelectEl.style.display = "none";
+    primerScreenEl.style.display = "block";
+  }
+  // "Start quiz" on the primer launches the pending selection
+  primerStartBtn.addEventListener("click", function () {
+    primerScreenEl.style.display = "none";
+    startQuiz(pendingTrack, pendingDomain);
   });
 
-  // Add the "All Domains" button
-  const allBtn = document.createElement("button");
-  allBtn.className = "domain-btn";
-  allBtn.textContent = "All Domains (full quiz)";
-  allBtn.addEventListener("click", function () {
-    startQuiz(trackName, "all");            // "all" = no filter
+  // "Back to domains" returns to the domain screen
+  primerBackBtn.addEventListener("click", function () {
+    primerScreenEl.style.display = "none";
+    domainSelectEl.style.display = "block";
   });
-  domainButtonsEl.appendChild(allBtn);
+  // ---- Back button: return from domain screen to track screen ----
+  domainBackBtn.addEventListener("click", function () {
+    domainSelectEl.style.display = "none";   // hide the domain screen
+    trackSelectEl.style.display = "block";   // show the track buttons again
+  });
 
-  domainSelectEl.style.display = "block";   // reveal the domain screen
-}
-quizArea.style.display = "none";
+  function showDomainScreen(trackName) {
+    currentTrack = trackName;                 // remember which track we're in
+    trackSelectEl.style.display = "none";     // hide the track buttons
+    domainButtonsEl.innerHTML = "";           // clear any buttons from a previous visit
+    if (trackVersions[trackName]) {
+      versionNoteEl.textContent = trackVersions[trackName];
+    } else {
+      versionNoteEl.textContent = "";          // Show the exam-version note if this track has one, otherwise clear it
+    }
+
+    const domains = trackDomains[trackName];  // the array of {id, name} for this track
+
+    // Build one button per domain, from the config data
+    domains.forEach(function (domain) {
+      const btn = document.createElement("button");
+      btn.className = "domain-btn";
+      btn.textContent = domain.id + ". " + domain.name;
+      btn.addEventListener("click", function () {
+        showPrimer(trackName, domain.id);      // start quiz filtered to this domain
+      });
+      domainButtonsEl.appendChild(btn);
+    });
+
+    // Add the "All Domains" button
+    const allBtn = document.createElement("button");
+    allBtn.className = "domain-btn";
+    allBtn.textContent = "All Domains (full quiz)";
+    allBtn.addEventListener("click", function () {
+      startQuiz(trackName, "all");            // "all" = no filter
+    });
+    domainButtonsEl.appendChild(allBtn);
+
+    domainSelectEl.style.display = "block";   // reveal the domain screen
+  }
+  quizArea.style.display = "none";
