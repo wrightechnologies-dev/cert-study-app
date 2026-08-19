@@ -74,6 +74,20 @@ h1 {
   text-align: left;
 }
 
+/* Disabled domain button (e.g. "Review missed (0)") — muted, non-interactive */
+.domain-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-color: var(--line);
+  color: var(--muted);
+}
+/* Keep disabled buttons from lifting/coloring on hover */
+.domain-btn:disabled:hover {
+  background: white;
+  color: var(--muted);
+  transform: none;
+}
+
 #domain-back-btn {
   margin-top: 16px;
   padding: 8px 14px;
