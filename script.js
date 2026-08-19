@@ -409,12 +409,14 @@ answerButtons.forEach(function (button, index) {
       feedbackEl.textContent = "Correct!";
       feedbackEl.style.color = "green";
       button.style.background = "#c6f6d5";  // light green on the button cliclked
+      if (reviewMode) recordReviewCorrect(currentTrack, q.id); // review-mode correct advances the streak
 
     } else {
       feedbackEl.textContent = "Not quite — the answer is: " + q.answers[q.correctIndex];
       feedbackEl.style.color = "red";
       button.style.background = "#fed7d7";
       answerButtons[q.correctIndex].style.background = "#c6f6d5";
+      recordMiss(currentTrack, q.id);  // record the miss (both modes; a review miss resets the streak)
     }
     explanationEl.textContent = q.explanation || "";
     if (q.explanation) {
@@ -440,6 +442,7 @@ function showResults() {
   // ---- Save best score for this track + domain ----
   const scoreKey = "best-" + currentTrack + "-" + currentDomain;   // e.g. "best-cissp-3"
   const previousBest = loadData(scoreKey);   // null if we've never saved one here
+  let isNewBest = false;                    // declare it, default to false
 
   if (previousBest === null || score > previousBest) {
     saveData(scoreKey, score);   // first time here, or a new personal best
@@ -500,6 +503,7 @@ function showResults() {
     domainSelectEl.style.display = "none";   // hide the domain screen if it was showing
     quizArea.style.display = "block";  // sets the display back to visible the moment a track is clicked, so the real question loads into a now-visible area.
     currentTrack = trackName;     //remember which track its on 
+    reviewMode = false;   // a normal quiz is never review mode — reset in case we just reviewed
     currentDomain = domainId || "all";  // remember the domain too, defaulting to "all"
 
     const allQuestions = await loadQuestions(currentTrack);   // load the whole track
@@ -526,6 +530,37 @@ function showResults() {
     shuffle(questions); // scramble the question order 
     showQuestion(); //displays the first one 
   }
+  // Start a REVIEW session: only the questions currently in this track's missed pool.
+async function startReview(trackName) {
+  domainSelectEl.style.display = "none";
+  quizArea.style.display = "block";
+  currentTrack = trackName;
+  currentDomain = "all";     // review spans domains; not tied to one
+  reviewMode = true;         // THIS is what makes correct answers count toward retirement
+
+  const allQuestions = await loadQuestions(currentTrack);
+  const missedList = loadData("missed-" + trackName) || [];
+  const missedIds = missedList.map(function (e) { return e.id; });   // just the id strings
+
+  // Keep only questions whose id is in the missed pool
+  questions = allQuestions.filter(function (q) {
+    return missedIds.indexOf(q.id) !== -1;
+  });
+
+  // Guard: nothing to review (shouldn't happen if the button is gated, but be safe)
+  if (questions.length === 0) {
+    quizArea.style.display = "none";
+    domainSelectEl.style.display = "block";
+    alert("Nothing to review — you've cleared this track's missed questions!");
+    reviewMode = false;
+    return;
+  }
+
+  currentIndex = 0;
+  score = 0;
+  shuffle(questions);
+  showQuestion();
+}
   // --- Wire each track to start its quiz---
   const trackButtons = document.querySelectorAll(".track-btn");
 
@@ -614,6 +649,20 @@ function showResults() {
       startQuiz(trackName, "all");            // "all" = no filter
     });
     domainButtonsEl.appendChild(allBtn);
+
+    // "Review missed" button — ONCE, after All Domains
+    const missedList = loadData("missed-" + trackName) || [];
+    const reviewBtn = document.createElement("button");
+    reviewBtn.className = "domain-btn";
+    reviewBtn.textContent = "Review missed (" + missedList.length + ")";
+    if (missedList.length === 0) {
+      reviewBtn.disabled = true;    // nothing to review yet — greyed out
+    } else {
+      reviewBtn.addEventListener("click", function () {
+        startReview(trackName);
+      });
+    }
+    domainButtonsEl.appendChild(reviewBtn);
 
     domainSelectEl.style.display = "block";   // reveal the domain screen
   }
