@@ -1,350 +1,650 @@
 [
   {
+    "id": "sc900-d1-001",
     "text": "In Microsoft's cloud model, which service type provides virtual machines where you manage the OS and applications?",
-    "answers": ["SaaS", "PaaS", "IaaS", "FaaS"],
+    "answers": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "FaaS"
+    ],
     "correctIndex": 2,
     "domain": 1,
     "explanation": "Infrastructure as a Service (IaaS) provides virtualized compute like VMs, where you manage the OS and applications while the provider manages the hardware. PaaS abstracts the OS away, and SaaS delivers finished applications."
   },
   {
+    "id": "sc900-d2-001",
     "text": "Which Microsoft Entra (Azure AD) feature adds a second verification step at sign-in?",
-    "answers": ["Single Sign-On", "Multi-Factor Authentication", "Conditional Access", "Self-Service Password Reset"],
+    "answers": [
+      "Single Sign-On",
+      "Multi-Factor Authentication",
+      "Conditional Access",
+      "Self-Service Password Reset"
+    ],
     "correctIndex": 1,
     "domain": 2,
     "explanation": "Multi-Factor Authentication (MFA) requires a second verification step beyond the password, such as a phone approval or code. Single Sign-On reduces repeated logins, and Conditional Access sets policies for when access is granted."
-  }  ,
+  },
   {
+    "id": "sc900-d3-001",
     "text": "Which Microsoft solution provides unified extended detection and response (XDR) across endpoints, email, identities, and cloud apps in a single portal?",
-    "answers": ["Microsoft Defender XDR", "Microsoft Entra ID", "Microsoft Purview", "Azure Policy"],
+    "answers": [
+      "Microsoft Defender XDR",
+      "Microsoft Entra ID",
+      "Microsoft Purview",
+      "Azure Policy"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Microsoft Defender XDR unifies signals from endpoints, email, identities, and cloud apps into one investigation and response experience. Entra ID handles identity, Purview covers compliance and data governance, and Azure Policy enforces resource configuration standards."
   },
   {
+    "id": "sc900-d3-002",
     "text": "Which Microsoft Defender product provides endpoint detection and response (EDR) for devices such as laptops and servers?",
-    "answers": ["Microsoft Defender for Endpoint", "Microsoft Defender for Office 365", "Microsoft Defender for Identity", "Microsoft Defender for Cloud Apps"],
+    "answers": [
+      "Microsoft Defender for Endpoint",
+      "Microsoft Defender for Office 365",
+      "Microsoft Defender for Identity",
+      "Microsoft Defender for Cloud Apps"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Microsoft Defender for Endpoint delivers EDR and threat protection for devices. Defender for Office 365 protects email and collaboration, Defender for Identity monitors Active Directory, and Defender for Cloud Apps secures SaaS applications."
   },
   {
+    "id": "sc900-d3-003",
     "text": "An organization wants to protect against malicious links and attachments in email and Microsoft Teams. Which solution is designed for this?",
-    "answers": ["Microsoft Defender for Office 365", "Microsoft Defender for Endpoint", "Microsoft Sentinel", "Azure Bastion"],
+    "answers": [
+      "Microsoft Defender for Office 365",
+      "Microsoft Defender for Endpoint",
+      "Microsoft Sentinel",
+      "Azure Bastion"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Microsoft Defender for Office 365 protects email and collaboration tools like Teams against phishing, malicious links, and unsafe attachments. Defender for Endpoint protects devices, Sentinel is a SIEM, and Azure Bastion provides secure VM access."
   },
   {
+    "id": "sc900-d3-004",
     "text": "Which Microsoft Defender product detects threats and compromised identities by monitoring on-premises Active Directory signals?",
-    "answers": ["Microsoft Defender for Identity", "Microsoft Defender for Office 365", "Microsoft Defender for Cloud Apps", "Microsoft Defender for Endpoint"],
+    "answers": [
+      "Microsoft Defender for Identity",
+      "Microsoft Defender for Office 365",
+      "Microsoft Defender for Cloud Apps",
+      "Microsoft Defender for Endpoint"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Microsoft Defender for Identity uses on-premises Active Directory signals to detect compromised identities and insider threats. Defender for Office 365 covers email, Defender for Cloud Apps covers SaaS, and Defender for Endpoint covers devices."
   },
   {
+    "id": "sc900-d3-005",
     "text": "An organization wants visibility and control over the SaaS cloud applications employees use, acting as a cloud access security broker (CASB). Which solution provides this?",
-    "answers": ["Microsoft Defender for Cloud Apps", "Microsoft Defender for Endpoint", "Microsoft Entra ID", "Azure Firewall"],
+    "answers": [
+      "Microsoft Defender for Cloud Apps",
+      "Microsoft Defender for Endpoint",
+      "Microsoft Entra ID",
+      "Azure Firewall"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Microsoft Defender for Cloud Apps is Microsoft's CASB, giving visibility and control over SaaS app usage and data. Defender for Endpoint protects devices, Entra ID manages identity, and Azure Firewall filters network traffic."
   },
   {
+    "id": "sc900-d3-006",
     "text": "Which Microsoft solution is a cloud-native SIEM and SOAR platform that collects and correlates security data across an entire environment?",
-    "answers": ["Microsoft Sentinel", "Microsoft Defender for Endpoint", "Microsoft Entra ID", "Microsoft Intune"],
+    "answers": [
+      "Microsoft Sentinel",
+      "Microsoft Defender for Endpoint",
+      "Microsoft Entra ID",
+      "Microsoft Intune"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Microsoft Sentinel is a cloud-native SIEM with SOAR capabilities, aggregating and correlating security data and automating response across the environment. Defender for Endpoint is EDR, Entra ID is identity, and Intune is device management."
   },
   {
+    "id": "sc900-d3-007",
     "text": "Which Microsoft solution helps protect cloud workloads and improve security posture across Azure, on-premises, and other clouds, including a secure score?",
-    "answers": ["Microsoft Defender for Cloud", "Microsoft Defender for Office 365", "Microsoft Purview", "Microsoft Entra Verified ID"],
+    "answers": [
+      "Microsoft Defender for Cloud",
+      "Microsoft Defender for Office 365",
+      "Microsoft Purview",
+      "Microsoft Entra Verified ID"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Microsoft Defender for Cloud provides cloud security posture management and workload protection across multicloud and hybrid environments, including a secure score to track posture. Defender for Office 365 covers email, Purview covers compliance, and Verified ID handles decentralized identity."
   },
   {
+    "id": "sc900-d3-008",
     "text": "Which AI-powered Microsoft solution assists security analysts by summarizing incidents, guiding response steps, and answering security questions in natural language?",
-    "answers": ["Microsoft Security Copilot", "Microsoft Defender for Identity", "Azure Policy", "Microsoft Entra ID"],
+    "answers": [
+      "Microsoft Security Copilot",
+      "Microsoft Defender for Identity",
+      "Azure Policy",
+      "Microsoft Entra ID"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Microsoft Security Copilot is a generative-AI assistant that helps analysts investigate and respond by summarizing incidents and providing guidance in natural language. The other options handle identity threat detection, resource governance, and identity management respectively."
   },
   {
+    "id": "sc900-d3-009",
     "text": "In Microsoft Defender for Cloud, which feature gives an organization a measurement of its overall security posture and recommendations to improve it?",
-    "answers": ["Secure Score", "Conditional Access", "Sensitivity labels", "Lifecycle workflows"],
+    "answers": [
+      "Secure Score",
+      "Conditional Access",
+      "Sensitivity labels",
+      "Lifecycle workflows"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Secure Score in Defender for Cloud quantifies the current security posture and recommends improvements. Conditional Access is an Entra access-policy feature, and sensitivity labels and lifecycle workflows belong to Purview and Entra respectively."
   },
   {
+    "id": "sc900-d3-010",
     "text": "Which Azure service provides network-level protection by filtering inbound and outbound traffic with stateful rules across virtual networks?",
-    "answers": ["Azure Firewall", "Azure Bastion", "Microsoft Sentinel", "Microsoft Purview"],
+    "answers": [
+      "Azure Firewall",
+      "Azure Bastion",
+      "Microsoft Sentinel",
+      "Microsoft Purview"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Azure Firewall is a managed, stateful network firewall that filters traffic across virtual networks. Azure Bastion provides secure RDP/SSH access to VMs, Sentinel is a SIEM, and Purview handles compliance and data governance."
-  }  ,
+  },
   {
+    "id": "sc900-d3-011",
     "text": "Which capability of Microsoft Sentinel allows it to automatically respond to threats by running predefined playbooks, such as blocking an IP or disabling an account?",
-    "answers": ["SOAR (orchestration and automation)", "Data masking", "Conditional Access", "Sensitivity labeling"],
+    "answers": [
+      "SOAR (orchestration and automation)",
+      "Data masking",
+      "Conditional Access",
+      "Sensitivity labeling"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Sentinel's SOAR capabilities use automated playbooks to respond to detected threats, such as blocking indicators or disabling accounts. Data masking, Conditional Access, and sensitivity labeling belong to other tools and don't provide automated SOAR response."
   },
   {
+    "id": "sc900-d3-012",
     "text": "Microsoft Sentinel connects to data sources using which component to ingest logs from Microsoft and third-party products?",
-    "answers": ["Data connectors", "Sensitivity labels", "Access reviews", "Lifecycle workflows"],
+    "answers": [
+      "Data connectors",
+      "Sensitivity labels",
+      "Access reviews",
+      "Lifecycle workflows"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Sentinel uses data connectors to ingest logs and alerts from Microsoft services and many third-party sources for correlation and analysis. Sensitivity labels, access reviews, and lifecycle workflows are features of Purview and Entra, not Sentinel ingestion."
   },
   {
+    "id": "sc900-d3-013",
     "text": "Which Azure service lets administrators securely connect to virtual machines over RDP or SSH through the Azure portal without exposing the VMs to the public internet?",
-    "answers": ["Azure Bastion", "Azure Firewall", "Microsoft Sentinel", "Azure Key Vault"],
+    "answers": [
+      "Azure Bastion",
+      "Azure Firewall",
+      "Microsoft Sentinel",
+      "Azure Key Vault"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Azure Bastion provides secure RDP and SSH connectivity to VMs through the portal without assigning them public IP addresses. Azure Firewall filters network traffic, Sentinel is a SIEM, and Key Vault stores secrets and keys."
   },
   {
+    "id": "sc900-d3-014",
     "text": "Which Azure service protects applications and resources against volumetric network flooding attacks?",
-    "answers": ["Azure DDoS Protection", "Azure Bastion", "Microsoft Purview", "Microsoft Entra ID"],
+    "answers": [
+      "Azure DDoS Protection",
+      "Azure Bastion",
+      "Microsoft Purview",
+      "Microsoft Entra ID"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Azure DDoS Protection defends resources against distributed denial-of-service flooding attacks. Azure Bastion provides secure VM access, Purview handles compliance, and Entra ID manages identity — none mitigate DDoS traffic."
   },
   {
+    "id": "sc900-d3-015",
     "text": "Which Azure service securely stores and manages secrets, encryption keys, and certificates for applications?",
-    "answers": ["Azure Key Vault", "Azure Bastion", "Microsoft Sentinel", "Azure Firewall"],
+    "answers": [
+      "Azure Key Vault",
+      "Azure Bastion",
+      "Microsoft Sentinel",
+      "Azure Firewall"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Azure Key Vault centrally stores and manages secrets, keys, and certificates, keeping them out of application code. Bastion provides VM access, Sentinel is a SIEM, and Azure Firewall filters network traffic."
   },
   {
+    "id": "sc900-d3-016",
     "text": "A capability in the Defender suite can autonomously contain a sophisticated attack while it is still in progress, for example by isolating a compromised device. What is this called?",
-    "answers": ["Automatic attack disruption", "Data loss prevention", "Conditional Access", "Just-in-time access"],
+    "answers": [
+      "Automatic attack disruption",
+      "Data loss prevention",
+      "Conditional Access",
+      "Just-in-time access"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Automatic attack disruption uses high-confidence signals across Defender products to contain an in-progress attack automatically, such as isolating a device or suspending an account. DLP, Conditional Access, and just-in-time access are separate controls that don't autonomously disrupt active attacks."
   },
   {
+    "id": "sc900-d3-017",
     "text": "How does Microsoft Security Copilot help a security analyst investigating a complex, multi-stage incident?",
-    "answers": ["It summarizes the incident in natural language, including attack path and affected entities", "It physically replaces the SIEM", "It encrypts all organizational data", "It issues user certificates"],
+    "answers": [
+      "It summarizes the incident in natural language, including attack path and affected entities",
+      "It physically replaces the SIEM",
+      "It encrypts all organizational data",
+      "It issues user certificates"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Security Copilot summarizes complex incidents in plain language, describing the attack path, affected entities, and recommended response steps to speed investigation. It does not replace the SIEM, encrypt data, or issue certificates."
   },
   {
+    "id": "sc900-d3-018",
     "text": "In the Microsoft Defender portal, which feature lets analysts proactively query raw event data across Defender products to search for threats?",
-    "answers": ["Advanced hunting", "Secure Score", "Conditional Access", "Sensitivity labels"],
+    "answers": [
+      "Advanced hunting",
+      "Secure Score",
+      "Conditional Access",
+      "Sensitivity labels"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Advanced hunting lets analysts write queries against raw event data across Defender workloads to proactively find threats. Secure Score measures posture, while Conditional Access and sensitivity labels are Entra and Purview features."
   },
   {
+    "id": "sc900-d3-019",
     "text": "An organization uses several Defender workloads and wants a single incident that groups related alerts from endpoints, email, and identities into one view. Which solution provides this correlation?",
-    "answers": ["Microsoft Defender XDR", "Azure Key Vault", "Azure Bastion", "Microsoft Entra ID"],
+    "answers": [
+      "Microsoft Defender XDR",
+      "Azure Key Vault",
+      "Azure Bastion",
+      "Microsoft Entra ID"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Microsoft Defender XDR correlates related alerts across endpoints, email, identities, and cloud apps into unified incidents for streamlined investigation. Key Vault stores secrets, Bastion provides VM access, and Entra ID manages identity."
-  }  ,
+  },
   {
+    "id": "sc900-d2-002",
     "text": "What is Microsoft Entra ID (formerly Azure Active Directory)?",
-    "answers": ["Microsoft's cloud-based identity and access management service", "A cloud-based SIEM", "A data loss prevention tool", "A virtual machine hosting service"],
+    "answers": [
+      "Microsoft's cloud-based identity and access management service",
+      "A cloud-based SIEM",
+      "A data loss prevention tool",
+      "A virtual machine hosting service"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Microsoft Entra ID is Microsoft's cloud identity and access management service, connecting users to apps, devices, and data. A SIEM (Sentinel) analyzes security signals, DLP protects data, and VM hosting is an Azure compute service — none manage identity."
   },
   {
+    "id": "sc900-d2-003",
     "text": "Which Microsoft Entra feature lets users sign in once and access many connected applications without re-authenticating for each one?",
-    "answers": ["Single Sign-On (SSO)", "Multi-Factor Authentication", "Self-Service Password Reset", "Conditional Access"],
+    "answers": [
+      "Single Sign-On (SSO)",
+      "Multi-Factor Authentication",
+      "Self-Service Password Reset",
+      "Conditional Access"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Single Sign-On (SSO) allows one authentication to grant access to multiple connected apps, reducing password fatigue. MFA adds verification factors, SSPR lets users reset passwords, and Conditional Access enforces sign-in policies."
   },
   {
+    "id": "sc900-d2-004",
     "text": "Which Entra feature lets users reset their own passwords or unlock accounts without contacting the help desk?",
-    "answers": ["Self-Service Password Reset (SSPR)", "Conditional Access", "Privileged Identity Management", "Identity Protection"],
+    "answers": [
+      "Self-Service Password Reset (SSPR)",
+      "Conditional Access",
+      "Privileged Identity Management",
+      "Identity Protection"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Self-Service Password Reset (SSPR) lets users reset passwords or unlock accounts using registered authentication methods, reducing help-desk load. Conditional Access enforces access policies, PIM manages privileged roles, and Identity Protection detects identity risk."
   },
   {
+    "id": "sc900-d2-005",
     "text": "An organization wants to require multi-factor authentication only when users sign in from outside the corporate network. Which Entra capability provides this policy-based control?",
-    "answers": ["Conditional Access", "Single Sign-On", "Self-Service Password Reset", "Entra Verified ID"],
+    "answers": [
+      "Conditional Access",
+      "Single Sign-On",
+      "Self-Service Password Reset",
+      "Entra Verified ID"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Conditional Access is a policy engine that evaluates signals such as location, device, and risk at sign-in and enforces controls like requiring MFA. SSO streamlines login, SSPR resets passwords, and Verified ID issues digital credentials."
   },
   {
+    "id": "sc900-d2-006",
     "text": "What is the PRIMARY distinction between authentication and authorization?",
-    "answers": ["Authentication verifies who you are; authorization determines what you can access", "Authentication grants permissions; authorization logs you in", "They are identical processes", "Authentication encrypts data; authorization decrypts it"],
+    "answers": [
+      "Authentication verifies who you are; authorization determines what you can access",
+      "Authentication grants permissions; authorization logs you in",
+      "They are identical processes",
+      "Authentication encrypts data; authorization decrypts it"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Authentication (AuthN) verifies identity, while authorization (AuthZ) determines what an authenticated identity is permitted to do. They are distinct and sequential, and neither is about encrypting or decrypting data."
   },
   {
+    "id": "sc900-d2-007",
     "text": "Which Entra capability provides just-in-time, time-bound elevation to privileged roles, reducing standing administrative access?",
-    "answers": ["Privileged Identity Management (PIM)", "Conditional Access", "Single Sign-On", "Self-Service Password Reset"],
+    "answers": [
+      "Privileged Identity Management (PIM)",
+      "Conditional Access",
+      "Single Sign-On",
+      "Self-Service Password Reset"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Privileged Identity Management (PIM) makes privileged roles eligible and grants time-bound, approval-based elevation, minimizing always-on admin rights. Conditional Access governs sign-in access, while SSO and SSPR address login convenience and password resets."
   },
   {
+    "id": "sc900-d2-008",
     "text": "Which Entra capability detects identity-based risks, such as sign-ins from anonymous IP addresses or leaked credentials, and provides risk signals?",
-    "answers": ["Microsoft Entra ID Protection", "Single Sign-On", "Self-Service Password Reset", "Entra Verified ID"],
+    "answers": [
+      "Microsoft Entra ID Protection",
+      "Single Sign-On",
+      "Self-Service Password Reset",
+      "Entra Verified ID"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Microsoft Entra ID Protection detects identity risks like risky sign-ins and leaked credentials and produces risk signals that Conditional Access can act on. It provides the risk detection rather than directly enforcing controls; SSO, SSPR, and Verified ID serve different purposes."
-  }  ,
+  },
   {
+    "id": "sc900-d2-009",
     "text": "Which access-control approach grants standing permissions to users based on their assigned role, such as 'Billing Administrator'?",
-    "answers": ["Role-Based Access Control (RBAC)", "Conditional Access", "Self-Service Password Reset", "Identity Protection"],
+    "answers": [
+      "Role-Based Access Control (RBAC)",
+      "Conditional Access",
+      "Self-Service Password Reset",
+      "Identity Protection"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Role-Based Access Control (RBAC) assigns permissions through roles, giving users the standing access their role requires. Conditional Access makes sign-in decisions based on conditions, SSPR resets passwords, and Identity Protection detects risk — none assign role-based permissions."
   },
   {
+    "id": "sc900-d2-010",
     "text": "An organization wants managers to periodically confirm that their team members still need their assigned access, removing what is no longer required. Which identity governance feature supports this?",
-    "answers": ["Access reviews", "Single Sign-On", "Azure Bastion", "Sensitivity labels"],
+    "answers": [
+      "Access reviews",
+      "Single Sign-On",
+      "Azure Bastion",
+      "Sensitivity labels"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Access reviews let designated reviewers periodically recertify user access and remove what is no longer needed, supporting least privilege. SSO streamlines login, Azure Bastion provides VM access, and sensitivity labels classify data."
   },
   {
+    "id": "sc900-d2-011",
     "text": "Which Entra identity governance feature bundles apps, groups, and roles into access packages that users can request, with approval and expiration built in?",
-    "answers": ["Entitlement management", "Conditional Access", "Multi-Factor Authentication", "Secure Score"],
+    "answers": [
+      "Entitlement management",
+      "Conditional Access",
+      "Multi-Factor Authentication",
+      "Secure Score"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Entitlement management uses access packages to automate access requests, approvals, and expiration for collections of resources. Conditional Access enforces sign-in policies, MFA adds verification, and Secure Score measures posture in Defender for Cloud."
   },
   {
+    "id": "sc900-d2-012",
     "text": "Which Microsoft Entra capability issues decentralized, verifiable digital credentials — such as proof of employment — without the verifier storing the holder's personal data?",
-    "answers": ["Microsoft Entra Verified ID", "Conditional Access", "Privileged Identity Management", "Self-Service Password Reset"],
+    "answers": [
+      "Microsoft Entra Verified ID",
+      "Conditional Access",
+      "Privileged Identity Management",
+      "Self-Service Password Reset"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Microsoft Entra Verified ID issues and verifies decentralized digital credentials that individuals control, enabling verification without central storage of personal data. The other options handle access policy, privileged elevation, and password resets."
   },
   {
+    "id": "sc900-d2-013",
     "text": "A company needs to grant external partners and vendors secure access to specific applications using their own identities. Which Entra capability supports this?",
-    "answers": ["External identities (B2B collaboration)", "Self-Service Password Reset", "Azure Key Vault", "Secure Score"],
+    "answers": [
+      "External identities (B2B collaboration)",
+      "Self-Service Password Reset",
+      "Azure Key Vault",
+      "Secure Score"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Entra External Identities (B2B collaboration) lets external partners access resources using their own identities without separate internal accounts. SSPR resets passwords, Key Vault stores secrets, and Secure Score measures security posture."
   },
   {
+    "id": "sc900-d2-014",
     "text": "Which authentication approach removes the password entirely, using methods like Windows Hello, FIDO2 security keys, or the Microsoft Authenticator app?",
-    "answers": ["Passwordless authentication", "Single Sign-On", "Role-Based Access Control", "Data loss prevention"],
+    "answers": [
+      "Passwordless authentication",
+      "Single Sign-On",
+      "Role-Based Access Control",
+      "Data loss prevention"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Passwordless authentication verifies identity with methods such as Windows Hello, FIDO2 keys, or the Authenticator app, eliminating the password as an attack target. SSO reduces repeated logins, RBAC assigns permissions, and DLP protects data."
-  }  ,
+  },
   {
+    "id": "sc900-d1-002",
     "text": "Which security model operates on the principle 'never trust, always verify,' requiring verification of every access request regardless of location?",
-    "answers": ["Zero Trust", "Perimeter security", "Implicit trust", "Open access"],
+    "answers": [
+      "Zero Trust",
+      "Perimeter security",
+      "Implicit trust",
+      "Open access"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "The Zero Trust model verifies every request explicitly, uses least-privilege access, and assumes breach — never trusting based on network location alone. Perimeter security and implicit trust assume internal traffic is safe, the opposite of Zero Trust."
   },
   {
+    "id": "sc900-d1-003",
     "text": "In the cloud shared responsibility model, who is always responsible for the physical security of the datacenter?",
-    "answers": ["The cloud provider", "The customer", "A third-party auditor", "The end user"],
+    "answers": [
+      "The cloud provider",
+      "The customer",
+      "A third-party auditor",
+      "The end user"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "The cloud provider is always responsible for physical datacenter security regardless of service model. Responsibility for data, identities, and configuration shifts to the customer depending on whether the model is IaaS, PaaS, or SaaS."
   },
   {
+    "id": "sc900-d1-004",
     "text": "Which three principles make up the CIA triad, a foundation of information security?",
-    "answers": ["Confidentiality, Integrity, Availability", "Control, Identity, Access", "Compliance, Insurance, Auditing", "Cryptography, Integrity, Authorization"],
+    "answers": [
+      "Confidentiality, Integrity, Availability",
+      "Control, Identity, Access",
+      "Compliance, Insurance, Auditing",
+      "Cryptography, Integrity, Authorization"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "The CIA triad consists of Confidentiality (preventing unauthorized disclosure), Integrity (preventing unauthorized alteration), and Availability (ensuring access when needed). The other options mix in unrelated terms."
   },
   {
+    "id": "sc900-d1-005",
     "text": "A layered security strategy that uses multiple overlapping controls so that if one fails, others still protect the asset is called:",
-    "answers": ["Defense in depth", "Single sign-on", "Zero Trust", "Least privilege"],
+    "answers": [
+      "Defense in depth",
+      "Single sign-on",
+      "Zero Trust",
+      "Least privilege"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "Defense in depth layers multiple security controls so a single failure doesn't compromise the asset. Single sign-on streamlines authentication, Zero Trust is a verification model, and least privilege limits access rights — none describe layered redundancy of controls."
   },
   {
+    "id": "sc900-d1-006",
     "text": "What is the difference between encryption and hashing?",
-    "answers": ["Encryption is reversible with a key; hashing is a one-way transformation", "Hashing is reversible; encryption is not", "They are the same process", "Encryption only works on passwords"],
+    "answers": [
+      "Encryption is reversible with a key; hashing is a one-way transformation",
+      "Hashing is reversible; encryption is not",
+      "They are the same process",
+      "Encryption only works on passwords"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "Encryption transforms data reversibly using a key so it can be decrypted, while hashing is a one-way function that cannot be reversed to recover the original. Hashing is commonly used for integrity checks and password storage, not decryption."
   },
   {
+    "id": "sc900-d4-001",
     "text": "Which Microsoft platform is the unified solution for compliance management, information protection, and data governance across Microsoft 365?",
-    "answers": ["Microsoft Purview", "Microsoft Defender XDR", "Microsoft Entra ID", "Microsoft Sentinel"],
+    "answers": [
+      "Microsoft Purview",
+      "Microsoft Defender XDR",
+      "Microsoft Entra ID",
+      "Microsoft Sentinel"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Microsoft Purview is the unified platform for compliance, information protection, and data governance. Defender XDR handles threat protection, Entra ID manages identity, and Sentinel is a SIEM — none are the compliance platform."
   },
   {
+    "id": "sc900-d4-002",
     "text": "Which Microsoft Purview capability classifies and protects documents and emails by applying markings and encryption based on content sensitivity?",
-    "answers": ["Sensitivity labels", "Retention policies", "eDiscovery", "Audit"],
+    "answers": [
+      "Sensitivity labels",
+      "Retention policies",
+      "eDiscovery",
+      "Audit"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Sensitivity labels classify content and can apply markings, encryption, and access restrictions based on sensitivity. Retention policies manage keeping or deleting content, eDiscovery finds content for legal cases, and audit logs record activity."
   },
   {
+    "id": "sc900-d4-003",
     "text": "An organization wants to prevent employees from accidentally emailing files containing credit card numbers outside the company. Which Purview capability addresses this?",
-    "answers": ["Data Loss Prevention (DLP)", "Compliance Manager", "eDiscovery", "Records management"],
+    "answers": [
+      "Data Loss Prevention (DLP)",
+      "Compliance Manager",
+      "eDiscovery",
+      "Records management"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Data Loss Prevention (DLP) policies detect and block or alert on sensitive data (like credit card numbers) moving to unauthorized destinations. Compliance Manager scores compliance, eDiscovery supports legal cases, and records management governs retention."
   },
   {
+    "id": "sc900-d4-004",
     "text": "Which Purview capability automatically keeps or deletes content according to legal, regulatory, or business requirements?",
-    "answers": ["Retention policies and labels", "Sensitivity labels", "Conditional Access", "Secure Score"],
+    "answers": [
+      "Retention policies and labels",
+      "Sensitivity labels",
+      "Conditional Access",
+      "Secure Score"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Retention policies and labels automatically retain or delete content based on defined rules, supporting regulatory and business requirements. Sensitivity labels classify and protect, Conditional Access governs sign-in, and Secure Score measures security posture."
   },
   {
+    "id": "sc900-d4-005",
     "text": "Which Purview solution helps detect and investigate risky activities by people inside the organization, such as potential data theft before an employee leaves?",
-    "answers": ["Insider Risk Management", "Data Loss Prevention", "eDiscovery", "Compliance Manager"],
+    "answers": [
+      "Insider Risk Management",
+      "Data Loss Prevention",
+      "eDiscovery",
+      "Compliance Manager"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Insider Risk Management detects and investigates risky internal user activity, such as data exfiltration, using signals and policy templates. DLP blocks sensitive data movement, eDiscovery supports legal investigations, and Compliance Manager tracks compliance posture."
   },
   {
+    "id": "sc900-d4-006",
     "text": "Which Purview capability helps legal teams identify, preserve, and export electronic content for litigation or investigations?",
-    "answers": ["eDiscovery", "Sensitivity labels", "Conditional Access", "Insider Risk Management"],
+    "answers": [
+      "eDiscovery",
+      "Sensitivity labels",
+      "Conditional Access",
+      "Insider Risk Management"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "eDiscovery identifies, holds, collects, and exports content for legal cases and investigations. Sensitivity labels classify data, Conditional Access governs sign-in access, and Insider Risk Management detects risky internal behavior."
   },
   {
+    "id": "sc900-d4-007",
     "text": "Which Purview capability provides a risk-based compliance score and actionable recommendations to improve compliance against regulations like GDPR or HIPAA?",
-    "answers": ["Compliance Manager", "eDiscovery", "Data Loss Prevention", "Sensitivity labels"],
+    "answers": [
+      "Compliance Manager",
+      "eDiscovery",
+      "Data Loss Prevention",
+      "Sensitivity labels"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Compliance Manager measures compliance posture with a score and provides improvement actions mapped to regulations and standards. eDiscovery supports legal cases, DLP prevents data leakage, and sensitivity labels classify and protect content."
   },
   {
+    "id": "sc900-d4-008",
     "text": "Which Purview capability records user and admin activities so administrators can review who did what and when for investigations?",
-    "answers": ["Audit", "Retention labels", "Sensitivity labels", "Conditional Access"],
+    "answers": [
+      "Audit",
+      "Retention labels",
+      "Sensitivity labels",
+      "Conditional Access"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Audit solutions in Purview log user and administrator activity for investigation and compliance review. Retention and sensitivity labels manage content lifecycle and classification, and Conditional Access enforces sign-in policies — none provide activity logging."
   },
   {
+    "id": "sc900-d4-009",
     "text": "Which Purview capability monitors communications in Teams and Exchange for policy violations such as harassment or inappropriate sharing?",
-    "answers": ["Communication Compliance", "eDiscovery", "Compliance Manager", "Records management"],
+    "answers": [
+      "Communication Compliance",
+      "eDiscovery",
+      "Compliance Manager",
+      "Records management"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Communication Compliance detects policy violations in messaging platforms like Teams and Exchange, such as harassment or improper information sharing. eDiscovery finds content for legal cases, Compliance Manager scores compliance, and records management governs retention."
   },
   {
+    "id": "sc900-d4-010",
     "text": "Which Purview capability lets organizations declare certain content as immutable records that cannot be altered or deleted until a retention requirement is met?",
-    "answers": ["Records management", "Data Loss Prevention", "Sensitivity labels", "Audit"],
+    "answers": [
+      "Records management",
+      "Data Loss Prevention",
+      "Sensitivity labels",
+      "Audit"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Records management lets organizations declare content as records with immutability and disposition controls to meet regulatory requirements. DLP prevents leakage, sensitivity labels classify and protect, and audit logs activity."
   },
   {
+    "id": "sc900-d4-011",
     "text": "Where can an organization find Microsoft's audit reports, certifications, and compliance documentation to evaluate Microsoft's own compliance posture?",
-    "answers": ["The Service Trust Portal", "The Microsoft Defender portal", "Azure Key Vault", "The Entra admin center"],
+    "answers": [
+      "The Service Trust Portal",
+      "The Microsoft Defender portal",
+      "Azure Key Vault",
+      "The Entra admin center"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "The Service Trust Portal publishes Microsoft's audit reports, certifications, and compliance documentation for customer review. The Defender portal manages threat protection, Key Vault stores secrets, and the Entra admin center manages identity."

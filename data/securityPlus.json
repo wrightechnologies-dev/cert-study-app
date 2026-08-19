@@ -1,351 +1,650 @@
 [
   {
+    "id": "secplus-d1-001",
     "text": "Which type of malware disguises itself as legitimate software to trick users into installing it?",
-    "answers": ["Worm", "Trojan", "Rootkit", "Ransomware"],
+    "answers": [
+      "Worm",
+      "Trojan",
+      "Rootkit",
+      "Ransomware"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "A Trojan disguises itself as legitimate or desirable software to trick users into installing it, then carries out malicious actions. A worm spreads on its own, and a rootkit hides its presence to maintain access."
   },
   {
+    "id": "secplus-d1-002",
     "text": "Which protocol provides encrypted remote command-line access to a device?",
-    "answers": ["Telnet", "SSH", "FTP", "SNMP"],
+    "answers": [
+      "Telnet",
+      "SSH",
+      "FTP",
+      "SNMP"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "SSH (Secure Shell) provides encrypted remote command-line access, protecting credentials and session data in transit. Telnet offers similar access but sends everything in plaintext, while FTP transfers files and SNMP manages network devices."
   },
   {
+    "id": "secplus-d1-003",
     "text": "What does a firewall primarily use to allow or block traffic?",
-    "answers": ["Rules based on ports, protocols, and addresses", "Antivirus signatures", "User passwords", "CPU usage thresholds"],
+    "answers": [
+      "Rules based on ports, protocols, and addresses",
+      "Antivirus signatures",
+      "User passwords",
+      "CPU usage thresholds"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "A firewall filters traffic using rules based on ports, protocols, and IP addresses, deciding what to allow or block. Antivirus signatures detect malware, not network traffic flow, and passwords and CPU thresholds are unrelated to filtering decisions."
   },
   {
+    "id": "secplus-d1-004",
     "text": "A company installs security cameras in its server room. When classifying this control by both its type and its function, how is it BEST described?",
-    "answers": ["A technical, preventive control", "A physical, detective control", "A managerial, corrective control", "An operational, compensating control"],
+    "answers": [
+      "A technical, preventive control",
+      "A physical, detective control",
+      "A managerial, corrective control",
+      "An operational, compensating control"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "Security cameras are a physical control (a tangible, real-world safeguard) and function as a detective control, because they record activity for later review rather than blocking it. They don't prevent an intruder from entering, which is what a preventive control would do."
   },
   {
+    "id": "secplus-d1-005",
     "text": "A security model assumes no user or device is trusted by default, even inside the corporate network, and verifies every access request. Which concept does this describe?",
-    "answers": ["Defense in depth", "Zero trust", "Implicit allow", "Perimeter-based security"],
+    "answers": [
+      "Defense in depth",
+      "Zero trust",
+      "Implicit allow",
+      "Perimeter-based security"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "Zero trust assumes no implicit trust based on network location and continuously verifies every request. Defense in depth layers multiple controls, implicit allow is the opposite of zero trust's default-deny stance, and perimeter-based security trusts anything inside the network — exactly what zero trust rejects."
   },
   {
+    "id": "secplus-d1-006",
     "text": "In the AAA framework, a system records which files a user accessed and when, for later review. Which component of AAA does this represent?",
-    "answers": ["Authentication", "Authorization", "Accounting", "Availability"],
+    "answers": [
+      "Authentication",
+      "Authorization",
+      "Accounting",
+      "Availability"
+    ],
     "correctIndex": 2,
     "domain": 1,
     "explanation": "Accounting tracks and records what an authenticated user does, such as files accessed and actions taken, supporting auditing and accountability. Authentication verifies identity, authorization determines permitted actions, and availability is a CIA triad property, not part of AAA."
   },
   {
+    "id": "secplus-d1-007",
     "text": "An organization requires that all changes to production systems be reviewed and approved before implementation, with a documented rollback plan. What is the PRIMARY security purpose of this change management process?",
-    "answers": ["To slow down the IT department intentionally", "To reduce the risk that unplanned or untested changes introduce vulnerabilities or outages", "To eliminate the need for backups", "To ensure only one person understands each system"],
+    "answers": [
+      "To slow down the IT department intentionally",
+      "To reduce the risk that unplanned or untested changes introduce vulnerabilities or outages",
+      "To eliminate the need for backups",
+      "To ensure only one person understands each system"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "Formal change management reduces the risk that unreviewed or untested changes cause security gaps or outages, and a rollback plan enables quick recovery if a change fails. It is not meant to slow work needlessly, replace backups, or concentrate knowledge in one person."
   },
   {
+    "id": "secplus-d1-008",
     "text": "A digital signature on an email allows the recipient to confirm the message truly came from the claimed sender and was not altered. Which two security properties does this PRIMARILY provide?",
-    "answers": ["Confidentiality and availability", "Authenticity and integrity", "Anonymity and redundancy", "Availability and scalability"],
+    "answers": [
+      "Confidentiality and availability",
+      "Authenticity and integrity",
+      "Anonymity and redundancy",
+      "Availability and scalability"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "A digital signature provides authenticity (verifying the sender's identity) and integrity (confirming the message was not altered). It does not by itself provide confidentiality, since the message content is not necessarily encrypted, nor does it address availability."
   },
   {
+    "id": "secplus-d1-009",
     "text": "A policy requiring employees to complete annual security awareness training is BEST categorized as which type of control?",
-    "answers": ["A technical control", "A managerial (administrative) control", "A physical control", "A cryptographic control"],
+    "answers": [
+      "A technical control",
+      "A managerial (administrative) control",
+      "A physical control",
+      "A cryptographic control"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "Security awareness training driven by policy is a managerial (administrative) control, because it involves governance, policy, and human processes rather than technology or physical barriers. Technical controls are enforced by systems, and physical controls are tangible barriers."
-  }
-  ,
-{
+  },
+  {
+    "id": "secplus-d2-001",
     "text": "A group of skilled attackers backed by a nation-state maintains covert, long-term access to a network to steal intelligence over months. Which threat actor type BEST describes them?",
-    "answers": ["Script kiddie", "Advanced Persistent Threat (APT)", "Hacktivist", "Insider threat"],
+    "answers": [
+      "Script kiddie",
+      "Advanced Persistent Threat (APT)",
+      "Hacktivist",
+      "Insider threat"
+    ],
     "correctIndex": 1,
     "domain": 2,
     "explanation": "An Advanced Persistent Threat (APT) is a well-resourced, often nation-state-backed actor that establishes stealthy, long-term access to pursue strategic goals. Script kiddies lack skill and use others' tools, hacktivists act for ideological causes and usually seek visibility, and insider threats originate from within the organization."
   },
   {
+    "id": "secplus-d2-002",
     "text": "Which characteristic MOST distinguishes an unskilled attacker (script kiddie) from other threat actors?",
-    "answers": ["Nation-state funding", "Reliance on existing tools and scripts without deep technical understanding", "A political or social motivation", "Authorized access to internal systems"],
+    "answers": [
+      "Nation-state funding",
+      "Reliance on existing tools and scripts without deep technical understanding",
+      "A political or social motivation",
+      "Authorized access to internal systems"
+    ],
     "correctIndex": 1,
     "domain": 2,
     "explanation": "The defining trait of a script kiddie is using pre-built tools and scripts they did not create and do not fully understand. Nation-state funding describes APTs, political motivation describes hacktivists, and authorized internal access describes insider threats."
   },
   {
+    "id": "secplus-d2-003",
     "text": "An employee receives a phone call from someone claiming to be IT support, who urgently pressures them to reveal their password to 'fix an account lockout.' Which attack vector is being used?",
-    "answers": ["Social engineering (vishing)", "SQL injection", "Cross-site scripting", "Buffer overflow"],
+    "answers": [
+      "Social engineering (vishing)",
+      "SQL injection",
+      "Cross-site scripting",
+      "Buffer overflow"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "This is social engineering carried out by voice call, known as vishing, exploiting human trust and urgency rather than a technical flaw. SQL injection, cross-site scripting, and buffer overflow are all technical attacks against software, not manipulation of a person."
   },
   {
+    "id": "secplus-d2-004",
     "text": "An attacker registers a domain named 'micros0ft-support.com' to trick users into believing it is legitimate. Which technique does this represent?",
-    "answers": ["Typosquatting", "Watering hole attack", "Privilege escalation", "Pretexting"],
+    "answers": [
+      "Typosquatting",
+      "Watering hole attack",
+      "Privilege escalation",
+      "Pretexting"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Registering a lookalike domain that relies on misreading or mistyping is typosquatting (a form of URL hijacking). A watering hole attack compromises a site the target already visits, privilege escalation gains higher rights on a system, and pretexting invents a false scenario to extract information."
   },
   {
+    "id": "secplus-d2-005",
     "text": "A vulnerability scan reveals that a production server is running software with a publicly known flaw for which the vendor has released no fix. What type of exposure is the UNPATCHABLE nature of this flaw BEST associated with when no patch yet exists at time of discovery?",
-    "answers": ["Zero-day vulnerability", "Weak configuration", "End-of-life vulnerability", "Race condition"],
+    "answers": [
+      "Zero-day vulnerability",
+      "Weak configuration",
+      "End-of-life vulnerability",
+      "Race condition"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "A zero-day is a vulnerability known to attackers (or newly disclosed) before a vendor patch is available, leaving defenders no immediate fix. A weak configuration is a hardening gap, an end-of-life vulnerability affects unsupported software, and a race condition is a timing flaw in concurrent operations."
   },
   {
+    "id": "secplus-d2-006",
     "text": "A company continues running an operating system that the vendor no longer supports with security updates. Which vulnerability category does this create?",
-    "answers": ["Zero-day", "Legacy / end-of-life system vulnerability", "Cryptographic weakness", "Injection flaw"],
+    "answers": [
+      "Zero-day",
+      "Legacy / end-of-life system vulnerability",
+      "Cryptographic weakness",
+      "Injection flaw"
+    ],
     "correctIndex": 1,
     "domain": 2,
     "explanation": "Running unsupported, end-of-life software means no further security patches are issued, leaving known flaws permanently unaddressed — a legacy system vulnerability. Zero-days involve unpatched-but-new flaws, cryptographic weaknesses involve flawed encryption, and injection flaws involve unvalidated input."
   },
   {
+    "id": "secplus-d2-007",
     "text": "An attacker floods a web server with traffic from thousands of compromised devices simultaneously, making the service unavailable to legitimate users. Which attack is this?",
-    "answers": ["Distributed Denial of Service (DDoS)", "On-path (man-in-the-middle) attack", "SQL injection", "Privilege escalation"],
+    "answers": [
+      "Distributed Denial of Service (DDoS)",
+      "On-path (man-in-the-middle) attack",
+      "SQL injection",
+      "Privilege escalation"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Overwhelming a service with traffic from many compromised hosts (a botnet) to deny availability is a Distributed Denial of Service (DDoS) attack. An on-path attack intercepts communications, SQL injection manipulates database queries, and privilege escalation gains elevated rights — none of which target availability by flooding."
   },
   {
+    "id": "secplus-d2-008",
     "text": "After gaining access to a standard user account, an attacker exploits a flaw to gain administrator-level rights on the same system. Which activity is this?",
-    "answers": ["Lateral movement", "Privilege escalation", "Data exfiltration", "Phishing"],
+    "answers": [
+      "Lateral movement",
+      "Privilege escalation",
+      "Data exfiltration",
+      "Phishing"
+    ],
     "correctIndex": 1,
     "domain": 2,
     "explanation": "Gaining higher permissions than originally granted on a system is privilege escalation. Lateral movement is spreading to other systems, data exfiltration is unauthorized data removal, and phishing is a social-engineering method to gain initial access — not the elevation of rights itself."
   },
   {
+    "id": "secplus-d2-009",
     "text": "Users report that a website is redirecting them to a malicious page. Investigation shows the attacker altered responses between the user and server in real time. Which attack does this describe?",
-    "answers": ["On-path (man-in-the-middle) attack", "Brute-force attack", "Watering hole attack", "Logic bomb"],
+    "answers": [
+      "On-path (man-in-the-middle) attack",
+      "Brute-force attack",
+      "Watering hole attack",
+      "Logic bomb"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Intercepting and altering communications between two parties in transit is an on-path (man-in-the-middle) attack. A brute-force attack guesses credentials, a watering hole compromises a trusted site the target visits, and a logic bomb is malicious code triggered by a condition."
   },
   {
+    "id": "secplus-d2-010",
     "text": "An organization divides its network so that the finance systems reside on a separate segment isolated from general user workstations. Which mitigation technique is this?",
-    "answers": ["Network segmentation", "Patch management", "Input validation", "Full-disk encryption"],
+    "answers": [
+      "Network segmentation",
+      "Patch management",
+      "Input validation",
+      "Full-disk encryption"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Isolating systems into separate network zones to limit access and contain breaches is network segmentation. Patch management addresses software flaws, input validation defends applications against malicious input, and full-disk encryption protects data at rest — none of which isolate network segments."
   },
   {
+    "id": "secplus-d2-011",
     "text": "A security team removes unnecessary services, closes unused ports, and disables default accounts on a new server before deployment. Which mitigation practice are they performing?",
-    "answers": ["System hardening", "Threat hunting", "Social engineering", "Data classification"],
+    "answers": [
+      "System hardening",
+      "Threat hunting",
+      "Social engineering",
+      "Data classification"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Reducing a system's attack surface by removing unneeded services, ports, and default accounts is system hardening. Threat hunting proactively searches for hidden threats, social engineering is an attack method, and data classification labels information by sensitivity — none describe reducing the attack surface."
   },
   {
+    "id": "secplus-d2-012",
     "text": "A newly discovered indicator of compromise on a workstation is an unexpected outbound connection to an unfamiliar external IP address at 3 a.m. What does this MOST likely suggest?",
-    "answers": ["Normal scheduled Windows updates", "Possible command-and-control or data exfiltration activity", "A hardware failure in the network card", "An expired TLS certificate"],
+    "answers": [
+      "Normal scheduled Windows updates",
+      "Possible command-and-control or data exfiltration activity",
+      "A hardware failure in the network card",
+      "An expired TLS certificate"
+    ],
     "correctIndex": 1,
     "domain": 2,
     "explanation": "Unexpected outbound traffic to an unknown external address, especially at unusual hours, is a classic indicator of compromise suggesting command-and-control communication or data exfiltration. Scheduled updates go to known vendor endpoints, and hardware failures or certificate errors do not generate covert outbound connections to unfamiliar IPs."
-  }  ,
+  },
   {
+    "id": "secplus-d4-001",
     "text": "Which system aggregates and correlates log data from many sources to provide centralized monitoring, alerting, and analysis for a security team?",
-    "answers": ["SIEM", "VPN", "DLP", "CASB"],
+    "answers": [
+      "SIEM",
+      "VPN",
+      "DLP",
+      "CASB"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "A SIEM (Security Information and Event Management) system collects, aggregates, and correlates logs from across the environment to enable centralized monitoring and alerting. A VPN secures connections, DLP prevents data exfiltration, and a CASB governs cloud service access."
   },
   {
+    "id": "secplus-d4-002",
     "text": "During which incident response phase does the team take action to stop an active threat from spreading further, such as isolating an infected host?",
-    "answers": ["Containment", "Preparation", "Lessons learned", "Recovery"],
+    "answers": [
+      "Containment",
+      "Preparation",
+      "Lessons learned",
+      "Recovery"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Containment focuses on limiting the damage and preventing an active incident from spreading, for example by isolating affected systems. Preparation happens before an incident, recovery restores normal operations afterward, and lessons learned reviews the response after resolution."
   },
   {
+    "id": "secplus-d4-003",
     "text": "What is the PRIMARY purpose of the 'lessons learned' phase of incident response?",
-    "answers": ["To review the incident and improve future response and defenses", "To immediately re-image all affected systems", "To assign blame to individuals", "To notify attackers of the response"],
+    "answers": [
+      "To review the incident and improve future response and defenses",
+      "To immediately re-image all affected systems",
+      "To assign blame to individuals",
+      "To notify attackers of the response"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "The lessons learned (post-incident) phase analyzes what happened and how the response performed, feeding improvements back into preparation and defenses. It is not about blame, re-imaging, or contacting attackers."
   },
   {
+    "id": "secplus-d4-004",
     "text": "A technology automates repetitive security tasks and coordinates responses across tools using playbooks, freeing analysts from manual work. What is it called?",
-    "answers": ["SOAR", "SIEM", "IDS", "PKI"],
+    "answers": [
+      "SOAR",
+      "SIEM",
+      "IDS",
+      "PKI"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "SOAR (Security Orchestration, Automation, and Response) automates repetitive tasks and orchestrates responses across tools via playbooks. A SIEM aggregates and correlates logs, an IDS detects intrusions, and PKI manages digital certificates."
   },
   {
+    "id": "secplus-d4-005",
     "text": "A vulnerability scanner assigns a numerical severity score to each finding so teams can prioritize remediation. Which scoring system provides this?",
-    "answers": ["CVSS", "CVE", "OWASP", "MITRE ATT&CK"],
+    "answers": [
+      "CVSS",
+      "CVE",
+      "OWASP",
+      "MITRE ATT&CK"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "The Common Vulnerability Scoring System (CVSS) produces a numeric severity score used to prioritize remediation. CVE is the identifier catalog for known vulnerabilities, OWASP publishes web-security guidance, and MITRE ATT&CK catalogs adversary tactics and techniques."
   },
   {
+    "id": "secplus-d4-006",
     "text": "A security team reduces a new server's attack surface by disabling unneeded services, closing unused ports, and changing default credentials. What is this practice called?",
-    "answers": ["System hardening", "Threat hunting", "Fuzzing", "Tokenization"],
+    "answers": [
+      "System hardening",
+      "Threat hunting",
+      "Fuzzing",
+      "Tokenization"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Reducing the attack surface by removing unnecessary services, ports, and default settings is system hardening. Threat hunting proactively searches for hidden threats, fuzzing tests software with malformed input, and tokenization substitutes sensitive data with tokens."
   },
   {
+    "id": "secplus-d4-007",
     "text": "An analyst wants network traffic metadata — source, destination, ports, and volume — without full packet contents, to spot unusual flows. Which data source is BEST?",
-    "answers": ["NetFlow", "Full packet capture", "BIOS logs", "SMTP headers"],
+    "answers": [
+      "NetFlow",
+      "Full packet capture",
+      "BIOS logs",
+      "SMTP headers"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "NetFlow provides traffic metadata (addresses, ports, byte counts) ideal for spotting anomalous flows without storing full payloads. Full packet capture records complete contents but is far larger, while BIOS logs and SMTP headers do not summarize network flows."
   },
   {
+    "id": "secplus-d4-008",
     "text": "Which access control principle grants users only the minimum permissions required to perform their job duties?",
-    "answers": ["Least privilege", "Separation of duties", "Implicit allow", "Transitive trust"],
+    "answers": [
+      "Least privilege",
+      "Separation of duties",
+      "Implicit allow",
+      "Transitive trust"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Least privilege limits each user to the minimum access needed, reducing the impact of compromise or misuse. Separation of duties splits sensitive tasks among people, implicit allow is an insecure default, and transitive trust passes trust between domains."
   },
   {
+    "id": "secplus-d4-009",
     "text": "A company implements a system that requires special approval and time-limited elevated access for administrators to perform sensitive tasks. Which solution provides this?",
-    "answers": ["Privileged Access Management (PAM)", "Single Sign-On (SSO)", "A CAPTCHA", "A honeypot"],
+    "answers": [
+      "Privileged Access Management (PAM)",
+      "Single Sign-On (SSO)",
+      "A CAPTCHA",
+      "A honeypot"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Privileged Access Management (PAM) controls, monitors, and time-limits elevated administrative access, often with just-in-time approval. SSO streamlines authentication across apps, a CAPTCHA distinguishes humans from bots, and a honeypot is a decoy for attackers."
   },
   {
+    "id": "secplus-d4-010",
     "text": "An organization wants to ensure former employees' accounts are promptly disabled when they leave. Which process addresses this?",
-    "answers": ["Account (identity) lifecycle management — deprovisioning", "Penetration testing", "Data masking", "Load balancing"],
+    "answers": [
+      "Account (identity) lifecycle management — deprovisioning",
+      "Penetration testing",
+      "Data masking",
+      "Load balancing"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Deprovisioning as part of account lifecycle management ensures accounts are disabled or removed when no longer needed, closing a common access gap. Penetration testing probes defenses, data masking obscures data, and load balancing distributes traffic."
   },
   {
+    "id": "secplus-d4-011",
     "text": "A vulnerability cannot be immediately patched because the fix would break a critical application. The team adds extra monitoring and network restrictions to reduce risk in the meantime. What is this called?",
-    "answers": ["A compensating control", "A corrective control", "Risk acceptance with no action", "A detective-only control"],
+    "answers": [
+      "A compensating control",
+      "A corrective control",
+      "Risk acceptance with no action",
+      "A detective-only control"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "A compensating control is an alternative safeguard used when the primary control (patching) isn't feasible, reducing risk until the real fix can be applied. Simply accepting the risk would involve no additional safeguards, which is not what is happening here."
   },
   {
+    "id": "secplus-d4-012",
     "text": "A SIEM generates many alerts that turn out not to be real threats, wasting analyst time. What are these called, and what is the appropriate response?",
-    "answers": ["False positives; tune the correlation rules", "True positives; ignore them", "False negatives; disable logging", "True negatives; escalate immediately"],
+    "answers": [
+      "False positives; tune the correlation rules",
+      "True positives; ignore them",
+      "False negatives; disable logging",
+      "True negatives; escalate immediately"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Alerts that fire on non-malicious activity are false positives, and the fix is tuning the rules to reduce noise without missing real threats. A false negative is a missed real threat, and true positives/negatives are correct detections."
   },
   {
+    "id": "secplus-d4-013",
     "text": "When collecting digital evidence during an investigation, which practice ensures the evidence remains admissible by documenting who handled it and when?",
-    "answers": ["Maintaining chain of custody", "Encrypting the evidence with a personal key", "Deleting duplicate copies", "Editing timestamps for clarity"],
+    "answers": [
+      "Maintaining chain of custody",
+      "Encrypting the evidence with a personal key",
+      "Deleting duplicate copies",
+      "Editing timestamps for clarity"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Chain of custody documents every person who handled evidence and when, preserving its integrity and admissibility. Editing timestamps or deleting copies would compromise integrity, and encrypting with a personal key does not establish handling accountability."
   },
   {
+    "id": "secplus-d4-014",
     "text": "During forensic collection, which data should be captured FIRST according to the order of volatility?",
-    "answers": ["Contents of RAM and running processes", "Data on backup tapes", "Files on a powered-off hard drive", "Archived email on a remote server"],
+    "answers": [
+      "Contents of RAM and running processes",
+      "Data on backup tapes",
+      "Files on a powered-off hard drive",
+      "Archived email on a remote server"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "The order of volatility dictates capturing the most ephemeral data first — RAM and running process state disappear when power is lost. Disk files, backups, and archived data are far more persistent and can be collected afterward."
-  }  ,
+  },
   {
+    "id": "secplus-d3-001",
     "text": "A security model requires every access request to be authenticated and authorized regardless of whether it originates inside or outside the network perimeter. Which architecture is this?",
-    "answers": ["Zero trust", "Perimeter-based security", "Flat network", "Implicit trust"],
+    "answers": [
+      "Zero trust",
+      "Perimeter-based security",
+      "Flat network",
+      "Implicit trust"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Zero trust follows 'never trust, always verify,' authenticating and authorizing each request regardless of network location. Perimeter-based and implicit-trust models trust internal traffic by default, and a flat network lacks segmentation entirely."
   },
   {
+    "id": "secplus-d3-002",
     "text": "In a zero trust architecture, which component makes the decision to grant or deny an access request based on policy?",
-    "answers": ["The policy engine", "The load balancer", "The DHCP server", "The switch"],
+    "answers": [
+      "The policy engine",
+      "The load balancer",
+      "The DHCP server",
+      "The switch"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "The policy engine evaluates each request against policy and decides to grant or deny access, with the policy administrator enforcing that decision. Load balancers, DHCP servers, and switches handle traffic distribution and connectivity, not access decisions."
   },
   {
+    "id": "secplus-d3-003",
     "text": "Which cryptographic approach uses a single shared key for both encryption and decryption, making it fast and suited to bulk data?",
-    "answers": ["Symmetric encryption", "Asymmetric encryption", "Hashing", "Digital signatures"],
+    "answers": [
+      "Symmetric encryption",
+      "Asymmetric encryption",
+      "Hashing",
+      "Digital signatures"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Symmetric encryption (e.g., AES) uses one shared key for both operations and is efficient for large volumes of data. Asymmetric encryption uses a public/private key pair, hashing is one-way, and digital signatures combine hashing with asymmetric keys."
   },
   {
+    "id": "secplus-d3-004",
     "text": "A secure web connection uses asymmetric encryption to exchange a key, then switches to symmetric encryption for the session. Why?",
-    "answers": ["Symmetric encryption is faster for bulk data, while asymmetric safely handles key exchange", "Asymmetric encryption cannot encrypt anything", "Symmetric encryption is more secure than any alternative", "Hashing replaces both during the session"],
+    "answers": [
+      "Symmetric encryption is faster for bulk data, while asymmetric safely handles key exchange",
+      "Asymmetric encryption cannot encrypt anything",
+      "Symmetric encryption is more secure than any alternative",
+      "Hashing replaces both during the session"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "This hybrid approach uses slower asymmetric encryption only to exchange the key securely, then fast symmetric encryption for the bulk session data — the pattern behind TLS. Asymmetric encryption can encrypt data but is too slow for large volumes."
   },
   {
+    "id": "secplus-d3-005",
     "text": "In a public key infrastructure (PKI), which entity issues and digitally signs certificates to vouch for their authenticity?",
-    "answers": ["Certificate Authority (CA)", "Domain Name Server", "Load balancer", "Proxy server"],
+    "answers": [
+      "Certificate Authority (CA)",
+      "Domain Name Server",
+      "Load balancer",
+      "Proxy server"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "A Certificate Authority (CA) issues and signs digital certificates, establishing the chain of trust in a PKI. DNS resolves names, load balancers distribute traffic, and proxies mediate connections — none issue certificates."
   },
   {
+    "id": "secplus-d3-006",
     "text": "Which mechanism allows a client to check in real time whether a specific certificate has been revoked?",
-    "answers": ["OCSP (Online Certificate Status Protocol)", "DHCP", "NTP", "SNMP"],
+    "answers": [
+      "OCSP (Online Certificate Status Protocol)",
+      "DHCP",
+      "NTP",
+      "SNMP"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "OCSP lets a client query a responder for the real-time revocation status of a certificate, an alternative to downloading a full Certificate Revocation List (CRL). DHCP assigns addresses, NTP synchronizes time, and SNMP monitors devices."
   },
   {
+    "id": "secplus-d3-007",
     "text": "A payment system must store a non-sensitive stand-in value for each credit card number, with the real number retrievable only from a separate secure vault. Which technique fits BEST?",
-    "answers": ["Tokenization", "Hashing", "Data masking", "Compression"],
+    "answers": [
+      "Tokenization",
+      "Hashing",
+      "Data masking",
+      "Compression"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Tokenization replaces sensitive data with a random surrogate token, keeping the real value in a separate secure vault for authorized retrieval. Hashing is one-way (not reversible), masking only hides characters for display, and compression reduces size without protecting the data."
   },
   {
+    "id": "secplus-d3-008",
     "text": "An organization deploys servers across two geographically separate data centers so that if one site fails, the other continues serving users. Which principle does this support?",
-    "answers": ["High availability and resilience", "Least privilege", "Non-repudiation", "Steganography"],
+    "answers": [
+      "High availability and resilience",
+      "Least privilege",
+      "Non-repudiation",
+      "Steganography"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Geographic redundancy across sites supports high availability and resilience, keeping services running through a site failure or disaster. Least privilege limits access, non-repudiation proves actions, and steganography hides data within other data."
   },
   {
+    "id": "secplus-d3-009",
     "text": "Remote employees need encrypted access to only a few specific internal web applications, without exposing the rest of the internal network. Which approach BEST meets both requirements?",
-    "answers": ["A clientless TLS reverse proxy publishing only those applications", "A full-tunnel VPN routing all traffic into the network", "Opening the applications directly to the public internet", "Disabling authentication for convenience"],
+    "answers": [
+      "A clientless TLS reverse proxy publishing only those applications",
+      "A full-tunnel VPN routing all traffic into the network",
+      "Opening the applications directly to the public internet",
+      "Disabling authentication for convenience"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "A clientless TLS reverse proxy exposes only the specific published applications over an encrypted channel, avoiding broad network access. A full-tunnel VPN grants wider reachability than needed, and exposing apps publicly or removing authentication increases risk."
-  }  ,
+  },
   {
+    "id": "secplus-d5-001",
     "text": "An organization formally identifies a risk and decides to purchase cyber insurance to offset potential financial loss. Which risk management strategy is this?",
-    "answers": ["Risk transference", "Risk avoidance", "Risk acceptance", "Risk mitigation"],
+    "answers": [
+      "Risk transference",
+      "Risk avoidance",
+      "Risk acceptance",
+      "Risk mitigation"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Shifting the financial impact of a risk to a third party, such as through insurance, is risk transference. Avoidance eliminates the risky activity, acceptance takes on the risk without further action, and mitigation reduces the likelihood or impact directly."
   },
   {
+    "id": "secplus-d5-002",
     "text": "Which metric estimates the expected monetary loss from a single occurrence of a specific risk event?",
-    "answers": ["Single Loss Expectancy (SLE)", "Annualized Rate of Occurrence (ARO)", "Annualized Loss Expectancy (ALE)", "Mean Time to Repair (MTTR)"],
+    "answers": [
+      "Single Loss Expectancy (SLE)",
+      "Annualized Rate of Occurrence (ARO)",
+      "Annualized Loss Expectancy (ALE)",
+      "Mean Time to Repair (MTTR)"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Single Loss Expectancy (SLE) is the expected loss from one occurrence of a risk (asset value × exposure factor). ARO is how often it's expected per year, ALE is SLE × ARO, and MTTR measures repair time, not loss."
   },
   {
+    "id": "secplus-d5-003",
     "text": "A company hires an outside firm to evaluate whether its security controls comply with a required regulation. What is this activity called?",
-    "answers": ["A third-party (external) audit", "Penetration testing", "Threat modeling", "Fuzzing"],
+    "answers": [
+      "A third-party (external) audit",
+      "Penetration testing",
+      "Threat modeling",
+      "Fuzzing"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "An external party evaluating controls against a standard or regulation is a third-party audit, providing independent assurance of compliance. Penetration testing probes for exploitable weaknesses, threat modeling anticipates attacks in design, and fuzzing tests software with malformed input."
   },
   {
+    "id": "secplus-d5-004",
     "text": "Before granting a new vendor access to sensitive data, an organization reviews the vendor's security practices, financial stability, and history. What is this process called?",
-    "answers": ["Vendor due diligence", "Change management", "Data classification", "Incident response"],
+    "answers": [
+      "Vendor due diligence",
+      "Change management",
+      "Data classification",
+      "Incident response"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Assessing a vendor's security, financial, and reputational posture before engagement is due diligence, a core part of third-party risk management. Change management governs system changes, data classification labels information sensitivity, and incident response handles security events."
   },
   {
+    "id": "secplus-d5-005",
     "text": "Which document is a legally binding contract that defines the expected level of service, including uptime and response times, between a provider and a customer?",
-    "answers": ["Service Level Agreement (SLA)", "Memorandum of Understanding (MOU)", "Acceptable Use Policy (AUP)", "Business Impact Analysis (BIA)"],
+    "answers": [
+      "Service Level Agreement (SLA)",
+      "Memorandum of Understanding (MOU)",
+      "Acceptable Use Policy (AUP)",
+      "Business Impact Analysis (BIA)"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "A Service Level Agreement (SLA) is a binding contract specifying measurable service expectations such as uptime and response times. An MOU expresses non-binding intent, an AUP governs acceptable resource use, and a BIA assesses the impact of disruptions."
   },
   {
+    "id": "secplus-d5-006",
     "text": "A business analysis identifies which processes are most critical and how long the organization can tolerate their disruption. Which activity is this?",
-    "answers": ["Business Impact Analysis (BIA)", "Penetration test", "Vulnerability scan", "Access review"],
+    "answers": [
+      "Business Impact Analysis (BIA)",
+      "Penetration test",
+      "Vulnerability scan",
+      "Access review"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "A Business Impact Analysis (BIA) identifies critical processes and defines tolerances such as maximum acceptable downtime, informing continuity planning. Penetration tests and vulnerability scans assess technical weaknesses, and access reviews verify user permissions."

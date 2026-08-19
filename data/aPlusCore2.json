@@ -1,350 +1,650 @@
 [
   {
+    "id": "aplus2-d1-001",
     "text": "Which Windows utility lets you view and manage startup programs, running processes, and performance?",
-    "answers": ["Disk Cleanup", "Task Manager", "Device Manager", "Event Viewer"],
+    "answers": [
+      "Disk Cleanup",
+      "Task Manager",
+      "Device Manager",
+      "Event Viewer"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "Task Manager shows running processes, startup items, and real-time performance. Device Manager handles hardware and drivers, Event Viewer shows logs, and Disk Cleanup frees storage space."
   },
   {
+    "id": "aplus2-d1-002",
     "text": "Which file system is the default for modern Windows installations and supports permissions, encryption, and journaling?",
-    "answers": ["NTFS", "FAT32", "exFAT", "ext4"],
+    "answers": [
+      "NTFS",
+      "FAT32",
+      "exFAT",
+      "ext4"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "NTFS is the default Windows file system and supports file-level permissions, encryption (EFS), journaling, and large volumes. FAT32 lacks permissions and has a 4 GB file-size limit, exFAT is aimed at flash media, and ext4 is a Linux file system."
   },
   {
+    "id": "aplus2-d1-003",
     "text": "A technician needs to format a USB flash drive to store files larger than 4 GB and use it across Windows, macOS, and Linux. Which file system is BEST?",
-    "answers": ["exFAT", "FAT32", "NTFS", "ext4"],
+    "answers": [
+      "exFAT",
+      "FAT32",
+      "NTFS",
+      "ext4"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "exFAT handles files larger than 4 GB and is broadly compatible across Windows, macOS, and Linux, making it ideal for flash media. FAT32 caps files at 4 GB, NTFS has limited native write support on macOS, and ext4 is Linux-specific."
   },
   {
+    "id": "aplus2-d1-004",
     "text": "Which partitioning scheme supports drives larger than 2 TB and more than four primary partitions, replacing the older MBR standard?",
-    "answers": ["GPT", "FAT", "NTFS", "MBR"],
+    "answers": [
+      "GPT",
+      "FAT",
+      "NTFS",
+      "MBR"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "GUID Partition Table (GPT) supports very large drives and many partitions, and pairs with UEFI firmware. MBR (Master Boot Record) is limited to 2 TB and four primary partitions, while NTFS and FAT are file systems, not partitioning schemes."
   },
   {
+    "id": "aplus2-d1-005",
     "text": "A user wants to install Windows fresh, erasing all existing data and settings on the drive. Which installation type is this?",
-    "answers": ["Clean install", "In-place upgrade", "Repair installation", "Multiboot"],
+    "answers": [
+      "Clean install",
+      "In-place upgrade",
+      "Repair installation",
+      "Multiboot"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "A clean install wipes the target partition and installs the OS from scratch, removing existing data and settings. An in-place upgrade preserves files and apps, a repair installation fixes system files without erasing data, and multiboot installs multiple OSes side by side."
   },
   {
+    "id": "aplus2-d1-006",
     "text": "Which Windows command-line tool checks a volume for file system errors and can attempt to repair them?",
-    "answers": ["chkdsk", "ipconfig", "ping", "tasklist"],
+    "answers": [
+      "chkdsk",
+      "ipconfig",
+      "ping",
+      "tasklist"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "chkdsk (check disk) scans a volume for file system and disk errors and can repair them with appropriate switches. ipconfig displays network configuration, ping tests connectivity, and tasklist lists running processes."
   },
   {
+    "id": "aplus2-d1-007",
     "text": "A technician needs to display and flush the local DNS resolver cache on a Windows machine. Which command is used?",
-    "answers": ["ipconfig", "chkdsk", "sfc", "diskpart"],
+    "answers": [
+      "ipconfig",
+      "chkdsk",
+      "sfc",
+      "diskpart"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "ipconfig displays IP configuration and, with /displaydns and /flushdns, shows and clears the DNS resolver cache. chkdsk checks disks, sfc verifies system files, and diskpart manages partitions — none handle the DNS cache."
   },
   {
+    "id": "aplus2-d1-008",
     "text": "Which Windows utility scans protected system files and restores corrupted ones from a cached copy?",
-    "answers": ["sfc (System File Checker)", "format", "robocopy", "gpupdate"],
+    "answers": [
+      "sfc (System File Checker)",
+      "format",
+      "robocopy",
+      "gpupdate"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "System File Checker (sfc /scannow) verifies the integrity of protected system files and repairs corrupted ones. format prepares a volume, robocopy copies files, and gpupdate refreshes Group Policy settings."
   },
   {
+    "id": "aplus2-d1-009",
     "text": "A computer belongs to a centrally managed corporate network where a domain controller handles authentication and policies. What is this arrangement called?",
-    "answers": ["A domain", "A workgroup", "A homegroup", "A VLAN"],
+    "answers": [
+      "A domain",
+      "A workgroup",
+      "A homegroup",
+      "A VLAN"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "A domain centralizes authentication and management through a domain controller (Active Directory), typical of corporate environments. A workgroup is a decentralized peer-to-peer grouping, a homegroup was a legacy home-sharing feature, and a VLAN is a network segmentation concept."
   },
   {
+    "id": "aplus2-d1-010",
     "text": "A file has NTFS permissions allowing 'Read' and share permissions allowing 'Full Control.' When the user accesses the file over the network, what is the effective permission?",
-    "answers": ["Read (the most restrictive of the combined permissions)", "Full Control", "Modify", "No access"],
+    "answers": [
+      "Read (the most restrictive of the combined permissions)",
+      "Full Control",
+      "Modify",
+      "No access"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "When NTFS and share permissions combine over the network, the most restrictive of the two applies — here NTFS Read wins over the more permissive share setting. Accessing locally would ignore share permissions and use NTFS directly."
   },
   {
+    "id": "aplus2-d1-011",
     "text": "Which macOS feature provides automated, scheduled backups to an external or network drive?",
-    "answers": ["Time Machine", "Disk Utility", "Spotlight", "Mission Control"],
+    "answers": [
+      "Time Machine",
+      "Disk Utility",
+      "Spotlight",
+      "Mission Control"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "Time Machine performs automatic, incremental backups to a designated drive, allowing point-in-time file recovery. Disk Utility manages disks, Spotlight is search, and Mission Control manages windows and desktops."
   },
   {
+    "id": "aplus2-d1-012",
     "text": "Which command in a Linux terminal lists the contents of a directory?",
-    "answers": ["ls", "cd", "pwd", "rm"],
+    "answers": [
+      "ls",
+      "cd",
+      "pwd",
+      "rm"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "ls lists the files and directories in the current location. cd changes directories, pwd prints the current working directory path, and rm removes files."
   },
   {
+    "id": "aplus2-d1-013",
     "text": "A Linux administrator needs to run a single command with elevated (root) privileges without logging in as root. Which command is used?",
-    "answers": ["sudo", "chmod", "grep", "ls"],
+    "answers": [
+      "sudo",
+      "chmod",
+      "grep",
+      "ls"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "sudo executes a single command with elevated privileges for authorized users, avoiding a full root login. chmod changes file permissions, grep searches text, and ls lists directory contents."
   },
   {
+    "id": "aplus2-d1-014",
     "text": "A technician wants to change a file's permissions in Linux. Which command accomplishes this?",
-    "answers": ["chmod", "chdir", "ipconfig", "sfc"],
+    "answers": [
+      "chmod",
+      "chdir",
+      "ipconfig",
+      "sfc"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "chmod (change mode) sets read, write, and execute permissions on files and directories in Linux. ipconfig and sfc are Windows tools, and chdir is not the standard Linux permission command."
   },
   {
+    "id": "aplus2-d1-015",
     "text": "A user's older computer cannot upgrade to Windows 11 because the CPU and TPM requirements are not met, and the current version is approaching end-of-life. What is the BEST reason this matters for security?",
-    "answers": ["End-of-life systems stop receiving security updates, leaving known flaws unpatched", "The computer will physically stop working on the EOL date", "Files automatically delete at end-of-life", "The keyboard layout changes after EOL"],
+    "answers": [
+      "End-of-life systems stop receiving security updates, leaving known flaws unpatched",
+      "The computer will physically stop working on the EOL date",
+      "Files automatically delete at end-of-life",
+      "The keyboard layout changes after EOL"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "Once an OS reaches end-of-life, the vendor stops issuing security updates, so newly discovered vulnerabilities remain permanently unpatched — the core security risk. The machine keeps running and files remain, but the exposure grows over time."
   },
   {
+    "id": "aplus2-d2-001",
     "text": "A user's files have been encrypted and a message demands payment to restore access. Which type of malware is this?",
-    "answers": ["Ransomware", "Spyware", "Adware", "Rootkit"],
+    "answers": [
+      "Ransomware",
+      "Spyware",
+      "Adware",
+      "Rootkit"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Ransomware encrypts a victim's data and demands payment for the decryption key. Spyware secretly gathers information, adware displays unwanted ads, and a rootkit hides malicious activity to maintain stealthy access."
   },
   {
+    "id": "aplus2-d2-002",
     "text": "Which type of malware disguises itself as legitimate software but carries a hidden malicious payload?",
-    "answers": ["Trojan", "Worm", "Boot sector virus", "Keylogger"],
+    "answers": [
+      "Trojan",
+      "Worm",
+      "Boot sector virus",
+      "Keylogger"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "A Trojan masquerades as useful software to trick users into running it, then delivers its hidden payload. A worm self-propagates, a boot sector virus infects the boot record, and a keylogger records keystrokes."
   },
   {
+    "id": "aplus2-d2-003",
     "text": "Malware that records every keystroke a user types, capturing passwords and messages, is called a:",
-    "answers": ["Keylogger", "Cryptominer", "Rootkit", "Adware"],
+    "answers": [
+      "Keylogger",
+      "Cryptominer",
+      "Rootkit",
+      "Adware"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "A keylogger captures keystrokes to steal credentials and other typed data. A cryptominer hijacks resources to mine cryptocurrency, a rootkit conceals malicious activity, and adware pushes advertisements."
   },
   {
+    "id": "aplus2-d2-004",
     "text": "Which type of malware is specifically designed to hide its presence and maintain privileged access, often at a deep OS level that evades normal detection?",
-    "answers": ["Rootkit", "Trojan", "Ransomware", "Adware"],
+    "answers": [
+      "Rootkit",
+      "Trojan",
+      "Ransomware",
+      "Adware"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "A rootkit embeds itself at a low level to conceal its presence and preserve privileged access, making it hard to detect and remove. Trojans rely on disguise, ransomware encrypts data, and adware displays ads without deep concealment."
   },
   {
+    "id": "aplus2-d2-005",
     "text": "An authentication method requires a password plus a code from a smartphone app. Which security concept does this implement?",
-    "answers": ["Multifactor authentication (MFA)", "Single sign-on (SSO)", "Least privilege", "Access control list"],
+    "answers": [
+      "Multifactor authentication (MFA)",
+      "Single sign-on (SSO)",
+      "Least privilege",
+      "Access control list"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Requiring two different factors — something you know (password) and something you have (the phone app code) — is multifactor authentication. SSO reduces repeated logins, least privilege limits access rights, and an ACL defines resource permissions."
   },
   {
+    "id": "aplus2-d2-006",
     "text": "A security principle states that users should be granted only the access rights they need to perform their job, and nothing more. What is this called?",
-    "answers": ["Principle of least privilege", "Defense in depth", "Implicit deny", "Separation of duties"],
+    "answers": [
+      "Principle of least privilege",
+      "Defense in depth",
+      "Implicit deny",
+      "Separation of duties"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "The principle of least privilege grants each user the minimum access required for their role, limiting damage from mistakes or compromise. Defense in depth layers controls, implicit deny blocks by default, and separation of duties splits sensitive tasks among people."
   },
   {
+    "id": "aplus2-d2-007",
     "text": "An attacker follows an authorized employee through a secure door without badging in. Which social engineering attack is this?",
-    "answers": ["Tailgating", "Phishing", "Vishing", "Smishing"],
+    "answers": [
+      "Tailgating",
+      "Phishing",
+      "Vishing",
+      "Smishing"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Tailgating (or piggybacking) is physically following an authorized person through a controlled entrance without proper credentials. Phishing uses deceptive email, vishing uses voice calls, and smishing uses text messages."
   },
   {
+    "id": "aplus2-d2-008",
     "text": "A user receives a text message claiming to be from their bank, urging them to click a link and verify their account. Which attack is this?",
-    "answers": ["Smishing", "Phishing", "Vishing", "Shoulder surfing"],
+    "answers": [
+      "Smishing",
+      "Phishing",
+      "Vishing",
+      "Shoulder surfing"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Smishing is phishing carried out over SMS text messages. Phishing typically refers to email, vishing uses voice calls, and shoulder surfing is observing someone enter sensitive information."
   },
   {
+    "id": "aplus2-d2-009",
     "text": "Following the CompTIA SOHO malware removal process, after identifying and verifying malware symptoms, what is the NEXT step?",
-    "answers": ["Quarantine the infected system", "Reimage the computer immediately", "Enable System Restore", "Schedule future scans"],
+    "answers": [
+      "Quarantine the infected system",
+      "Reimage the computer immediately",
+      "Enable System Restore",
+      "Schedule future scans"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "After identifying and verifying symptoms, the next step is to quarantine the infected system to prevent spread. Disabling System Restore, remediating, and (only at the end) re-enabling System Restore and scheduling scans come later in the process."
   },
   {
+    "id": "aplus2-d2-010",
     "text": "During malware remediation in Windows, why is it recommended to disable System Restore before cleaning the system?",
-    "answers": ["Restore points can harbor infected files and reintroduce the malware", "It permanently deletes all user data", "It speeds up the CPU", "It is required to connect to the internet"],
+    "answers": [
+      "Restore points can harbor infected files and reintroduce the malware",
+      "It permanently deletes all user data",
+      "It speeds up the CPU",
+      "It is required to connect to the internet"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Malware can be saved within restore points, so disabling System Restore before cleaning prevents the infection from being restored later. It does not delete user data, affect CPU speed, or control internet connectivity."
   },
   {
+    "id": "aplus2-d2-011",
     "text": "A company needs to securely dispose of hard drives so data cannot be recovered, even with advanced tools, while physically destroying the drives. Which method accomplishes this?",
-    "answers": ["Shredding or drilling the drives", "Emptying the Recycle Bin", "A quick format", "Deleting the partition"],
+    "answers": [
+      "Shredding or drilling the drives",
+      "Emptying the Recycle Bin",
+      "A quick format",
+      "Deleting the partition"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Physical destruction such as shredding or drilling renders drives and their data unrecoverable. Emptying the Recycle Bin, quick-formatting, and deleting a partition all leave data recoverable with the right tools."
   },
   {
+    "id": "aplus2-d2-012",
     "text": "Which Windows feature encrypts an entire drive so its data is protected if the computer is lost or stolen?",
-    "answers": ["BitLocker", "Windows Defender Firewall", "User Account Control", "Task Scheduler"],
+    "answers": [
+      "BitLocker",
+      "Windows Defender Firewall",
+      "User Account Control",
+      "Task Scheduler"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "BitLocker provides full-disk encryption, keeping data unreadable without the key even if the drive is removed. Windows Defender Firewall filters network traffic, UAC prompts for elevation, and Task Scheduler automates tasks — none encrypt the drive."
   },
   {
+    "id": "aplus2-d2-013",
     "text": "A user connects to a wireless network that looks legitimate and uses the same name as the coffee shop's real Wi-Fi, but it is actually run by an attacker. What is this called?",
-    "answers": ["An evil twin", "A honeypot", "A firewall", "A VPN"],
+    "answers": [
+      "An evil twin",
+      "A honeypot",
+      "A firewall",
+      "A VPN"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "An evil twin is a rogue access point that imitates a legitimate network's name (SSID) to trick users into connecting so the attacker can intercept traffic. A honeypot is a decoy for attackers, and firewalls and VPNs are defensive technologies."
-  }  ,
+  },
   {
+    "id": "aplus2-d3-001",
     "text": "A Windows PC displays a blue screen with an error code and restarts. This 'blue screen of death' MOST commonly indicates what?",
-    "answers": ["A serious system or driver/hardware error", "A weak Wi-Fi signal", "An expired password", "A full Recycle Bin"],
+    "answers": [
+      "A serious system or driver/hardware error",
+      "A weak Wi-Fi signal",
+      "An expired password",
+      "A full Recycle Bin"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "A BSOD signals a critical error — often a faulty driver, failing hardware, or corrupted system file — serious enough that Windows halts to protect itself. Wi-Fi strength, passwords, and Recycle Bin contents do not trigger a stop error."
   },
   {
+    "id": "aplus2-d3-002",
     "text": "A user reports that an application crashes immediately on launch, while other programs work fine. Which is a reasonable FIRST troubleshooting step?",
-    "answers": ["Repair or reinstall the affected application", "Replace the power supply", "Reinstall Windows from scratch", "Replace the motherboard"],
+    "answers": [
+      "Repair or reinstall the affected application",
+      "Replace the power supply",
+      "Reinstall Windows from scratch",
+      "Replace the motherboard"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "When a single app fails but the rest of the system is fine, repairing or reinstalling that application targets the likely cause directly. Replacing hardware or reinstalling the entire OS is disproportionate to a single-application problem."
   },
   {
+    "id": "aplus2-d3-003",
     "text": "Windows will not boot normally, and a technician wants to start it with only essential drivers and services to diagnose the issue. Which option should be used?",
-    "answers": ["Safe Mode", "Full Screen Mode", "Sleep Mode", "Airplane Mode"],
+    "answers": [
+      "Safe Mode",
+      "Full Screen Mode",
+      "Sleep Mode",
+      "Airplane Mode"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Safe Mode loads Windows with a minimal set of drivers and services, helping isolate whether third-party software or drivers are causing boot problems. The other modes relate to display, power saving, and wireless radios, not diagnostic booting."
   },
   {
+    "id": "aplus2-d3-004",
     "text": "A user wants to undo a recent problematic change by reverting Windows system files and settings to an earlier point without affecting personal documents. Which tool should be used?",
-    "answers": ["System Restore", "Disk Cleanup", "chkdsk", "Task Manager"],
+    "answers": [
+      "System Restore",
+      "Disk Cleanup",
+      "chkdsk",
+      "Task Manager"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "System Restore rolls back system files, drivers, and registry settings to a previous restore point while leaving personal files intact. Disk Cleanup frees space, chkdsk checks disks, and Task Manager manages processes."
   },
   {
+    "id": "aplus2-d3-005",
     "text": "A computer runs extremely slowly, and Task Manager shows one process consuming nearly 100% of the CPU. What is the BEST next step?",
-    "answers": ["Investigate and, if appropriate, end the runaway process", "Immediately replace the CPU", "Reinstall the operating system", "Disconnect the monitor"],
+    "answers": [
+      "Investigate and, if appropriate, end the runaway process",
+      "Immediately replace the CPU",
+      "Reinstall the operating system",
+      "Disconnect the monitor"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Identifying the resource-hogging process and ending or addressing it targets the actual cause of the slowdown. Replacing the CPU, reinstalling the OS, or disconnecting the monitor are unnecessary and ignore the evidence in Task Manager."
   },
   {
+    "id": "aplus2-d3-006",
     "text": "A user's web browser constantly redirects to unwanted sites and shows pop-ups even when closed. Which is the MOST likely cause?",
-    "answers": ["A browser hijacker or malware/unwanted extension", "A failing hard drive", "An outdated BIOS", "A loose RAM module"],
+    "answers": [
+      "A browser hijacker or malware/unwanted extension",
+      "A failing hard drive",
+      "An outdated BIOS",
+      "A loose RAM module"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Persistent redirects and pop-ups typically indicate a browser hijacker, malicious extension, or adware. Failing drives, outdated BIOS, and loose RAM produce different symptoms like crashes or boot failures, not browser redirection."
   },
   {
+    "id": "aplus2-d3-007",
     "text": "An application reports a missing DLL file and fails to start. Which action is MOST appropriate?",
-    "answers": ["Repair or reinstall the application to restore the missing file", "Format the hard drive", "Replace the network card", "Disable the firewall"],
+    "answers": [
+      "Repair or reinstall the application to restore the missing file",
+      "Format the hard drive",
+      "Replace the network card",
+      "Disable the firewall"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "A missing DLL usually means the application's files are incomplete or corrupted, so repairing or reinstalling it restores the needed component. Formatting the drive is drastic, and the network card and firewall are unrelated to a missing local library."
   },
   {
+    "id": "aplus2-d3-008",
     "text": "A smartphone app repeatedly fails to launch after a recent update. Which is a reasonable early troubleshooting step?",
-    "answers": ["Clear the app's cache or reinstall the app", "Replace the phone's battery", "Factory reset the phone immediately", "Replace the SIM card"],
+    "answers": [
+      "Clear the app's cache or reinstall the app",
+      "Replace the phone's battery",
+      "Factory reset the phone immediately",
+      "Replace the SIM card"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Clearing the app cache or reinstalling the app addresses corrupted app data from the update without disruptive measures. A factory reset is a last resort, and the battery and SIM card are unrelated to a single app failing to launch."
   },
   {
+    "id": "aplus2-d3-009",
     "text": "A Windows computer boots to a black screen stating no operating system was found, after a failed update. Which recovery tool attempts to fix boot problems automatically?",
-    "answers": ["Startup Repair (Windows Recovery Environment)", "Disk Cleanup", "Task Scheduler", "Performance Monitor"],
+    "answers": [
+      "Startup Repair (Windows Recovery Environment)",
+      "Disk Cleanup",
+      "Task Scheduler",
+      "Performance Monitor"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Startup Repair in the Windows Recovery Environment automatically diagnoses and fixes common boot problems. Disk Cleanup frees space, Task Scheduler automates tasks, and Performance Monitor tracks system metrics — none repair the boot process."
   },
   {
+    "id": "aplus2-d3-010",
     "text": "A user complains their phone battery drains unusually fast and the device feels warm even when idle. Which is the BEST first step?",
-    "answers": ["Check battery usage stats for a misbehaving app and update or close it", "Replace the display", "Reinstall the mobile OS", "Swap the charging cable"],
+    "answers": [
+      "Check battery usage stats for a misbehaving app and update or close it",
+      "Replace the display",
+      "Reinstall the mobile OS",
+      "Swap the charging cable"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Reviewing battery usage to find a background app consuming resources targets the most common cause of drain and heat. Replacing the display, reinstalling the OS, or swapping the cable are disproportionate to the symptom without further evidence."
   },
   {
+    "id": "aplus2-d3-011",
     "text": "After installing a new device driver, Windows becomes unstable. Which built-in feature lets you revert to the previously working driver?",
-    "answers": ["Roll Back Driver in Device Manager", "Disk Defragmenter", "Windows Firewall", "Magnifier"],
+    "answers": [
+      "Roll Back Driver in Device Manager",
+      "Disk Defragmenter",
+      "Windows Firewall",
+      "Magnifier"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "The Roll Back Driver option in Device Manager reverts a device to its previous driver when a new one causes problems. Disk Defragmenter optimizes storage, Windows Firewall filters traffic, and Magnifier is an accessibility tool."
   },
   {
+    "id": "aplus2-d4-001",
     "text": "According to backup best practices, what does the '3-2-1 rule' recommend?",
-    "answers": ["Three copies of data, on two different media types, with one copy off-site", "Three backups per day, two per week, one per month", "Three drives, two servers, one cloud login", "Three passwords, two admins, one key"],
+    "answers": [
+      "Three copies of data, on two different media types, with one copy off-site",
+      "Three backups per day, two per week, one per month",
+      "Three drives, two servers, one cloud login",
+      "Three passwords, two admins, one key"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "The 3-2-1 rule calls for three copies of data, stored on two different media types, with one copy kept off-site to survive local disasters. The other options misstate the rule's meaning."
   },
   {
+    "id": "aplus2-d4-002",
     "text": "Which backup type copies only the data that has changed since the last FULL backup, and does not reset the archive marker?",
-    "answers": ["Differential", "Incremental", "Synthetic full", "Full"],
+    "answers": [
+      "Differential",
+      "Incremental",
+      "Synthetic full",
+      "Full"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "A differential backup captures all changes since the last full backup, so differentials grow larger over time but simplify restores (full + latest differential). An incremental captures changes since the last backup of any type, and a full backs up everything."
   },
   {
+    "id": "aplus2-d4-003",
     "text": "Which backup type copies only the data changed since the last backup of ANY type, producing the smallest and fastest backups?",
-    "answers": ["Incremental", "Differential", "Full", "Synthetic full"],
+    "answers": [
+      "Incremental",
+      "Differential",
+      "Full",
+      "Synthetic full"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "An incremental backup saves only what changed since the previous backup of any type, making each backup small and quick but requiring the full plus every incremental to restore. Differentials grow larger, and a full copies everything each time."
   },
   {
+    "id": "aplus2-d4-004",
     "text": "Before opening a computer case to replace components, which safety practice BEST protects sensitive electronics from static damage?",
-    "answers": ["Wear an ESD wrist strap connected to ground", "Wear latex gloves", "Keep the humidity as low as possible", "Leave the PSU plugged in and powered on"],
+    "answers": [
+      "Wear an ESD wrist strap connected to ground",
+      "Wear latex gloves",
+      "Keep the humidity as low as possible",
+      "Leave the PSU plugged in and powered on"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "An ESD wrist strap connected to ground safely dissipates static charge, protecting components from electrostatic discharge. Latex gloves don't prevent ESD, low humidity increases static, and leaving the PSU powered on poses an electrical hazard."
   },
   {
+    "id": "aplus2-d4-005",
     "text": "An organization requires that any change to production systems be formally requested, reviewed, and approved, with a documented rollback plan. What is this process called?",
-    "answers": ["Change management", "Incident response", "Asset disposal", "Social engineering"],
+    "answers": [
+      "Change management",
+      "Incident response",
+      "Asset disposal",
+      "Social engineering"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Change management governs how changes are requested, reviewed, approved, implemented, and rolled back if needed, reducing risk from unplanned changes. Incident response handles security events, asset disposal covers retiring equipment, and social engineering is an attack method."
   },
   {
+    "id": "aplus2-d4-006",
     "text": "Which document establishes acceptable ways employees may use company computers, networks, and internet access?",
-    "answers": ["Acceptable Use Policy (AUP)", "Chain of custody form", "Material Safety Data Sheet (SDS)", "Non-disclosure agreement (NDA)"],
+    "answers": [
+      "Acceptable Use Policy (AUP)",
+      "Chain of custody form",
+      "Material Safety Data Sheet (SDS)",
+      "Non-disclosure agreement (NDA)"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "An Acceptable Use Policy (AUP) defines how employees may use company IT resources. A chain of custody tracks evidence handling, an SDS covers hazardous materials safety, and an NDA governs confidentiality of information."
   },
   {
+    "id": "aplus2-d4-007",
     "text": "When handling hazardous materials such as old batteries or toner, which document provides guidance on safe handling and disposal?",
-    "answers": ["Safety Data Sheet (SDS)", "Acceptable Use Policy", "End User License Agreement", "Service Level Agreement"],
+    "answers": [
+      "Safety Data Sheet (SDS)",
+      "Acceptable Use Policy",
+      "End User License Agreement",
+      "Service Level Agreement"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "A Safety Data Sheet (SDS) details safe handling, storage, and disposal of hazardous materials. An AUP governs resource use, an EULA covers software licensing terms, and an SLA defines service expectations."
   },
   {
+    "id": "aplus2-d4-008",
     "text": "A technician needs to lift a heavy box of equipment. Which practice reduces the risk of injury?",
-    "answers": ["Lift with the legs, keeping the back straight", "Bend at the waist and lift with the back", "Twist while lifting to save time", "Hold the load away from the body"],
+    "answers": [
+      "Lift with the legs, keeping the back straight",
+      "Bend at the waist and lift with the back",
+      "Twist while lifting to save time",
+      "Hold the load away from the body"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Proper lifting uses the leg muscles with a straight back and the load held close to the body, protecting the spine. Bending at the waist, twisting while lifting, and holding loads away from the body all increase injury risk."
   },
   {
+    "id": "aplus2-d4-009",
     "text": "In a backup rotation scheme, which approach uses daily, weekly, and monthly backup sets that are promoted on a schedule?",
-    "answers": ["Grandfather-father-son (GFS)", "3-2-1 rule", "Synthetic full", "In-place recovery"],
+    "answers": [
+      "Grandfather-father-son (GFS)",
+      "3-2-1 rule",
+      "Synthetic full",
+      "In-place recovery"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Grandfather-father-son (GFS) rotates backups across daily (son), weekly (father), and monthly (grandfather) sets on a defined schedule. The 3-2-1 rule addresses copies and locations, a synthetic full is a backup type, and in-place recovery is a restore method."
   },
   {
+    "id": "aplus2-d4-010",
     "text": "Why is it important to periodically TEST backups by performing a restore?",
-    "answers": ["To confirm the backups are actually usable and can be recovered when needed", "To increase the size of the backups", "To disable the firewall temporarily", "To reset user passwords"],
+    "answers": [
+      "To confirm the backups are actually usable and can be recovered when needed",
+      "To increase the size of the backups",
+      "To disable the firewall temporarily",
+      "To reset user passwords"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Testing restores verifies that backups are complete and recoverable, so a real disaster doesn't reveal that the backups were corrupt or incomplete. Testing does not change backup size, firewall state, or passwords."
   },
   {
+    "id": "aplus2-d4-011",
     "text": "A company must securely retire old workstations containing sensitive data before donating the hardware. Which step is essential before the machines leave the building?",
-    "answers": ["Sanitize or destroy the drives so no recoverable data remains", "Delete the desktop shortcuts", "Sign out of the user accounts", "Empty the Recycle Bin"],
+    "answers": [
+      "Sanitize or destroy the drives so no recoverable data remains",
+      "Delete the desktop shortcuts",
+      "Sign out of the user accounts",
+      "Empty the Recycle Bin"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Proper disposal requires sanitizing (secure wipe) or physically destroying the drives so sensitive data cannot be recovered before hardware leaves the organization. Deleting shortcuts, signing out, or emptying the Recycle Bin leave the underlying data fully recoverable."

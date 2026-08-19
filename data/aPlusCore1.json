@@ -1,350 +1,650 @@
 [
   {
+    "id": "aplus1-d3-001",
     "text": "Which connector is used to attach a modern internal SATA hard drive's data cable?",
-    "answers": ["7-pin SATA", "40-pin IDE", "15-pin power", "6-pin PCIe"],
+    "answers": [
+      "7-pin SATA",
+      "40-pin IDE",
+      "15-pin power",
+      "6-pin PCIe"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "SATA data cables use a flat 7-pin connector. The 40-pin IDE connector belongs to older PATA drives, the 15-pin connector is SATA power (not data), and 6-pin PCIe is for graphics card power."
   },
   {
+    "id": "aplus1-d5-001",
     "text": "A user reports their laptop won't charge. Which component should you check first?",
-    "answers": ["The RAM", "The AC adapter and charging port", "The GPU", "The optical drive"],
+    "answers": [
+      "The RAM",
+      "The AC adapter and charging port",
+      "The GPU",
+      "The optical drive"
+    ],
     "correctIndex": 1,
     "domain": 5,
     "explanation": "For a no-charge symptom, start with the AC adapter and charging port, since those are directly in the power path and the most common failure points. RAM, GPU, and optical drives are unrelated to charging."
   },
   {
+    "id": "aplus1-d1-001",
     "text": "A laptop's screen is dim and cannot be brightened even at maximum brightness settings, though the image is faintly visible. Which component has MOST likely failed?",
-    "answers": ["The LCD panel itself", "The backlight or inverter/backlight circuit", "The wireless card", "The RAM"],
+    "answers": [
+      "The LCD panel itself",
+      "The backlight or inverter/backlight circuit",
+      "The wireless card",
+      "The RAM"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "A faintly visible image with no brightness indicates the backlight has failed while the panel still displays — on older LCDs this involves the inverter, on LED-backlit panels the backlight circuit. A dead LCD panel shows nothing, and RAM or the wireless card have no role in display brightness."
   },
   {
+    "id": "aplus1-d1-002",
     "text": "Which connector type is used by modern smartphones and laptops for reversible charging and high-speed data, and is increasingly the industry standard?",
-    "answers": ["USB-C", "Micro-USB", "Mini-USB", "Barrel connector"],
+    "answers": [
+      "USB-C",
+      "Micro-USB",
+      "Mini-USB",
+      "Barrel connector"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "USB-C is a small, reversible connector supporting fast charging and high-speed data, now the dominant standard across mobile devices and laptops. Micro-USB and Mini-USB are older, non-reversible connectors, and a barrel connector supplies only power."
   },
   {
+    "id": "aplus1-d1-003",
     "text": "A user wants their laptop to connect to a corporate network resource securely over the public internet as though directly on the office LAN. Which technology provides this?",
-    "answers": ["VPN", "NFC", "Bluetooth", "Hotspot"],
+    "answers": [
+      "VPN",
+      "NFC",
+      "Bluetooth",
+      "Hotspot"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "A VPN (virtual private network) creates an encrypted tunnel over the public internet, letting a remote device access internal resources as if locally connected. NFC and Bluetooth are short-range, and a hotspot shares a cellular connection rather than securing access to a corporate LAN."
   },
   {
+    "id": "aplus1-d1-004",
     "text": "A technician is replacing a laptop's internal storage with the thinnest, fastest option that has no moving parts and often uses the M.2 form factor. Which drive type is this?",
-    "answers": ["2.5-inch SATA HDD", "M.2 NVMe SSD", "5.25-inch optical drive", "eSATA external drive"],
+    "answers": [
+      "2.5-inch SATA HDD",
+      "M.2 NVMe SSD",
+      "5.25-inch optical drive",
+      "eSATA external drive"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "An M.2 NVMe SSD is compact, has no moving parts, and uses the PCIe/NVMe interface for the fastest consumer storage speeds. A 2.5-inch SATA HDD has spinning platters and is slower, optical drives read discs, and eSATA is an external connection type."
   },
   {
+    "id": "aplus1-d1-005",
     "text": "Which short-range wireless technology is commonly used for contactless mobile payments by tapping a phone near a reader?",
-    "answers": ["NFC", "Infrared (IR)", "Cellular (LTE)", "Wi-Fi Direct"],
+    "answers": [
+      "NFC",
+      "Infrared (IR)",
+      "Cellular (LTE)",
+      "Wi-Fi Direct"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "Near Field Communication (NFC) operates over a few centimeters and powers tap-to-pay transactions. Infrared requires line of sight and is largely obsolete, cellular is long-range data, and Wi-Fi Direct links devices peer-to-peer over greater distances than contactless payment requires."
   },
   {
+    "id": "aplus1-d1-006",
     "text": "A user reports very short battery life and notices the back cover of their phone is bulging slightly. What should the technician do?",
-    "answers": ["Ignore it, as this is normal wear", "Recognize a swollen battery as a safety hazard and replace it properly", "Puncture the battery to release pressure", "Charge the device fully to reset the battery"],
+    "answers": [
+      "Ignore it, as this is normal wear",
+      "Recognize a swollen battery as a safety hazard and replace it properly",
+      "Puncture the battery to release pressure",
+      "Charge the device fully to reset the battery"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "A bulging case indicates a swollen lithium-ion battery, which is a fire and rupture hazard and must be handled carefully and replaced. Puncturing it is extremely dangerous, and neither ignoring nor charging it addresses the safety risk."
   },
   {
+    "id": "aplus1-d1-007",
     "text": "Which laptop feature allows an external monitor, keyboard, and mouse to connect through a single connection point at a desk?",
-    "answers": ["A docking station", "A KVM splitter cable", "A USB flash drive", "A Molex adapter"],
+    "answers": [
+      "A docking station",
+      "A KVM splitter cable",
+      "A USB flash drive",
+      "A Molex adapter"
+    ],
     "correctIndex": 0,
     "domain": 1,
     "explanation": "A docking station lets a laptop connect to multiple peripherals — displays, input devices, wired network, and power — through one attachment at the desk. A KVM switch shares one keyboard/monitor/mouse across multiple computers, and the other options are unrelated."
   },
   {
+    "id": "aplus1-d2-001",
     "text": "Which wireless standard operates only in the 5 GHz band?",
-    "answers": ["802.11ac (Wi-Fi 5)", "802.11ax (Wi-Fi 6)", "802.11n", "802.11g"],
+    "answers": [
+      "802.11ac (Wi-Fi 5)",
+      "802.11ax (Wi-Fi 6)",
+      "802.11n",
+      "802.11g"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "802.11ac operates exclusively in the 5 GHz band. 802.11ax (Wi-Fi 6) uses 2.4 and 5 GHz (with 6 GHz added in Wi-Fi 6E), 802.11n is dual-band 2.4/5 GHz, and 802.11g is 2.4 GHz only."
   },
   {
+    "id": "aplus1-d2-002",
     "text": "A user needs the widest coverage and best penetration through walls, accepting lower speed. Which frequency band is the BEST choice?",
-    "answers": ["2.4 GHz", "5 GHz", "6 GHz", "60 GHz"],
+    "answers": [
+      "2.4 GHz",
+      "5 GHz",
+      "6 GHz",
+      "60 GHz"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "The 2.4 GHz band travels farther and penetrates walls better than higher bands, at the cost of lower throughput and more congestion. 5 GHz and 6 GHz offer more speed but shorter range and weaker obstacle penetration."
   },
   {
+    "id": "aplus1-d2-003",
     "text": "Which device operates at Layer 2 and forwards frames only to the specific port where the destination device is connected?",
-    "answers": ["Switch", "Hub", "Repeater", "Modem"],
+    "answers": [
+      "Switch",
+      "Hub",
+      "Repeater",
+      "Modem"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "A switch learns MAC addresses and forwards each frame only to the port of the intended recipient, reducing unnecessary traffic. A hub repeats signals to all ports, a repeater extends a signal, and a modem converts between digital and analog for internet service."
   },
   {
+    "id": "aplus1-d2-004",
     "text": "A small office needs to share one internet connection, provide Wi-Fi, assign local IP addresses, and include a basic firewall in a single device. What is this device commonly called?",
-    "answers": ["A SOHO router (wireless gateway)", "An unmanaged switch", "A repeater", "A KVM switch"],
+    "answers": [
+      "A SOHO router (wireless gateway)",
+      "An unmanaged switch",
+      "A repeater",
+      "A KVM switch"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "A SOHO (small office/home office) router combines routing, wireless access, DHCP, NAT, and basic firewalling in one unit. An unmanaged switch only forwards frames, a repeater extends range, and a KVM switch shares input/output devices among computers."
   },
   {
+    "id": "aplus1-d2-005",
     "text": "Which protocol automatically assigns IP addresses to devices on a home or office network?",
-    "answers": ["DHCP", "DNS", "SMTP", "SNMP"],
+    "answers": [
+      "DHCP",
+      "DNS",
+      "SMTP",
+      "SNMP"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "DHCP leases IP addresses and related settings automatically to devices. DNS resolves names to addresses, SMTP sends email, and SNMP monitors network devices — none assign addresses."
   },
   {
+    "id": "aplus1-d2-006",
     "text": "A technician needs to make a patch cable and must attach connectors to twisted-pair cable. Which connector and tool are used?",
-    "answers": ["RJ45 connector with a crimper", "RJ11 connector with a punchdown tool", "BNC connector with pliers", "SC connector with a crimper"],
+    "answers": [
+      "RJ45 connector with a crimper",
+      "RJ11 connector with a punchdown tool",
+      "BNC connector with pliers",
+      "SC connector with a crimper"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Ethernet patch cables use RJ45 connectors attached with a crimping tool. RJ11 is for telephone lines, BNC is for coaxial, and SC is a fiber-optic connector — none of which terminate twisted-pair Ethernet with a crimper."
   },
   {
+    "id": "aplus1-d2-007",
     "text": "A user's device shows an IP address of 169.254.5.20 and cannot reach the internet. What does this indicate?",
-    "answers": ["The device failed to obtain an address from DHCP", "The device has a valid public IP", "DNS is misconfigured", "The firewall is blocking port 443"],
+    "answers": [
+      "The device failed to obtain an address from DHCP",
+      "The device has a valid public IP",
+      "DNS is misconfigured",
+      "The firewall is blocking port 443"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "A 169.254.x.x address is an APIPA (link-local) address the device self-assigns when it cannot reach a DHCP server, which is why internet access fails. A public IP would be routable, and DNS or firewall issues would not produce a link-local address."
   },
   {
+    "id": "aplus1-d2-008",
     "text": "Which fiber-optic cable type is designed for long-distance runs using a laser light source and a very small core?",
-    "answers": ["Single-mode fiber", "Multimode fiber", "Cat 6 twisted pair", "Coaxial (RG-6)"],
+    "answers": [
+      "Single-mode fiber",
+      "Multimode fiber",
+      "Cat 6 twisted pair",
+      "Coaxial (RG-6)"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "Single-mode fiber has a very small core and uses laser light to carry signals over long distances with minimal loss. Multimode fiber uses a larger core and LED/VCSEL sources for shorter runs, while twisted pair and coaxial are copper media."
   },
   {
+    "id": "aplus1-d2-009",
     "text": "Which internet connection type delivers service over existing telephone lines while allowing simultaneous voice calls?",
-    "answers": ["DSL", "Dial-up", "Satellite", "Cellular"],
+    "answers": [
+      "DSL",
+      "Dial-up",
+      "Satellite",
+      "Cellular"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "DSL (Digital Subscriber Line) runs over telephone wiring and separates voice and data frequencies so calls and internet work at the same time. Dial-up occupies the phone line during use, and satellite and cellular do not use the local telephone line at all."
   },
   {
+    "id": "aplus1-d2-010",
     "text": "A user wants to reserve a fixed IP address for a network printer so it never changes, without manually configuring the printer. Which router feature accomplishes this?",
-    "answers": ["A DHCP reservation", "Port forwarding", "MAC filtering", "A static route"],
+    "answers": [
+      "A DHCP reservation",
+      "Port forwarding",
+      "MAC filtering",
+      "A static route"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "A DHCP reservation ties a specific IP address to a device's MAC address so the DHCP server always leases it the same address. Port forwarding directs inbound traffic, MAC filtering permits or blocks devices, and a static route defines a manual path between networks."
   },
   {
+    "id": "aplus1-d2-011",
     "text": "Which port is used by HTTPS, the protocol securing web traffic to sites like online banking?",
-    "answers": ["443", "80", "21", "25"],
+    "answers": [
+      "443",
+      "80",
+      "21",
+      "25"
+    ],
     "correctIndex": 0,
     "domain": 2,
     "explanation": "HTTPS uses port 443 to carry encrypted web traffic. Port 80 is unencrypted HTTP, port 21 is FTP control, and port 25 is SMTP for email."
   },
   {
+    "id": "aplus1-d3-002",
     "text": "Which RAID level provides disk mirroring, writing identical data to two drives for redundancy?",
-    "answers": ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
+    "answers": [
+      "RAID 0",
+      "RAID 1",
+      "RAID 5",
+      "RAID 10"
+    ],
     "correctIndex": 1,
     "domain": 3,
     "explanation": "RAID 1 mirrors data across two drives, so a full copy survives if one fails. RAID 0 stripes without redundancy, RAID 5 stripes with parity across three or more drives, and RAID 10 combines mirroring and striping across at least four drives."
   },
   {
+    "id": "aplus1-d3-003",
     "text": "Which RAID level uses striping with distributed parity and requires a minimum of three drives?",
-    "answers": ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
+    "answers": [
+      "RAID 0",
+      "RAID 1",
+      "RAID 5",
+      "RAID 10"
+    ],
     "correctIndex": 2,
     "domain": 3,
     "explanation": "RAID 5 stripes data with parity spread across all member drives, needing at least three disks and surviving a single drive failure. RAID 0 has no parity, RAID 1 mirrors, and RAID 10 needs at least four drives for its stripe-plus-mirror design."
   },
   {
+    "id": "aplus1-d3-004",
     "text": "A technician is installing memory in a laptop. Which RAM form factor is used?",
-    "answers": ["DIMM", "SODIMM", "eSATA", "PCIe"],
+    "answers": [
+      "DIMM",
+      "SODIMM",
+      "eSATA",
+      "PCIe"
+    ],
     "correctIndex": 1,
     "domain": 3,
     "explanation": "Laptops use the smaller SODIMM (Small Outline DIMM) form factor to fit their compact chassis. Full-size DIMMs go in desktops, while eSATA and PCIe are interfaces, not memory form factors."
   },
   {
+    "id": "aplus1-d3-005",
     "text": "A server requires memory that can automatically detect and correct single-bit errors for reliability. Which RAM type is needed?",
-    "answers": ["ECC RAM", "Non-ECC RAM", "VRAM", "Flash memory"],
+    "answers": [
+      "ECC RAM",
+      "Non-ECC RAM",
+      "VRAM",
+      "Flash memory"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "ECC (error-correcting code) RAM detects and corrects single-bit memory errors, valued in servers where reliability is critical. Non-ECC RAM lacks this, VRAM is dedicated video memory, and flash memory is non-volatile storage, not system RAM."
   },
   {
+    "id": "aplus1-d3-006",
     "text": "Which connector supplies power from the power supply to older internal peripherals and some fans, using a 4-pin design?",
-    "answers": ["Molex", "SATA power (15-pin)", "8-pin EPS", "RJ45"],
+    "answers": [
+      "Molex",
+      "SATA power (15-pin)",
+      "8-pin EPS",
+      "RJ45"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "The 4-pin Molex connector delivers power to legacy drives, fans, and accessories. The 15-pin SATA power connector serves modern drives, the 8-pin EPS powers the CPU, and RJ45 is a network connector, not a power connector."
   },
   {
+    "id": "aplus1-d3-007",
     "text": "A user needs to connect a modern monitor capable of high refresh rates and resolutions using a digital-only interface common on graphics cards. Which connector is BEST?",
-    "answers": ["DisplayPort", "VGA", "PS/2", "RJ11"],
+    "answers": [
+      "DisplayPort",
+      "VGA",
+      "PS/2",
+      "RJ11"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "DisplayPort is a modern digital video interface supporting high resolutions and refresh rates, common on PC graphics cards. VGA is legacy analog video, PS/2 connects older keyboards and mice, and RJ11 is a telephone connector."
   },
   {
+    "id": "aplus1-d3-008",
     "text": "When selecting a power supply unit (PSU) for a new build with a high-end graphics card, which specification is MOST important to verify?",
-    "answers": ["Sufficient wattage and the correct connectors for all components", "The color of the cables", "The number of USB ports on the case", "The brand of the monitor"],
+    "answers": [
+      "Sufficient wattage and the correct connectors for all components",
+      "The color of the cables",
+      "The number of USB ports on the case",
+      "The brand of the monitor"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "A PSU must supply enough total wattage and provide the correct connectors (such as PCIe power for the GPU) to run all components reliably. Cable color, case USB ports, and monitor brand have no bearing on whether the PSU can power the system."
   },
   {
+    "id": "aplus1-d3-009",
     "text": "A laser printer produces pages with faint, evenly faded print across the entire page. Which consumable is MOST likely low or failing?",
-    "answers": ["The toner cartridge", "The paper tray", "The USB cable", "The network card"],
+    "answers": [
+      "The toner cartridge",
+      "The paper tray",
+      "The USB cable",
+      "The network card"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Uniformly faded output on a laser printer typically means the toner cartridge is running low. The paper tray holds media, and the USB cable and network card affect connectivity, not print density."
   },
   {
+    "id": "aplus1-d3-010",
     "text": "Which printer type uses heat to transfer or form the image and is commonly used for shipping labels and receipts?",
-    "answers": ["Thermal printer", "Laser printer", "Inkjet printer", "Impact (dot-matrix) printer"],
+    "answers": [
+      "Thermal printer",
+      "Laser printer",
+      "Inkjet printer",
+      "Impact (dot-matrix) printer"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "Thermal printers use heat to create images on heat-sensitive paper or via thermal-transfer ribbon, ideal for labels and receipts. Laser printers use toner and a fuser, inkjets spray liquid ink, and impact printers strike a ribbon against paper."
   },
   {
+    "id": "aplus1-d3-011",
     "text": "A technician is about to install a memory module and wants to prevent damaging it with static electricity. Which precaution is BEST?",
-    "answers": ["Wear an anti-static (ESD) wrist strap connected to ground", "Work on a carpeted floor for cushioning", "Wear rubber gloves and keep the room dry", "Hold the module by its gold contacts"],
+    "answers": [
+      "Wear an anti-static (ESD) wrist strap connected to ground",
+      "Work on a carpeted floor for cushioning",
+      "Wear rubber gloves and keep the room dry",
+      "Hold the module by its gold contacts"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "An ESD wrist strap connected to ground safely equalizes charge and prevents electrostatic discharge from damaging components. Carpet increases static, low humidity worsens ESD, and touching the gold contacts risks transferring charge and contaminants directly to the pins."
   },
   {
+    "id": "aplus1-d3-012",
     "text": "Which storage interface offers the highest performance by connecting a solid-state drive directly to the PCIe bus rather than through SATA?",
-    "answers": ["NVMe", "eSATA", "USB 2.0", "IDE"],
+    "answers": [
+      "NVMe",
+      "eSATA",
+      "USB 2.0",
+      "IDE"
+    ],
     "correctIndex": 0,
     "domain": 3,
     "explanation": "NVMe (Non-Volatile Memory Express) drives connect over PCIe lanes, delivering far higher throughput than SATA-based SSDs. eSATA and USB 2.0 are slower external interfaces, and IDE is a legacy parallel interface for older drives."
   },
   {
+    "id": "aplus1-d4-001",
     "text": "Which cloud service model provides ready-to-use applications accessed through a web browser, with the provider managing everything underneath?",
-    "answers": ["SaaS", "PaaS", "IaaS", "DaaS"],
+    "answers": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "DaaS"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Software as a Service (SaaS) delivers finished applications (like web-based email) that the provider fully manages. PaaS offers a development platform, IaaS provides raw infrastructure like VMs, and the customer manages progressively more in each of those."
   },
   {
+    "id": "aplus1-d4-002",
     "text": "A developer wants a cloud environment that provides the operating system, runtime, and tools to build and deploy applications, without managing the underlying servers. Which model fits BEST?",
-    "answers": ["PaaS", "IaaS", "SaaS", "On-premises"],
+    "answers": [
+      "PaaS",
+      "IaaS",
+      "SaaS",
+      "On-premises"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Platform as a Service (PaaS) supplies a managed platform — OS, runtime, and development tools — so developers focus on code rather than infrastructure. IaaS would require managing the OS, SaaS delivers finished apps, and on-premises means managing everything locally."
   },
   {
+    "id": "aplus1-d4-003",
     "text": "What is the primary role of a hypervisor in virtualization?",
-    "answers": ["To create and manage virtual machines by allocating physical resources", "To encrypt network traffic", "To provide antivirus scanning", "To manage printer queues"],
+    "answers": [
+      "To create and manage virtual machines by allocating physical resources",
+      "To encrypt network traffic",
+      "To provide antivirus scanning",
+      "To manage printer queues"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "A hypervisor creates and runs virtual machines, allocating the host's CPU, memory, storage, and network among them. Encryption, antivirus, and print management are unrelated functions handled by other software."
   },
   {
+    "id": "aplus1-d4-004",
     "text": "A user runs VirtualBox on their Windows laptop to run a Linux VM on top of the existing OS. Which type of hypervisor is this?",
-    "answers": ["Type 2 (hosted)", "Type 1 (bare-metal)", "A container runtime", "A RAID controller"],
+    "answers": [
+      "Type 2 (hosted)",
+      "Type 1 (bare-metal)",
+      "A container runtime",
+      "A RAID controller"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "A Type 2 (hosted) hypervisor like VirtualBox runs as an application on top of an existing operating system. A Type 1 (bare-metal) hypervisor runs directly on hardware with no host OS, and containers and RAID controllers are different technologies entirely."
   },
   {
+    "id": "aplus1-d4-005",
     "text": "Which cloud deployment model combines on-premises private infrastructure with public cloud resources, allowing data and workloads to move between them?",
-    "answers": ["Hybrid cloud", "Public cloud", "Private cloud", "Community cloud"],
+    "answers": [
+      "Hybrid cloud",
+      "Public cloud",
+      "Private cloud",
+      "Community cloud"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "A hybrid cloud blends private and public cloud environments so workloads and data can shift between them as needed. Public cloud is fully provider-hosted, private cloud is dedicated to one organization, and community cloud is shared among related organizations."
   },
   {
+    "id": "aplus1-d4-006",
     "text": "A key benefit of virtualization when testing risky software is the ability to save a VM's state and return to it if something breaks. What is this feature called?",
-    "answers": ["A snapshot", "A firewall", "A partition", "A domain"],
+    "answers": [
+      "A snapshot",
+      "A firewall",
+      "A partition",
+      "A domain"
+    ],
     "correctIndex": 0,
     "domain": 4,
     "explanation": "A snapshot captures a VM's state at a point in time, letting you roll back after a failed test or change. A firewall filters traffic, a partition divides storage, and a domain is a network administrative grouping — none preserve and restore VM state."
   },
   {
+    "id": "aplus1-d5-002",
     "text": "A computer powers on, fans spin, but there is no display and a series of beep codes sounds during boot. What should the technician check FIRST?",
-    "answers": ["The RAM seating and modules", "The hard drive cable", "The printer driver", "The DNS settings"],
+    "answers": [
+      "The RAM seating and modules",
+      "The hard drive cable",
+      "The printer driver",
+      "The DNS settings"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Beep codes at POST with no display commonly point to a memory problem, so reseating or testing the RAM is the logical first step. A hard drive issue would typically allow POST to complete, and printer drivers and DNS have nothing to do with a no-boot beep code."
   },
   {
+    "id": "aplus1-d5-003",
     "text": "A PC randomly shuts down under heavy load, and the technician notices the CPU heatsink is caked with dust. What is the MOST likely cause?",
-    "answers": ["Overheating due to poor cooling", "A corrupt DNS cache", "An expired SSL certificate", "A full recycle bin"],
+    "answers": [
+      "Overheating due to poor cooling",
+      "A corrupt DNS cache",
+      "An expired SSL certificate",
+      "A full recycle bin"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Random shutdowns under load with a dust-clogged heatsink indicate thermal shutdown — the system powers off to protect the overheating CPU. DNS, certificates, and disk clutter do not trigger hardware thermal protection."
   },
   {
+    "id": "aplus1-d5-004",
     "text": "A user reports their computer displays 'No boot device found' after working fine yesterday. Which component is the MOST likely culprit?",
-    "answers": ["The storage drive or its connection/boot order", "The monitor", "The keyboard", "The speakers"],
+    "answers": [
+      "The storage drive or its connection/boot order",
+      "The monitor",
+      "The keyboard",
+      "The speakers"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "A 'no boot device' message means firmware cannot locate a bootable drive, pointing to a failed drive, a loose cable, or an incorrect boot order. The monitor, keyboard, and speakers are unrelated to locating the boot volume."
   },
   {
+    "id": "aplus1-d5-005",
     "text": "A laptop display shows nothing, but connecting an external monitor produces a clear image. What does this indicate?",
-    "answers": ["A problem with the laptop's internal display, cable, or backlight", "A failed CPU", "A corrupt operating system", "A dead hard drive"],
+    "answers": [
+      "A problem with the laptop's internal display, cable, or backlight",
+      "A failed CPU",
+      "A corrupt operating system",
+      "A dead hard drive"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "If an external monitor works while the built-in screen stays dark, the fault lies in the laptop's internal panel, display cable, or backlight — not the shared components. A failed CPU, corrupt OS, or dead drive would affect the external display too."
   },
   {
+    "id": "aplus1-d5-006",
     "text": "A user complains that their inkjet printer produces output with missing colors and streaks. Which maintenance step should be tried FIRST?",
-    "answers": ["Run the printhead cleaning and nozzle-check utility", "Replace the fuser assembly", "Reinstall the operating system", "Replace the motherboard"],
+    "answers": [
+      "Run the printhead cleaning and nozzle-check utility",
+      "Replace the fuser assembly",
+      "Reinstall the operating system",
+      "Replace the motherboard"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Missing colors and streaks on an inkjet usually indicate clogged nozzles, so running the printhead cleaning/nozzle-check utility is the correct first step. Fusers belong to laser printers, and reinstalling the OS or replacing the motherboard is far beyond the actual symptom."
   },
   {
+    "id": "aplus1-d5-007",
     "text": "After installing a second RAM module, a PC now fails to boot. Following the troubleshooting methodology, what is the BEST next step?",
-    "answers": ["Remove the newly added module to test if it caused the issue", "Reinstall the operating system", "Replace the power supply", "Update the printer driver"],
+    "answers": [
+      "Remove the newly added module to test if it caused the issue",
+      "Reinstall the operating system",
+      "Replace the power supply",
+      "Update the printer driver"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Since the failure began right after adding the module, reverting that change — removing the new RAM — tests the most probable cause directly. Reinstalling the OS, swapping the PSU, or touching printer drivers ignores the obvious change that introduced the problem."
   },
   {
+    "id": "aplus1-d5-008",
     "text": "A spinning hard drive is making a repetitive clicking sound and files are becoming inaccessible. What does this MOST likely indicate?",
-    "answers": ["Imminent mechanical drive failure", "A software update in progress", "A full DNS cache", "Normal operation"],
+    "answers": [
+      "Imminent mechanical drive failure",
+      "A software update in progress",
+      "A full DNS cache",
+      "Normal operation"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "A repetitive clicking noise (the 'click of death') on a mechanical drive signals failing internal components and impending failure — data should be backed up immediately. This is not normal, and it is unrelated to software updates or DNS."
   },
   {
+    "id": "aplus1-d5-009",
     "text": "A monitor displays a distorted image with the wrong colors, and wiggling the video cable changes the display. What is the MOST likely cause?",
-    "answers": ["A loose or damaged video cable/connection", "A failed hard drive", "An outdated antivirus", "A misconfigured firewall"],
+    "answers": [
+      "A loose or damaged video cable/connection",
+      "A failed hard drive",
+      "An outdated antivirus",
+      "A misconfigured firewall"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Color distortion that changes when the cable is moved points to a loose or damaged video cable or connector. Hard drive, antivirus, and firewall problems would not produce a display artifact that responds to physically moving the video cable."
   },
   {
+    "id": "aplus1-d5-010",
     "text": "A desktop won't power on at all — no lights, no fans. After confirming the wall outlet works, what should the technician check NEXT?",
-    "answers": ["The power supply and its switch/connections", "The graphics driver", "The web browser settings", "The DNS server"],
+    "answers": [
+      "The power supply and its switch/connections",
+      "The graphics driver",
+      "The web browser settings",
+      "The DNS server"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "With a confirmed working outlet and a completely dead system, the power supply (including its rear switch, cable, and motherboard connection) is the next logical check. Graphics drivers, browser settings, and DNS are irrelevant when the machine gets no power at all."
   },
   {
+    "id": "aplus1-d5-011",
     "text": "A projector image is dim and displays a warning about lamp life. What is the MOST appropriate action?",
-    "answers": ["Replace the projector lamp/bulb", "Reinstall the operating system on the source computer", "Replace the network switch", "Update the antivirus definitions"],
+    "answers": [
+      "Replace the projector lamp/bulb",
+      "Reinstall the operating system on the source computer",
+      "Replace the network switch",
+      "Update the antivirus definitions"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "A dimming image with a lamp-life warning means the projector bulb is near end of life and should be replaced. The source computer's OS, the network switch, and antivirus have nothing to do with projector lamp brightness."
   },
   {
+    "id": "aplus1-d5-012",
     "text": "A RAID 5 array reports that one drive has failed, but the volume is still accessible. What should the technician do?",
-    "answers": ["Replace the failed drive so the array can rebuild", "Immediately delete the entire array", "Ignore it since data is still available", "Convert the array to RAID 0"],
+    "answers": [
+      "Replace the failed drive so the array can rebuild",
+      "Immediately delete the entire array",
+      "Ignore it since data is still available",
+      "Convert the array to RAID 0"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "RAID 5 tolerates a single drive failure using parity, so the correct action is to replace the failed drive and let the array rebuild before a second failure causes data loss. Deleting the array, ignoring the fault, or converting to non-redundant RAID 0 all risk losing the data."
   },
   {
+    "id": "aplus1-d5-013",
     "text": "A smartphone becomes very warm, drains its battery quickly, and runs sluggishly even when idle. Which is a reasonable FIRST troubleshooting step?",
-    "answers": ["Check for a rogue app consuming resources in the background", "Replace the display assembly", "Reflow the motherboard", "Replace the SIM card"],
+    "answers": [
+      "Check for a rogue app consuming resources in the background",
+      "Replace the display assembly",
+      "Reflow the motherboard",
+      "Replace the SIM card"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Overheating, rapid battery drain, and sluggishness while idle often trace to a misbehaving background app, so checking battery/resource usage and closing or uninstalling the culprit is the logical first move. Replacing the display, reflowing the board, or swapping the SIM are drastic steps unsupported by these symptoms."
   },
   {
+    "id": "aplus1-d5-014",
     "text": "A workstation intermittently freezes and shows different error messages each time, with no consistent pattern tied to a single application. Which hardware component is a likely suspect?",
-    "answers": ["Failing RAM", "The mouse", "The monitor", "The Ethernet cable"],
+    "answers": [
+      "Failing RAM",
+      "The mouse",
+      "The monitor",
+      "The Ethernet cable"
+    ],
     "correctIndex": 0,
     "domain": 5,
     "explanation": "Random freezes and inconsistent, application-independent errors are a classic sign of failing RAM, which memory diagnostics can confirm. A mouse, monitor, or Ethernet cable failure produces specific, localized symptoms rather than random system-wide instability."
