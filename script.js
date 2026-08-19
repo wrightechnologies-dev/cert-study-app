@@ -17,6 +17,38 @@ function loadData(key) {
   const raw = localStorage.getItem(key);
   return raw ? JSON.parse(raw) : null;
 }
+// ---- Missed-question tracking (Stage 3) ----
+// Stored per track under "missed-<track>" as an array of { id, streak }.
+// streak = consecutive correct answers IN REVIEW MODE; 2 retires the question.
+
+// Add a miss, or reset an existing entry's streak back to 0.
+function recordMiss(track, id) {
+  const key = "missed-" + track;
+  const list = loadData(key) || [];        // [] if nothing saved yet
+  const entry = list.find(function (e) { return e.id === id; });
+  if (entry) {
+    entry.streak = 0;                      // seen it, missed it again — reset progress
+  } else {
+    list.push({ id: id, streak: 0 });      // first time missing this one
+  }
+  saveData(key, list);
+}
+
+// A correct answer during review: advance the streak, retire at 2.
+function recordReviewCorrect(track, id) {
+  const key = "missed-" + track;
+  const list = loadData(key) || [];
+  const entry = list.find(function (e) { return e.id === id; });
+  if (!entry) return;                      // not in the pool; nothing to do
+  entry.streak = entry.streak + 1;
+  if (entry.streak >= 2) {
+    // Retire it: keep every entry EXCEPT this id
+    const remaining = list.filter(function (e) { return e.id !== id; });
+    saveData(key, remaining);
+  } else {
+    saveData(key, list);
+  }
+}
 // ---- Which tracks have domains, and what they're called ----
 // A track listed here gets a domain-selection screen.
 // A track NOT listed here just starts its quiz normally.
@@ -304,6 +336,7 @@ async function loadQuestions(trackName) {
 // ---- STATE: what the app needs to remember as you play ----
 let currentTrack = "cissp";  //Which exam track is active 
 let currentDomain = "all";   // which domain is active (or "all"); used for saving scores
+let reviewMode = false;   // true only during a "review missed" session
 let pendingTrack = null;   // track chosen, waiting for primer "Start quiz"
 let pendingDomain = null;  // domain chosen, waiting for primer "Start quiz"
 let questions = [];
@@ -419,7 +452,7 @@ function showResults() {
   } else {
     bestScoreEl.textContent = "Your best here: " + bestNow + " of " + questions.length;
   }
- }
+}
   ////When the Next button is clicked, advance the quiz.
   nextBtn.addEventListener("click", function () {
     currentIndex = currentIndex + 1;
