@@ -346,7 +346,7 @@ let answered = false;   // has the user answered the current question yet?
 
 // ---- Grab the page elements ----
 const questionEl = document.getElementById("question");
-const progressE1 = document.getElementById("progress");
+const progressEl = document.getElementById("progress");
 const answerButtons = document.querySelectorAll(".answer-btn");
 const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
@@ -382,7 +382,7 @@ function showQuestion() {
   const correctText = q.answers[q.correctIndex];  //Remember the correct answer text 
   shuffle(q.answers); // scramble the questions answer 
   q.correctIndex = q.answers.indexOf(correctText); //find where the text landed now 
-  progressE1.textContent = "Question " + (currentIndex + 1) + " of " + questions.length;
+  progressEl.textContent = "Question " + (currentIndex + 1) + " of " + questions.length;
   questionEl.textContent = q.text;
 
   answerButtons.forEach(function (button, index) {
@@ -428,7 +428,7 @@ answerButtons.forEach(function (button, index) {
 // ---- Show the final score ----
 function showResults() {
   questionEl.textContent = "Quiz complete!";
-  progressE1.textContent = "";
+  progressEl.textContent = "";
   explanationEl.textContent = "";
   explanationEl.classList.remove("has-text")
   feedbackEl.style.color = "black";
@@ -439,21 +439,37 @@ function showResults() {
   nextBtn.style.display = "none";   //hide next button on results screen
   restartBtn.style.display = "inline-block"; // show the restart button
   newQuizBtn.style.display = "inline-block";  //Allow user to go back to the track selection screen
-  // ---- Save best score for this track + domain ----
-  const scoreKey = "best-" + currentTrack + "-" + currentDomain;   // e.g. "best-cissp-3"
-  const previousBest = loadData(scoreKey);   // null if we've never saved one here
-  let isNewBest = false;                    // declare it, default to false
-
-  if (previousBest === null || score > previousBest) {
-    saveData(scoreKey, score);   // first time here, or a new personal best
-    isNewBest = true;
-  }
-  // ---- Show the best score under the result ----
-  const bestNow = loadData(scoreKey);   // re-read so it reflects any save we just made
-  if (isNewBest) {
-    bestScoreEl.textContent = "🎉 New best score! (" + bestNow + " of " + questions.length + ")";
+  if (reviewMode) {
+    // ---- Review session: no best-score save; show pool progress instead ----
+    const remaining = (loadData("missed-" + currentTrack) || []).length;
+    const retired = questions.length - remaining;   // how many left the pool this session
+    if (remaining === 0) {
+      bestScoreEl.textContent = "🎉 Pool cleared! All missed questions retired.";
+    } else {
+      bestScoreEl.textContent = "Retired " + retired + " this session — " + remaining + " still to review.";
+    }
   } else {
-    bestScoreEl.textContent = "Your best here: " + bestNow + " of " + questions.length;
+    // ---- Normal quiz: save best score for this track + domain ----
+    // Review sessions don't count toward best scores — bail before saving.
+if (reviewMode) {
+  bestScoreEl.textContent = "Review session complete.";
+  return;
+}
+    const scoreKey = "best-" + currentTrack + "-" + currentDomain;   // e.g. "best-cissp-3"
+    const previousBest = loadData(scoreKey);   // null if we've never saved one here
+    let isNewBest = false;                    // declare it, default to false
+
+    if (previousBest === null || score > previousBest) {
+      saveData(scoreKey, score);   // first time here, or a new personal best
+      isNewBest = true;
+    }
+    // ---- Show the best score under the result ----
+    const bestNow = loadData(scoreKey);   // re-read so it reflects any save we just made
+    if (isNewBest) {
+      bestScoreEl.textContent = "🎉 New best score! (" + bestNow + " of " + questions.length + ")";
+    } else {
+      bestScoreEl.textContent = "Your best here: " + bestNow + " of " + questions.length;
+    }
   }
 }
   ////When the Next button is clicked, advance the quiz.
@@ -531,11 +547,11 @@ function showResults() {
     showQuestion(); //displays the first one 
   }
   // Start a REVIEW session: only the questions currently in this track's missed pool.
-async function startReview(trackName) {
+async function startReview(trackName, domainId) {
   domainSelectEl.style.display = "none";
   quizArea.style.display = "block";
   currentTrack = trackName;
-  currentDomain = "all";     // review spans domains; not tied to one
+  currentDomain = domainId || "all";     // review spans domains; not tied to one
   reviewMode = true;         // THIS is what makes correct answers count toward retirement
 
   const allQuestions = await loadQuestions(currentTrack);
@@ -546,6 +562,12 @@ async function startReview(trackName) {
   questions = allQuestions.filter(function (q) {
     return missedIds.indexOf(q.id) !== -1;
   });
+    // If a specific domain was requested, narrow to just that domain's misses.
+  if (domainId) {
+    questions = questions.filter(function (q) {
+      return q.domain === domainId;
+    });
+  }
 
   // Guard: nothing to review (shouldn't happen if the button is gated, but be safe)
   if (questions.length === 0) {
@@ -663,7 +685,30 @@ async function startReview(trackName) {
       });
     }
     domainButtonsEl.appendChild(reviewBtn);
+    // Per-domain review buttons — one per domain that actually has misses.
+        if (domains) {
+      // Count misses per domain by cross-referencing the pool against loaded questions.
+      loadQuestions(trackName).then(function (allQuestions) {
+        const missedIds = missedList.map(function (e) { return e.id; });
 
+        domains.forEach(function (d) {
+          // How many missed questions belong to THIS domain?
+          const count = allQuestions.filter(function (q) {
+            return q.domain === d.id && missedIds.indexOf(q.id) !== -1;
+          }).length;
+
+          if (count === 0) return;   // skip domains with nothing to review
+
+          const btn = document.createElement("button");
+          btn.className = "domain-btn";
+          btn.textContent = "Review " + d.name + " (" + count + ")";
+          btn.addEventListener("click", function () {
+            startReview(trackName, d.id);   // d.id is a number — matches q.domain
+          });
+          domainButtonsEl.appendChild(btn);
+        });
+      });
+    }
     domainSelectEl.style.display = "block";   // reveal the domain screen
   }
   quizArea.style.display = "none";
