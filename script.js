@@ -337,6 +337,7 @@ async function loadQuestions(trackName) {
 let currentTrack = "cissp";  //Which exam track is active 
 let currentDomain = "all";   // which domain is active (or "all"); used for saving scores
 let reviewMode = false;   // true only during a "review missed" session
+let reviewPoolAtStart = 0;   // pool size when the current review session began
 let pendingTrack = null;   // track chosen, waiting for primer "Start quiz"
 let pendingDomain = null;  // domain chosen, waiting for primer "Start quiz"
 let questions = [];
@@ -442,7 +443,7 @@ function showResults() {
   if (reviewMode) {
     // ---- Review session: no best-score save; show pool progress instead ----
     const remaining = (loadData("missed-" + currentTrack) || []).length;
-    const retired = questions.length - remaining;   // how many left the pool this session
+    const retired = reviewPoolAtStart - remaining;  // how many left the pool this session
     if (remaining === 0) {
       bestScoreEl.textContent = "🎉 Pool cleared! All missed questions retired.";
     } else {
@@ -451,10 +452,7 @@ function showResults() {
   } else {
     // ---- Normal quiz: save best score for this track + domain ----
     // Review sessions don't count toward best scores — bail before saving.
-if (reviewMode) {
-  bestScoreEl.textContent = "Review session complete.";
-  return;
-}
+
     const scoreKey = "best-" + currentTrack + "-" + currentDomain;   // e.g. "best-cissp-3"
     const previousBest = loadData(scoreKey);   // null if we've never saved one here
     let isNewBest = false;                    // declare it, default to false
@@ -470,6 +468,21 @@ if (reviewMode) {
     } else {
       bestScoreEl.textContent = "Your best here: " + bestNow + " of " + questions.length;
     }
+    // ---- Record this attempt in the trend history (Stage 2) ----
+    const historyKey = "history-" + currentTrack + "-" + currentDomain;
+    const history = loadData(historyKey) || [];   // [] if first attempt here
+
+    history.push({
+      score: score,
+      total: questions.length,
+      date: Date.now()                 // raw timestamp; format only at display time
+    });
+
+    if (history.length > 20) {
+      history.shift();                 // ring buffer: drop the oldest, keep last 20
+    }
+
+    saveData(historyKey, history);
   }
 }
   ////When the Next button is clicked, advance the quiz.
@@ -557,7 +570,7 @@ async function startReview(trackName, domainId) {
   const allQuestions = await loadQuestions(currentTrack);
   const missedList = loadData("missed-" + trackName) || [];
   const missedIds = missedList.map(function (e) { return e.id; });   // just the id strings
-
+  reviewPoolAtStart = missedIds.length;   // snapshot full pool before this session retires any
   // Keep only questions whose id is in the missed pool
   questions = allQuestions.filter(function (q) {
     return missedIds.indexOf(q.id) !== -1;
