@@ -352,6 +352,7 @@ const answerButtons = document.querySelectorAll(".answer-btn");
 const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
 const bestScoreEl = document.getElementById("best-score");
+const trendEl = document.getElementById("trend");
 const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
 const quizArea = document.getElementById("quiz-area");
@@ -425,7 +426,50 @@ answerButtons.forEach(function (button, index) {
     }
   });
 });
+// ---- Trend sparkline (Stage 2B) ----
+// Takes a history array of { score, total, date } and returns an SVG string.
+// Plots each attempt as a percentage (0–100) so quizzes of different lengths
+// share one scale. Returns "" when there aren't at least 2 points to connect.
+function buildSparkline(history) {
+  if (!history || history.length < 2) return "";   // nothing to trend yet
 
+  const w = 200;      // drawing width in px
+  const h = 40;       // drawing height in px
+  const pad = 4;      // keep dots/line off the very edge
+
+  // Convert each attempt to a percentage (0..100)
+  const pcts = history.map(function (a) {
+    return (a.score / a.total) * 100;
+  });
+
+  // Map an index + percentage to an (x, y) point in the SVG box.
+  // x spreads points evenly left→right; y inverts because SVG y grows downward.
+  const n = pcts.length;
+  function xAt(i) {
+    return pad + (i / (n - 1)) * (w - 2 * pad);
+  }
+  function yAt(pct) {
+    return pad + (1 - pct / 100) * (h - 2 * pad);
+  }
+
+  // Build the polyline "x,y x,y ..." points string
+  const points = pcts.map(function (pct, i) {
+    return xAt(i) + "," + yAt(pct);
+  }).join(" ");
+
+  // Highlight the latest attempt with a dot
+  const lastX = xAt(n - 1);
+  const lastY = yAt(pcts[n - 1]);
+
+  return (
+    '<svg viewBox="0 0 ' + w + ' ' + h + '" width="' + w + '" height="' + h + '" ' +
+    'role="img" aria-label="Score trend over last ' + n + ' attempts">' +
+    '<polyline fill="none" stroke="#2b6cb0" stroke-width="2" ' +
+    'stroke-linecap="round" stroke-linejoin="round" points="' + points + '" />' +
+    '<circle cx="' + lastX + '" cy="' + lastY + '" r="3" fill="#2b6cb0" />' +
+    '</svg>'
+  );
+}
 // ---- Show the final score ----
 function showResults() {
   questionEl.textContent = "Quiz complete!";
@@ -441,6 +485,7 @@ function showResults() {
   restartBtn.style.display = "inline-block"; // show the restart button
   newQuizBtn.style.display = "inline-block";  //Allow user to go back to the track selection screen
   if (reviewMode) {
+    trendEl.innerHTML = ""; 
     // ---- Review session: no best-score save; show pool progress instead ----
     const remaining = (loadData("missed-" + currentTrack) || []).length;
     const retired = reviewPoolAtStart - remaining;  // how many left the pool this session
@@ -483,6 +528,7 @@ function showResults() {
     }
 
     saveData(historyKey, history);
+    trendEl.innerHTML = buildSparkline(history);
   }
 }
   ////When the Next button is clicked, advance the quiz.
