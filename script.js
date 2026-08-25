@@ -9,6 +9,27 @@ function shuffle(array) {
   }
   return array
 }
+// ---- Reversal variants (Stage 4) ----
+// In review mode, if a question has a reversal, quiz the reversed direction
+// instead of the original wording. Returns the fields to render; correctIndex
+// and answers come from whichever variant is active. Records against the SAME
+// id either way — a reversal is the same concept, one pool entry.
+function activeView(q, isReview) {
+  if (isReview && q.reversal) {
+    return {
+      text: q.reversal.text,
+      answers: q.reversal.answers,
+      correctIndex: q.reversal.correctIndex,
+      explanation: q.reversal.explanation || ""
+    };
+  }
+  return {
+    text: q.text,
+    answers: q.answers,
+    correctIndex: q.correctIndex,
+    explanation: q.explanation || ""
+  };
+}
 // ---- localStorage helpers: wrap the stringify/parse so we don't repeat it ----
 function saveData(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
@@ -340,6 +361,7 @@ let reviewMode = false;   // true only during a "review missed" session
 let reviewPoolAtStart = 0;   // pool size when the current review session began
 let pendingTrack = null;   // track chosen, waiting for primer "Start quiz"
 let pendingDomain = null;  // domain chosen, waiting for primer "Start quiz"
+let currentView = null;   // the active question view (original or reversal) being shown
 let questions = [];
 let currentIndex = 0;   // which question we're on (starts at the first)
 let score = 0;          // how many correct so far
@@ -381,14 +403,16 @@ function showQuestion() {
   explanationEl.classList.remove("has-text");
 
   const q = questions[currentIndex];      // the current question object
-  const correctText = q.answers[q.correctIndex];  //Remember the correct answer text 
-  shuffle(q.answers); // scramble the questions answer 
-  q.correctIndex = q.answers.indexOf(correctText); //find where the text landed now 
+  currentView = activeView(q, reviewMode);  // original, or reversal if in review
+
+  const correctText = currentView.answers[currentView.correctIndex];  // remember correct text
+  currentView.answers = shuffle(currentView.answers.slice());  // shuffle a COPY — never mutate source
+  currentView.correctIndex = currentView.answers.indexOf(correctText);  // find where it landed
   progressEl.textContent = "Question " + (currentIndex + 1) + " of " + questions.length;
-  questionEl.textContent = q.text;
+  questionEl.textContent = currentView.text;
 
   answerButtons.forEach(function (button, index) {
-    button.textContent = q.answers[index];
+    button.textContent = currentView.answers[index];
     button.style.background = "#f9f9f9";  // reset color from any previous question
     button.disabled = false;
   });
