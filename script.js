@@ -430,7 +430,7 @@ answerButtons.forEach(function (button, index) {
 
     const q = questions[currentIndex];
 
-    if (index === q.correctIndex) {
+    if (index === currentView.correctIndex) {
       score = score + 1;
       feedbackEl.textContent = "Correct!";
       feedbackEl.style.color = "green";
@@ -438,14 +438,14 @@ answerButtons.forEach(function (button, index) {
       if (reviewMode) recordReviewCorrect(currentTrack, q.id); // review-mode correct advances the streak
 
     } else {
-      feedbackEl.textContent = "Not quite — the answer is: " + q.answers[q.correctIndex];
+      feedbackEl.textContent = "Not quite — the answer is: " + currentView.answers[currentView.correctIndex];
       feedbackEl.style.color = "red";
       button.style.background = "#fed7d7";
       answerButtons[q.correctIndex].style.background = "#c6f6d5";
       recordMiss(currentTrack, q.id);  // record the miss (both modes; a review miss resets the streak)
     }
-    explanationEl.textContent = q.explanation || "";
-    if (q.explanation) {
+    explanationEl.textContent = currentView.explanation;
+    if (currentView.explanation) {
       explanationEl.classList.add("has-text");
     }
   });
@@ -539,6 +539,7 @@ function showResults() {
     }
     // ---- Record this attempt in the trend history (Stage 2) ----
     const historyKey = "history-" + currentTrack + "-" + currentDomain;
+    if (questions.length === 0) return;   // don't record attempts from an empty/broken load
     const history = loadData(historyKey) || [];   // [] if first attempt here
 
     history.push({

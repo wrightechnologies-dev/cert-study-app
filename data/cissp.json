@@ -2,15 +2,21 @@
   {
     "id": "cissp-d1-001",
     "text": "Which principle ensures that information is not disclosed to unauthorized individuals?",
-    "answers": [
-      "Integrity",
-      "Confidentiality",
-      "Availability",
-      "Non-repudiation"
-    ],
+    "answers": [ 
+    "Integrity", 
+    "Confidentiality", 
+    "Availability", 
+    "Non-repudiation" 
+  ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "Confidentiality is the CIA triad principle concerned with preventing unauthorized disclosure of information. Integrity addresses unauthorized alteration, and availability addresses access when needed."
+    "explanation": "Confidentiality is the CIA triad principle concerned with preventing unauthorized disclosure of information. Integrity addresses unauthorized alteration, and availability addresses access when needed.",
+    "reversal": {
+      "text": "Confidentiality, as a principle of the CIA triad, is primarily concerned with preventing which of the following?",
+      "answers": ["Unauthorized disclosure of information", "Unauthorized alteration of information", "Loss of timely access to information", "Denial that an action took place"],
+      "correctIndex": 0,
+      "explanation": "Confidentiality protects against unauthorized disclosure. Unauthorized alteration is an integrity concern, loss of access is an availability concern, and denial of an action relates to non-repudiation."
+    }
   },
   {
     "id": "cissp-d1-002",
