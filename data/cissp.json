@@ -29,7 +29,18 @@
     ],
     "correctIndex": 2,
     "domain": 1,
-    "explanation": "Integrity ensures data has not been modified by unauthorized parties, preserving its accuracy and trustworthiness. Confidentiality concerns disclosure, and availability concerns access — neither addresses unauthorized alteration."
+    "explanation": "Integrity ensures data has not been modified by unauthorized parties, preserving its accuracy and trustworthiness. Confidentiality concerns disclosure, and availability concerns access — neither addresses unauthorized alteration.",
+      "reversal": {
+    "text": "Integrity, as a CIA triad principle, is best described as:",
+    "answers": [
+      "Ensuring information is not disclosed to unauthorized individuals",
+      "Ensuring data has not been altered by unauthorized parties",
+      "Ensuring systems and data are accessible when needed",
+      "Confirming the identity of a user before granting access"
+    ],
+    "correctIndex": 1,
+    "explanation": "Integrity ensures data has not been altered by unauthorized parties. Preventing disclosure is confidentiality, ensuring access when needed is availability, and confirming identity is authentication."
+  }
   },
   {
     "id": "cissp-d1-003",
@@ -42,7 +53,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "Availability ensures that systems, data, and services are accessible to authorized users when needed. Accounting, authorization, and auditing relate to access control and tracking, not to the CIA triad's guarantee of access."
+    "explanation": "Availability ensures that systems, data, and services are accessible to authorized users when needed. Accounting, authorization, and auditing relate to access control and tracking, not to the CIA triad's guarantee of access.",
+    "reversal": {
+    "text": "Availability, as a CIA triad component, is best described as:",
+    "answers": [
+      "Ensuring systems and data are accessible when needed",
+      "Tracking what actions a user performed (accounting)",
+      "Granting a user permission to a resource (authorization)",
+      "Reviewing records to detect improper activity (auditing)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Availability ensures systems and data are accessible when needed. Accounting tracks actions taken, authorization grants permissions, and auditing reviews records — the distractors that pair with Availability on the exam."
+  }
   },
   {
     "id": "cissp-d1-004",
@@ -55,7 +77,18 @@
     ],
     "correctIndex": 2,
     "domain": 1,
-    "explanation": "Mandatory Access Control (MAC) assigns security labels to subjects and objects, and the system — not the data owner — enforces access based on clearance levels. DAC leaves access decisions to the owner, and RBAC grants access based on job roles."
+    "explanation": "Mandatory Access Control (MAC) assigns security labels to subjects and objects, and the system — not the data owner — enforces access based on clearance levels. DAC leaves access decisions to the owner, and RBAC grants access based on job roles.",
+    "reversal": {
+    "text": "Which statement best describes Mandatory Access Control (MAC)?",
+    "answers": [
+      "The data owner decides who gets access at their discretion",
+      "Access is granted based on a user's job role",
+      "The system enforces access using labels and clearances",
+      "Access is determined by rules such as time-of-day or IP"
+    ],
+    "correctIndex": 2,
+    "explanation": "MAC enforces access through system-assigned labels and clearances that users cannot override. DAC leaves decisions to the data owner, RBAC grants by job role, and rule-based control uses conditions like time or address."
+  }
   },
   {
     "id": "cissp-d1-005",
@@ -68,7 +101,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "Non-repudiation ensures that a party cannot deny having performed an action, typically achieved through digital signatures and audit logs. It provides accountability, not encryption, uptime, or authentication speed."
+    "explanation": "Non-repudiation ensures that a party cannot deny having performed an action, typically achieved through digital signatures and audit logs. It provides accountability, not encryption, uptime, or authentication speed.",
+      "reversal": {
+    "text": "Which security principle provides assurance that a party cannot deny performing an action?",
+    "answers": [
+      "Confidentiality",
+      "Availability",
+      "Non-repudiation",
+      "Authorization"
+    ],
+    "correctIndex": 2,
+    "explanation": "Non-repudiation assures that a party cannot deny having performed an action. Confidentiality prevents disclosure, availability ensures access, and authorization grants permissions."
+  }
   },
   {
     "id": "cissp-d1-006",
