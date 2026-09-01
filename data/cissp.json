@@ -395,7 +395,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "A screened subnet, or DMZ, places public-facing servers in a segmented zone between the internet and the internal network, so compromising one does not grant direct access to internal systems. Static IPs and disk encryption do not provide network isolation, and sharing a VLAN with internal hosts would remove the separation entirely."
+    "explanation": "A screened subnet, or DMZ, places public-facing servers in a segmented zone between the internet and the internal network, so compromising one does not grant direct access to internal systems. Static IPs and disk encryption do not provide network isolation, and sharing a VLAN with internal hosts would remove the separation entirely.",
+      "reversal": {
+    "text": "What is the purpose of placing servers in a screened subnet (DMZ)?",
+    "answers": [
+      "To isolate public-facing servers so their compromise doesn't directly expose the internal network",
+      "To give the servers permanent, unchanging IP addresses",
+      "To protect data on the servers' disks if the hardware is stolen",
+      "To place the servers on the same broadcast domain as internal hosts"
+    ],
+    "correctIndex": 0,
+    "explanation": "A screened subnet (DMZ) isolates public-facing servers between filtering layers so a compromise doesn't directly reach internal systems. Static IPs are just addressing, full-disk encryption protects data at rest, and sharing a VLAN with internal hosts would remove the isolation."
+  }
   },
   {
     "id": "cissp-d4-002",
@@ -408,7 +419,18 @@
     ],
     "correctIndex": 1,
     "domain": 4,
-    "explanation": "A VPN (virtual private network) creates an encrypted tunnel across an untrusted network, allowing secure remote access to internal resources. A VLAN segments a local network, NAT translates addresses, and DNS resolves names to IP addresses — none of these provide the encrypted remote-access tunnel a VPN does."
+    "explanation": "A VPN (virtual private network) creates an encrypted tunnel across an untrusted network, allowing secure remote access to internal resources. A VLAN segments a local network, NAT translates addresses, and DNS resolves names to IP addresses — none of these provide the encrypted remote-access tunnel a VPN does.",
+      "reversal": {
+    "text": "What is the primary function of a VPN?",
+    "answers": [
+      "Segmenting a switch into separate broadcast domains",
+      "Creating an encrypted tunnel for secure access over an untrusted network",
+      "Translating private IP addresses to public ones",
+      "Resolving domain names to IP addresses"
+    ],
+    "correctIndex": 1,
+    "explanation": "A VPN creates an encrypted tunnel so remote users can reach internal resources securely over the public internet. A VLAN segments a switch, NAT translates addresses, and DNS resolves names to IPs."
+  }
   },
   {
     "id": "cissp-d4-003",
@@ -421,7 +443,18 @@
     ],
     "correctIndex": 1,
     "domain": 4,
-    "explanation": "Telnet transmits credentials and session data in plaintext, allowing anyone capturing traffic to read them, and the standard remediation is to replace it with SSH, which encrypts the session. Speed, port count, and IP version are not the core security problem with Telnet."
+    "explanation": "Telnet transmits credentials and session data in plaintext, allowing anyone capturing traffic to read them, and the standard remediation is to replace it with SSH, which encrypts the session. Speed, port count, and IP version are not the core security problem with Telnet.",
+      "reversal": {
+    "text": "Why is Telnet considered insecure for administrative access, and what replaces it?",
+    "answers": [
+      "It is too slow; replace it with faster hardware",
+      "It transmits credentials in plaintext; replace it with SSH",
+      "It consumes too many ports; consolidate to a single port",
+      "It only supports IPv4; migrate the network to IPv6"
+    ],
+    "correctIndex": 1,
+    "explanation": "Telnet sends credentials and session data in plaintext, so anyone capturing traffic can read them; SSH provides the same remote access over an encrypted channel. The other options misstate the problem — speed, port count, and IP version aren't the security issue."
+  }
   },
   {
     "id": "cissp-d4-004",
@@ -434,7 +467,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "Forging ARP replies to bind the attacker's MAC to another host's IP is ARP poisoning, which enables on-path (man-in-the-middle) interception of traffic. A SYN flood exhausts connection resources, DNS tunneling smuggles data through DNS queries, and phishing targets people rather than the ARP protocol."
+    "explanation": "Forging ARP replies to bind the attacker's MAC to another host's IP is ARP poisoning, which enables on-path (man-in-the-middle) interception of traffic. A SYN flood exhausts connection resources, DNS tunneling smuggles data through DNS queries, and phishing targets people rather than the ARP protocol.",
+      "reversal": {
+    "text": "How does an ARP poisoning attack work, and what category is it?",
+    "answers": [
+      "Forging ARP replies to associate the attacker's MAC with another host's IP, enabling an on-path (MITM) attack",
+      "Flooding a target with half-open connections to exhaust resources (denial of service)",
+      "Hiding stolen data inside DNS queries to exfiltrate it",
+      "Tricking a user into revealing credentials through a deceptive message (social engineering)"
+    ],
+    "correctIndex": 0,
+    "explanation": "ARP poisoning forges ARP replies so the attacker's MAC is mapped to a legitimate IP (often the gateway), placing them on-path to intercept traffic — a man-in-the-middle attack. The distractors describe a SYN flood, DNS tunneling, and phishing."
+  }
   },
   {
     "id": "cissp-d4-005",
@@ -447,7 +491,18 @@
     ],
     "correctIndex": 1,
     "domain": 4,
-    "explanation": "WPA2 or WPA3 with strong authentication provides robust encryption for wireless traffic and is the current best practice. WEP is deprecated and easily broken, hiding an SSID offers no real encryption, and MAC filtering is trivially bypassed by spoofing and does not encrypt traffic."
+    "explanation": "WPA2 or WPA3 with strong authentication provides robust encryption for wireless traffic and is the current best practice. WEP is deprecated and easily broken, hiding an SSID offers no real encryption, and MAC filtering is trivially bypassed by spoofing and does not encrypt traffic.",
+      "reversal": {
+    "text": "Which wireless security option provides the strongest data confidentiality?",
+    "answers": [
+      "WEP",
+      "WPA2/WPA3 with strong authentication",
+      "An open network with a hidden SSID",
+      "MAC address filtering alone"
+    ],
+    "correctIndex": 1,
+    "explanation": "WPA2/WPA3 with strong authentication provides the strongest Wi-Fi confidentiality. WEP is broken and trivially cracked, a hidden SSID on an open network is easily discovered and unencrypted, and MAC filtering is easily spoofed and encrypts nothing."
+  }
   },
   {
     "id": "cissp-d4-006",
