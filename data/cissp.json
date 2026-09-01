@@ -164,7 +164,18 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "The data owner — typically a senior business official — is accountable for classifying data and defining access requirements. The custodian and database administrator implement and maintain the controls the owner specifies but do not set classification, and end users simply operate within the granted permissions."
+    "explanation": "The data owner — typically a senior business official — is accountable for classifying data and defining access requirements. The custodian and database administrator implement and maintain the controls the owner specifies but do not set classification, and end users simply operate within the granted permissions.",
+      "reversal": {
+    "text": "In data governance, which responsibility belongs to the data owner?",
+    "answers": [
+      "Implementing and maintaining the controls the owner specifies",
+      "Classifying the data and defining who may access it",
+      "Administering the database platform day to day",
+      "Accessing and using the data within granted permissions"
+    ],
+    "correctIndex": 1,
+    "explanation": "The data owner — a senior business official — is accountable for classifying data and deciding who may access it. The custodian implements the owner's decisions, the DBA administers the platform, and the end user works within granted permissions."
+  }
   },
   {
     "id": "cissp-d2-002",
@@ -177,7 +188,18 @@
     ],
     "correctIndex": 2,
     "domain": 2,
-    "explanation": "Data moving between systems over a network is data in transit, best protected with transport encryption such as TLS. Data at rest is stored data, data in use is data actively being processed in memory, and neither describes information actively crossing a network link."
+    "explanation": "Data moving between systems over a network is data in transit, best protected with transport encryption such as TLS. Data at rest is stored data, data in use is data actively being processed in memory, and neither describes information actively crossing a network link.",
+      "reversal": {
+    "text": "Which description best matches the 'data in transit' state?",
+    "answers": [
+      "Data stored on disk or other media",
+      "Data actively being processed in memory",
+      "Data moving across a network between systems",
+      "Data held in long-term archive storage"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data in transit is data moving across a network between systems, typically protected with TLS. Data at rest sits on storage, data in use is being processed in memory, and archived data is retained in long-term storage."
+  }
   },
   {
     "id": "cissp-d2-003",
@@ -203,7 +225,18 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "A data processor handles personal data on behalf of, and per the instructions of, the controller. The data controller determines the purposes and means of processing, the data owner is an internal accountability role, and the data subject is the individual the personal data is about."
+    "explanation": "A data processor handles personal data on behalf of, and per the instructions of, the controller. The data controller determines the purposes and means of processing, the data owner is an internal accountability role, and the data subject is the individual the personal data is about.",
+      "reversal": {
+    "text": "Which description best matches the 'data in transit' state?",
+    "answers": [
+      "Data stored on disk or other media",
+      "Data actively being processed in memory",
+      "Data moving across a network between systems",
+      "Data held in long-term archive storage"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data in transit is data moving across a network between systems, typically protected with TLS. Data at rest sits on storage, data in use is being processed in memory, and archived data is retained in long-term storage."
+  }
   },
   {
     "id": "cissp-d2-005",
@@ -229,7 +262,18 @@
     ],
     "correctIndex": 1,
     "domain": 3,
-    "explanation": "Bell-LaPadula enforces 'no read up' (simple security property) and 'no write down' (star property) to protect confidentiality. Biba protects integrity with the opposite rules ('no write up, no read down'), Clark-Wilson uses well-formed transactions for integrity, and Brewer-Nash addresses conflicts of interest."
+    "explanation": "Bell-LaPadula enforces 'no read up' (simple security property) and 'no write down' (star property) to protect confidentiality. Biba protects integrity with the opposite rules ('no write up, no read down'), Clark-Wilson uses well-formed transactions for integrity, and Brewer-Nash addresses conflicts of interest.",
+      "reversal": {
+    "text": "Which access rules does the Bell-LaPadula model enforce?",
+    "answers": [
+      "No read down and no write up, to protect integrity",
+      "No read up and no write down, to protect confidentiality",
+      "Well-formed transactions and separation of duties",
+      "Dynamic barriers preventing conflict-of-interest access"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bell-LaPadula protects confidentiality with 'no read up, no write down.' Biba inverts these for integrity, Clark-Wilson uses well-formed transactions and separation of duties, and Brewer-Nash (Chinese Wall) prevents conflict-of-interest access."
+  }
   },
   {
     "id": "cissp-d3-002",
@@ -242,7 +286,18 @@
     ],
     "correctIndex": 1,
     "domain": 3,
-    "explanation": "Asymmetric encryption uses a public/private key pair, allowing parties to exchange public keys openly and communicate securely without a pre-shared secret. Symmetric encryption requires both sides to already hold the same key, hashing provides integrity rather than confidentiality, and steganography conceals a message's existence but does not establish a secure channel."
+    "explanation": "Asymmetric encryption uses a public/private key pair, allowing parties to exchange public keys openly and communicate securely without a pre-shared secret. Symmetric encryption requires both sides to already hold the same key, hashing provides integrity rather than confidentiality, and steganography conceals a message's existence but does not establish a secure channel.",
+      "reversal": {
+    "text": "What is the defining characteristic of asymmetric encryption?",
+    "answers": [
+      "Both parties use the same shared secret key",
+      "It uses a public/private key pair, so no secret need be pre-shared",
+      "It produces a fixed-length digest that cannot be reversed",
+      "It hides the existence of the message within other data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Asymmetric encryption uses a mathematically linked public/private key pair, letting parties who have never met establish security without pre-sharing a secret. Symmetric encryption relies on a shared key, hashing produces a digest, and steganography hides a message's existence."
+  }
   },
   {
     "id": "cissp-d3-003",
@@ -255,7 +310,18 @@
     ],
     "correctIndex": 1,
     "domain": 3,
-    "explanation": "A cryptographic hash function produces a fixed-length digest that changes if the input changes, making it ideal for verifying integrity. Symmetric ciphers and one-time pads provide confidentiality, and a public key certificate binds an identity to a key but does not by itself verify file integrity."
+    "explanation": "A cryptographic hash function produces a fixed-length digest that changes if the input changes, making it ideal for verifying integrity. Symmetric ciphers and one-time pads provide confidentiality, and a public key certificate binds an identity to a key but does not by itself verify file integrity.",
+      "reversal": {
+    "text": "What does a cryptographic hash function primarily provide?",
+    "answers": [
+      "Confidentiality of a message using a shared key",
+      "Verification that data has not been altered, via a fixed-length digest",
+      "Binding of an identity to a public key",
+      "Perfect secrecy using a key as long as the message"
+    ],
+    "correctIndex": 1,
+    "explanation": "A cryptographic hash produces a fixed-length digest used to verify integrity — any change to the input changes the output. A symmetric cipher provides confidentiality, a certificate binds identity to a public key, and a one-time pad provides perfect secrecy."
+  }
   },
   {
     "id": "cissp-d3-004",
@@ -268,7 +334,18 @@
     ],
     "correctIndex": 1,
     "domain": 3,
-    "explanation": "A certificate authority issues and digitally signs certificates that bind an identity to a public key, allowing others to trust that the key belongs to the named party. It does not encrypt all traffic itself, private key escrow is a separate function that CAs generally avoid, and one-time password generation is unrelated to a CA's core role."
+    "explanation": "A certificate authority issues and digitally signs certificates that bind an identity to a public key, allowing others to trust that the key belongs to the named party. It does not encrypt all traffic itself, private key escrow is a separate function that CAs generally avoid, and one-time password generation is unrelated to a CA's core role.",
+      "reversal": {
+    "text": "In a PKI, which component issues and digitally signs certificates that bind identities to public keys?",
+    "answers": [
+      "The registration authority (RA)",
+      "The certificate authority (CA)",
+      "The key escrow service",
+      "The online certificate status responder (OCSP)"
+    ],
+    "correctIndex": 1,
+    "explanation": "The certificate authority issues and digitally signs certificates binding identities to public keys. The RA verifies identity before issuance, key escrow stores keys for recovery, and OCSP reports whether a certificate has been revoked."
+  }
   },
   {
     "id": "cissp-d3-005",
@@ -294,7 +371,18 @@
     ],
     "correctIndex": 1,
     "domain": 3,
-    "explanation": "A Trusted Platform Module (TPM) is a dedicated hardware chip that securely stores cryptographic keys and supports features like full-disk encryption while resisting tampering. A GPU handles graphics, a NIC handles network connectivity, and a PSU supplies power — none provide secure key storage."
+    "explanation": "A Trusted Platform Module (TPM) is a dedicated hardware chip that securely stores cryptographic keys and supports features like full-disk encryption while resisting tampering. A GPU handles graphics, a NIC handles network connectivity, and a PSU supplies power — none provide secure key storage.",
+      "reversal": {
+    "text": "What is the primary function of a Trusted Platform Module (TPM)?",
+    "answers": [
+      "Accelerating graphics and parallel computation",
+      "Securely storing cryptographic keys and supporting full-disk encryption in tamper-resistant hardware",
+      "Connecting the system to a wired or wireless network",
+      "Converting AC power to the DC voltages components use"
+    ],
+    "correctIndex": 1,
+    "explanation": "A TPM is a dedicated hardware chip that securely stores cryptographic keys and supports full-disk encryption, resisting tampering and key extraction. The other options describe a GPU, a NIC, and a PSU respectively."
+  }
   },
   {
     "id": "cissp-d4-001",

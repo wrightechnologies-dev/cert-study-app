@@ -441,7 +441,7 @@ answerButtons.forEach(function (button, index) {
       feedbackEl.textContent = "Not quite — the answer is: " + currentView.answers[currentView.correctIndex];
       feedbackEl.style.color = "red";
       button.style.background = "#fed7d7";
-      answerButtons[q.correctIndex].style.background = "#c6f6d5";
+      answerButtons[currentView.correctIndex].style.background = "#c6f6d5";
       recordMiss(currentTrack, q.id);  // record the miss (both modes; a review miss resets the streak)
     }
     explanationEl.textContent = currentView.explanation;
