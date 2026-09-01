@@ -344,7 +344,10 @@
       "The online certificate status responder (OCSP)"
     ],
     "correctIndex": 1,
-    "explanation": "The certificate authority issues and digitally signs certificates binding identities to public keys. The RA verifies identity before issuance, key escrow stores keys for recovery, and OCSP reports whether a certificate has been revoked."
+    "explanation": "The certificate authority issues and digitally signs certificates binding identities to public keys. The RA verifies identity before issuance, key escrow stores keys for recovery, and OCSP reports whether a certificate has been revoked.",
+      "resources": [
+    { "label": "How PKI and certificate authorities work", "url": "https://www.cloudflare.com/learning/ssl/what-is-a-certificate-authority/", "type": "article" }
+  ]
   }
   },
   {
@@ -1025,17 +1028,6 @@
     ],
     "correctIndex": 1,
     "domain": 8,
-    "explanation": "Tracking dependencies with a software bill of materials (SBOM) and regularly checking components against known vulnerability databases addresses risk from third-party code. Assuming vendors handle everything, ignoring external code, or disabling libraries post-release are not realistic or effective approaches to supply-chain security.",
-      "reversal": {
-    "text": "Which practice best addresses the risk that third-party libraries introduce known vulnerabilities?",
-    "answers": [
-      "Trusting vendors to handle all component security",
-      "Maintaining a software bill of materials and checking components for known vulnerabilities",
-      "Reviewing only code the team wrote itself",
-      "Disabling all external libraries after release"
-    ],
-    "correctIndex": 1,
-    "explanation": "Maintaining a software bill of materials (SBOM) and regularly checking those components against vulnerability databases manages third-party risk. Trusting vendors blindly, ignoring external code, or disabling libraries post-release all leave the risk unmanaged."
-  }
+    "explanation": "Tracking dependencies with a software bill of materials (SBOM) and regularly checking components against known vulnerability databases addresses risk from third-party code. Assuming vendors handle everything, ignoring external code, or disabling libraries post-release are not realistic or effective approaches to supply-chain security." 
   }
 ]

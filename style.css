@@ -257,3 +257,29 @@ h1 {
   cursor: pointer;
 }
 #primer-back-btn:hover { color: var(--brand); }
+
+/* ---- Learn more / resources (Stage 4B) ---- */
+#resources {
+  margin-top: 12px;
+}
+#resources:not(:empty) {
+  padding: 12px 16px;
+  background: var(--panel);
+  border-left: 4px solid var(--brand);
+  border-radius: 0 6px 6px 0;
+}
+.resources-heading {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+#resources ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+#resources a { color: var(--brand); }

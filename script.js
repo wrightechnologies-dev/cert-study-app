@@ -373,6 +373,7 @@ const progressEl = document.getElementById("progress");
 const answerButtons = document.querySelectorAll(".answer-btn");
 const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
+const resourcesEl = document.getElementById("resources");
 const bestScoreEl = document.getElementById("best-score");
 const trendEl = document.getElementById("trend");
 const nextBtn = document.getElementById("next-btn");
@@ -401,6 +402,7 @@ function showQuestion() {
   bestScoreEl.textContent = "";
   explanationEl.textContent = "";
   explanationEl.classList.remove("has-text");
+  resourcesEl.innerHTML = "";
 
   const q = questions[currentIndex];      // the current question object
   currentView = activeView(q, reviewMode);  // original, or reversal if in review
@@ -443,6 +445,7 @@ answerButtons.forEach(function (button, index) {
       button.style.background = "#fed7d7";
       answerButtons[currentView.correctIndex].style.background = "#c6f6d5";
       recordMiss(currentTrack, q.id);  // record the miss (both modes; a review miss resets the streak)
+      renderResources(q.resources);
     }
     explanationEl.textContent = currentView.explanation;
     if (currentView.explanation) {
@@ -450,6 +453,35 @@ answerButtons.forEach(function (button, index) {
     }
   });
 });
+// ---- Render "Learn more" resources (Stage 4B) ----
+// Shows optional external links under the explanation, review mode only,
+// on a missed question. Expects q.resources = [{ label, url, type }].
+// Absent/empty field renders nothing (opt-in, no migration).
+function renderResources(resources) {
+  resourcesEl.innerHTML = "";                      // always start clean
+  if (!reviewMode) return;                          // review-only
+  if (!Array.isArray(resources) || resources.length === 0) return;
+
+  const heading = document.createElement("p");
+  heading.className = "resources-heading";
+  heading.textContent = "Learn more";
+  resourcesEl.appendChild(heading);
+
+  const list = document.createElement("ul");
+  resources.forEach(function (r) {
+    if (!r || !r.url) return;                        // skip malformed entries
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = r.url;
+    a.target = "_blank";
+    a.rel = "noopener";                              // new tab can't touch window.opener
+    const typeTag = r.type ? "[" + r.type + "] " : "";
+    a.textContent = typeTag + (r.label || r.url);
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+  resourcesEl.appendChild(list);
+}
 // ---- Trend sparkline (Stage 2B) ----
 // Takes a history array of { score, total, date } and returns an SVG string.
 // Plots each attempt as a percentage (0–100) so quizzes of different lengths
@@ -480,7 +512,6 @@ function buildSparkline(history) {
   const points = pcts.map(function (pct, i) {
     return xAt(i) + "," + yAt(pct);
   }).join(" ");
-
   // Highlight the latest attempt with a dot
   const lastX = xAt(n - 1);
   const lastY = yAt(pcts[n - 1]);
@@ -500,6 +531,7 @@ function showResults() {
   progressEl.textContent = "";
   explanationEl.textContent = "";
   explanationEl.classList.remove("has-text")
+  resourcesEl.innerHTML = "";
   feedbackEl.style.color = "black";
   feedbackEl.textContent = "You scored " + score + " out of " + questions.length + ".";
   answerButtons.forEach(function (button) {
