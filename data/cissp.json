@@ -528,7 +528,18 @@
     ],
     "correctIndex": 1,
     "domain": 5,
-    "explanation": "Identification is the claim of an identity — the username asserts who the user claims to be — while authentication proves that claim, which the password does. The two steps are distinct: identification makes the claim, authentication verifies it."
+    "explanation": "Identification is the claim of an identity — the username asserts who the user claims to be — while authentication proves that claim, which the password does. The two steps are distinct: identification makes the claim, authentication verifies it.",
+      "reversal": {
+    "text": "Providing a username at a login prompt is an example of which access control step?",
+    "answers": [
+      "Authentication",
+      "Identification",
+      "Authorization",
+      "Accountability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Claiming an identity (entering a username) is identification. Proving that claim (the password) is authentication, granting access to resources is authorization, and tracing actions to a user is accountability."
+  }
   },
   {
     "id": "cissp-d5-002",
@@ -541,7 +552,18 @@
     ],
     "correctIndex": 1,
     "domain": 5,
-    "explanation": "A password is something you know and a fingerprint is something you are, so combining them uses two different factor types and qualifies as multi-factor authentication. Multi-factor requires factors from different categories; combining two of the same type (for example, two passwords) would not qualify."
+    "explanation": "A password is something you know and a fingerprint is something you are, so combining them uses two different factor types and qualifies as multi-factor authentication. Multi-factor requires factors from different categories; combining two of the same type (for example, two passwords) would not qualify.",
+      "reversal": {
+    "text": "A fingerprint scan is an example of which authentication factor?",
+    "answers": [
+      "Something you know",
+      "Something you have",
+      "Something you are",
+      "Somewhere you are"
+    ],
+    "correctIndex": 2,
+    "explanation": "A fingerprint is a biometric — 'something you are.' A password or PIN is 'something you know,' a token or phone is 'something you have,' and geolocation is 'somewhere you are.' Combining two different types (e.g., password + fingerprint) makes it multi-factor."
+  }
   },
   {
     "id": "cissp-d5-003",
@@ -554,7 +576,18 @@
     ],
     "correctIndex": 2,
     "domain": 5,
-    "explanation": "Role-Based Access Control assigns permissions to roles, so changing a user's role automatically adjusts their access, which scales well with job functions. DAC ties access to owner discretion, MAC uses classification labels, and rule-based control applies conditions like time-of-day rather than job roles."
+    "explanation": "Role-Based Access Control assigns permissions to roles, so changing a user's role automatically adjusts their access, which scales well with job functions. DAC ties access to owner discretion, MAC uses classification labels, and rule-based control applies conditions like time-of-day rather than job roles.",
+      "reversal": {
+    "text": "Which statement best describes Role-Based Access Control (RBAC)?",
+    "answers": [
+      "The data owner grants access at their own discretion",
+      "The system enforces access using labels and clearances",
+      "Access is assigned by job function, so changing roles changes access",
+      "Access is granted by conditions such as time of day or source IP"
+    ],
+    "correctIndex": 2,
+    "explanation": "RBAC assigns permissions to roles tied to job function, so moving an employee to a new role automatically adjusts their access. DAC leaves it to the owner's discretion, MAC uses labels and clearances, and rule-based control uses conditions like time or address."
+  }
   },
   {
     "id": "cissp-d5-004",
@@ -580,7 +613,18 @@
     ],
     "correctIndex": 1,
     "domain": 5,
-    "explanation": "SSO improves usability but concentrates risk: if the single set of credentials is compromised, an attacker may reach every connected application, which is why strong authentication and monitoring of SSO systems are critical."
+    "explanation": "SSO improves usability but concentrates risk: if the single set of credentials is compromised, an attacker may reach every connected application, which is why strong authentication and monitoring of SSO systems are critical.",
+      "reversal": {
+    "text": "The risk that one compromised credential could grant access to many connected applications is a primary security concern of which technology?",
+    "answers": [
+      "Multi-factor authentication (MFA)",
+      "Single sign-on (SSO)",
+      "Role-based access control (RBAC)",
+      "Full-disk encryption"
+    ],
+    "correctIndex": 1,
+    "explanation": "Single sign-on lets one authentication unlock many applications, so a compromised SSO credential exposes all of them — which is why SSO is typically paired with strong MFA. MFA reduces credential risk, RBAC governs permissions, and full-disk encryption protects data at rest."
+  }
   },
   {
     "id": "cissp-d6-001",
