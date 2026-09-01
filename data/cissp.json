@@ -637,7 +637,18 @@
     ],
     "correctIndex": 0,
     "domain": 6,
-    "explanation": "A penetration test goes beyond identification and actively exploits vulnerabilities to demonstrate real impact, whereas a vulnerability scan detects and reports potential weaknesses without exploiting them. The scan is broader but shallower; the pen test is deeper and proves what an attacker could actually achieve."
+    "explanation": "A penetration test goes beyond identification and actively exploits vulnerabilities to demonstrate real impact, whereas a vulnerability scan detects and reports potential weaknesses without exploiting them. The scan is broader but shallower; the pen test is deeper and proves what an attacker could actually achieve.",
+      "reversal": {
+    "text": "Which activity only identifies potential weaknesses without exploiting them?",
+    "answers": [
+      "A penetration test",
+      "A vulnerability scan",
+      "A red-team engagement",
+      "A social-engineering assessment"
+    ],
+    "correctIndex": 1,
+    "explanation": "A vulnerability scan identifies and reports potential weaknesses but does not exploit them. A penetration test actively exploits weaknesses to prove real-world impact; red-team and social-engineering assessments also involve active attack techniques."
+  }
   },
   {
     "id": "cissp-d6-002",
@@ -650,7 +661,18 @@
     ],
     "correctIndex": 1,
     "domain": 6,
-    "explanation": "Black-box testing gives the tester no internal knowledge, simulating an outside attacker's viewpoint. White-box testing provides full internal information, gray-box provides partial knowledge, and regression testing checks that changes have not broken existing functionality."
+    "explanation": "Black-box testing gives the tester no internal knowledge, simulating an outside attacker's viewpoint. White-box testing provides full internal information, gray-box provides partial knowledge, and regression testing checks that changes have not broken existing functionality.",
+      "reversal": {
+    "text": "In black-box testing, what knowledge does the tester have of the target?",
+    "answers": [
+      "Full knowledge of the internal architecture and source code",
+      "No prior knowledge of internal architecture, approaching as an external attacker",
+      "Partial knowledge, such as limited credentials or documentation",
+      "Knowledge of a prior version, to confirm old bugs stay fixed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Black-box testing gives the tester no prior internal knowledge, simulating an outside attacker. White-box provides full internal knowledge, gray-box provides partial knowledge, and regression testing confirms previously fixed defects remain fixed."
+  }
   },
   {
     "id": "cissp-d6-003",
@@ -663,7 +685,18 @@
     ],
     "correctIndex": 1,
     "domain": 6,
-    "explanation": "Reviewing logs of events such as failed logins supports accountability by ensuring actions can be traced and monitored. While logging touches several objectives, its assessment here is fundamentally about holding users accountable and detecting misuse, not about confidentiality or availability."
+    "explanation": "Reviewing logs of events such as failed logins supports accountability by ensuring actions can be traced and monitored. While logging touches several objectives, its assessment here is fundamentally about holding users accountable and detecting misuse, not about confidentiality or availability.",
+      "reversal": {
+    "text": "Recording and reviewing user actions so they can be traced to an individual primarily supports which security objective?",
+    "answers": [
+      "Confidentiality",
+      "Accountability",
+      "Availability",
+      "Integrity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tracing actions to a specific user through logging and review supports accountability. Confidentiality prevents disclosure, availability ensures access, and integrity ensures data is not improperly altered."
+  }
   },
   {
     "id": "cissp-d6-004",
@@ -676,7 +709,18 @@
     ],
     "correctIndex": 1,
     "domain": 6,
-    "explanation": "A formal audit provides an independent, structured evaluation of controls against a defined standard and can produce attestation for external parties. A vulnerability scan is a technical check, a code review examines source code, and a tabletop exercise rehearses incident response — none produce a formal compliance attestation."
+    "explanation": "A formal audit provides an independent, structured evaluation of controls against a defined standard and can produce attestation for external parties. A vulnerability scan is a technical check, a code review examines source code, and a tabletop exercise rehearses incident response — none produce a formal compliance attestation.",
+      "reversal": {
+    "text": "Which activity produces an independent, formal attestation that controls meet a specific standard?",
+    "answers": [
+      "An internal vulnerability scan",
+      "A formal audit against the standard",
+      "A developer code review",
+      "A tabletop incident exercise"
+    ],
+    "correctIndex": 1,
+    "explanation": "A formal audit is an independent evaluation that produces an attestation third parties can rely on. A vulnerability scan finds technical weaknesses, a code review examines source quality, and a tabletop exercise rehearses incident response."
+  }
   },
   {
     "id": "cissp-d6-005",
