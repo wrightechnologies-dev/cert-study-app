@@ -772,7 +772,18 @@
     ],
     "correctIndex": 1,
     "domain": 7,
-    "explanation": "Maintaining a documented chain of custody — who collected, handled, and stored evidence and when — is essential for the evidence to be admissible and trustworthy in legal proceedings. Reformatting destroys evidence, public sharing compromises it, and deleting logs eliminates it."
+    "explanation": "Maintaining a documented chain of custody — who collected, handled, and stored evidence and when — is essential for the evidence to be admissible and trustworthy in legal proceedings. Reformatting destroys evidence, public sharing compromises it, and deleting logs eliminates it.",
+      "reversal": {
+    "text": "Which practice ensures evidence remains admissible by documenting who handled it and when?",
+    "answers": [
+      "Reformatting affected systems before analysis",
+      "Preserving a documented chain of custody",
+      "Publishing raw evidence for crowdsourced analysis",
+      "Deleting logs to protect user privacy"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chain of custody documents every person who handled evidence and when, preserving its integrity and legal admissibility. Reformatting destroys evidence, public sharing compromises it, and deleting logs removes it entirely."
+  }
   },
   {
     "id": "cissp-d7-003",
@@ -785,7 +796,18 @@
     ],
     "correctIndex": 1,
     "domain": 7,
-    "explanation": "The 3-2-1 rule means keeping three copies of data, stored on two different types of media, with at least one copy kept offsite. This protects against media failure, site-level disasters, and single points of failure in the backup scheme."
+    "explanation": "The 3-2-1 rule means keeping three copies of data, stored on two different types of media, with at least one copy kept offsite. This protects against media failure, site-level disasters, and single points of failure in the backup scheme.",
+      "reversal": {
+    "text": "Keeping three copies of data on two different media types with one copy offsite describes which backup strategy?",
+    "answers": [
+      "The 3-2-1 backup strategy",
+      "The grandfather-father-son rotation",
+      "A full-plus-incremental schedule",
+      "A continuous data protection scheme"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is the 3-2-1 rule: three copies, two media types, one offsite. Grandfather-father-son is a tape rotation scheme, full-plus-incremental describes backup types, and continuous data protection captures changes in near real time."
+  }
   },
   {
     "id": "cissp-d7-004",
@@ -798,7 +820,18 @@
     ],
     "correctIndex": 1,
     "domain": 7,
-    "explanation": "The Recovery Time Objective (RTO) defines the maximum tolerable downtime for a system before harm becomes unacceptable. RPO defines the maximum tolerable data loss measured in time, MTBF estimates reliability, and ARO expresses how often a threat is expected annually."
+    "explanation": "The Recovery Time Objective (RTO) defines the maximum tolerable downtime for a system before harm becomes unacceptable. RPO defines the maximum tolerable data loss measured in time, MTBF estimates reliability, and ARO expresses how often a threat is expected annually.",
+      "reversal": {
+    "text": "In business continuity planning, what does the Recovery Time Objective (RTO) measure?",
+    "answers": [
+      "The maximum acceptable amount of data loss, measured in time",
+      "The maximum acceptable time a system can be down before unacceptable harm",
+      "The average time between hardware failures",
+      "The expected number of times a threat occurs per year"
+    ],
+    "correctIndex": 1,
+    "explanation": "RTO is the maximum tolerable downtime before harm becomes unacceptable. RPO measures tolerable data loss, MTBF is average time between failures, and ARO is the expected yearly frequency of a threat."
+  }
   },
   {
     "id": "cissp-d7-005",
@@ -811,7 +844,18 @@
     ],
     "correctIndex": 0,
     "domain": 7,
-    "explanation": "RPO (Recovery Point Objective) measures the maximum acceptable amount of data loss, expressed as a point in time to which data must be restored, while RTO (Recovery Time Objective) measures the maximum acceptable downtime. Confusing the two is a common error: one is about data, the other about time to restore service."
+    "explanation": "RPO (Recovery Point Objective) measures the maximum acceptable amount of data loss, expressed as a point in time to which data must be restored, while RTO (Recovery Time Objective) measures the maximum acceptable downtime. Confusing the two is a common error: one is about data, the other about time to restore service.",
+      "reversal": {
+    "text": "In business continuity planning, what does the Recovery Time Objective (RTO) measure?",
+    "answers": [
+      "The maximum acceptable amount of data loss, measured in time",
+      "The maximum acceptable time a system can be down before unacceptable harm",
+      "The average time between hardware failures",
+      "The expected number of times a threat occurs per year"
+    ],
+    "correctIndex": 1,
+    "explanation": "RTO is the maximum tolerable downtime before harm becomes unacceptable. RPO measures tolerable data loss, MTBF is average time between failures, and ARO is the expected yearly frequency of a threat."
+  }
   },
   {
     "id": "cissp-d7-006",
@@ -824,7 +868,18 @@
     ],
     "correctIndex": 1,
     "domain": 7,
-    "explanation": "Mandatory vacations and job rotation help detect and deter fraud, because schemes that rely on one individual's uninterrupted, exclusive control of a process are more likely to surface when someone else performs the role. These are detective and deterrent controls, not merely morale or cost measures."
+    "explanation": "Mandatory vacations and job rotation help detect and deter fraud, because schemes that rely on one individual's uninterrupted, exclusive control of a process are more likely to surface when someone else performs the role. These are detective and deterrent controls, not merely morale or cost measures.",
+      "reversal": {
+    "text": "Which administrative controls are used primarily to detect and deter fraud that relies on one person's exclusive, continuous control of a process?",
+    "answers": [
+      "Mandatory vacations and job rotation",
+      "Least privilege and need-to-know",
+      "Defense in depth and layered controls",
+      "Encryption and key escrow"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mandatory vacations and job rotation force another person into a role, surfacing fraud that depends on one individual's uninterrupted control. Least privilege limits access scope, defense in depth layers controls, and encryption protects data confidentiality."
+  }
   },
   {
     "id": "cissp-d7-007",
@@ -837,7 +892,18 @@
     ],
     "correctIndex": 1,
     "domain": 7,
-    "explanation": "A SIEM (Security Information and Event Management) system centralizes log collection and correlates events across sources, enabling faster detection and investigation of incidents. It does not replace firewalls, patch vulnerabilities, or encrypt traffic — its value is unified visibility and correlation."
+    "explanation": "A SIEM (Security Information and Event Management) system centralizes log collection and correlates events across sources, enabling faster detection and investigation of incidents. It does not replace firewalls, patch vulnerabilities, or encrypt traffic — its value is unified visibility and correlation.",
+      "reversal": {
+    "text": "Which system centralizes logs from many sources and correlates events to speed incident detection?",
+    "answers": [
+      "A firewall",
+      "A SIEM (Security Information and Event Management)",
+      "A load balancer",
+      "A VPN concentrator"
+    ],
+    "correctIndex": 1,
+    "explanation": "A SIEM aggregates and correlates logs across systems to detect suspicious patterns faster. A firewall filters traffic, a load balancer distributes it, and a VPN concentrator terminates encrypted tunnels."
+  }
   },
   {
     "id": "cissp-d8-001",
@@ -850,7 +916,18 @@
     ],
     "correctIndex": 1,
     "domain": 8,
-    "explanation": "Passing unvalidated input into a database query enables SQL injection, best defended with input validation and parameterized queries (prepared statements) that separate code from data. Cross-site scripting targets the browser, buffer overflow involves memory boundaries, and race conditions involve timing — different classes of flaw."
+    "explanation": "Passing unvalidated input into a database query enables SQL injection, best defended with input validation and parameterized queries (prepared statements) that separate code from data. Cross-site scripting targets the browser, buffer overflow involves memory boundaries, and race conditions involve timing — different classes of flaw.",
+      "reversal": {
+    "text": "Input validation and parameterized queries are the primary defense against which vulnerability?",
+    "answers": [
+      "Cross-site scripting (XSS)",
+      "SQL injection",
+      "Buffer overflow",
+      "Race condition"
+    ],
+    "correctIndex": 1,
+    "explanation": "Parameterized queries and input validation defend against SQL injection by preventing user input from altering query structure. XSS is countered with output encoding, buffer overflows with bounds checking, and race conditions with proper synchronization."
+  }
   },
   {
     "id": "cissp-d8-002",
@@ -876,7 +953,18 @@
     ],
     "correctIndex": 0,
     "domain": 8,
-    "explanation": "Failing to check a file's type, size, and contents before processing reflects missing input validation, a foundational secure coding practice that prevents malicious or malformed input from causing harm. Obfuscation, logging, and comments do not address the underlying validation gap."
+    "explanation": "Failing to check a file's type, size, and contents before processing reflects missing input validation, a foundational secure coding practice that prevents malicious or malformed input from causing harm. Obfuscation, logging, and comments do not address the underlying validation gap.",
+      "reversal": {
+    "text": "Which secure coding practice checks that data such as an uploaded file meets expected type, size, and content rules before processing?",
+    "answers": [
+      "Input validation",
+      "Code obfuscation",
+      "Verbose logging",
+      "Inline code comments"
+    ],
+    "correctIndex": 0,
+    "explanation": "Input validation verifies that data conforms to expected type, size, and content before it is processed, blocking malformed or malicious input. Obfuscation hides code logic, logging records events, and comments document code — none validate input."
+  }
   },
   {
     "id": "cissp-d8-004",
@@ -889,7 +977,18 @@
     ],
     "correctIndex": 1,
     "domain": 8,
-    "explanation": "Writing beyond a buffer's fixed length is a buffer overflow, mitigated by bounds checking, using memory-safe functions, and languages or compilers that enforce memory safety. SQL injection, phishing, and weak encryption are unrelated vulnerability classes with their own distinct defenses."
+    "explanation": "Writing beyond a buffer's fixed length is a buffer overflow, mitigated by bounds checking, using memory-safe functions, and languages or compilers that enforce memory safety. SQL injection, phishing, and weak encryption are unrelated vulnerability classes with their own distinct defenses.",
+      "reversal": {
+    "text": "Writing more data into a fixed-length memory buffer than it can hold, overwriting adjacent memory, describes which vulnerability class?",
+    "answers": [
+      "SQL injection",
+      "Buffer overflow",
+      "Cross-site scripting",
+      "Privilege escalation"
+    ],
+    "correctIndex": 1,
+    "explanation": "A buffer overflow occurs when data exceeds a fixed buffer and overwrites adjacent memory; key mitigations are bounds checking and safe memory-handling functions. SQL injection manipulates queries, XSS injects scripts into pages, and privilege escalation abuses elevated rights."
+  }
   },
   {
     "id": "cissp-d8-005",
@@ -902,7 +1001,18 @@
     ],
     "correctIndex": 1,
     "domain": 8,
-    "explanation": "Analyzing source code for flaws without running the program is Static Application Security Testing (SAST). Dynamic testing (DAST) examines a running application, penetration testing actively exploits weaknesses, and load testing measures performance under demand."
+    "explanation": "Analyzing source code for flaws without running the program is Static Application Security Testing (SAST). Dynamic testing (DAST) examines a running application, penetration testing actively exploits weaknesses, and load testing measures performance under demand.",
+      "reversal": {
+    "text": "Which testing method analyzes an application's source code for flaws without executing the program?",
+    "answers": [
+      "Dynamic Application Security Testing (DAST)",
+      "Static Application Security Testing (SAST)",
+      "Penetration testing",
+      "Load testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "SAST examines source code for flaws without running it. DAST tests a running application from the outside, penetration testing actively exploits weaknesses, and load testing measures performance under demand."
+  }
   },
   {
     "id": "cissp-d8-006",
@@ -915,6 +1025,17 @@
     ],
     "correctIndex": 1,
     "domain": 8,
-    "explanation": "Tracking dependencies with a software bill of materials (SBOM) and regularly checking components against known vulnerability databases addresses risk from third-party code. Assuming vendors handle everything, ignoring external code, or disabling libraries post-release are not realistic or effective approaches to supply-chain security."
+    "explanation": "Tracking dependencies with a software bill of materials (SBOM) and regularly checking components against known vulnerability databases addresses risk from third-party code. Assuming vendors handle everything, ignoring external code, or disabling libraries post-release are not realistic or effective approaches to supply-chain security.",
+      "reversal": {
+    "text": "Which practice best addresses the risk that third-party libraries introduce known vulnerabilities?",
+    "answers": [
+      "Trusting vendors to handle all component security",
+      "Maintaining a software bill of materials and checking components for known vulnerabilities",
+      "Reviewing only code the team wrote itself",
+      "Disabling all external libraries after release"
+    ],
+    "correctIndex": 1,
+    "explanation": "Maintaining a software bill of materials (SBOM) and regularly checking those components against vulnerability databases manages third-party risk. Trusting vendors blindly, ignoring external code, or disabling libraries post-release all leave the risk unmanaged."
+  }
   }
 ]
