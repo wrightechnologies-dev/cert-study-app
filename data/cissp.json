@@ -217,7 +217,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Data remanence is the residual data that persists after deletion or formatting, and for media leaving the organization, degaussing or physical destruction reliably prevents recovery. Encryption protects active data but is not a sanitization method, labeling addresses classification not removal, and retention concerns how long data is kept, not its secure disposal."
+    "explanation": "Data remanence is the residual data that persists after deletion or formatting, and for media leaving the organization, degaussing or physical destruction reliably prevents recovery. Encryption protects active data but is not a sanitization method, labeling addresses classification not removal, and retention concerns how long data is kept, not its secure disposal.",
+    "reversal": {
+  "text": "Which term describes residual data that remains recoverable on storage media after it has been deleted or formatted?",
+  "answers": [
+    "Data remanence",
+    "Data classification",
+    "Data retention",
+    "Data in use"
+  ],
+  "correctIndex": 0,
+  "explanation": "Data remanence is the residual data that persists after deletion or formatting, which is why media leaving the organization requires degaussing or physical destruction. Classification assigns sensitivity labels, retention governs how long data is kept, and data in use describes data actively being processed."
+}
   },
   {
     "id": "cissp-d2-004",
@@ -254,7 +265,18 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "Retention schedules are primarily driven by legal, regulatory, and business requirements that dictate how long records must be kept and when they should be disposed of. Storage cost and performance may be secondary benefits, but they are not the governing reason, and retention is distinct from classification."
+    "explanation": "Retention schedules are primarily driven by legal, regulatory, and business requirements that dictate how long records must be kept and when they should be disposed of. Storage cost and performance may be secondary benefits, but they are not the governing reason, and retention is distinct from classification.",
+    "reversal": {
+  "text": "What is a data retention schedule?",
+  "answers": [
+    "A policy defining how long records must be kept and when they must be securely destroyed",
+    "A scheme for assigning sensitivity labels to data",
+    "A method for reducing storage hardware costs",
+    "A process for tuning database query performance"
+  ],
+  "correctIndex": 0,
+  "explanation": "A retention schedule defines how long records must be kept and when they must be disposed of, driven primarily by legal, regulatory, and business requirements. Classification assigns sensitivity labels, and storage cost or query performance may be side effects but are not what a retention schedule is."
+}
   },
   {
     "id": "cissp-d3-001",
@@ -358,9 +380,9 @@
         "type": "article"
       },
       {
-        "label": "How does SSL work?", 
-        "url": "https://www.cloudflare.com/learning/ssl/how-does-ssl-work/", 
-        "type": "article" 
+        "label": "How does SSL work?",
+        "url": "https://www.cloudflare.com/learning/ssl/how-does-ssl-work/",
+        "type": "article"
       }
     ]
   },

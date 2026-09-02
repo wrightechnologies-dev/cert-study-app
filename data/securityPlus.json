@@ -10,7 +10,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "A Trojan disguises itself as legitimate or desirable software to trick users into installing it, then carries out malicious actions. A worm spreads on its own, and a rootkit hides its presence to maintain access."
+    "explanation": "A Trojan disguises itself as legitimate or desirable software to trick users into installing it, then carries out malicious actions. A worm spreads on its own, and a rootkit hides its presence to maintain access.",
+    "reversal": {
+  "text": "A Trojan is a type of malware best described by which characteristic?",
+  "answers": [
+    "It disguises itself as legitimate software to trick users into installing it",
+    "It self-replicates across networks without user interaction",
+    "It hides its presence by subverting the operating system kernel",
+    "It encrypts files and demands payment for their release"
+  ],
+  "correctIndex": 0,
+  "explanation": "A Trojan disguises itself as legitimate software to trick users into installing it. Self-replication across networks describes a worm, kernel-level hiding describes a rootkit, and encrypting files for ransom describes ransomware."
+}
   },
   {
     "id": "secplus-d1-002",
@@ -49,7 +60,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "Security cameras are a physical control (a tangible, real-world safeguard) and function as a detective control, because they record activity for later review rather than blocking it. They don't prevent an intruder from entering, which is what a preventive control would do."
+    "explanation": "Security cameras are a physical control (a tangible, real-world safeguard) and function as a detective control, because they record activity for later review rather than blocking it. They don't prevent an intruder from entering, which is what a preventive control would do.",
+    "reversal": {
+  "text": "Which capability does the SSH protocol provide?",
+  "answers": [
+    "Encrypted remote command-line access to a device",
+    "Unencrypted remote terminal access",
+    "File transfer without built-in encryption",
+    "Monitoring and management of network devices"
+  ],
+  "correctIndex": 0,
+  "explanation": "SSH provides encrypted remote command-line access. Unencrypted terminal access describes Telnet, unencrypted file transfer describes FTP, and device monitoring/management describes SNMP."
+}
   },
   {
     "id": "secplus-d1-005",
@@ -62,7 +84,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "Zero trust assumes no implicit trust based on network location and continuously verifies every request. Defense in depth layers multiple controls, implicit allow is the opposite of zero trust's default-deny stance, and perimeter-based security trusts anything inside the network — exactly what zero trust rejects."
+    "explanation": "Zero trust assumes no implicit trust based on network location and continuously verifies every request. Defense in depth layers multiple controls, implicit allow is the opposite of zero trust's default-deny stance, and perimeter-based security trusts anything inside the network — exactly what zero trust rejects.",
+    "reversal": {
+  "text": "Which security model assumes no user or device is trusted by default and verifies every access request?",
+  "answers": [
+    "Zero trust",
+    "Defense in depth",
+    "Perimeter-based security",
+    "Implicit allow"
+  ],
+  "correctIndex": 0,
+  "explanation": "Zero trust assumes no user or device is trusted by default, even inside the network, and verifies every access request. Defense in depth layers multiple controls, perimeter-based security trusts internal traffic once inside, and implicit allow permits traffic not explicitly denied."
+}
   },
   {
     "id": "secplus-d1-006",
@@ -75,7 +108,18 @@
     ],
     "correctIndex": 2,
     "domain": 1,
-    "explanation": "Accounting tracks and records what an authenticated user does, such as files accessed and actions taken, supporting auditing and accountability. Authentication verifies identity, authorization determines permitted actions, and availability is a CIA triad property, not part of AAA."
+    "explanation": "Accounting tracks and records what an authenticated user does, such as files accessed and actions taken, supporting auditing and accountability. Authentication verifies identity, authorization determines permitted actions, and availability is a CIA triad property, not part of AAA.",
+    "reversal": {
+  "text": "Which security model assumes no user or device is trusted by default and verifies every access request?",
+  "answers": [
+    "Zero trust",
+    "Defense in depth",
+    "Perimeter-based security",
+    "Implicit allow"
+  ],
+  "correctIndex": 0,
+  "explanation": "Zero trust assumes no user or device is trusted by default, even inside the network, and verifies every access request. Defense in depth layers multiple controls, perimeter-based security trusts internal traffic once inside, and implicit allow permits traffic not explicitly denied."
+}
   },
   {
     "id": "secplus-d1-007",
@@ -101,7 +145,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "A digital signature provides authenticity (verifying the sender's identity) and integrity (confirming the message was not altered). It does not by itself provide confidentiality, since the message content is not necessarily encrypted, nor does it address availability."
+    "explanation": "A digital signature provides authenticity (verifying the sender's identity) and integrity (confirming the message was not altered). It does not by itself provide confidentiality, since the message content is not necessarily encrypted, nor does it address availability.",
+    "reversal": {
+  "text": "Which security model assumes no user or device is trusted by default and verifies every access request?",
+  "answers": [
+    "Zero trust",
+    "Defense in depth",
+    "Perimeter-based security",
+    "Implicit allow"
+  ],
+  "correctIndex": 0,
+  "explanation": "Zero trust assumes no user or device is trusted by default, even inside the network, and verifies every access request. Defense in depth layers multiple controls, perimeter-based security trusts internal traffic once inside, and implicit allow permits traffic not explicitly denied."
+}
   },
   {
     "id": "secplus-d1-009",
