@@ -182,7 +182,18 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "An Advanced Persistent Threat (APT) is a well-resourced, often nation-state-backed actor that establishes stealthy, long-term access to pursue strategic goals. Script kiddies lack skill and use others' tools, hacktivists act for ideological causes and usually seek visibility, and insider threats originate from within the organization."
+    "explanation": "An Advanced Persistent Threat (APT) is a well-resourced, often nation-state-backed actor that establishes stealthy, long-term access to pursue strategic goals. Script kiddies lack skill and use others' tools, hacktivists act for ideological causes and usually seek visibility, and insider threats originate from within the organization.",
+    "reversal": {
+  "text": "Which threat actor type is characterized by skilled, often nation-state-backed attackers maintaining covert, long-term access to steal intelligence?",
+  "answers": [
+    "Advanced Persistent Threat (APT)",
+    "Script kiddie",
+    "Hacktivist",
+    "Insider threat"
+  ],
+  "correctIndex": 0,
+  "explanation": "An APT is a skilled, well-resourced (often nation-state) actor that maintains covert, long-term access to steal intelligence. A script kiddie relies on existing tools without deep skill, a hacktivist is politically or socially motivated, and an insider threat originates from someone with authorized access."
+}
   },
   {
     "id": "secplus-d2-002",
@@ -208,7 +219,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "This is social engineering carried out by voice call, known as vishing, exploiting human trust and urgency rather than a technical flaw. SQL injection, cross-site scripting, and buffer overflow are all technical attacks against software, not manipulation of a person."
+    "explanation": "This is social engineering carried out by voice call, known as vishing, exploiting human trust and urgency rather than a technical flaw. SQL injection, cross-site scripting, and buffer overflow are all technical attacks against software, not manipulation of a person.",
+    "reversal": {
+  "text": "Which attack vector uses a phone call in which the attacker impersonates a trusted party to pressure a victim into revealing information?",
+  "answers": [
+    "Social engineering (vishing)",
+    "SQL injection",
+    "Cross-site scripting",
+    "Buffer overflow"
+  ],
+  "correctIndex": 0,
+  "explanation": "Vishing is voice-based social engineering, using a phone call to manipulate a victim into revealing information. SQL injection and cross-site scripting are code/input attacks against applications, and a buffer overflow exploits memory handling."
+}
   },
   {
     "id": "secplus-d2-004",
@@ -221,7 +243,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Registering a lookalike domain that relies on misreading or mistyping is typosquatting (a form of URL hijacking). A watering hole attack compromises a site the target already visits, privilege escalation gains higher rights on a system, and pretexting invents a false scenario to extract information."
+    "explanation": "Registering a lookalike domain that relies on misreading or mistyping is typosquatting (a form of URL hijacking). A watering hole attack compromises a site the target already visits, privilege escalation gains higher rights on a system, and pretexting invents a false scenario to extract information.",
+    "reversal": {
+  "text": "Which attack vector uses a phone call in which the attacker impersonates a trusted party to pressure a victim into revealing information?",
+  "answers": [
+    "Social engineering (vishing)",
+    "SQL injection",
+    "Cross-site scripting",
+    "Buffer overflow"
+  ],
+  "correctIndex": 0,
+  "explanation": "Vishing is voice-based social engineering, using a phone call to manipulate a victim into revealing information. SQL injection and cross-site scripting are code/input attacks against applications, and a buffer overflow exploits memory handling."
+}
   },
   {
     "id": "secplus-d2-005",
@@ -234,7 +267,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "A zero-day is a vulnerability known to attackers (or newly disclosed) before a vendor patch is available, leaving defenders no immediate fix. A weak configuration is a hardening gap, an end-of-life vulnerability affects unsupported software, and a race condition is a timing flaw in concurrent operations."
+    "explanation": "A zero-day is a vulnerability known to attackers (or newly disclosed) before a vendor patch is available, leaving defenders no immediate fix. A weak configuration is a hardening gap, an end-of-life vulnerability affects unsupported software, and a race condition is a timing flaw in concurrent operations.",
+    "reversal": {
+  "text": "Which term describes a publicly known software flaw for which no vendor fix yet exists at the time of discovery?",
+  "answers": [
+    "Zero-day vulnerability",
+    "Weak configuration",
+    "End-of-life vulnerability",
+    "Race condition"
+  ],
+  "correctIndex": 0,
+  "explanation": "A zero-day vulnerability is a flaw with no available vendor patch at the time it is discovered or exploited. Weak configuration is an insecure setting, an end-of-life vulnerability stems from unsupported software, and a race condition arises from timing-dependent behavior."
+}
   },
   {
     "id": "secplus-d2-006",
@@ -247,7 +291,18 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "Running unsupported, end-of-life software means no further security patches are issued, leaving known flaws permanently unaddressed — a legacy system vulnerability. Zero-days involve unpatched-but-new flaws, cryptographic weaknesses involve flawed encryption, and injection flaws involve unvalidated input."
+    "explanation": "Running unsupported, end-of-life software means no further security patches are issued, leaving known flaws permanently unaddressed — a legacy system vulnerability. Zero-days involve unpatched-but-new flaws, cryptographic weaknesses involve flawed encryption, and injection flaws involve unvalidated input.",
+    "reversal": {
+  "text": "Running an operating system the vendor no longer supports with security updates creates which vulnerability category?",
+  "answers": [
+    "Legacy / end-of-life system vulnerability",
+    "Zero-day",
+    "Cryptographic weakness",
+    "Injection flaw"
+  ],
+  "correctIndex": 0,
+  "explanation": "Unsupported software that no longer receives security updates is a legacy/end-of-life vulnerability. A zero-day has no patch yet at discovery, a cryptographic weakness involves flawed encryption, and an injection flaw comes from unvalidated input."
+}
   },
   {
     "id": "secplus-d2-007",
@@ -260,7 +315,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Overwhelming a service with traffic from many compromised hosts (a botnet) to deny availability is a Distributed Denial of Service (DDoS) attack. An on-path attack intercepts communications, SQL injection manipulates database queries, and privilege escalation gains elevated rights — none of which target availability by flooding."
+    "explanation": "Overwhelming a service with traffic from many compromised hosts (a botnet) to deny availability is a Distributed Denial of Service (DDoS) attack. An on-path attack intercepts communications, SQL injection manipulates database queries, and privilege escalation gains elevated rights — none of which target availability by flooding.",
+    "reversal": {
+  "text": "Which attack floods a target with traffic from thousands of compromised devices at once to make a service unavailable?",
+  "answers": [
+    "Distributed Denial of Service (DDoS)",
+    "On-path (man-in-the-middle) attack",
+    "SQL injection",
+    "Privilege escalation"
+  ],
+  "correctIndex": 0,
+  "explanation": "A DDoS attack overwhelms a service with traffic from many compromised devices, denying access to legitimate users. An on-path attack intercepts communications, SQL injection targets databases through input, and privilege escalation gains higher access rights."
+}
   },
   {
     "id": "secplus-d2-008",
@@ -273,7 +339,18 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "Gaining higher permissions than originally granted on a system is privilege escalation. Lateral movement is spreading to other systems, data exfiltration is unauthorized data removal, and phishing is a social-engineering method to gain initial access — not the elevation of rights itself."
+    "explanation": "Gaining higher permissions than originally granted on a system is privilege escalation. Lateral movement is spreading to other systems, data exfiltration is unauthorized data removal, and phishing is a social-engineering method to gain initial access — not the elevation of rights itself.",
+    "reversal": {
+  "text": "Which activity occurs when an attacker with a standard user account exploits a flaw to gain administrator-level rights on that system?",
+  "answers": [
+    "Privilege escalation",
+    "Lateral movement",
+    "Data exfiltration",
+    "Phishing"
+  ],
+  "correctIndex": 0,
+  "explanation": "Privilege escalation raises an attacker's access rights on a system, such as from user to administrator. Lateral movement spreads to other systems, data exfiltration steals data out of the network, and phishing is a social-engineering technique."
+}
   },
   {
     "id": "secplus-d2-009",
@@ -286,7 +363,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Intercepting and altering communications between two parties in transit is an on-path (man-in-the-middle) attack. A brute-force attack guesses credentials, a watering hole compromises a trusted site the target visits, and a logic bomb is malicious code triggered by a condition."
+    "explanation": "Intercepting and altering communications between two parties in transit is an on-path (man-in-the-middle) attack. A brute-force attack guesses credentials, a watering hole compromises a trusted site the target visits, and a logic bomb is malicious code triggered by a condition.",
+    "reversal": {
+  "text": "Which attack involves an attacker intercepting and altering communications between a user and server in real time?",
+  "answers": [
+    "On-path (man-in-the-middle) attack",
+    "Brute-force attack",
+    "Watering hole attack",
+    "Logic bomb"
+  ],
+  "correctIndex": 0,
+  "explanation": "An on-path (man-in-the-middle) attack intercepts and can modify traffic between two parties in real time. A brute-force attack guesses credentials, a watering hole compromises a site the target visits, and a logic bomb triggers malicious code on a condition."
+}
   },
   {
     "id": "secplus-d2-010",
@@ -299,7 +387,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Isolating systems into separate network zones to limit access and contain breaches is network segmentation. Patch management addresses software flaws, input validation defends applications against malicious input, and full-disk encryption protects data at rest — none of which isolate network segments."
+    "explanation": "Isolating systems into separate network zones to limit access and contain breaches is network segmentation. Patch management addresses software flaws, input validation defends applications against malicious input, and full-disk encryption protects data at rest — none of which isolate network segments.",
+    "reversal": {
+  "text": "Which mitigation technique isolates systems (such as placing finance systems on a separate segment from general workstations) to limit exposure?",
+  "answers": [
+    "Network segmentation",
+    "Patch management",
+    "Input validation",
+    "Full-disk encryption"
+  ],
+  "correctIndex": 0,
+  "explanation": "Network segmentation divides a network into isolated segments to limit access and contain threats. Patch management fixes known flaws, input validation prevents injection attacks, and full-disk encryption protects data at rest."
+}
   },
   {
     "id": "secplus-d2-011",
@@ -312,7 +411,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Reducing a system's attack surface by removing unneeded services, ports, and default accounts is system hardening. Threat hunting proactively searches for hidden threats, social engineering is an attack method, and data classification labels information by sensitivity — none describe reducing the attack surface."
+    "explanation": "Reducing a system's attack surface by removing unneeded services, ports, and default accounts is system hardening. Threat hunting proactively searches for hidden threats, social engineering is an attack method, and data classification labels information by sensitivity — none describe reducing the attack surface.",
+    "reversal": {
+  "text": "Which mitigation technique isolates systems (such as placing finance systems on a separate segment from general workstations) to limit exposure?",
+  "answers": [
+    "Network segmentation",
+    "Patch management",
+    "Input validation",
+    "Full-disk encryption"
+  ],
+  "correctIndex": 0,
+  "explanation": "Network segmentation divides a network into isolated segments to limit access and contain threats. Patch management fixes known flaws, input validation prevents injection attacks, and full-disk encryption protects data at rest."
+}
   },
   {
     "id": "secplus-d2-012",
