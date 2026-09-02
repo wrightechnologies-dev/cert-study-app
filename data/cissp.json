@@ -2,18 +2,23 @@
   {
     "id": "cissp-d1-001",
     "text": "Which principle ensures that information is not disclosed to unauthorized individuals?",
-    "answers": [ 
-    "Integrity", 
-    "Confidentiality", 
-    "Availability", 
-    "Non-repudiation" 
-  ],
+    "answers": [
+      "Integrity",
+      "Confidentiality",
+      "Availability",
+      "Non-repudiation"
+    ],
     "correctIndex": 1,
     "domain": 1,
     "explanation": "Confidentiality is the CIA triad principle concerned with preventing unauthorized disclosure of information. Integrity addresses unauthorized alteration, and availability addresses access when needed.",
     "reversal": {
       "text": "Confidentiality, as a principle of the CIA triad, is primarily concerned with preventing which of the following?",
-      "answers": ["Unauthorized disclosure of information", "Unauthorized alteration of information", "Loss of timely access to information", "Denial that an action took place"],
+      "answers": [
+        "Unauthorized disclosure of information",
+        "Unauthorized alteration of information",
+        "Loss of timely access to information",
+        "Denial that an action took place"
+      ],
       "correctIndex": 0,
       "explanation": "Confidentiality protects against unauthorized disclosure. Unauthorized alteration is an integrity concern, loss of access is an availability concern, and denial of an action relates to non-repudiation."
     }
@@ -30,17 +35,17 @@
     "correctIndex": 2,
     "domain": 1,
     "explanation": "Integrity ensures data has not been modified by unauthorized parties, preserving its accuracy and trustworthiness. Confidentiality concerns disclosure, and availability concerns access — neither addresses unauthorized alteration.",
-      "reversal": {
-    "text": "Integrity, as a CIA triad principle, is best described as:",
-    "answers": [
-      "Ensuring information is not disclosed to unauthorized individuals",
-      "Ensuring data has not been altered by unauthorized parties",
-      "Ensuring systems and data are accessible when needed",
-      "Confirming the identity of a user before granting access"
-    ],
-    "correctIndex": 1,
-    "explanation": "Integrity ensures data has not been altered by unauthorized parties. Preventing disclosure is confidentiality, ensuring access when needed is availability, and confirming identity is authentication."
-  }
+    "reversal": {
+      "text": "Integrity, as a CIA triad principle, is best described as:",
+      "answers": [
+        "Ensuring information is not disclosed to unauthorized individuals",
+        "Ensuring data has not been altered by unauthorized parties",
+        "Ensuring systems and data are accessible when needed",
+        "Confirming the identity of a user before granting access"
+      ],
+      "correctIndex": 1,
+      "explanation": "Integrity ensures data has not been altered by unauthorized parties. Preventing disclosure is confidentiality, ensuring access when needed is availability, and confirming identity is authentication."
+    }
   },
   {
     "id": "cissp-d1-003",
@@ -55,16 +60,16 @@
     "domain": 1,
     "explanation": "Availability ensures that systems, data, and services are accessible to authorized users when needed. Accounting, authorization, and auditing relate to access control and tracking, not to the CIA triad's guarantee of access.",
     "reversal": {
-    "text": "Availability, as a CIA triad component, is best described as:",
-    "answers": [
-      "Ensuring systems and data are accessible when needed",
-      "Tracking what actions a user performed (accounting)",
-      "Granting a user permission to a resource (authorization)",
-      "Reviewing records to detect improper activity (auditing)"
-    ],
-    "correctIndex": 0,
-    "explanation": "Availability ensures systems and data are accessible when needed. Accounting tracks actions taken, authorization grants permissions, and auditing reviews records — the distractors that pair with Availability on the exam."
-  }
+      "text": "Availability, as a CIA triad component, is best described as:",
+      "answers": [
+        "Ensuring systems and data are accessible when needed",
+        "Tracking what actions a user performed (accounting)",
+        "Granting a user permission to a resource (authorization)",
+        "Reviewing records to detect improper activity (auditing)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Availability ensures systems and data are accessible when needed. Accounting tracks actions taken, authorization grants permissions, and auditing reviews records — the distractors that pair with Availability on the exam."
+    }
   },
   {
     "id": "cissp-d1-004",
@@ -79,16 +84,16 @@
     "domain": 1,
     "explanation": "Mandatory Access Control (MAC) assigns security labels to subjects and objects, and the system — not the data owner — enforces access based on clearance levels. DAC leaves access decisions to the owner, and RBAC grants access based on job roles.",
     "reversal": {
-    "text": "Which statement best describes Mandatory Access Control (MAC)?",
-    "answers": [
-      "The data owner decides who gets access at their discretion",
-      "Access is granted based on a user's job role",
-      "The system enforces access using labels and clearances",
-      "Access is determined by rules such as time-of-day or IP"
-    ],
-    "correctIndex": 2,
-    "explanation": "MAC enforces access through system-assigned labels and clearances that users cannot override. DAC leaves decisions to the data owner, RBAC grants by job role, and rule-based control uses conditions like time or address."
-  }
+      "text": "Which statement best describes Mandatory Access Control (MAC)?",
+      "answers": [
+        "The data owner decides who gets access at their discretion",
+        "Access is granted based on a user's job role",
+        "The system enforces access using labels and clearances",
+        "Access is determined by rules such as time-of-day or IP"
+      ],
+      "correctIndex": 2,
+      "explanation": "MAC enforces access through system-assigned labels and clearances that users cannot override. DAC leaves decisions to the data owner, RBAC grants by job role, and rule-based control uses conditions like time or address."
+    }
   },
   {
     "id": "cissp-d1-005",
@@ -102,17 +107,17 @@
     "correctIndex": 1,
     "domain": 1,
     "explanation": "Non-repudiation ensures that a party cannot deny having performed an action, typically achieved through digital signatures and audit logs. It provides accountability, not encryption, uptime, or authentication speed.",
-      "reversal": {
-    "text": "Which security principle provides assurance that a party cannot deny performing an action?",
-    "answers": [
-      "Confidentiality",
-      "Availability",
-      "Non-repudiation",
-      "Authorization"
-    ],
-    "correctIndex": 2,
-    "explanation": "Non-repudiation assures that a party cannot deny having performed an action. Confidentiality prevents disclosure, availability ensures access, and authorization grants permissions."
-  }
+    "reversal": {
+      "text": "Which security principle provides assurance that a party cannot deny performing an action?",
+      "answers": [
+        "Confidentiality",
+        "Availability",
+        "Non-repudiation",
+        "Authorization"
+      ],
+      "correctIndex": 2,
+      "explanation": "Non-repudiation assures that a party cannot deny having performed an action. Confidentiality prevents disclosure, availability ensures access, and authorization grants permissions."
+    }
   },
   {
     "id": "cissp-d1-006",
@@ -165,17 +170,17 @@
     "correctIndex": 1,
     "domain": 2,
     "explanation": "The data owner — typically a senior business official — is accountable for classifying data and defining access requirements. The custodian and database administrator implement and maintain the controls the owner specifies but do not set classification, and end users simply operate within the granted permissions.",
-      "reversal": {
-    "text": "In data governance, which responsibility belongs to the data owner?",
-    "answers": [
-      "Implementing and maintaining the controls the owner specifies",
-      "Classifying the data and defining who may access it",
-      "Administering the database platform day to day",
-      "Accessing and using the data within granted permissions"
-    ],
-    "correctIndex": 1,
-    "explanation": "The data owner — a senior business official — is accountable for classifying data and deciding who may access it. The custodian implements the owner's decisions, the DBA administers the platform, and the end user works within granted permissions."
-  }
+    "reversal": {
+      "text": "In data governance, which responsibility belongs to the data owner?",
+      "answers": [
+        "Implementing and maintaining the controls the owner specifies",
+        "Classifying the data and defining who may access it",
+        "Administering the database platform day to day",
+        "Accessing and using the data within granted permissions"
+      ],
+      "correctIndex": 1,
+      "explanation": "The data owner — a senior business official — is accountable for classifying data and deciding who may access it. The custodian implements the owner's decisions, the DBA administers the platform, and the end user works within granted permissions."
+    }
   },
   {
     "id": "cissp-d2-002",
@@ -189,17 +194,17 @@
     "correctIndex": 2,
     "domain": 2,
     "explanation": "Data moving between systems over a network is data in transit, best protected with transport encryption such as TLS. Data at rest is stored data, data in use is data actively being processed in memory, and neither describes information actively crossing a network link.",
-      "reversal": {
-    "text": "Which description best matches the 'data in transit' state?",
-    "answers": [
-      "Data stored on disk or other media",
-      "Data actively being processed in memory",
-      "Data moving across a network between systems",
-      "Data held in long-term archive storage"
-    ],
-    "correctIndex": 2,
-    "explanation": "Data in transit is data moving across a network between systems, typically protected with TLS. Data at rest sits on storage, data in use is being processed in memory, and archived data is retained in long-term storage."
-  }
+    "reversal": {
+      "text": "Which description best matches the 'data in transit' state?",
+      "answers": [
+        "Data stored on disk or other media",
+        "Data actively being processed in memory",
+        "Data moving across a network between systems",
+        "Data held in long-term archive storage"
+      ],
+      "correctIndex": 2,
+      "explanation": "Data in transit is data moving across a network between systems, typically protected with TLS. Data at rest sits on storage, data in use is being processed in memory, and archived data is retained in long-term storage."
+    }
   },
   {
     "id": "cissp-d2-003",
@@ -226,17 +231,17 @@
     "correctIndex": 1,
     "domain": 2,
     "explanation": "A data processor handles personal data on behalf of, and per the instructions of, the controller. The data controller determines the purposes and means of processing, the data owner is an internal accountability role, and the data subject is the individual the personal data is about.",
-      "reversal": {
-    "text": "Which description best matches the 'data in transit' state?",
-    "answers": [
-      "Data stored on disk or other media",
-      "Data actively being processed in memory",
-      "Data moving across a network between systems",
-      "Data held in long-term archive storage"
-    ],
-    "correctIndex": 2,
-    "explanation": "Data in transit is data moving across a network between systems, typically protected with TLS. Data at rest sits on storage, data in use is being processed in memory, and archived data is retained in long-term storage."
-  }
+    "reversal": {
+      "text": "Which description best matches the 'data in transit' state?",
+      "answers": [
+        "Data stored on disk or other media",
+        "Data actively being processed in memory",
+        "Data moving across a network between systems",
+        "Data held in long-term archive storage"
+      ],
+      "correctIndex": 2,
+      "explanation": "Data in transit is data moving across a network between systems, typically protected with TLS. Data at rest sits on storage, data in use is being processed in memory, and archived data is retained in long-term storage."
+    }
   },
   {
     "id": "cissp-d2-005",
@@ -263,17 +268,17 @@
     "correctIndex": 1,
     "domain": 3,
     "explanation": "Bell-LaPadula enforces 'no read up' (simple security property) and 'no write down' (star property) to protect confidentiality. Biba protects integrity with the opposite rules ('no write up, no read down'), Clark-Wilson uses well-formed transactions for integrity, and Brewer-Nash addresses conflicts of interest.",
-      "reversal": {
-    "text": "Which access rules does the Bell-LaPadula model enforce?",
-    "answers": [
-      "No read down and no write up, to protect integrity",
-      "No read up and no write down, to protect confidentiality",
-      "Well-formed transactions and separation of duties",
-      "Dynamic barriers preventing conflict-of-interest access"
-    ],
-    "correctIndex": 1,
-    "explanation": "Bell-LaPadula protects confidentiality with 'no read up, no write down.' Biba inverts these for integrity, Clark-Wilson uses well-formed transactions and separation of duties, and Brewer-Nash (Chinese Wall) prevents conflict-of-interest access."
-  }
+    "reversal": {
+      "text": "Which access rules does the Bell-LaPadula model enforce?",
+      "answers": [
+        "No read down and no write up, to protect integrity",
+        "No read up and no write down, to protect confidentiality",
+        "Well-formed transactions and separation of duties",
+        "Dynamic barriers preventing conflict-of-interest access"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bell-LaPadula protects confidentiality with 'no read up, no write down.' Biba inverts these for integrity, Clark-Wilson uses well-formed transactions and separation of duties, and Brewer-Nash (Chinese Wall) prevents conflict-of-interest access."
+    }
   },
   {
     "id": "cissp-d3-002",
@@ -287,17 +292,17 @@
     "correctIndex": 1,
     "domain": 3,
     "explanation": "Asymmetric encryption uses a public/private key pair, allowing parties to exchange public keys openly and communicate securely without a pre-shared secret. Symmetric encryption requires both sides to already hold the same key, hashing provides integrity rather than confidentiality, and steganography conceals a message's existence but does not establish a secure channel.",
-      "reversal": {
-    "text": "What is the defining characteristic of asymmetric encryption?",
-    "answers": [
-      "Both parties use the same shared secret key",
-      "It uses a public/private key pair, so no secret need be pre-shared",
-      "It produces a fixed-length digest that cannot be reversed",
-      "It hides the existence of the message within other data"
-    ],
-    "correctIndex": 1,
-    "explanation": "Asymmetric encryption uses a mathematically linked public/private key pair, letting parties who have never met establish security without pre-sharing a secret. Symmetric encryption relies on a shared key, hashing produces a digest, and steganography hides a message's existence."
-  }
+    "reversal": {
+      "text": "What is the defining characteristic of asymmetric encryption?",
+      "answers": [
+        "Both parties use the same shared secret key",
+        "It uses a public/private key pair, so no secret need be pre-shared",
+        "It produces a fixed-length digest that cannot be reversed",
+        "It hides the existence of the message within other data"
+      ],
+      "correctIndex": 1,
+      "explanation": "Asymmetric encryption uses a mathematically linked public/private key pair, letting parties who have never met establish security without pre-sharing a secret. Symmetric encryption relies on a shared key, hashing produces a digest, and steganography hides a message's existence."
+    }
   },
   {
     "id": "cissp-d3-003",
@@ -311,17 +316,17 @@
     "correctIndex": 1,
     "domain": 3,
     "explanation": "A cryptographic hash function produces a fixed-length digest that changes if the input changes, making it ideal for verifying integrity. Symmetric ciphers and one-time pads provide confidentiality, and a public key certificate binds an identity to a key but does not by itself verify file integrity.",
-      "reversal": {
-    "text": "What does a cryptographic hash function primarily provide?",
-    "answers": [
-      "Confidentiality of a message using a shared key",
-      "Verification that data has not been altered, via a fixed-length digest",
-      "Binding of an identity to a public key",
-      "Perfect secrecy using a key as long as the message"
-    ],
-    "correctIndex": 1,
-    "explanation": "A cryptographic hash produces a fixed-length digest used to verify integrity — any change to the input changes the output. A symmetric cipher provides confidentiality, a certificate binds identity to a public key, and a one-time pad provides perfect secrecy."
-  }
+    "reversal": {
+      "text": "What does a cryptographic hash function primarily provide?",
+      "answers": [
+        "Confidentiality of a message using a shared key",
+        "Verification that data has not been altered, via a fixed-length digest",
+        "Binding of an identity to a public key",
+        "Perfect secrecy using a key as long as the message"
+      ],
+      "correctIndex": 1,
+      "explanation": "A cryptographic hash produces a fixed-length digest used to verify integrity — any change to the input changes the output. A symmetric cipher provides confidentiality, a certificate binds identity to a public key, and a one-time pad provides perfect secrecy."
+    }
   },
   {
     "id": "cissp-d3-004",
@@ -335,20 +340,29 @@
     "correctIndex": 1,
     "domain": 3,
     "explanation": "A certificate authority issues and digitally signs certificates that bind an identity to a public key, allowing others to trust that the key belongs to the named party. It does not encrypt all traffic itself, private key escrow is a separate function that CAs generally avoid, and one-time password generation is unrelated to a CA's core role.",
-      "reversal": {
-    "text": "In a PKI, which component issues and digitally signs certificates that bind identities to public keys?",
-    "answers": [
-      "The registration authority (RA)",
-      "The certificate authority (CA)",
-      "The key escrow service",
-      "The online certificate status responder (OCSP)"
-    ],
-    "correctIndex": 1,
-    "explanation": "The certificate authority issues and digitally signs certificates binding identities to public keys. The RA verifies identity before issuance, key escrow stores keys for recovery, and OCSP reports whether a certificate has been revoked.",
-      "resources": [
-    { "label": "How PKI and certificate authorities work", "url": "https://www.cloudflare.com/learning/ssl/what-is-a-certificate-authority/", "type": "article" }
-  ]
-  }
+    "reversal": {
+      "text": "In a PKI, which component issues and digitally signs certificates that bind identities to public keys?",
+      "answers": [
+        "The registration authority (RA)",
+        "The certificate authority (CA)",
+        "The key escrow service",
+        "The online certificate status responder (OCSP)"
+      ],
+      "correctIndex": 1,
+      "explanation": "The certificate authority issues and digitally signs certificates binding identities to public keys. The RA verifies identity before issuance, key escrow stores keys for recovery, and OCSP reports whether a certificate has been revoked."
+    },
+    "resources": [
+      {
+        "label": "How PKI and certificate authorities work",
+        "url": "https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/",
+        "type": "article"
+      },
+      {
+        "label": "How does SSL work?", 
+        "url": "https://www.cloudflare.com/learning/ssl/how-does-ssl-work/", 
+        "type": "article" 
+      }
+    ]
   },
   {
     "id": "cissp-d3-005",
@@ -375,17 +389,17 @@
     "correctIndex": 1,
     "domain": 3,
     "explanation": "A Trusted Platform Module (TPM) is a dedicated hardware chip that securely stores cryptographic keys and supports features like full-disk encryption while resisting tampering. A GPU handles graphics, a NIC handles network connectivity, and a PSU supplies power — none provide secure key storage.",
-      "reversal": {
-    "text": "What is the primary function of a Trusted Platform Module (TPM)?",
-    "answers": [
-      "Accelerating graphics and parallel computation",
-      "Securely storing cryptographic keys and supporting full-disk encryption in tamper-resistant hardware",
-      "Connecting the system to a wired or wireless network",
-      "Converting AC power to the DC voltages components use"
-    ],
-    "correctIndex": 1,
-    "explanation": "A TPM is a dedicated hardware chip that securely stores cryptographic keys and supports full-disk encryption, resisting tampering and key extraction. The other options describe a GPU, a NIC, and a PSU respectively."
-  }
+    "reversal": {
+      "text": "What is the primary function of a Trusted Platform Module (TPM)?",
+      "answers": [
+        "Accelerating graphics and parallel computation",
+        "Securely storing cryptographic keys and supporting full-disk encryption in tamper-resistant hardware",
+        "Connecting the system to a wired or wireless network",
+        "Converting AC power to the DC voltages components use"
+      ],
+      "correctIndex": 1,
+      "explanation": "A TPM is a dedicated hardware chip that securely stores cryptographic keys and supports full-disk encryption, resisting tampering and key extraction. The other options describe a GPU, a NIC, and a PSU respectively."
+    }
   },
   {
     "id": "cissp-d4-001",
@@ -399,17 +413,17 @@
     "correctIndex": 0,
     "domain": 4,
     "explanation": "A screened subnet, or DMZ, places public-facing servers in a segmented zone between the internet and the internal network, so compromising one does not grant direct access to internal systems. Static IPs and disk encryption do not provide network isolation, and sharing a VLAN with internal hosts would remove the separation entirely.",
-      "reversal": {
-    "text": "What is the purpose of placing servers in a screened subnet (DMZ)?",
-    "answers": [
-      "To isolate public-facing servers so their compromise doesn't directly expose the internal network",
-      "To give the servers permanent, unchanging IP addresses",
-      "To protect data on the servers' disks if the hardware is stolen",
-      "To place the servers on the same broadcast domain as internal hosts"
-    ],
-    "correctIndex": 0,
-    "explanation": "A screened subnet (DMZ) isolates public-facing servers between filtering layers so a compromise doesn't directly reach internal systems. Static IPs are just addressing, full-disk encryption protects data at rest, and sharing a VLAN with internal hosts would remove the isolation."
-  }
+    "reversal": {
+      "text": "What is the purpose of placing servers in a screened subnet (DMZ)?",
+      "answers": [
+        "To isolate public-facing servers so their compromise doesn't directly expose the internal network",
+        "To give the servers permanent, unchanging IP addresses",
+        "To protect data on the servers' disks if the hardware is stolen",
+        "To place the servers on the same broadcast domain as internal hosts"
+      ],
+      "correctIndex": 0,
+      "explanation": "A screened subnet (DMZ) isolates public-facing servers between filtering layers so a compromise doesn't directly reach internal systems. Static IPs are just addressing, full-disk encryption protects data at rest, and sharing a VLAN with internal hosts would remove the isolation."
+    }
   },
   {
     "id": "cissp-d4-002",
@@ -423,17 +437,17 @@
     "correctIndex": 1,
     "domain": 4,
     "explanation": "A VPN (virtual private network) creates an encrypted tunnel across an untrusted network, allowing secure remote access to internal resources. A VLAN segments a local network, NAT translates addresses, and DNS resolves names to IP addresses — none of these provide the encrypted remote-access tunnel a VPN does.",
-      "reversal": {
-    "text": "What is the primary function of a VPN?",
-    "answers": [
-      "Segmenting a switch into separate broadcast domains",
-      "Creating an encrypted tunnel for secure access over an untrusted network",
-      "Translating private IP addresses to public ones",
-      "Resolving domain names to IP addresses"
-    ],
-    "correctIndex": 1,
-    "explanation": "A VPN creates an encrypted tunnel so remote users can reach internal resources securely over the public internet. A VLAN segments a switch, NAT translates addresses, and DNS resolves names to IPs."
-  }
+    "reversal": {
+      "text": "What is the primary function of a VPN?",
+      "answers": [
+        "Segmenting a switch into separate broadcast domains",
+        "Creating an encrypted tunnel for secure access over an untrusted network",
+        "Translating private IP addresses to public ones",
+        "Resolving domain names to IP addresses"
+      ],
+      "correctIndex": 1,
+      "explanation": "A VPN creates an encrypted tunnel so remote users can reach internal resources securely over the public internet. A VLAN segments a switch, NAT translates addresses, and DNS resolves names to IPs."
+    }
   },
   {
     "id": "cissp-d4-003",
@@ -447,17 +461,17 @@
     "correctIndex": 1,
     "domain": 4,
     "explanation": "Telnet transmits credentials and session data in plaintext, allowing anyone capturing traffic to read them, and the standard remediation is to replace it with SSH, which encrypts the session. Speed, port count, and IP version are not the core security problem with Telnet.",
-      "reversal": {
-    "text": "Why is Telnet considered insecure for administrative access, and what replaces it?",
-    "answers": [
-      "It is too slow; replace it with faster hardware",
-      "It transmits credentials in plaintext; replace it with SSH",
-      "It consumes too many ports; consolidate to a single port",
-      "It only supports IPv4; migrate the network to IPv6"
-    ],
-    "correctIndex": 1,
-    "explanation": "Telnet sends credentials and session data in plaintext, so anyone capturing traffic can read them; SSH provides the same remote access over an encrypted channel. The other options misstate the problem — speed, port count, and IP version aren't the security issue."
-  }
+    "reversal": {
+      "text": "Why is Telnet considered insecure for administrative access, and what replaces it?",
+      "answers": [
+        "It is too slow; replace it with faster hardware",
+        "It transmits credentials in plaintext; replace it with SSH",
+        "It consumes too many ports; consolidate to a single port",
+        "It only supports IPv4; migrate the network to IPv6"
+      ],
+      "correctIndex": 1,
+      "explanation": "Telnet sends credentials and session data in plaintext, so anyone capturing traffic can read them; SSH provides the same remote access over an encrypted channel. The other options misstate the problem — speed, port count, and IP version aren't the security issue."
+    }
   },
   {
     "id": "cissp-d4-004",
@@ -471,17 +485,17 @@
     "correctIndex": 0,
     "domain": 4,
     "explanation": "Forging ARP replies to bind the attacker's MAC to another host's IP is ARP poisoning, which enables on-path (man-in-the-middle) interception of traffic. A SYN flood exhausts connection resources, DNS tunneling smuggles data through DNS queries, and phishing targets people rather than the ARP protocol.",
-      "reversal": {
-    "text": "How does an ARP poisoning attack work, and what category is it?",
-    "answers": [
-      "Forging ARP replies to associate the attacker's MAC with another host's IP, enabling an on-path (MITM) attack",
-      "Flooding a target with half-open connections to exhaust resources (denial of service)",
-      "Hiding stolen data inside DNS queries to exfiltrate it",
-      "Tricking a user into revealing credentials through a deceptive message (social engineering)"
-    ],
-    "correctIndex": 0,
-    "explanation": "ARP poisoning forges ARP replies so the attacker's MAC is mapped to a legitimate IP (often the gateway), placing them on-path to intercept traffic — a man-in-the-middle attack. The distractors describe a SYN flood, DNS tunneling, and phishing."
-  }
+    "reversal": {
+      "text": "How does an ARP poisoning attack work, and what category is it?",
+      "answers": [
+        "Forging ARP replies to associate the attacker's MAC with another host's IP, enabling an on-path (MITM) attack",
+        "Flooding a target with half-open connections to exhaust resources (denial of service)",
+        "Hiding stolen data inside DNS queries to exfiltrate it",
+        "Tricking a user into revealing credentials through a deceptive message (social engineering)"
+      ],
+      "correctIndex": 0,
+      "explanation": "ARP poisoning forges ARP replies so the attacker's MAC is mapped to a legitimate IP (often the gateway), placing them on-path to intercept traffic — a man-in-the-middle attack. The distractors describe a SYN flood, DNS tunneling, and phishing."
+    }
   },
   {
     "id": "cissp-d4-005",
@@ -495,17 +509,17 @@
     "correctIndex": 1,
     "domain": 4,
     "explanation": "WPA2 or WPA3 with strong authentication provides robust encryption for wireless traffic and is the current best practice. WEP is deprecated and easily broken, hiding an SSID offers no real encryption, and MAC filtering is trivially bypassed by spoofing and does not encrypt traffic.",
-      "reversal": {
-    "text": "Which wireless security option provides the strongest data confidentiality?",
-    "answers": [
-      "WEP",
-      "WPA2/WPA3 with strong authentication",
-      "An open network with a hidden SSID",
-      "MAC address filtering alone"
-    ],
-    "correctIndex": 1,
-    "explanation": "WPA2/WPA3 with strong authentication provides the strongest Wi-Fi confidentiality. WEP is broken and trivially cracked, a hidden SSID on an open network is easily discovered and unencrypted, and MAC filtering is easily spoofed and encrypts nothing."
-  }
+    "reversal": {
+      "text": "Which wireless security option provides the strongest data confidentiality?",
+      "answers": [
+        "WEP",
+        "WPA2/WPA3 with strong authentication",
+        "An open network with a hidden SSID",
+        "MAC address filtering alone"
+      ],
+      "correctIndex": 1,
+      "explanation": "WPA2/WPA3 with strong authentication provides the strongest Wi-Fi confidentiality. WEP is broken and trivially cracked, a hidden SSID on an open network is easily discovered and unencrypted, and MAC filtering is easily spoofed and encrypts nothing."
+    }
   },
   {
     "id": "cissp-d4-006",
@@ -532,17 +546,17 @@
     "correctIndex": 1,
     "domain": 5,
     "explanation": "Identification is the claim of an identity — the username asserts who the user claims to be — while authentication proves that claim, which the password does. The two steps are distinct: identification makes the claim, authentication verifies it.",
-      "reversal": {
-    "text": "Providing a username at a login prompt is an example of which access control step?",
-    "answers": [
-      "Authentication",
-      "Identification",
-      "Authorization",
-      "Accountability"
-    ],
-    "correctIndex": 1,
-    "explanation": "Claiming an identity (entering a username) is identification. Proving that claim (the password) is authentication, granting access to resources is authorization, and tracing actions to a user is accountability."
-  }
+    "reversal": {
+      "text": "Providing a username at a login prompt is an example of which access control step?",
+      "answers": [
+        "Authentication",
+        "Identification",
+        "Authorization",
+        "Accountability"
+      ],
+      "correctIndex": 1,
+      "explanation": "Claiming an identity (entering a username) is identification. Proving that claim (the password) is authentication, granting access to resources is authorization, and tracing actions to a user is accountability."
+    }
   },
   {
     "id": "cissp-d5-002",
@@ -556,17 +570,17 @@
     "correctIndex": 1,
     "domain": 5,
     "explanation": "A password is something you know and a fingerprint is something you are, so combining them uses two different factor types and qualifies as multi-factor authentication. Multi-factor requires factors from different categories; combining two of the same type (for example, two passwords) would not qualify.",
-      "reversal": {
-    "text": "A fingerprint scan is an example of which authentication factor?",
-    "answers": [
-      "Something you know",
-      "Something you have",
-      "Something you are",
-      "Somewhere you are"
-    ],
-    "correctIndex": 2,
-    "explanation": "A fingerprint is a biometric — 'something you are.' A password or PIN is 'something you know,' a token or phone is 'something you have,' and geolocation is 'somewhere you are.' Combining two different types (e.g., password + fingerprint) makes it multi-factor."
-  }
+    "reversal": {
+      "text": "A fingerprint scan is an example of which authentication factor?",
+      "answers": [
+        "Something you know",
+        "Something you have",
+        "Something you are",
+        "Somewhere you are"
+      ],
+      "correctIndex": 2,
+      "explanation": "A fingerprint is a biometric — 'something you are.' A password or PIN is 'something you know,' a token or phone is 'something you have,' and geolocation is 'somewhere you are.' Combining two different types (e.g., password + fingerprint) makes it multi-factor."
+    }
   },
   {
     "id": "cissp-d5-003",
@@ -580,17 +594,17 @@
     "correctIndex": 2,
     "domain": 5,
     "explanation": "Role-Based Access Control assigns permissions to roles, so changing a user's role automatically adjusts their access, which scales well with job functions. DAC ties access to owner discretion, MAC uses classification labels, and rule-based control applies conditions like time-of-day rather than job roles.",
-      "reversal": {
-    "text": "Which statement best describes Role-Based Access Control (RBAC)?",
-    "answers": [
-      "The data owner grants access at their own discretion",
-      "The system enforces access using labels and clearances",
-      "Access is assigned by job function, so changing roles changes access",
-      "Access is granted by conditions such as time of day or source IP"
-    ],
-    "correctIndex": 2,
-    "explanation": "RBAC assigns permissions to roles tied to job function, so moving an employee to a new role automatically adjusts their access. DAC leaves it to the owner's discretion, MAC uses labels and clearances, and rule-based control uses conditions like time or address."
-  }
+    "reversal": {
+      "text": "Which statement best describes Role-Based Access Control (RBAC)?",
+      "answers": [
+        "The data owner grants access at their own discretion",
+        "The system enforces access using labels and clearances",
+        "Access is assigned by job function, so changing roles changes access",
+        "Access is granted by conditions such as time of day or source IP"
+      ],
+      "correctIndex": 2,
+      "explanation": "RBAC assigns permissions to roles tied to job function, so moving an employee to a new role automatically adjusts their access. DAC leaves it to the owner's discretion, MAC uses labels and clearances, and rule-based control uses conditions like time or address."
+    }
   },
   {
     "id": "cissp-d5-004",
@@ -617,17 +631,17 @@
     "correctIndex": 1,
     "domain": 5,
     "explanation": "SSO improves usability but concentrates risk: if the single set of credentials is compromised, an attacker may reach every connected application, which is why strong authentication and monitoring of SSO systems are critical.",
-      "reversal": {
-    "text": "The risk that one compromised credential could grant access to many connected applications is a primary security concern of which technology?",
-    "answers": [
-      "Multi-factor authentication (MFA)",
-      "Single sign-on (SSO)",
-      "Role-based access control (RBAC)",
-      "Full-disk encryption"
-    ],
-    "correctIndex": 1,
-    "explanation": "Single sign-on lets one authentication unlock many applications, so a compromised SSO credential exposes all of them — which is why SSO is typically paired with strong MFA. MFA reduces credential risk, RBAC governs permissions, and full-disk encryption protects data at rest."
-  }
+    "reversal": {
+      "text": "The risk that one compromised credential could grant access to many connected applications is a primary security concern of which technology?",
+      "answers": [
+        "Multi-factor authentication (MFA)",
+        "Single sign-on (SSO)",
+        "Role-based access control (RBAC)",
+        "Full-disk encryption"
+      ],
+      "correctIndex": 1,
+      "explanation": "Single sign-on lets one authentication unlock many applications, so a compromised SSO credential exposes all of them — which is why SSO is typically paired with strong MFA. MFA reduces credential risk, RBAC governs permissions, and full-disk encryption protects data at rest."
+    }
   },
   {
     "id": "cissp-d6-001",
@@ -641,17 +655,17 @@
     "correctIndex": 0,
     "domain": 6,
     "explanation": "A penetration test goes beyond identification and actively exploits vulnerabilities to demonstrate real impact, whereas a vulnerability scan detects and reports potential weaknesses without exploiting them. The scan is broader but shallower; the pen test is deeper and proves what an attacker could actually achieve.",
-      "reversal": {
-    "text": "Which activity only identifies potential weaknesses without exploiting them?",
-    "answers": [
-      "A penetration test",
-      "A vulnerability scan",
-      "A red-team engagement",
-      "A social-engineering assessment"
-    ],
-    "correctIndex": 1,
-    "explanation": "A vulnerability scan identifies and reports potential weaknesses but does not exploit them. A penetration test actively exploits weaknesses to prove real-world impact; red-team and social-engineering assessments also involve active attack techniques."
-  }
+    "reversal": {
+      "text": "Which activity only identifies potential weaknesses without exploiting them?",
+      "answers": [
+        "A penetration test",
+        "A vulnerability scan",
+        "A red-team engagement",
+        "A social-engineering assessment"
+      ],
+      "correctIndex": 1,
+      "explanation": "A vulnerability scan identifies and reports potential weaknesses but does not exploit them. A penetration test actively exploits weaknesses to prove real-world impact; red-team and social-engineering assessments also involve active attack techniques."
+    }
   },
   {
     "id": "cissp-d6-002",
@@ -665,17 +679,17 @@
     "correctIndex": 1,
     "domain": 6,
     "explanation": "Black-box testing gives the tester no internal knowledge, simulating an outside attacker's viewpoint. White-box testing provides full internal information, gray-box provides partial knowledge, and regression testing checks that changes have not broken existing functionality.",
-      "reversal": {
-    "text": "In black-box testing, what knowledge does the tester have of the target?",
-    "answers": [
-      "Full knowledge of the internal architecture and source code",
-      "No prior knowledge of internal architecture, approaching as an external attacker",
-      "Partial knowledge, such as limited credentials or documentation",
-      "Knowledge of a prior version, to confirm old bugs stay fixed"
-    ],
-    "correctIndex": 1,
-    "explanation": "Black-box testing gives the tester no prior internal knowledge, simulating an outside attacker. White-box provides full internal knowledge, gray-box provides partial knowledge, and regression testing confirms previously fixed defects remain fixed."
-  }
+    "reversal": {
+      "text": "In black-box testing, what knowledge does the tester have of the target?",
+      "answers": [
+        "Full knowledge of the internal architecture and source code",
+        "No prior knowledge of internal architecture, approaching as an external attacker",
+        "Partial knowledge, such as limited credentials or documentation",
+        "Knowledge of a prior version, to confirm old bugs stay fixed"
+      ],
+      "correctIndex": 1,
+      "explanation": "Black-box testing gives the tester no prior internal knowledge, simulating an outside attacker. White-box provides full internal knowledge, gray-box provides partial knowledge, and regression testing confirms previously fixed defects remain fixed."
+    }
   },
   {
     "id": "cissp-d6-003",
@@ -689,17 +703,17 @@
     "correctIndex": 1,
     "domain": 6,
     "explanation": "Reviewing logs of events such as failed logins supports accountability by ensuring actions can be traced and monitored. While logging touches several objectives, its assessment here is fundamentally about holding users accountable and detecting misuse, not about confidentiality or availability.",
-      "reversal": {
-    "text": "Recording and reviewing user actions so they can be traced to an individual primarily supports which security objective?",
-    "answers": [
-      "Confidentiality",
-      "Accountability",
-      "Availability",
-      "Integrity"
-    ],
-    "correctIndex": 1,
-    "explanation": "Tracing actions to a specific user through logging and review supports accountability. Confidentiality prevents disclosure, availability ensures access, and integrity ensures data is not improperly altered."
-  }
+    "reversal": {
+      "text": "Recording and reviewing user actions so they can be traced to an individual primarily supports which security objective?",
+      "answers": [
+        "Confidentiality",
+        "Accountability",
+        "Availability",
+        "Integrity"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tracing actions to a specific user through logging and review supports accountability. Confidentiality prevents disclosure, availability ensures access, and integrity ensures data is not improperly altered."
+    }
   },
   {
     "id": "cissp-d6-004",
@@ -713,17 +727,17 @@
     "correctIndex": 1,
     "domain": 6,
     "explanation": "A formal audit provides an independent, structured evaluation of controls against a defined standard and can produce attestation for external parties. A vulnerability scan is a technical check, a code review examines source code, and a tabletop exercise rehearses incident response — none produce a formal compliance attestation.",
-      "reversal": {
-    "text": "Which activity produces an independent, formal attestation that controls meet a specific standard?",
-    "answers": [
-      "An internal vulnerability scan",
-      "A formal audit against the standard",
-      "A developer code review",
-      "A tabletop incident exercise"
-    ],
-    "correctIndex": 1,
-    "explanation": "A formal audit is an independent evaluation that produces an attestation third parties can rely on. A vulnerability scan finds technical weaknesses, a code review examines source quality, and a tabletop exercise rehearses incident response."
-  }
+    "reversal": {
+      "text": "Which activity produces an independent, formal attestation that controls meet a specific standard?",
+      "answers": [
+        "An internal vulnerability scan",
+        "A formal audit against the standard",
+        "A developer code review",
+        "A tabletop incident exercise"
+      ],
+      "correctIndex": 1,
+      "explanation": "A formal audit is an independent evaluation that produces an attestation third parties can rely on. A vulnerability scan finds technical weaknesses, a code review examines source quality, and a tabletop exercise rehearses incident response."
+    }
   },
   {
     "id": "cissp-d6-005",
@@ -776,17 +790,17 @@
     "correctIndex": 1,
     "domain": 7,
     "explanation": "Maintaining a documented chain of custody — who collected, handled, and stored evidence and when — is essential for the evidence to be admissible and trustworthy in legal proceedings. Reformatting destroys evidence, public sharing compromises it, and deleting logs eliminates it.",
-      "reversal": {
-    "text": "Which practice ensures evidence remains admissible by documenting who handled it and when?",
-    "answers": [
-      "Reformatting affected systems before analysis",
-      "Preserving a documented chain of custody",
-      "Publishing raw evidence for crowdsourced analysis",
-      "Deleting logs to protect user privacy"
-    ],
-    "correctIndex": 1,
-    "explanation": "Chain of custody documents every person who handled evidence and when, preserving its integrity and legal admissibility. Reformatting destroys evidence, public sharing compromises it, and deleting logs removes it entirely."
-  }
+    "reversal": {
+      "text": "Which practice ensures evidence remains admissible by documenting who handled it and when?",
+      "answers": [
+        "Reformatting affected systems before analysis",
+        "Preserving a documented chain of custody",
+        "Publishing raw evidence for crowdsourced analysis",
+        "Deleting logs to protect user privacy"
+      ],
+      "correctIndex": 1,
+      "explanation": "Chain of custody documents every person who handled evidence and when, preserving its integrity and legal admissibility. Reformatting destroys evidence, public sharing compromises it, and deleting logs removes it entirely."
+    }
   },
   {
     "id": "cissp-d7-003",
@@ -800,17 +814,17 @@
     "correctIndex": 1,
     "domain": 7,
     "explanation": "The 3-2-1 rule means keeping three copies of data, stored on two different types of media, with at least one copy kept offsite. This protects against media failure, site-level disasters, and single points of failure in the backup scheme.",
-      "reversal": {
-    "text": "Keeping three copies of data on two different media types with one copy offsite describes which backup strategy?",
-    "answers": [
-      "The 3-2-1 backup strategy",
-      "The grandfather-father-son rotation",
-      "A full-plus-incremental schedule",
-      "A continuous data protection scheme"
-    ],
-    "correctIndex": 0,
-    "explanation": "This is the 3-2-1 rule: three copies, two media types, one offsite. Grandfather-father-son is a tape rotation scheme, full-plus-incremental describes backup types, and continuous data protection captures changes in near real time."
-  }
+    "reversal": {
+      "text": "Keeping three copies of data on two different media types with one copy offsite describes which backup strategy?",
+      "answers": [
+        "The 3-2-1 backup strategy",
+        "The grandfather-father-son rotation",
+        "A full-plus-incremental schedule",
+        "A continuous data protection scheme"
+      ],
+      "correctIndex": 0,
+      "explanation": "This is the 3-2-1 rule: three copies, two media types, one offsite. Grandfather-father-son is a tape rotation scheme, full-plus-incremental describes backup types, and continuous data protection captures changes in near real time."
+    }
   },
   {
     "id": "cissp-d7-004",
@@ -824,17 +838,17 @@
     "correctIndex": 1,
     "domain": 7,
     "explanation": "The Recovery Time Objective (RTO) defines the maximum tolerable downtime for a system before harm becomes unacceptable. RPO defines the maximum tolerable data loss measured in time, MTBF estimates reliability, and ARO expresses how often a threat is expected annually.",
-      "reversal": {
-    "text": "In business continuity planning, what does the Recovery Time Objective (RTO) measure?",
-    "answers": [
-      "The maximum acceptable amount of data loss, measured in time",
-      "The maximum acceptable time a system can be down before unacceptable harm",
-      "The average time between hardware failures",
-      "The expected number of times a threat occurs per year"
-    ],
-    "correctIndex": 1,
-    "explanation": "RTO is the maximum tolerable downtime before harm becomes unacceptable. RPO measures tolerable data loss, MTBF is average time between failures, and ARO is the expected yearly frequency of a threat."
-  }
+    "reversal": {
+      "text": "In business continuity planning, what does the Recovery Time Objective (RTO) measure?",
+      "answers": [
+        "The maximum acceptable amount of data loss, measured in time",
+        "The maximum acceptable time a system can be down before unacceptable harm",
+        "The average time between hardware failures",
+        "The expected number of times a threat occurs per year"
+      ],
+      "correctIndex": 1,
+      "explanation": "RTO is the maximum tolerable downtime before harm becomes unacceptable. RPO measures tolerable data loss, MTBF is average time between failures, and ARO is the expected yearly frequency of a threat."
+    }
   },
   {
     "id": "cissp-d7-005",
@@ -848,17 +862,17 @@
     "correctIndex": 0,
     "domain": 7,
     "explanation": "RPO (Recovery Point Objective) measures the maximum acceptable amount of data loss, expressed as a point in time to which data must be restored, while RTO (Recovery Time Objective) measures the maximum acceptable downtime. Confusing the two is a common error: one is about data, the other about time to restore service.",
-      "reversal": {
-    "text": "In business continuity planning, what does the Recovery Time Objective (RTO) measure?",
-    "answers": [
-      "The maximum acceptable amount of data loss, measured in time",
-      "The maximum acceptable time a system can be down before unacceptable harm",
-      "The average time between hardware failures",
-      "The expected number of times a threat occurs per year"
-    ],
-    "correctIndex": 1,
-    "explanation": "RTO is the maximum tolerable downtime before harm becomes unacceptable. RPO measures tolerable data loss, MTBF is average time between failures, and ARO is the expected yearly frequency of a threat."
-  }
+    "reversal": {
+      "text": "In business continuity planning, what does the Recovery Time Objective (RTO) measure?",
+      "answers": [
+        "The maximum acceptable amount of data loss, measured in time",
+        "The maximum acceptable time a system can be down before unacceptable harm",
+        "The average time between hardware failures",
+        "The expected number of times a threat occurs per year"
+      ],
+      "correctIndex": 1,
+      "explanation": "RTO is the maximum tolerable downtime before harm becomes unacceptable. RPO measures tolerable data loss, MTBF is average time between failures, and ARO is the expected yearly frequency of a threat."
+    }
   },
   {
     "id": "cissp-d7-006",
@@ -872,17 +886,17 @@
     "correctIndex": 1,
     "domain": 7,
     "explanation": "Mandatory vacations and job rotation help detect and deter fraud, because schemes that rely on one individual's uninterrupted, exclusive control of a process are more likely to surface when someone else performs the role. These are detective and deterrent controls, not merely morale or cost measures.",
-      "reversal": {
-    "text": "Which administrative controls are used primarily to detect and deter fraud that relies on one person's exclusive, continuous control of a process?",
-    "answers": [
-      "Mandatory vacations and job rotation",
-      "Least privilege and need-to-know",
-      "Defense in depth and layered controls",
-      "Encryption and key escrow"
-    ],
-    "correctIndex": 0,
-    "explanation": "Mandatory vacations and job rotation force another person into a role, surfacing fraud that depends on one individual's uninterrupted control. Least privilege limits access scope, defense in depth layers controls, and encryption protects data confidentiality."
-  }
+    "reversal": {
+      "text": "Which administrative controls are used primarily to detect and deter fraud that relies on one person's exclusive, continuous control of a process?",
+      "answers": [
+        "Mandatory vacations and job rotation",
+        "Least privilege and need-to-know",
+        "Defense in depth and layered controls",
+        "Encryption and key escrow"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mandatory vacations and job rotation force another person into a role, surfacing fraud that depends on one individual's uninterrupted control. Least privilege limits access scope, defense in depth layers controls, and encryption protects data confidentiality."
+    }
   },
   {
     "id": "cissp-d7-007",
@@ -896,17 +910,17 @@
     "correctIndex": 1,
     "domain": 7,
     "explanation": "A SIEM (Security Information and Event Management) system centralizes log collection and correlates events across sources, enabling faster detection and investigation of incidents. It does not replace firewalls, patch vulnerabilities, or encrypt traffic — its value is unified visibility and correlation.",
-      "reversal": {
-    "text": "Which system centralizes logs from many sources and correlates events to speed incident detection?",
-    "answers": [
-      "A firewall",
-      "A SIEM (Security Information and Event Management)",
-      "A load balancer",
-      "A VPN concentrator"
-    ],
-    "correctIndex": 1,
-    "explanation": "A SIEM aggregates and correlates logs across systems to detect suspicious patterns faster. A firewall filters traffic, a load balancer distributes it, and a VPN concentrator terminates encrypted tunnels."
-  }
+    "reversal": {
+      "text": "Which system centralizes logs from many sources and correlates events to speed incident detection?",
+      "answers": [
+        "A firewall",
+        "A SIEM (Security Information and Event Management)",
+        "A load balancer",
+        "A VPN concentrator"
+      ],
+      "correctIndex": 1,
+      "explanation": "A SIEM aggregates and correlates logs across systems to detect suspicious patterns faster. A firewall filters traffic, a load balancer distributes it, and a VPN concentrator terminates encrypted tunnels."
+    }
   },
   {
     "id": "cissp-d8-001",
@@ -920,17 +934,17 @@
     "correctIndex": 1,
     "domain": 8,
     "explanation": "Passing unvalidated input into a database query enables SQL injection, best defended with input validation and parameterized queries (prepared statements) that separate code from data. Cross-site scripting targets the browser, buffer overflow involves memory boundaries, and race conditions involve timing — different classes of flaw.",
-      "reversal": {
-    "text": "Input validation and parameterized queries are the primary defense against which vulnerability?",
-    "answers": [
-      "Cross-site scripting (XSS)",
-      "SQL injection",
-      "Buffer overflow",
-      "Race condition"
-    ],
-    "correctIndex": 1,
-    "explanation": "Parameterized queries and input validation defend against SQL injection by preventing user input from altering query structure. XSS is countered with output encoding, buffer overflows with bounds checking, and race conditions with proper synchronization."
-  }
+    "reversal": {
+      "text": "Input validation and parameterized queries are the primary defense against which vulnerability?",
+      "answers": [
+        "Cross-site scripting (XSS)",
+        "SQL injection",
+        "Buffer overflow",
+        "Race condition"
+      ],
+      "correctIndex": 1,
+      "explanation": "Parameterized queries and input validation defend against SQL injection by preventing user input from altering query structure. XSS is countered with output encoding, buffer overflows with bounds checking, and race conditions with proper synchronization."
+    }
   },
   {
     "id": "cissp-d8-002",
@@ -957,17 +971,17 @@
     "correctIndex": 0,
     "domain": 8,
     "explanation": "Failing to check a file's type, size, and contents before processing reflects missing input validation, a foundational secure coding practice that prevents malicious or malformed input from causing harm. Obfuscation, logging, and comments do not address the underlying validation gap.",
-      "reversal": {
-    "text": "Which secure coding practice checks that data such as an uploaded file meets expected type, size, and content rules before processing?",
-    "answers": [
-      "Input validation",
-      "Code obfuscation",
-      "Verbose logging",
-      "Inline code comments"
-    ],
-    "correctIndex": 0,
-    "explanation": "Input validation verifies that data conforms to expected type, size, and content before it is processed, blocking malformed or malicious input. Obfuscation hides code logic, logging records events, and comments document code — none validate input."
-  }
+    "reversal": {
+      "text": "Which secure coding practice checks that data such as an uploaded file meets expected type, size, and content rules before processing?",
+      "answers": [
+        "Input validation",
+        "Code obfuscation",
+        "Verbose logging",
+        "Inline code comments"
+      ],
+      "correctIndex": 0,
+      "explanation": "Input validation verifies that data conforms to expected type, size, and content before it is processed, blocking malformed or malicious input. Obfuscation hides code logic, logging records events, and comments document code — none validate input."
+    }
   },
   {
     "id": "cissp-d8-004",
@@ -981,17 +995,17 @@
     "correctIndex": 1,
     "domain": 8,
     "explanation": "Writing beyond a buffer's fixed length is a buffer overflow, mitigated by bounds checking, using memory-safe functions, and languages or compilers that enforce memory safety. SQL injection, phishing, and weak encryption are unrelated vulnerability classes with their own distinct defenses.",
-      "reversal": {
-    "text": "Writing more data into a fixed-length memory buffer than it can hold, overwriting adjacent memory, describes which vulnerability class?",
-    "answers": [
-      "SQL injection",
-      "Buffer overflow",
-      "Cross-site scripting",
-      "Privilege escalation"
-    ],
-    "correctIndex": 1,
-    "explanation": "A buffer overflow occurs when data exceeds a fixed buffer and overwrites adjacent memory; key mitigations are bounds checking and safe memory-handling functions. SQL injection manipulates queries, XSS injects scripts into pages, and privilege escalation abuses elevated rights."
-  }
+    "reversal": {
+      "text": "Writing more data into a fixed-length memory buffer than it can hold, overwriting adjacent memory, describes which vulnerability class?",
+      "answers": [
+        "SQL injection",
+        "Buffer overflow",
+        "Cross-site scripting",
+        "Privilege escalation"
+      ],
+      "correctIndex": 1,
+      "explanation": "A buffer overflow occurs when data exceeds a fixed buffer and overwrites adjacent memory; key mitigations are bounds checking and safe memory-handling functions. SQL injection manipulates queries, XSS injects scripts into pages, and privilege escalation abuses elevated rights."
+    }
   },
   {
     "id": "cissp-d8-005",
@@ -1005,17 +1019,17 @@
     "correctIndex": 1,
     "domain": 8,
     "explanation": "Analyzing source code for flaws without running the program is Static Application Security Testing (SAST). Dynamic testing (DAST) examines a running application, penetration testing actively exploits weaknesses, and load testing measures performance under demand.",
-      "reversal": {
-    "text": "Which testing method analyzes an application's source code for flaws without executing the program?",
-    "answers": [
-      "Dynamic Application Security Testing (DAST)",
-      "Static Application Security Testing (SAST)",
-      "Penetration testing",
-      "Load testing"
-    ],
-    "correctIndex": 1,
-    "explanation": "SAST examines source code for flaws without running it. DAST tests a running application from the outside, penetration testing actively exploits weaknesses, and load testing measures performance under demand."
-  }
+    "reversal": {
+      "text": "Which testing method analyzes an application's source code for flaws without executing the program?",
+      "answers": [
+        "Dynamic Application Security Testing (DAST)",
+        "Static Application Security Testing (SAST)",
+        "Penetration testing",
+        "Load testing"
+      ],
+      "correctIndex": 1,
+      "explanation": "SAST examines source code for flaws without running it. DAST tests a running application from the outside, penetration testing actively exploits weaknesses, and load testing measures performance under demand."
+    }
   },
   {
     "id": "cissp-d8-006",
@@ -1028,6 +1042,6 @@
     ],
     "correctIndex": 1,
     "domain": 8,
-    "explanation": "Tracking dependencies with a software bill of materials (SBOM) and regularly checking components against known vulnerability databases addresses risk from third-party code. Assuming vendors handle everything, ignoring external code, or disabling libraries post-release are not realistic or effective approaches to supply-chain security." 
+    "explanation": "Tracking dependencies with a software bill of materials (SBOM) and regularly checking components against known vulnerability databases addresses risk from third-party code. Assuming vendors handle everything, ignoring external code, or disabling libraries post-release are not realistic or effective approaches to supply-chain security."
   }
 ]
