@@ -10,7 +10,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "SATA data cables use a flat 7-pin connector. The 40-pin IDE connector belongs to older PATA drives, the 15-pin connector is SATA power (not data), and 6-pin PCIe is for graphics card power."
+    "explanation": "SATA data cables use a flat 7-pin connector. The 40-pin IDE connector belongs to older PATA drives, the 15-pin connector is SATA power (not data), and 6-pin PCIe is for graphics card power.",
+    "reversal": {
+  "text": "Which connector attaches the data cable of a modern internal SATA hard drive?",
+  "answers": [
+    "7-pin SATA",
+    "40-pin IDE",
+    "15-pin power",
+    "6-pin PCIe"
+  ],
+  "correctIndex": 0,
+  "explanation": "The 7-pin SATA connector carries data to a SATA drive. The 40-pin IDE connector is the older parallel data standard, the 15-pin connector supplies SATA power, and the 6-pin PCIe connector powers graphics cards."
+}
   },
   {
     "id": "aplus1-d5-001",
@@ -36,7 +47,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "A faintly visible image with no brightness indicates the backlight has failed while the panel still displays — on older LCDs this involves the inverter, on LED-backlit panels the backlight circuit. A dead LCD panel shows nothing, and RAM or the wireless card have no role in display brightness."
+    "explanation": "A faintly visible image with no brightness indicates the backlight has failed while the panel still displays — on older LCDs this involves the inverter, on LED-backlit panels the backlight circuit. A dead LCD panel shows nothing, and RAM or the wireless card have no role in display brightness.",
+    "reversal": {
+  "text": "A laptop screen that stays dim at maximum brightness while the image remains faintly visible most likely indicates a failure of which component?",
+  "answers": [
+    "The backlight or inverter/backlight circuit",
+    "The LCD panel itself",
+    "The wireless card",
+    "The RAM"
+  ],
+  "correctIndex": 0,
+  "explanation": "A faintly visible image with no brightness points to the backlight or its power circuit, since the panel still renders the image. A failed LCD panel would show cracks or dead areas, and the wireless card and RAM have nothing to do with display brightness."
+}
   },
   {
     "id": "aplus1-d1-002",
@@ -49,7 +71,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "USB-C is a small, reversible connector supporting fast charging and high-speed data, now the dominant standard across mobile devices and laptops. Micro-USB and Mini-USB are older, non-reversible connectors, and a barrel connector supplies only power."
+    "explanation": "USB-C is a small, reversible connector supporting fast charging and high-speed data, now the dominant standard across mobile devices and laptops. Micro-USB and Mini-USB are older, non-reversible connectors, and a barrel connector supplies only power.",
+    "reversal": {
+  "text": "Which connector type provides reversible charging and high-speed data and is now the industry standard for modern phones and laptops?",
+  "answers": [
+    "USB-C",
+    "Micro-USB",
+    "Mini-USB",
+    "Barrel connector"
+  ],
+  "correctIndex": 0,
+  "explanation": "USB-C is reversible, supports high-speed data and power delivery, and has become the modern standard. Micro-USB and Mini-USB are older, non-reversible connectors, and a barrel connector carries power only."
+}
   },
   {
     "id": "aplus1-d1-003",
@@ -62,7 +95,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "A VPN (virtual private network) creates an encrypted tunnel over the public internet, letting a remote device access internal resources as if locally connected. NFC and Bluetooth are short-range, and a hotspot shares a cellular connection rather than securing access to a corporate LAN."
+    "explanation": "A VPN (virtual private network) creates an encrypted tunnel over the public internet, letting a remote device access internal resources as if locally connected. NFC and Bluetooth are short-range, and a hotspot shares a cellular connection rather than securing access to a corporate LAN.",
+    "reversal": {
+  "text": "Which technology lets a laptop securely reach corporate resources over the public internet as if directly on the office LAN?",
+  "answers": [
+    "VPN",
+    "NFC",
+    "Bluetooth",
+    "Hotspot"
+  ],
+  "correctIndex": 0,
+  "explanation": "A VPN creates an encrypted tunnel over the internet, giving remote access as though on the local network. NFC is short-range contactless, Bluetooth is short-range device pairing, and a hotspot shares an internet connection rather than securing access to a private LAN."
+}
   },
   {
     "id": "aplus1-d1-004",
@@ -75,7 +119,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "An M.2 NVMe SSD is compact, has no moving parts, and uses the PCIe/NVMe interface for the fastest consumer storage speeds. A 2.5-inch SATA HDD has spinning platters and is slower, optical drives read discs, and eSATA is an external connection type."
+    "explanation": "An M.2 NVMe SSD is compact, has no moving parts, and uses the PCIe/NVMe interface for the fastest consumer storage speeds. A 2.5-inch SATA HDD has spinning platters and is slower, optical drives read discs, and eSATA is an external connection type.",
+    "reversal": {
+  "text": "Which storage type is the thinnest and fastest option, has no moving parts, and often uses the M.2 form factor?",
+  "answers": [
+    "M.2 NVMe SSD",
+    "2.5-inch SATA HDD",
+    "5.25-inch optical drive",
+    "eSATA external drive"
+  ],
+  "correctIndex": 0,
+  "explanation": "An M.2 NVMe SSD is compact, has no moving parts, and delivers the highest speeds by using the NVMe protocol over PCIe. A 2.5-inch SATA HDD has spinning platters, an optical drive reads discs, and eSATA is an external connection interface."
+}
   },
   {
     "id": "aplus1-d1-005",
@@ -88,7 +143,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "Near Field Communication (NFC) operates over a few centimeters and powers tap-to-pay transactions. Infrared requires line of sight and is largely obsolete, cellular is long-range data, and Wi-Fi Direct links devices peer-to-peer over greater distances than contactless payment requires."
+    "explanation": "Near Field Communication (NFC) operates over a few centimeters and powers tap-to-pay transactions. Infrared requires line of sight and is largely obsolete, cellular is long-range data, and Wi-Fi Direct links devices peer-to-peer over greater distances than contactless payment requires.",
+    "reversal": {
+  "text": "Which short-range wireless technology enables contactless mobile payments by tapping a phone near a reader?",
+  "answers": [
+    "NFC",
+    "Infrared (IR)",
+    "Cellular (LTE)",
+    "Wi-Fi Direct"
+  ],
+  "correctIndex": 0,
+  "explanation": "NFC operates at very short range (a few centimeters), making it suited to tap-to-pay. Infrared requires line of sight, cellular is long-range mobile data, and Wi-Fi Direct connects devices over longer distances than a payment tap."
+}
   },
   {
     "id": "aplus1-d1-006",
@@ -114,7 +180,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "A docking station lets a laptop connect to multiple peripherals — displays, input devices, wired network, and power — through one attachment at the desk. A KVM switch shares one keyboard/monitor/mouse across multiple computers, and the other options are unrelated."
+    "explanation": "A docking station lets a laptop connect to multiple peripherals — displays, input devices, wired network, and power — through one attachment at the desk. A KVM switch shares one keyboard/monitor/mouse across multiple computers, and the other options are unrelated.",
+    "reversal": {
+  "text": "Which laptop accessory lets an external monitor, keyboard, and mouse all connect through a single connection point at a desk?",
+  "answers": [
+    "A docking station",
+    "A KVM splitter cable",
+    "A USB flash drive",
+    "A Molex adapter"
+  ],
+  "correctIndex": 0,
+  "explanation": "A docking station provides many ports through one connection, letting a laptop attach to a full desk setup at once. A KVM switches one keyboard/monitor/mouse among computers, a USB flash drive stores files, and a Molex adapter is an internal power connector."
+}
   },
   {
     "id": "aplus1-d2-001",
@@ -127,7 +204,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "802.11ac operates exclusively in the 5 GHz band. 802.11ax (Wi-Fi 6) uses 2.4 and 5 GHz (with 6 GHz added in Wi-Fi 6E), 802.11n is dual-band 2.4/5 GHz, and 802.11g is 2.4 GHz only."
+    "explanation": "802.11ac operates exclusively in the 5 GHz band. 802.11ax (Wi-Fi 6) uses 2.4 and 5 GHz (with 6 GHz added in Wi-Fi 6E), 802.11n is dual-band 2.4/5 GHz, and 802.11g is 2.4 GHz only.",
+    "reversal": {
+  "text": "Which wireless standard operates only in the 5 GHz band?",
+  "answers": [
+    "802.11ac (Wi-Fi 5)",
+    "802.11ax (Wi-Fi 6)",
+    "802.11n",
+    "802.11g"
+  ],
+  "correctIndex": 0,
+  "explanation": "802.11ac (Wi-Fi 5) operates exclusively in the 5 GHz band. 802.11ax (Wi-Fi 6) and 802.11n are dual-band (2.4 and 5 GHz), and 802.11g operates only at 2.4 GHz."
+}
   },
   {
     "id": "aplus1-d2-002",
@@ -140,7 +228,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "The 2.4 GHz band travels farther and penetrates walls better than higher bands, at the cost of lower throughput and more congestion. 5 GHz and 6 GHz offer more speed but shorter range and weaker obstacle penetration."
+    "explanation": "The 2.4 GHz band travels farther and penetrates walls better than higher bands, at the cost of lower throughput and more congestion. 5 GHz and 6 GHz offer more speed but shorter range and weaker obstacle penetration.",
+    "reversal": {
+  "text": "Which frequency band offers the widest coverage and best wall penetration, at the cost of lower speed?",
+  "answers": [
+    "2.4 GHz",
+    "5 GHz",
+    "6 GHz",
+    "60 GHz"
+  ],
+  "correctIndex": 0,
+  "explanation": "Lower-frequency 2.4 GHz signals travel farther and penetrate walls better but carry less data. 5 GHz and 6 GHz offer more speed with shorter range, and 60 GHz is very high-speed but extremely short-range."
+}
   },
   {
     "id": "aplus1-d2-003",
@@ -153,7 +252,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "A switch learns MAC addresses and forwards each frame only to the port of the intended recipient, reducing unnecessary traffic. A hub repeats signals to all ports, a repeater extends a signal, and a modem converts between digital and analog for internet service."
+    "explanation": "A switch learns MAC addresses and forwards each frame only to the port of the intended recipient, reducing unnecessary traffic. A hub repeats signals to all ports, a repeater extends a signal, and a modem converts between digital and analog for internet service.",
+    "reversal": {
+  "text": "Which Layer 2 device forwards frames only to the specific port where the destination device is connected?",
+  "answers": [
+    "Switch",
+    "Hub",
+    "Repeater",
+    "Modem"
+  ],
+  "correctIndex": 0,
+  "explanation": "A switch learns MAC addresses and forwards frames only to the correct port. A hub repeats traffic to all ports, a repeater regenerates a signal to extend range, and a modem modulates signals between digital and analog."
+}
   },
   {
     "id": "aplus1-d2-004",
@@ -166,7 +276,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "A SOHO (small office/home office) router combines routing, wireless access, DHCP, NAT, and basic firewalling in one unit. An unmanaged switch only forwards frames, a repeater extends range, and a KVM switch shares input/output devices among computers."
+    "explanation": "A SOHO (small office/home office) router combines routing, wireless access, DHCP, NAT, and basic firewalling in one unit. An unmanaged switch only forwards frames, a repeater extends range, and a KVM switch shares input/output devices among computers.",
+    "reversal": {
+  "text": "Which single device shares one internet connection, provides Wi-Fi, assigns local IP addresses, and includes a basic firewall?",
+  "answers": [
+    "A SOHO router (wireless gateway)",
+    "An unmanaged switch",
+    "A repeater",
+    "A KVM switch"
+  ],
+  "correctIndex": 0,
+  "explanation": "A SOHO router combines routing, Wi-Fi, DHCP, and firewalling in one unit. An unmanaged switch only forwards frames, a repeater extends signal range, and a KVM switch shares input devices among computers."
+}
   },
   {
     "id": "aplus1-d2-005",
@@ -179,7 +300,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "DHCP leases IP addresses and related settings automatically to devices. DNS resolves names to addresses, SMTP sends email, and SNMP monitors network devices — none assign addresses."
+    "explanation": "DHCP leases IP addresses and related settings automatically to devices. DNS resolves names to addresses, SMTP sends email, and SNMP monitors network devices — none assign addresses.",
+    "reversal": {
+  "text": "Which protocol automatically assigns IP addresses to devices on a home or office network?",
+  "answers": [
+    "DHCP",
+    "DNS",
+    "SMTP",
+    "SNMP"
+  ],
+  "correctIndex": 0,
+  "explanation": "DHCP automatically assigns IP addresses and related configuration to hosts. DNS resolves names to addresses, SMTP sends email, and SNMP monitors network devices."
+}
   },
   {
     "id": "aplus1-d2-006",
@@ -192,7 +324,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Ethernet patch cables use RJ45 connectors attached with a crimping tool. RJ11 is for telephone lines, BNC is for coaxial, and SC is a fiber-optic connector — none of which terminate twisted-pair Ethernet with a crimper."
+    "explanation": "Ethernet patch cables use RJ45 connectors attached with a crimping tool. RJ11 is for telephone lines, BNC is for coaxial, and SC is a fiber-optic connector — none of which terminate twisted-pair Ethernet with a crimper.",
+    "reversal": {
+  "text": "Which connector and tool are used to make a twisted-pair patch cable?",
+  "answers": [
+    "RJ45 connector with a crimper",
+    "RJ11 connector with a punchdown tool",
+    "BNC connector with pliers",
+    "SC connector with a crimper"
+  ],
+  "correctIndex": 0,
+  "explanation": "A patch cable uses RJ45 connectors attached with a crimper. RJ11 is for telephone lines, BNC is for coaxial, and SC is a fiber connector — none of which apply to crimping a twisted-pair Ethernet patch cable."
+}
   },
   {
     "id": "aplus1-d2-007",
@@ -218,7 +361,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Single-mode fiber has a very small core and uses laser light to carry signals over long distances with minimal loss. Multimode fiber uses a larger core and LED/VCSEL sources for shorter runs, while twisted pair and coaxial are copper media."
+    "explanation": "Single-mode fiber has a very small core and uses laser light to carry signals over long distances with minimal loss. Multimode fiber uses a larger core and LED/VCSEL sources for shorter runs, while twisted pair and coaxial are copper media.",
+    "reversal": {
+  "text": "Which fiber-optic cable type uses a laser and a very small core for long-distance runs?",
+  "answers": [
+    "Single-mode fiber",
+    "Multimode fiber",
+    "Cat 6 twisted pair",
+    "Coaxial (RG-6)"
+  ],
+  "correctIndex": 0,
+  "explanation": "Single-mode fiber has a small core and uses laser light for long distances with minimal signal loss. Multimode uses a larger core and LED/laser for shorter runs, while Cat 6 and coaxial are copper media."
+}
   },
   {
     "id": "aplus1-d2-009",
@@ -231,7 +385,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "DSL (Digital Subscriber Line) runs over telephone wiring and separates voice and data frequencies so calls and internet work at the same time. Dial-up occupies the phone line during use, and satellite and cellular do not use the local telephone line at all."
+    "explanation": "DSL (Digital Subscriber Line) runs over telephone wiring and separates voice and data frequencies so calls and internet work at the same time. Dial-up occupies the phone line during use, and satellite and cellular do not use the local telephone line at all.",
+    "reversal": {
+  "text": "Which internet connection type runs over existing telephone lines while allowing simultaneous voice calls?",
+  "answers": [
+    "DSL",
+    "Dial-up",
+    "Satellite",
+    "Cellular"
+  ],
+  "correctIndex": 0,
+  "explanation": "DSL uses phone lines but separates voice and data frequencies, so calls and internet work at once. Dial-up monopolizes the line, satellite uses orbital links, and cellular uses mobile networks."
+}
   },
   {
     "id": "aplus1-d2-010",
@@ -244,7 +409,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "A DHCP reservation ties a specific IP address to a device's MAC address so the DHCP server always leases it the same address. Port forwarding directs inbound traffic, MAC filtering permits or blocks devices, and a static route defines a manual path between networks."
+    "explanation": "A DHCP reservation ties a specific IP address to a device's MAC address so the DHCP server always leases it the same address. Port forwarding directs inbound traffic, MAC filtering permits or blocks devices, and a static route defines a manual path between networks.",
+    "reversal": {
+  "text": "Which router feature guarantees a device always receives the same IP address without configuring the device manually?",
+  "answers": [
+    "A DHCP reservation",
+    "Port forwarding",
+    "MAC filtering",
+    "A static route"
+  ],
+  "correctIndex": 0,
+  "explanation": "A DHCP reservation ties a specific IP to a device's MAC address, so it always gets the same address from the server. Port forwarding directs inbound traffic, MAC filtering controls which devices may connect, and a static route defines a fixed path to a network."
+}
   },
   {
     "id": "aplus1-d2-011",
@@ -257,7 +433,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "HTTPS uses port 443 to carry encrypted web traffic. Port 80 is unencrypted HTTP, port 21 is FTP control, and port 25 is SMTP for email."
+    "explanation": "HTTPS uses port 443 to carry encrypted web traffic. Port 80 is unencrypted HTTP, port 21 is FTP control, and port 25 is SMTP for email.",
+    "reversal": {
+  "text": "Which port does HTTPS use to secure web traffic to sites like online banking?",
+  "answers": [
+    "443",
+    "80",
+    "21",
+    "25"
+  ],
+  "correctIndex": 0,
+  "explanation": "HTTPS uses port 443 for encrypted web traffic. Port 80 is plain HTTP, port 21 is FTP, and port 25 is SMTP for email."
+}
   },
   {
     "id": "aplus1-d3-002",
@@ -270,7 +457,18 @@
     ],
     "correctIndex": 1,
     "domain": 3,
-    "explanation": "RAID 1 mirrors data across two drives, so a full copy survives if one fails. RAID 0 stripes without redundancy, RAID 5 stripes with parity across three or more drives, and RAID 10 combines mirroring and striping across at least four drives."
+    "explanation": "RAID 1 mirrors data across two drives, so a full copy survives if one fails. RAID 0 stripes without redundancy, RAID 5 stripes with parity across three or more drives, and RAID 10 combines mirroring and striping across at least four drives.",
+    "reversal": {
+  "text": "Which RAID level mirrors data by writing identical copies to two drives for redundancy?",
+  "answers": [
+    "RAID 1",
+    "RAID 0",
+    "RAID 5",
+    "RAID 10"
+  ],
+  "correctIndex": 0,
+  "explanation": "RAID 1 mirrors identical data across two drives, so either can fail without data loss. RAID 0 stripes for speed with no redundancy, RAID 5 stripes with distributed parity, and RAID 10 combines mirroring and striping."
+}
   },
   {
     "id": "aplus1-d3-003",
@@ -283,7 +481,18 @@
     ],
     "correctIndex": 2,
     "domain": 3,
-    "explanation": "RAID 5 stripes data with parity spread across all member drives, needing at least three disks and surviving a single drive failure. RAID 0 has no parity, RAID 1 mirrors, and RAID 10 needs at least four drives for its stripe-plus-mirror design."
+    "explanation": "RAID 5 stripes data with parity spread across all member drives, needing at least three disks and surviving a single drive failure. RAID 0 has no parity, RAID 1 mirrors, and RAID 10 needs at least four drives for its stripe-plus-mirror design.",
+    "reversal": {
+  "text": "Which RAID level uses striping with distributed parity and needs at least three drives?",
+  "answers": [
+    "RAID 5",
+    "RAID 0",
+    "RAID 1",
+    "RAID 10"
+  ],
+  "correctIndex": 0,
+  "explanation": "RAID 5 stripes data with parity spread across all drives, tolerating one drive failure with a three-drive minimum. RAID 0 has no redundancy, RAID 1 mirrors two drives, and RAID 10 mirrors then stripes across four or more drives."
+}
   },
   {
     "id": "aplus1-d3-004",
@@ -296,7 +505,18 @@
     ],
     "correctIndex": 1,
     "domain": 3,
-    "explanation": "Laptops use the smaller SODIMM (Small Outline DIMM) form factor to fit their compact chassis. Full-size DIMMs go in desktops, while eSATA and PCIe are interfaces, not memory form factors."
+    "explanation": "Laptops use the smaller SODIMM (Small Outline DIMM) form factor to fit their compact chassis. Full-size DIMMs go in desktops, while eSATA and PCIe are interfaces, not memory form factors.",
+    "reversal": {
+  "text": "Which RAM form factor is used in laptops?",
+  "answers": [
+    "SODIMM",
+    "DIMM",
+    "eSATA",
+    "PCIe"
+  ],
+  "correctIndex": 0,
+  "explanation": "SODIMM (small outline DIMM) is the compact memory module used in laptops. A full-size DIMM is used in desktops, while eSATA and PCIe are interfaces for storage and expansion cards, not memory form factors."
+}
   },
   {
     "id": "aplus1-d3-005",
@@ -309,7 +529,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "ECC (error-correcting code) RAM detects and corrects single-bit memory errors, valued in servers where reliability is critical. Non-ECC RAM lacks this, VRAM is dedicated video memory, and flash memory is non-volatile storage, not system RAM."
+    "explanation": "ECC (error-correcting code) RAM detects and corrects single-bit memory errors, valued in servers where reliability is critical. Non-ECC RAM lacks this, VRAM is dedicated video memory, and flash memory is non-volatile storage, not system RAM.",
+    "reversal": {
+  "text": "Which RAM type automatically detects and corrects single-bit errors for reliability in servers?",
+  "answers": [
+    "ECC RAM",
+    "Non-ECC RAM",
+    "VRAM",
+    "Flash memory"
+  ],
+  "correctIndex": 0,
+  "explanation": "ECC (error-correcting code) RAM detects and fixes single-bit errors, valued in servers. Non-ECC RAM lacks this, VRAM is specialized video memory, and flash memory is non-volatile storage rather than system RAM."
+}
   },
   {
     "id": "aplus1-d3-006",
@@ -322,7 +553,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "The 4-pin Molex connector delivers power to legacy drives, fans, and accessories. The 15-pin SATA power connector serves modern drives, the 8-pin EPS powers the CPU, and RJ45 is a network connector, not a power connector."
+    "explanation": "The 4-pin Molex connector delivers power to legacy drives, fans, and accessories. The 15-pin SATA power connector serves modern drives, the 8-pin EPS powers the CPU, and RJ45 is a network connector, not a power connector.",
+    "reversal": {
+  "text": "Which 4-pin connector supplies power to older internal peripherals and some fans?",
+  "answers": [
+    "Molex",
+    "SATA power (15-pin)",
+    "8-pin EPS",
+    "RJ45"
+  ],
+  "correctIndex": 0,
+  "explanation": "The 4-pin Molex connector powers older drives, fans, and peripherals. SATA power uses 15 pins, the 8-pin EPS connector powers the CPU, and RJ45 is a network connector, not a power connector."
+}
   },
   {
     "id": "aplus1-d3-007",
@@ -335,7 +577,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "DisplayPort is a modern digital video interface supporting high resolutions and refresh rates, common on PC graphics cards. VGA is legacy analog video, PS/2 connects older keyboards and mice, and RJ11 is a telephone connector."
+    "explanation": "DisplayPort is a modern digital video interface supporting high resolutions and refresh rates, common on PC graphics cards. VGA is legacy analog video, PS/2 connects older keyboards and mice, and RJ11 is a telephone connector.",
+    "reversal": {
+  "text": "Which digital-only connector, common on graphics cards, is best for a modern monitor with high refresh rates and resolutions?",
+  "answers": [
+    "DisplayPort",
+    "VGA",
+    "PS/2",
+    "RJ11"
+  ],
+  "correctIndex": 0,
+  "explanation": "DisplayPort is a modern digital interface supporting high resolutions and refresh rates. VGA is an older analog video connector, PS/2 connects legacy keyboards and mice, and RJ11 is for telephone lines."
+}
   },
   {
     "id": "aplus1-d3-008",
@@ -361,7 +614,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Uniformly faded output on a laser printer typically means the toner cartridge is running low. The paper tray holds media, and the USB cable and network card affect connectivity, not print density."
+    "explanation": "Uniformly faded output on a laser printer typically means the toner cartridge is running low. The paper tray holds media, and the USB cable and network card affect connectivity, not print density.",
+    "reversal": {
+  "text": "Faint, evenly faded print across an entire laser-printed page most likely points to which failing consumable?",
+  "answers": [
+    "The toner cartridge",
+    "The paper tray",
+    "The USB cable",
+    "The network card"
+  ],
+  "correctIndex": 0,
+  "explanation": "Uniformly faded output indicates low toner. The paper tray only holds media, and a USB cable or network card affects connectivity, not print density."
+}
   },
   {
     "id": "aplus1-d3-010",
@@ -374,7 +638,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Thermal printers use heat to create images on heat-sensitive paper or via thermal-transfer ribbon, ideal for labels and receipts. Laser printers use toner and a fuser, inkjets spray liquid ink, and impact printers strike a ribbon against paper."
+    "explanation": "Thermal printers use heat to create images on heat-sensitive paper or via thermal-transfer ribbon, ideal for labels and receipts. Laser printers use toner and a fuser, inkjets spray liquid ink, and impact printers strike a ribbon against paper.",
+    "reversal": {
+  "text": "Which printer type uses heat to form the image and is common for shipping labels and receipts?",
+  "answers": [
+    "Thermal printer",
+    "Laser printer",
+    "Inkjet printer",
+    "Impact (dot-matrix) printer"
+  ],
+  "correctIndex": 0,
+  "explanation": "A thermal printer applies heat to specially coated paper, ideal for labels and receipts. A laser printer fuses toner, an inkjet sprays ink droplets, and an impact printer strikes a ribbon against the page."
+}
   },
   {
     "id": "aplus1-d3-011",
@@ -387,7 +662,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "An ESD wrist strap connected to ground safely equalizes charge and prevents electrostatic discharge from damaging components. Carpet increases static, low humidity worsens ESD, and touching the gold contacts risks transferring charge and contaminants directly to the pins."
+    "explanation": "An ESD wrist strap connected to ground safely equalizes charge and prevents electrostatic discharge from damaging components. Carpet increases static, low humidity worsens ESD, and touching the gold contacts risks transferring charge and contaminants directly to the pins.",
+    "reversal": {
+  "text": "Which precaution best prevents static damage to a memory module during installation?",
+  "answers": [
+    "Wear an anti-static (ESD) wrist strap connected to ground",
+    "Work on a carpeted floor for cushioning",
+    "Wear rubber gloves and keep the room dry",
+    "Hold the module by its gold contacts"
+  ],
+  "correctIndex": 0,
+  "explanation": "A grounded ESD wrist strap safely discharges static away from components. Carpet generates static, a dry room increases static risk, and touching the gold contacts can transfer damaging charge directly to the module."
+}
   },
   {
     "id": "aplus1-d3-012",
@@ -400,7 +686,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "NVMe (Non-Volatile Memory Express) drives connect over PCIe lanes, delivering far higher throughput than SATA-based SSDs. eSATA and USB 2.0 are slower external interfaces, and IDE is a legacy parallel interface for older drives."
+    "explanation": "NVMe (Non-Volatile Memory Express) drives connect over PCIe lanes, delivering far higher throughput than SATA-based SSDs. eSATA and USB 2.0 are slower external interfaces, and IDE is a legacy parallel interface for older drives.",
+    "reversal": {
+  "text": "Which storage interface delivers the highest performance by connecting an SSD directly to the PCIe bus instead of through SATA?",
+  "answers": [
+    "NVMe",
+    "eSATA",
+    "USB 2.0",
+    "IDE"
+  ],
+  "correctIndex": 0,
+  "explanation": "NVMe connects SSDs over the high-bandwidth PCIe bus, far outpacing SATA-based interfaces. eSATA is external SATA, USB 2.0 is a slow legacy interface, and IDE is an obsolete parallel standard."
+}
   },
   {
     "id": "aplus1-d4-001",
@@ -413,7 +710,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "Software as a Service (SaaS) delivers finished applications (like web-based email) that the provider fully manages. PaaS offers a development platform, IaaS provides raw infrastructure like VMs, and the customer manages progressively more in each of those."
+    "explanation": "Software as a Service (SaaS) delivers finished applications (like web-based email) that the provider fully manages. PaaS offers a development platform, IaaS provides raw infrastructure like VMs, and the customer manages progressively more in each of those.",
+    "reversal": {
+  "text": "Which cloud service model delivers ready-to-use applications through a web browser, with the provider managing everything underneath?",
+  "answers": [
+    "SaaS",
+    "PaaS",
+    "IaaS",
+    "DaaS"
+  ],
+  "correctIndex": 0,
+  "explanation": "SaaS delivers finished applications over the web with the provider handling all infrastructure. PaaS provides a development platform, IaaS provides raw compute and storage, and DaaS delivers virtual desktops."
+}
   },
   {
     "id": "aplus1-d4-002",
@@ -426,7 +734,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "Platform as a Service (PaaS) supplies a managed platform — OS, runtime, and development tools — so developers focus on code rather than infrastructure. IaaS would require managing the OS, SaaS delivers finished apps, and on-premises means managing everything locally."
+    "explanation": "Platform as a Service (PaaS) supplies a managed platform — OS, runtime, and development tools — so developers focus on code rather than infrastructure. IaaS would require managing the OS, SaaS delivers finished apps, and on-premises means managing everything locally.",
+    "reversal": {
+  "text": "Which cloud model provides the OS, runtime, and tools to build and deploy applications without managing the underlying servers?",
+  "answers": [
+    "PaaS",
+    "IaaS",
+    "SaaS",
+    "On-premises"
+  ],
+  "correctIndex": 0,
+  "explanation": "PaaS gives developers a managed platform to build and deploy on, without server administration. IaaS provides raw infrastructure to manage, SaaS delivers complete applications, and on-premises means self-hosted hardware."
+}
   },
   {
     "id": "aplus1-d4-003",
@@ -439,7 +758,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "A hypervisor creates and runs virtual machines, allocating the host's CPU, memory, storage, and network among them. Encryption, antivirus, and print management are unrelated functions handled by other software."
+    "explanation": "A hypervisor creates and runs virtual machines, allocating the host's CPU, memory, storage, and network among them. Encryption, antivirus, and print management are unrelated functions handled by other software.",
+    "reversal": {
+  "text": "Which component creates and manages virtual machines by allocating physical resources to them?",
+  "answers": [
+    "A hypervisor",
+    "A firewall",
+    "An antivirus scanner",
+    "A print spooler"
+  ],
+  "correctIndex": 0,
+  "explanation": "A hypervisor creates and manages VMs, dividing physical CPU, memory, and storage among them. A firewall filters traffic, antivirus scans for malware, and a print spooler manages print jobs."
+}
   },
   {
     "id": "aplus1-d4-004",
@@ -452,7 +782,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "A Type 2 (hosted) hypervisor like VirtualBox runs as an application on top of an existing operating system. A Type 1 (bare-metal) hypervisor runs directly on hardware with no host OS, and containers and RAID controllers are different technologies entirely."
+    "explanation": "A Type 2 (hosted) hypervisor like VirtualBox runs as an application on top of an existing operating system. A Type 1 (bare-metal) hypervisor runs directly on hardware with no host OS, and containers and RAID controllers are different technologies entirely.",
+    "reversal": {
+  "text": "Running VirtualBox on Windows to host a Linux VM on top of the existing OS is which type of hypervisor?",
+  "answers": [
+    "Type 2 (hosted)",
+    "Type 1 (bare-metal)",
+    "A container runtime",
+    "A RAID controller"
+  ],
+  "correctIndex": 0,
+  "explanation": "A Type 2 (hosted) hypervisor runs as an application on top of an existing OS, like VirtualBox. A Type 1 hypervisor runs directly on hardware, a container runtime isolates apps without full VMs, and a RAID controller manages disk arrays."
+}
   },
   {
     "id": "aplus1-d4-005",
@@ -465,7 +806,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "A hybrid cloud blends private and public cloud environments so workloads and data can shift between them as needed. Public cloud is fully provider-hosted, private cloud is dedicated to one organization, and community cloud is shared among related organizations."
+    "explanation": "A hybrid cloud blends private and public cloud environments so workloads and data can shift between them as needed. Public cloud is fully provider-hosted, private cloud is dedicated to one organization, and community cloud is shared among related organizations.",
+    "reversal": {
+  "text": "Which cloud deployment model combines on-premises private infrastructure with public cloud, letting workloads move between them?",
+  "answers": [
+    "Hybrid cloud",
+    "Public cloud",
+    "Private cloud",
+    "Community cloud"
+  ],
+  "correctIndex": 0,
+  "explanation": "A hybrid cloud blends private and public resources so data and workloads can shift between them. A public cloud is shared provider-hosted infrastructure, a private cloud is dedicated to one organization, and a community cloud is shared among related organizations."
+}
   },
   {
     "id": "aplus1-d4-006",
@@ -478,7 +830,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "A snapshot captures a VM's state at a point in time, letting you roll back after a failed test or change. A firewall filters traffic, a partition divides storage, and a domain is a network administrative grouping — none preserve and restore VM state."
+    "explanation": "A snapshot captures a VM's state at a point in time, letting you roll back after a failed test or change. A firewall filters traffic, a partition divides storage, and a domain is a network administrative grouping — none preserve and restore VM state.",
+    "reversal": {
+  "text": "Which virtualization feature saves a VM's state so you can return to it if something breaks during risky testing?",
+  "answers": [
+    "A snapshot",
+    "A firewall",
+    "A partition",
+    "A domain"
+  ],
+  "correctIndex": 0,
+  "explanation": "A snapshot captures a VM's state at a point in time for easy rollback. A firewall filters traffic, a partition divides a disk, and a domain is a managed group of networked computers."
+}
   },
   {
     "id": "aplus1-d5-002",
