@@ -82,7 +82,18 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "A trunk port carries traffic for multiple VLANs between switches, tagging frames (commonly with 802.1Q) so the receiving switch knows which VLAN each frame belongs to. An access port belongs to a single VLAN and carries untagged traffic for one host or segment."
+    "explanation": "A trunk port carries traffic for multiple VLANs between switches, tagging frames (commonly with 802.1Q) so the receiving switch knows which VLAN each frame belongs to. An access port belongs to a single VLAN and carries untagged traffic for one host or segment.",
+    "reversal": {
+  "text": "Which switch port configuration carries traffic for multiple VLANs to another switch?",
+  "answers": [
+    "A trunk port",
+    "An access port assigned to one VLAN",
+    "A routed port with a static IP",
+    "A port in half-duplex mode"
+  ],
+  "correctIndex": 0,
+  "explanation": "A trunk port carries traffic for multiple VLANs between switches using tagging. An access port belongs to a single VLAN, a routed port operates at Layer 3 with an IP, and half-duplex refers to one-direction-at-a-time transmission, not VLAN handling."
+}
   },
   {
     "id": "netplus-d2-002",
@@ -108,7 +119,18 @@
     ],
     "correctIndex": 1,
     "domain": 3,
-    "explanation": "A dynamic routing protocol like OSPF lets routers exchange reachability information and recalculate paths automatically when the topology changes. Static routes are entered by hand and don't adapt on their own, and the ARP table maps IPs to MACs on a local segment rather than choosing routes."
+    "explanation": "A dynamic routing protocol like OSPF lets routers exchange reachability information and recalculate paths automatically when the topology changes. Static routes are entered by hand and don't adapt on their own, and the ARP table maps IPs to MACs on a local segment rather than choosing routes.",
+    "reversal": {
+  "text": "Which approach lets a router learn routes automatically and adjust when a link fails, without manual updates?",
+  "answers": [
+    "A dynamic routing protocol such as OSPF",
+    "Static routing",
+    "A default route only",
+    "Manually editing the ARP table"
+  ],
+  "correctIndex": 0,
+  "explanation": "A dynamic routing protocol like OSPF learns and updates routes automatically as the network changes. Static routing requires manual entries, a default route only sends unknown traffic one way, and the ARP table maps IP to MAC addresses, not routes."
+}
   },
   {
     "id": "netplus-d4-001",
@@ -121,7 +143,18 @@
     ],
     "correctIndex": 1,
     "domain": 4,
-    "explanation": "802.1X provides port-based network access control, requiring a device to authenticate (typically against a RADIUS server) before the port grants network access. 802.11ac is a Wi-Fi standard, 802.3af is Power over Ethernet, and 802.1Q defines VLAN tagging."
+    "explanation": "802.1X provides port-based network access control, requiring a device to authenticate (typically against a RADIUS server) before the port grants network access. 802.11ac is a Wi-Fi standard, 802.3af is Power over Ethernet, and 802.1Q defines VLAN tagging.",
+    "reversal": {
+  "text": "Which standard provides port-based access control, allowing only authenticated devices onto switch ports?",
+  "answers": [
+    "802.1X",
+    "802.11ac",
+    "802.3af",
+    "802.1Q"
+  ],
+  "correctIndex": 0,
+  "explanation": "802.1X provides port-based network access control, requiring authentication before a device is granted access. 802.11ac is a Wi-Fi standard, 802.3af is Power over Ethernet, and 802.1Q is VLAN tagging."
+}
   },
   {
     "id": "netplus-d5-001",
@@ -210,7 +243,18 @@
     ],
     "correctIndex": 1,
     "domain": 3,
-    "explanation": "SNMP (Simple Network Management Protocol) lets a management system poll devices for health data and receive trap notifications when events like an interface failure occur. SMTP sends email, FTP transfers files, and RDP provides remote desktop access."
+    "explanation": "SNMP (Simple Network Management Protocol) lets a management system poll devices for health data and receive trap notifications when events like an interface failure occur. SMTP sends email, FTP transfers files, and RDP provides remote desktop access.",
+    "reversal": {
+  "text": "Which protocol provides centralized, real-time monitoring of device health and alerts when an interface goes down?",
+  "answers": [
+    "SNMP",
+    "SMTP",
+    "FTP",
+    "RDP"
+  ],
+  "correctIndex": 0,
+  "explanation": "SNMP monitors and manages network devices, sending traps when events like an interface failure occur. SMTP sends email, FTP transfers files, and RDP provides remote graphical access."
+}
   },
   {
     "id": "netplus-d4-002",
@@ -223,7 +267,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "Placing guest traffic on a separate VLAN isolated from internal resources segments it so visitors can reach the internet without touching internal servers. Hiding the SSID and adjusting transmit power or lease times don't enforce isolation between guest and internal networks."
+    "explanation": "Placing guest traffic on a separate VLAN isolated from internal resources segments it so visitors can reach the internet without touching internal servers. Hiding the SSID and adjusting transmit power or lease times don't enforce isolation between guest and internal networks.",
+    "reversal": {
+  "text": "Which control most directly lets guest wireless users reach the internet while blocking access to internal servers?",
+  "answers": [
+    "Placing guest traffic on a separate, isolated VLAN",
+    "Increasing the Wi-Fi transmit power",
+    "Disabling SSID broadcast",
+    "Shortening the DHCP lease time"
+  ],
+  "correctIndex": 0,
+  "explanation": "Isolating guest traffic on its own VLAN separates it from internal resources at Layer 2. Transmit power affects coverage, disabling SSID broadcast only hides the name, and DHCP lease time controls address renewal — none of which isolate traffic."
+}
   },
   {
     "id": "netplus-d5-003",
@@ -406,7 +461,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "802.1Q inserts a VLAN tag into Ethernet frames so trunk links can carry traffic for multiple VLANs while preserving VLAN separation. 802.3af is Power over Ethernet, 802.1X is port-based authentication, and 802.11ax is a Wi-Fi standard."
+    "explanation": "802.1Q inserts a VLAN tag into Ethernet frames so trunk links can carry traffic for multiple VLANs while preserving VLAN separation. 802.3af is Power over Ethernet, 802.1X is port-based authentication, and 802.11ax is a Wi-Fi standard.",
+    "reversal": {
+  "text": "Which protocol tags frames so switches can identify which VLAN each frame belongs to across a shared link?",
+  "answers": [
+    "802.1Q",
+    "802.3af",
+    "802.1X",
+    "802.11ax"
+  ],
+  "correctIndex": 0,
+  "explanation": "802.1Q is the VLAN tagging standard that lets multiple VLANs traverse a trunk link. 802.3af is Power over Ethernet, 802.1X is port-based network access control, and 802.11ax is a Wi-Fi standard."
+}
   },
   {
     "id": "netplus-d2-005",
@@ -419,7 +485,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Spanning Tree Protocol (STP) prevents Layer 2 loops by blocking redundant paths while keeping a loop-free active topology, reactivating backups if a link fails. BGP is a routing protocol, DHCP assigns addresses, and ARP resolves IP addresses to MAC addresses."
+    "explanation": "Spanning Tree Protocol (STP) prevents Layer 2 loops by blocking redundant paths while keeping a loop-free active topology, reactivating backups if a link fails. BGP is a routing protocol, DHCP assigns addresses, and ARP resolves IP addresses to MAC addresses.",
+    "reversal": {
+  "text": "Which protocol prevents switching loops in a network with redundant links between switches?",
+  "answers": [
+    "Spanning Tree Protocol (STP)",
+    "Border Gateway Protocol (BGP)",
+    "Dynamic Host Configuration Protocol (DHCP)",
+    "Address Resolution Protocol (ARP)"
+  ],
+  "correctIndex": 0,
+  "explanation": "STP prevents Layer 2 loops by blocking redundant paths until needed. BGP routes between autonomous systems, DHCP assigns IP configuration, and ARP resolves IP addresses to MAC addresses."
+}
   },
   {
     "id": "netplus-d2-006",
@@ -432,7 +509,18 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "Fiber optic carries signals as light, making it immune to electromagnetic interference and capable of far exceeding copper's 100-meter limit. Twisted-pair copper (Cat 5e/Cat 6) is limited to about 100 meters and susceptible to EMI, and coaxial is not suited to this scenario."
+    "explanation": "Fiber optic carries signals as light, making it immune to electromagnetic interference and capable of far exceeding copper's 100-meter limit. Twisted-pair copper (Cat 5e/Cat 6) is limited to about 100 meters and susceptible to EMI, and coaxial is not suited to this scenario.",
+    "reversal": {
+  "text": "Which cabling type is best for a 300-meter run requiring immunity to electromagnetic interference?",
+  "answers": [
+    "Fiber optic",
+    "Cat 6 UTP copper",
+    "Coaxial",
+    "Cat 5e copper"
+  ],
+  "correctIndex": 0,
+  "explanation": "Fiber optic carries light rather than electrical signals, so it is immune to EMI and supports long distances well beyond copper's 100-meter limit. Cat 6, Cat 5e, and coaxial are all copper media subject to interference and distance limits."
+}
   },
   {
     "id": "netplus-d2-007",
@@ -445,7 +533,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Port Address Translation (PAT), a form of NAT overload, maps many private addresses to one public address by tracking unique source ports. Dynamic routing chooses paths, subnetting divides address space, and trunking carries multiple VLANs — none translate addresses."
+    "explanation": "Port Address Translation (PAT), a form of NAT overload, maps many private addresses to one public address by tracking unique source ports. Dynamic routing chooses paths, subnetting divides address space, and trunking carries multiple VLANs — none translate addresses.",
+    "reversal": {
+  "text": "Which technology lets multiple internal hosts with private addresses share a single public IP when accessing the internet?",
+  "answers": [
+    "Port Address Translation (PAT)",
+    "Dynamic routing",
+    "Subnetting",
+    "VLAN trunking"
+  ],
+  "correctIndex": 0,
+  "explanation": "PAT (a form of NAT overload) maps many private addresses to one public IP using unique port numbers. Dynamic routing exchanges route information, subnetting divides an address space, and VLAN trunking carries multiple VLANs over a link."
+}
   },
   {
     "id": "netplus-d2-008",
@@ -458,7 +557,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Power over Ethernet (802.3af and the higher-power 802.3at) delivers electrical power over the same twisted-pair cable that carries data, powering devices like APs and IP phones. 802.1Q is VLAN tagging, 802.11ac is Wi-Fi, and QoS prioritizes traffic."
+    "explanation": "Power over Ethernet (802.3af and the higher-power 802.3at) delivers electrical power over the same twisted-pair cable that carries data, powering devices like APs and IP phones. 802.1Q is VLAN tagging, 802.11ac is Wi-Fi, and QoS prioritizes traffic.",
+    "reversal": {
+  "text": "Which standard lets a device power on using only its Ethernet cable, with no separate power adapter?",
+  "answers": [
+    "Power over Ethernet (802.3af/at)",
+    "802.1Q",
+    "802.11ac",
+    "Quality of Service (QoS)"
+  ],
+  "correctIndex": 0,
+  "explanation": "Power over Ethernet delivers electrical power alongside data over the Ethernet cable. 802.1Q is VLAN tagging, 802.11ac is a Wi-Fi standard, and QoS prioritizes traffic types."
+}
   },
   {
     "id": "netplus-d2-009",
@@ -471,7 +581,18 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "Mixing T568A on one end and T568B on the other produces a crossover cable, historically used to connect like devices directly. A straight-through uses the same standard on both ends, while rollover and loopback serve console access and testing respectively."
+    "explanation": "Mixing T568A on one end and T568B on the other produces a crossover cable, historically used to connect like devices directly. A straight-through uses the same standard on both ends, while rollover and loopback serve console access and testing respectively.",
+    "reversal": {
+  "text": "A cable terminated with T568A on one end and T568B on the other is what type of cable?",
+  "answers": [
+    "A crossover cable",
+    "A straight-through cable",
+    "A rollover (console) cable",
+    "A loopback cable"
+  ],
+  "correctIndex": 0,
+  "explanation": "Mixing T568A and T568B on opposite ends creates a crossover cable, historically used to connect like devices. A straight-through uses the same standard on both ends, a rollover connects to console ports, and a loopback loops transmit to receive for testing."
+}
   },
   {
     "id": "netplus-d2-010",
@@ -484,7 +605,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Quality of Service (QoS) classifies and prioritizes latency-sensitive traffic like VoIP so it is handled ahead of less time-critical data during congestion. NAT translates addresses, STP prevents loops, and DHCP snooping filters untrusted DHCP messages — none manage traffic priority."
+    "explanation": "Quality of Service (QoS) classifies and prioritizes latency-sensitive traffic like VoIP so it is handled ahead of less time-critical data during congestion. NAT translates addresses, STP prevents loops, and DHCP snooping filters untrusted DHCP messages — none manage traffic priority.",
+    "reversal": {
+  "text": "Which mechanism prioritizes voice-over-IP traffic over bulk file transfers on a congested link?",
+  "answers": [
+    "Quality of Service (QoS)",
+    "Network Address Translation (NAT)",
+    "Spanning Tree Protocol (STP)",
+    "DHCP snooping"
+  ],
+  "correctIndex": 0,
+  "explanation": "QoS classifies and prioritizes traffic so latency-sensitive data like VoIP is served first. NAT translates addresses, STP prevents switching loops, and DHCP snooping filters untrusted DHCP messages."
+}
   },
   {
     "id": "netplus-d4-003",
@@ -497,7 +629,18 @@
     ],
     "correctIndex": 3,
     "domain": 4,
-    "explanation": "WPA3 is the newest Wi-Fi security standard and offers the strongest protection, including improved handshake security over its predecessors. WEP is obsolete and easily broken, WPA is deprecated, and WPA2 remains common but is weaker than WPA3."
+    "explanation": "WPA3 is the newest Wi-Fi security standard and offers the strongest protection, including improved handshake security over its predecessors. WEP is obsolete and easily broken, WPA is deprecated, and WPA2 remains common but is weaker than WPA3.",
+    "reversal": {
+  "text": "Which wireless security standard is the most current and provides the strongest encryption for modern Wi-Fi?",
+  "answers": [
+    "WPA3",
+    "WEP",
+    "WPA",
+    "WPA2"
+  ],
+  "correctIndex": 0,
+  "explanation": "WPA3 is the newest Wi-Fi security standard with the strongest protections. WEP is obsolete and easily broken, WPA improved on WEP but is dated, and WPA2 remains common but is superseded by WPA3."
+}
   },
   {
     "id": "netplus-d4-004",
@@ -523,7 +666,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "MAC flooding overwhelms a switch's MAC address table so it fails open and floods frames out all ports, letting the attacker capture traffic. ARP poisoning corrupts IP-to-MAC mappings, DNS spoofing falsifies name resolution, and DHCP starvation exhausts the address pool."
+    "explanation": "MAC flooding overwhelms a switch's MAC address table so it fails open and floods frames out all ports, letting the attacker capture traffic. ARP poisoning corrupts IP-to-MAC mappings, DNS spoofing falsifies name resolution, and DHCP starvation exhausts the address pool.",
+    "reversal": {
+  "text": "Which tool filters traffic on a router by permitting or denying packets based on source/destination IP addresses and ports?",
+  "answers": [
+    "An access control list (ACL)",
+    "A DHCP reservation",
+    "An NTP server",
+    "A DNS zone"
+  ],
+  "correctIndex": 0,
+  "explanation": "An ACL permits or denies traffic based on criteria like addresses and ports. A DHCP reservation assigns a fixed IP to a device, an NTP server provides time synchronization, and a DNS zone holds name records."
+}
   },
   {
     "id": "netplus-d4-006",
@@ -549,7 +703,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Syslog centralizes log messages from network devices to a collector, using UDP port 514 by default. SNMP monitors device health, NTP synchronizes clocks, and RDP provides remote desktop access — none aggregate logs."
+    "explanation": "Syslog centralizes log messages from network devices to a collector, using UDP port 514 by default. SNMP monitors device health, NTP synchronizes clocks, and RDP provides remote desktop access — none aggregate logs.",
+    "reversal": {
+  "text": "Which protocol and port are typically used to collect log messages from many devices into one central server?",
+  "answers": [
+    "Syslog on port 514",
+    "SNMP on port 161",
+    "NTP on port 123",
+    "RDP on port 3389"
+  ],
+  "correctIndex": 0,
+  "explanation": "Syslog centralizes log messages on port 514 for review and correlation. SNMP (161) monitors device health, NTP (123) synchronizes clocks, and RDP (3389) provides remote desktop access."
+}
   },
   {
     "id": "netplus-d3-004",
@@ -562,7 +727,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "A baseline captures normal performance and traffic metrics, providing a reference to detect anomalies or degradation later. A honeypot is a decoy for attackers, a broadcast domain is a network segment scope, and a default gateway is an exit router."
+    "explanation": "A baseline captures normal performance and traffic metrics, providing a reference to detect anomalies or degradation later. A honeypot is a decoy for attackers, a broadcast domain is a network segment scope, and a default gateway is an exit router.",
+    "reversal": {
+  "text": "What is the term for documented normal traffic levels and performance used as a reference for future comparison?",
+  "answers": [
+    "A baseline",
+    "A honeypot",
+    "A broadcast domain",
+    "A default gateway"
+  ],
+  "correctIndex": 0,
+  "explanation": "A baseline captures normal performance so deviations can be spotted later. A honeypot is a decoy for attackers, a broadcast domain is the set of devices reached by a broadcast, and a default gateway is the exit path to other networks."
+}
   },
   {
     "id": "netplus-d3-005",
@@ -575,7 +751,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Automatic takeover by a redundant circuit when the primary fails is failover, a core element of high availability. Port forwarding directs inbound traffic to internal hosts, subnetting divides address space, and link aggregation combines links (primarily for throughput) rather than providing circuit-level failover."
+    "explanation": "Automatic takeover by a redundant circuit when the primary fails is failover, a core element of high availability. Port forwarding directs inbound traffic to internal hosts, subnetting divides address space, and link aggregation combines links (primarily for throughput) rather than providing circuit-level failover.",
+    "reversal": {
+  "text": "Which concept describes a backup circuit automatically taking over when the primary fails, with no manual intervention?",
+  "answers": [
+    "High availability / failover",
+    "Port forwarding",
+    "Subnetting",
+    "Link aggregation for speed only"
+  ],
+  "correctIndex": 0,
+  "explanation": "High availability with failover keeps service running by automatically switching to a redundant path. Port forwarding directs inbound traffic to an internal host, subnetting divides an address space, and link aggregation combines links mainly for bandwidth."
+}
   },
   {
     "id": "netplus-d3-006",
@@ -588,7 +775,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "The Recovery Time Objective (RTO) defines the target time to restore a service after disruption. MTBF estimates reliability between failures, RPO defines tolerable data loss measured backward in time, and MTU is a frame-size setting unrelated to recovery."
+    "explanation": "The Recovery Time Objective (RTO) defines the target time to restore a service after disruption. MTBF estimates reliability between failures, RPO defines tolerable data loss measured backward in time, and MTU is a frame-size setting unrelated to recovery.",
+    "reversal": {
+  "text": "Which metric defines the target time to restore a failed service after an outage?",
+  "answers": [
+    "Recovery Time Objective (RTO)",
+    "Mean Time Between Failures (MTBF)",
+    "Recovery Point Objective (RPO)",
+    "Maximum Transmission Unit (MTU)"
+  ],
+  "correctIndex": 0,
+  "explanation": "RTO is the target duration for restoring a service after failure. MTBF is the average time between failures, RPO is the maximum tolerable data loss measured in time, and MTU is the largest frame size on a link."
+}
   },
   {
     "id": "netplus-d3-007",
@@ -601,7 +799,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Link aggregation, often negotiated with LACP, bundles multiple physical links into one logical connection for greater bandwidth and redundancy. Port mirroring copies traffic for monitoring, VLAN pruning limits VLANs on trunks, and spanning tree blocking disables loops."
+    "explanation": "Link aggregation, often negotiated with LACP, bundles multiple physical links into one logical connection for greater bandwidth and redundancy. Port mirroring copies traffic for monitoring, VLAN pruning limits VLANs on trunks, and spanning tree blocking disables loops.",
+    "reversal": {
+  "text": "Combining two physical switch ports into one logical link for more bandwidth and redundancy is called what?",
+  "answers": [
+    "Link aggregation (LACP)",
+    "Port mirroring",
+    "VLAN pruning",
+    "Spanning tree blocking"
+  ],
+  "correctIndex": 0,
+  "explanation": "Link aggregation bundles multiple links into one logical connection for bandwidth and redundancy. Port mirroring copies traffic for monitoring, VLAN pruning limits VLANs on trunks, and spanning tree blocking disables redundant paths to prevent loops."
+}
   },
   {
     "id": "netplus-d3-008",
@@ -614,7 +823,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Port mirroring (also called SPAN) copies frames from one or more ports to a designated monitoring port for analysis by a sniffer or IDS. DHCP relay forwards DHCP requests across subnets, NAT translates addresses, and trunking carries multiple VLANs."
+    "explanation": "Port mirroring (also called SPAN) copies frames from one or more ports to a designated monitoring port for analysis by a sniffer or IDS. DHCP relay forwards DHCP requests across subnets, NAT translates addresses, and trunking carries multiple VLANs.",
+    "reversal": {
+  "text": "Which tool copies traffic from a switch port to another port so a monitoring device can analyze it?",
+  "answers": [
+    "Port mirroring (SPAN)",
+    "DHCP relay",
+    "NAT",
+    "Trunking"
+  ],
+  "correctIndex": 0,
+  "explanation": "Port mirroring (SPAN) duplicates traffic to a monitoring port for analysis. DHCP relay forwards DHCP requests across subnets, NAT translates addresses, and trunking carries multiple VLANs over one link."
+}
   },
   {
     "id": "netplus-d3-009",
@@ -627,7 +847,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Configuration management stores, tracks, and versions device configurations so changes are auditable and reversible. Broadcast storm control limits excessive broadcasts, wardriving is an attack reconnaissance activity, and half-duplex is a transmission mode."
+    "explanation": "Configuration management stores, tracks, and versions device configurations so changes are auditable and reversible. Broadcast storm control limits excessive broadcasts, wardriving is an attack reconnaissance activity, and half-duplex is a transmission mode.",
+    "reversal": {
+  "text": "Which practice stores and version-controls device configurations so changes can be tracked and rolled back?",
+  "answers": [
+    "Configuration management",
+    "Broadcast storm control",
+    "Wardriving",
+    "Half-duplex operation"
+  ],
+  "correctIndex": 0,
+  "explanation": "Configuration management tracks and versions device configs, enabling change history and rollback. Broadcast storm control limits excessive broadcasts, wardriving is searching for wireless networks, and half-duplex is one-direction-at-a-time transmission."
+}
   },
   {
     "id": "netplus-d4-007",
@@ -640,7 +871,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "A secure firewall policy follows implicit deny: block everything by default and explicitly permit only required traffic, such as inbound HTTPS to the web server. Allowing everything first, disabling logging, or opening ports broadly all widen the attack surface unnecessarily."
+    "explanation": "A secure firewall policy follows implicit deny: block everything by default and explicitly permit only required traffic, such as inbound HTTPS to the web server. Allowing everything first, disabling logging, or opening ports broadly all widen the attack surface unnecessarily.",
+    "reversal": {
+  "text": "Which firewall principle permits only explicitly needed traffic and blocks everything else by default?",
+  "answers": [
+    "Implicit deny (allow only what is explicitly needed)",
+    "Allow all, then block known bad",
+    "Disable logging to improve speed",
+    "Open all high-numbered ports by default"
+  ],
+  "correctIndex": 0,
+  "explanation": "Implicit deny blocks everything not explicitly permitted, the foundation of a secure rule set. Allowing all and blocking known-bad is permissive and error-prone, disabling logging removes visibility, and opening high ports by default needlessly expands the attack surface."
+}
   },
   {
     "id": "netplus-d5-004",
@@ -666,7 +908,18 @@
     ],
     "correctIndex": 0,
     "domain": 5,
-    "explanation": "Two hosts sharing one IP address cause a duplicate IP conflict, producing intermittent connectivity as the address contends between them. DNS issues affect name resolution, a broadcast storm floods the segment, and a wrong gateway blocks off-subnet traffic — none match identical static IPs."
+    "explanation": "Two hosts sharing one IP address cause a duplicate IP conflict, producing intermittent connectivity as the address contends between them. DNS issues affect name resolution, a broadcast storm floods the segment, and a wrong gateway blocks off-subnet traffic — none match identical static IPs.",
+    "reversal": {
+  "text": "When two devices on the same subnet are set to the same static IP and intermittently lose connectivity, what is this problem called?",
+  "answers": [
+    "Duplicate IP address conflict",
+    "DNS misconfiguration",
+    "Broadcast storm",
+    "Incorrect default gateway"
+  ],
+  "correctIndex": 0,
+  "explanation": "A duplicate IP address conflict occurs when two hosts share the same address, causing intermittent connectivity for both. DNS misconfiguration breaks name resolution, a broadcast storm floods the segment, and an incorrect default gateway blocks off-subnet access."
+}
   },
   {
     "id": "netplus-d5-006",
@@ -679,7 +932,18 @@
     ],
     "correctIndex": 0,
     "domain": 5,
-    "explanation": "nslookup queries DNS directly, confirming whether name resolution is working and which server is responding. Releasing the IP lease, clearing the ARP cache, or printing the routing table address other layers and would not isolate a name-resolution failure."
+    "explanation": "nslookup queries DNS directly, confirming whether name resolution is working and which server is responding. Releasing the IP lease, clearing the ARP cache, or printing the routing table address other layers and would not isolate a name-resolution failure.",
+    "reversal": {
+  "text": "Which command best helps confirm a DNS problem when a host can be reached by IP but not by name?",
+  "answers": [
+    "nslookup",
+    "ipconfig /release",
+    "arp -d",
+    "route print"
+  ],
+  "correctIndex": 0,
+  "explanation": "nslookup queries DNS directly to confirm whether name resolution is working. ipconfig /release drops the DHCP lease, arp -d clears the ARP cache, and route print displays the routing table — none of which test DNS."
+}
   },
   {
     "id": "netplus-d5-007",
@@ -705,7 +969,18 @@
     ],
     "correctIndex": 0,
     "domain": 5,
-    "explanation": "A cable tester checks a twisted-pair run for opens, shorts, and incorrect pinouts. A protocol analyzer inspects packet contents, a spectrum analyzer examines wireless RF interference, and a toner probe alone locates or traces a cable rather than diagnosing wiring faults."
+    "explanation": "A cable tester checks a twisted-pair run for opens, shorts, and incorrect pinouts. A protocol analyzer inspects packet contents, a spectrum analyzer examines wireless RF interference, and a toner probe alone locates or traces a cable rather than diagnosing wiring faults.",
+    "reversal": {
+  "text": "Which tool identifies wiring faults such as opens, shorts, and miswires in a twisted-pair cable?",
+  "answers": [
+    "A cable tester",
+    "A protocol analyzer",
+    "A spectrum analyzer",
+    "A toner probe used alone"
+  ],
+  "correctIndex": 0,
+  "explanation": "A cable tester checks a twisted-pair run for opens, shorts, and miswires. A protocol analyzer inspects captured traffic, a spectrum analyzer detects RF interference, and a toner probe alone only helps locate or trace a cable, not verify its wiring map."
+}
   },
   {
     "id": "netplus-d5-009",
