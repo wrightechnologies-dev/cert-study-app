@@ -10,7 +10,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "Task Manager shows running processes, startup items, and real-time performance. Device Manager handles hardware and drivers, Event Viewer shows logs, and Disk Cleanup frees storage space."
+    "explanation": "Task Manager shows running processes, startup items, and real-time performance. Device Manager handles hardware and drivers, Event Viewer shows logs, and Disk Cleanup frees storage space.",
+    "reversal": {
+  "text": "Which Windows utility lets you view and manage startup programs, running processes, and performance?",
+  "answers": [
+    "Task Manager",
+    "Disk Cleanup",
+    "Device Manager",
+    "Event Viewer"
+  ],
+  "correctIndex": 0,
+  "explanation": "Task Manager shows processes, startup items, and performance metrics. Disk Cleanup frees disk space, Device Manager manages hardware and drivers, and Event Viewer displays system logs."
+}
   },
   {
     "id": "aplus2-d1-002",
@@ -23,7 +34,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "NTFS is the default Windows file system and supports file-level permissions, encryption (EFS), journaling, and large volumes. FAT32 lacks permissions and has a 4 GB file-size limit, exFAT is aimed at flash media, and ext4 is a Linux file system."
+    "explanation": "NTFS is the default Windows file system and supports file-level permissions, encryption (EFS), journaling, and large volumes. FAT32 lacks permissions and has a 4 GB file-size limit, exFAT is aimed at flash media, and ext4 is a Linux file system.",
+    "reversal": {
+  "text": "Which file system is the default for modern Windows and supports permissions, encryption, and journaling?",
+  "answers": [
+    "NTFS",
+    "FAT32",
+    "exFAT",
+    "ext4"
+  ],
+  "correctIndex": 0,
+  "explanation": "NTFS is the modern Windows file system with permissions, encryption, and journaling. FAT32 is older with a 4 GB file limit, exFAT is cross-platform for flash media, and ext4 is a Linux file system."
+}
   },
   {
     "id": "aplus2-d1-003",
@@ -36,7 +58,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "exFAT handles files larger than 4 GB and is broadly compatible across Windows, macOS, and Linux, making it ideal for flash media. FAT32 caps files at 4 GB, NTFS has limited native write support on macOS, and ext4 is Linux-specific."
+    "explanation": "exFAT handles files larger than 4 GB and is broadly compatible across Windows, macOS, and Linux, making it ideal for flash media. FAT32 caps files at 4 GB, NTFS has limited native write support on macOS, and ext4 is Linux-specific.",
+    "reversal": {
+  "text": "Which file system best suits a USB drive that must store files over 4 GB and work across Windows, macOS, and Linux?",
+  "answers": [
+    "exFAT",
+    "FAT32",
+    "NTFS",
+    "ext4"
+  ],
+  "correctIndex": 0,
+  "explanation": "exFAT handles large files and is broadly compatible across operating systems. FAT32 caps files at 4 GB, NTFS has limited native write support on macOS, and ext4 is Linux-specific."
+}
   },
   {
     "id": "aplus2-d1-004",
@@ -49,7 +82,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "GUID Partition Table (GPT) supports very large drives and many partitions, and pairs with UEFI firmware. MBR (Master Boot Record) is limited to 2 TB and four primary partitions, while NTFS and FAT are file systems, not partitioning schemes."
+    "explanation": "GUID Partition Table (GPT) supports very large drives and many partitions, and pairs with UEFI firmware. MBR (Master Boot Record) is limited to 2 TB and four primary partitions, while NTFS and FAT are file systems, not partitioning schemes.",
+    "reversal": {
+  "text": "Which partitioning scheme supports drives over 2 TB and more than four primary partitions, replacing MBR?",
+  "answers": [
+    "GPT",
+    "FAT",
+    "NTFS",
+    "MBR"
+  ],
+  "correctIndex": 0,
+  "explanation": "GPT supports very large drives and many partitions, superseding MBR. FAT and NTFS are file systems, not partition schemes, and MBR is the older scheme GPT replaces with its 2 TB and four-partition limits."
+}
   },
   {
     "id": "aplus2-d1-005",
@@ -62,7 +106,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "A clean install wipes the target partition and installs the OS from scratch, removing existing data and settings. An in-place upgrade preserves files and apps, a repair installation fixes system files without erasing data, and multiboot installs multiple OSes side by side."
+    "explanation": "A clean install wipes the target partition and installs the OS from scratch, removing existing data and settings. An in-place upgrade preserves files and apps, a repair installation fixes system files without erasing data, and multiboot installs multiple OSes side by side.",
+    "reversal": {
+  "text": "Which installation type erases all existing data and settings to install Windows fresh?",
+  "answers": [
+    "Clean install",
+    "In-place upgrade",
+    "Repair installation",
+    "Multiboot"
+  ],
+  "correctIndex": 0,
+  "explanation": "A clean install wipes the drive and installs a fresh copy. An in-place upgrade keeps files and apps, a repair installation fixes an existing install, and multiboot sets up multiple operating systems on one machine."
+}
   },
   {
     "id": "aplus2-d1-006",
@@ -75,7 +130,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "chkdsk (check disk) scans a volume for file system and disk errors and can repair them with appropriate switches. ipconfig displays network configuration, ping tests connectivity, and tasklist lists running processes."
+    "explanation": "chkdsk (check disk) scans a volume for file system and disk errors and can repair them with appropriate switches. ipconfig displays network configuration, ping tests connectivity, and tasklist lists running processes.",
+    "reversal": {
+  "text": "Which Windows command-line tool checks a volume for file system errors and can repair them?",
+  "answers": [
+    "chkdsk",
+    "ipconfig",
+    "ping",
+    "tasklist"
+  ],
+  "correctIndex": 0,
+  "explanation": "chkdsk scans a volume for file system errors and bad sectors and can repair them. ipconfig manages IP configuration, ping tests connectivity, and tasklist lists running processes."
+}
   },
   {
     "id": "aplus2-d1-007",
@@ -88,7 +154,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "ipconfig displays IP configuration and, with /displaydns and /flushdns, shows and clears the DNS resolver cache. chkdsk checks disks, sfc verifies system files, and diskpart manages partitions — none handle the DNS cache."
+    "explanation": "ipconfig displays IP configuration and, with /displaydns and /flushdns, shows and clears the DNS resolver cache. chkdsk checks disks, sfc verifies system files, and diskpart manages partitions — none handle the DNS cache.",
+    "reversal": {
+  "text": "Which Windows command displays and flushes the local DNS resolver cache?",
+  "answers": [
+    "ipconfig",
+    "chkdsk",
+    "sfc",
+    "diskpart"
+  ],
+  "correctIndex": 0,
+  "explanation": "ipconfig, with switches like /displaydns and /flushdns, manages the DNS resolver cache. chkdsk checks disks, sfc repairs system files, and diskpart manages partitions."
+}
   },
   {
     "id": "aplus2-d1-008",
@@ -101,7 +178,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "System File Checker (sfc /scannow) verifies the integrity of protected system files and repairs corrupted ones. format prepares a volume, robocopy copies files, and gpupdate refreshes Group Policy settings."
+    "explanation": "System File Checker (sfc /scannow) verifies the integrity of protected system files and repairs corrupted ones. format prepares a volume, robocopy copies files, and gpupdate refreshes Group Policy settings.",
+    "reversal": {
+  "text": "Which Windows utility scans protected system files and restores corrupted ones from a cached copy?",
+  "answers": [
+    "sfc (System File Checker)",
+    "format",
+    "robocopy",
+    "gpupdate"
+  ],
+  "correctIndex": 0,
+  "explanation": "System File Checker (sfc) verifies and restores protected system files. format prepares a volume, robocopy copies files and directories, and gpupdate refreshes Group Policy settings."
+}
   },
   {
     "id": "aplus2-d1-009",
@@ -114,7 +202,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "A domain centralizes authentication and management through a domain controller (Active Directory), typical of corporate environments. A workgroup is a decentralized peer-to-peer grouping, a homegroup was a legacy home-sharing feature, and a VLAN is a network segmentation concept."
+    "explanation": "A domain centralizes authentication and management through a domain controller (Active Directory), typical of corporate environments. A workgroup is a decentralized peer-to-peer grouping, a homegroup was a legacy home-sharing feature, and a VLAN is a network segmentation concept.",
+    "reversal": {
+  "text": "What is a centrally managed corporate network called, where a domain controller handles authentication and policies?",
+  "answers": [
+    "A domain",
+    "A workgroup",
+    "A homegroup",
+    "A VLAN"
+  ],
+  "correctIndex": 0,
+  "explanation": "A domain centralizes authentication and policy through a domain controller. A workgroup is decentralized peer-to-peer, a homegroup was a simple home-sharing feature, and a VLAN is a logical network segment."
+}
   },
   {
     "id": "aplus2-d1-010",
@@ -140,7 +239,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "Time Machine performs automatic, incremental backups to a designated drive, allowing point-in-time file recovery. Disk Utility manages disks, Spotlight is search, and Mission Control manages windows and desktops."
+    "explanation": "Time Machine performs automatic, incremental backups to a designated drive, allowing point-in-time file recovery. Disk Utility manages disks, Spotlight is search, and Mission Control manages windows and desktops.",
+    "reversal": {
+  "text": "Which macOS feature provides automated, scheduled backups to an external or network drive?",
+  "answers": [
+    "Time Machine",
+    "Disk Utility",
+    "Spotlight",
+    "Mission Control"
+  ],
+  "correctIndex": 0,
+  "explanation": "Time Machine performs automatic scheduled backups on macOS. Disk Utility manages disks, Spotlight is system search, and Mission Control manages windows and desktops."
+}
   },
   {
     "id": "aplus2-d1-012",
@@ -153,7 +263,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "ls lists the files and directories in the current location. cd changes directories, pwd prints the current working directory path, and rm removes files."
+    "explanation": "ls lists the files and directories in the current location. cd changes directories, pwd prints the current working directory path, and rm removes files.",
+    "reversal": {
+  "text": "Which Linux command lists the contents of a directory?",
+  "answers": [
+    "ls",
+    "cd",
+    "pwd",
+    "rm"
+  ],
+  "correctIndex": 0,
+  "explanation": "ls lists directory contents. cd changes directories, pwd prints the current directory path, and rm removes files."
+}
   },
   {
     "id": "aplus2-d1-013",
@@ -166,7 +287,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "sudo executes a single command with elevated privileges for authorized users, avoiding a full root login. chmod changes file permissions, grep searches text, and ls lists directory contents."
+    "explanation": "sudo executes a single command with elevated privileges for authorized users, avoiding a full root login. chmod changes file permissions, grep searches text, and ls lists directory contents.",
+    "reversal": {
+  "text": "Which Linux command runs a single command with elevated (root) privileges without logging in as root?",
+  "answers": [
+    "sudo",
+    "chmod",
+    "grep",
+    "ls"
+  ],
+  "correctIndex": 0,
+  "explanation": "sudo executes a command with elevated privileges. chmod changes file permissions, grep searches text, and ls lists directory contents."
+}
   },
   {
     "id": "aplus2-d1-014",
@@ -179,7 +311,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "chmod (change mode) sets read, write, and execute permissions on files and directories in Linux. ipconfig and sfc are Windows tools, and chdir is not the standard Linux permission command."
+    "explanation": "chmod (change mode) sets read, write, and execute permissions on files and directories in Linux. ipconfig and sfc are Windows tools, and chdir is not the standard Linux permission command.",
+    "reversal": {
+  "text": "Which Linux command changes a file's permissions?",
+  "answers": [
+    "chmod",
+    "chdir",
+    "ipconfig",
+    "sfc"
+  ],
+  "correctIndex": 0,
+  "explanation": "chmod modifies file and directory permissions in Linux. chdir is not a standard Linux shell command for this, while ipconfig and sfc are Windows tools."
+}
   },
   {
     "id": "aplus2-d1-015",
@@ -205,7 +348,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Ransomware encrypts a victim's data and demands payment for the decryption key. Spyware secretly gathers information, adware displays unwanted ads, and a rootkit hides malicious activity to maintain stealthy access."
+    "explanation": "Ransomware encrypts a victim's data and demands payment for the decryption key. Spyware secretly gathers information, adware displays unwanted ads, and a rootkit hides malicious activity to maintain stealthy access.",
+    "reversal": {
+  "text": "Which type of malware encrypts a user's files and demands payment to restore access?",
+  "answers": [
+    "Ransomware",
+    "Spyware",
+    "Adware",
+    "Rootkit"
+  ],
+  "correctIndex": 0,
+  "explanation": "Ransomware encrypts files and demands payment for the decryption key. Spyware secretly gathers information, adware displays unwanted ads, and a rootkit hides deep in the OS to maintain access."
+}
   },
   {
     "id": "aplus2-d2-002",
@@ -218,7 +372,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "A Trojan masquerades as useful software to trick users into running it, then delivers its hidden payload. A worm self-propagates, a boot sector virus infects the boot record, and a keylogger records keystrokes."
+    "explanation": "A Trojan masquerades as useful software to trick users into running it, then delivers its hidden payload. A worm self-propagates, a boot sector virus infects the boot record, and a keylogger records keystrokes.",
+    "reversal": {
+  "text": "Which type of malware disguises itself as legitimate software while carrying a hidden malicious payload?",
+  "answers": [
+    "Trojan",
+    "Worm",
+    "Boot sector virus",
+    "Keylogger"
+  ],
+  "correctIndex": 0,
+  "explanation": "A Trojan appears legitimate but hides malicious code that runs once installed. A worm self-replicates across networks, a boot sector virus infects the startup area of a disk, and a keylogger records keystrokes."
+}
   },
   {
     "id": "aplus2-d2-003",
@@ -231,7 +396,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "A keylogger captures keystrokes to steal credentials and other typed data. A cryptominer hijacks resources to mine cryptocurrency, a rootkit conceals malicious activity, and adware pushes advertisements."
+    "explanation": "A keylogger captures keystrokes to steal credentials and other typed data. A cryptominer hijacks resources to mine cryptocurrency, a rootkit conceals malicious activity, and adware pushes advertisements.",
+    "reversal": {
+  "text": "Which type of malware records every keystroke a user types, capturing passwords and messages?",
+  "answers": [
+    "Keylogger",
+    "Cryptominer",
+    "Rootkit",
+    "Adware"
+  ],
+  "correctIndex": 0,
+  "explanation": "A keylogger captures keystrokes to steal credentials and other typed data. A cryptominer hijacks resources to mine currency, a rootkit hides privileged access, and adware displays unwanted ads."
+}
   },
   {
     "id": "aplus2-d2-004",
@@ -244,7 +420,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "A rootkit embeds itself at a low level to conceal its presence and preserve privileged access, making it hard to detect and remove. Trojans rely on disguise, ransomware encrypts data, and adware displays ads without deep concealment."
+    "explanation": "A rootkit embeds itself at a low level to conceal its presence and preserve privileged access, making it hard to detect and remove. Trojans rely on disguise, ransomware encrypts data, and adware displays ads without deep concealment.",
+    "reversal": {
+  "text": "Which type of malware is designed to hide its presence and maintain privileged access at a deep OS level that evades normal detection?",
+  "answers": [
+    "Rootkit",
+    "Trojan",
+    "Ransomware",
+    "Adware"
+  ],
+  "correctIndex": 0,
+  "explanation": "A rootkit conceals itself and maintains privileged control at a low level, making it hard to detect and remove. A Trojan disguises itself as legitimate software, ransomware encrypts files for payment, and adware serves unwanted ads."
+}
   },
   {
     "id": "aplus2-d2-005",
@@ -257,7 +444,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Requiring two different factors — something you know (password) and something you have (the phone app code) — is multifactor authentication. SSO reduces repeated logins, least privilege limits access rights, and an ACL defines resource permissions."
+    "explanation": "Requiring two different factors — something you know (password) and something you have (the phone app code) — is multifactor authentication. SSO reduces repeated logins, least privilege limits access rights, and an ACL defines resource permissions.",
+    "reversal": {
+  "text": "Requiring a password plus a code from a smartphone app implements which security concept?",
+  "answers": [
+    "Multifactor authentication (MFA)",
+    "Single sign-on (SSO)",
+    "Least privilege",
+    "Access control list"
+  ],
+  "correctIndex": 0,
+  "explanation": "MFA combines two or more distinct factors, such as a password and a phone-generated code. SSO lets one login access many services, least privilege limits access rights, and an ACL defines permissions on a resource."
+}
   },
   {
     "id": "aplus2-d2-006",
@@ -270,7 +468,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "The principle of least privilege grants each user the minimum access required for their role, limiting damage from mistakes or compromise. Defense in depth layers controls, implicit deny blocks by default, and separation of duties splits sensitive tasks among people."
+    "explanation": "The principle of least privilege grants each user the minimum access required for their role, limiting damage from mistakes or compromise. Defense in depth layers controls, implicit deny blocks by default, and separation of duties splits sensitive tasks among people.",
+    "reversal": {
+  "text": "Which security principle grants users only the access rights needed to do their job and nothing more?",
+  "answers": [
+    "Principle of least privilege",
+    "Defense in depth",
+    "Implicit deny",
+    "Separation of duties"
+  ],
+  "correctIndex": 0,
+  "explanation": "Least privilege limits each user to the minimum access required. Defense in depth layers multiple controls, implicit deny blocks anything not explicitly allowed, and separation of duties divides critical tasks among people."
+}
   },
   {
     "id": "aplus2-d2-007",
@@ -283,7 +492,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Tailgating (or piggybacking) is physically following an authorized person through a controlled entrance without proper credentials. Phishing uses deceptive email, vishing uses voice calls, and smishing uses text messages."
+    "explanation": "Tailgating (or piggybacking) is physically following an authorized person through a controlled entrance without proper credentials. Phishing uses deceptive email, vishing uses voice calls, and smishing uses text messages.",
+    "reversal": {
+  "text": "Which social engineering attack involves following an authorized employee through a secure door without badging in?",
+  "answers": [
+    "Tailgating",
+    "Phishing",
+    "Vishing",
+    "Smishing"
+  ],
+  "correctIndex": 0,
+  "explanation": "Tailgating is a physical attack where an intruder slips through a secured entrance behind someone authorized. Phishing uses fraudulent email, vishing uses voice calls, and smishing uses text messages."
+}
   },
   {
     "id": "aplus2-d2-008",
@@ -296,7 +516,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Smishing is phishing carried out over SMS text messages. Phishing typically refers to email, vishing uses voice calls, and shoulder surfing is observing someone enter sensitive information."
+    "explanation": "Smishing is phishing carried out over SMS text messages. Phishing typically refers to email, vishing uses voice calls, and shoulder surfing is observing someone enter sensitive information.",
+    "reversal": {
+  "text": "A fraudulent text message posing as a bank and urging the user to click a link is which type of attack?",
+  "answers": [
+    "Smishing",
+    "Phishing",
+    "Vishing",
+    "Shoulder surfing"
+  ],
+  "correctIndex": 0,
+  "explanation": "Smishing is phishing carried out over SMS text messages. Phishing typically uses email, vishing uses voice calls, and shoulder surfing is observing someone's screen or keystrokes in person."
+}
   },
   {
     "id": "aplus2-d2-009",
@@ -335,7 +566,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "Physical destruction such as shredding or drilling renders drives and their data unrecoverable. Emptying the Recycle Bin, quick-formatting, and deleting a partition all leave data recoverable with the right tools."
+    "explanation": "Physical destruction such as shredding or drilling renders drives and their data unrecoverable. Emptying the Recycle Bin, quick-formatting, and deleting a partition all leave data recoverable with the right tools.",
+    "reversal": {
+  "text": "Which disposal method ensures hard drive data cannot be recovered even with advanced tools, by physically destroying the drive?",
+  "answers": [
+    "Shredding or drilling the drives",
+    "Emptying the Recycle Bin",
+    "A quick format",
+    "Deleting the partition"
+  ],
+  "correctIndex": 0,
+  "explanation": "Physical destruction like shredding or drilling makes data unrecoverable. Emptying the Recycle Bin, quick formatting, and deleting a partition all leave data recoverable with the right tools."
+}
   },
   {
     "id": "aplus2-d2-012",
@@ -348,7 +590,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "BitLocker provides full-disk encryption, keeping data unreadable without the key even if the drive is removed. Windows Defender Firewall filters network traffic, UAC prompts for elevation, and Task Scheduler automates tasks — none encrypt the drive."
+    "explanation": "BitLocker provides full-disk encryption, keeping data unreadable without the key even if the drive is removed. Windows Defender Firewall filters network traffic, UAC prompts for elevation, and Task Scheduler automates tasks — none encrypt the drive.",
+    "reversal": {
+  "text": "Which Windows feature encrypts an entire drive to protect its data if the computer is lost or stolen?",
+  "answers": [
+    "BitLocker",
+    "Windows Defender Firewall",
+    "User Account Control",
+    "Task Scheduler"
+  ],
+  "correctIndex": 0,
+  "explanation": "BitLocker provides full-disk encryption on Windows. Windows Defender Firewall filters network traffic, User Account Control prompts for elevation, and Task Scheduler automates tasks."
+}
   },
   {
     "id": "aplus2-d2-013",
@@ -361,7 +614,18 @@
     ],
     "correctIndex": 0,
     "domain": 2,
-    "explanation": "An evil twin is a rogue access point that imitates a legitimate network's name (SSID) to trick users into connecting so the attacker can intercept traffic. A honeypot is a decoy for attackers, and firewalls and VPNs are defensive technologies."
+    "explanation": "An evil twin is a rogue access point that imitates a legitimate network's name (SSID) to trick users into connecting so the attacker can intercept traffic. A honeypot is a decoy for attackers, and firewalls and VPNs are defensive technologies.",
+    "reversal": {
+  "text": "Which attack uses a rogue wireless network with the same name as a legitimate one to trick users into connecting?",
+  "answers": [
+    "An evil twin",
+    "A honeypot",
+    "A firewall",
+    "A VPN"
+  ],
+  "correctIndex": 0,
+  "explanation": "An evil twin impersonates a legitimate access point to intercept traffic. A honeypot is a decoy to attract attackers, a firewall filters traffic, and a VPN encrypts a connection."
+}
   },
   {
     "id": "aplus2-d3-001",
@@ -400,7 +664,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Safe Mode loads Windows with a minimal set of drivers and services, helping isolate whether third-party software or drivers are causing boot problems. The other modes relate to display, power saving, and wireless radios, not diagnostic booting."
+    "explanation": "Safe Mode loads Windows with a minimal set of drivers and services, helping isolate whether third-party software or drivers are causing boot problems. The other modes relate to display, power saving, and wireless radios, not diagnostic booting.",
+    "reversal": {
+  "text": "Which Windows startup option loads only essential drivers and services to help diagnose boot problems?",
+  "answers": [
+    "Safe Mode",
+    "Full Screen Mode",
+    "Sleep Mode",
+    "Airplane Mode"
+  ],
+  "correctIndex": 0,
+  "explanation": "Safe Mode starts Windows with a minimal set of drivers and services for troubleshooting. Full Screen Mode is a display state, Sleep Mode is a low-power state, and Airplane Mode disables wireless radios."
+}
   },
   {
     "id": "aplus2-d3-004",
@@ -413,7 +688,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "System Restore rolls back system files, drivers, and registry settings to a previous restore point while leaving personal files intact. Disk Cleanup frees space, chkdsk checks disks, and Task Manager manages processes."
+    "explanation": "System Restore rolls back system files, drivers, and registry settings to a previous restore point while leaving personal files intact. Disk Cleanup frees space, chkdsk checks disks, and Task Manager manages processes.",
+    "reversal": {
+  "text": "Which Windows tool reverts system files and settings to an earlier point without affecting personal documents?",
+  "answers": [
+    "System Restore",
+    "Disk Cleanup",
+    "chkdsk",
+    "Task Manager"
+  ],
+  "correctIndex": 0,
+  "explanation": "System Restore rolls back system files, drivers, and registry settings to a restore point while leaving personal files intact. Disk Cleanup frees space, chkdsk checks disks for errors, and Task Manager manages processes."
+}
   },
   {
     "id": "aplus2-d3-005",
@@ -478,7 +764,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Startup Repair in the Windows Recovery Environment automatically diagnoses and fixes common boot problems. Disk Cleanup frees space, Task Scheduler automates tasks, and Performance Monitor tracks system metrics — none repair the boot process."
+    "explanation": "Startup Repair in the Windows Recovery Environment automatically diagnoses and fixes common boot problems. Disk Cleanup frees space, Task Scheduler automates tasks, and Performance Monitor tracks system metrics — none repair the boot process.",
+    "reversal": {
+  "text": "Which Windows tool reverts system files and settings to an earlier point without affecting personal documents?",
+  "answers": [
+    "System Restore",
+    "Disk Cleanup",
+    "chkdsk",
+    "Task Manager"
+  ],
+  "correctIndex": 0,
+  "explanation": "System Restore rolls back system files, drivers, and registry settings to a restore point while leaving personal files intact. Disk Cleanup frees space, chkdsk checks disks for errors, and Task Manager manages processes."
+}
   },
   {
     "id": "aplus2-d3-010",
@@ -504,7 +801,18 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "The Roll Back Driver option in Device Manager reverts a device to its previous driver when a new one causes problems. Disk Defragmenter optimizes storage, Windows Firewall filters traffic, and Magnifier is an accessibility tool."
+    "explanation": "The Roll Back Driver option in Device Manager reverts a device to its previous driver when a new one causes problems. Disk Defragmenter optimizes storage, Windows Firewall filters traffic, and Magnifier is an accessibility tool.",
+    "reversal": {
+  "text": "Which Windows feature reverts to the previously working driver after a new driver causes instability?",
+  "answers": [
+    "Roll Back Driver in Device Manager",
+    "Disk Defragmenter",
+    "Windows Firewall",
+    "Magnifier"
+  ],
+  "correctIndex": 0,
+  "explanation": "Roll Back Driver in Device Manager restores the prior driver version when an update causes problems. Disk Defragmenter optimizes file layout, Windows Firewall filters traffic, and Magnifier is an accessibility zoom tool."
+}
   },
   {
     "id": "aplus2-d4-001",
@@ -517,7 +825,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "The 3-2-1 rule calls for three copies of data, stored on two different media types, with one copy kept off-site to survive local disasters. The other options misstate the rule's meaning."
+    "explanation": "The 3-2-1 rule calls for three copies of data, stored on two different media types, with one copy kept off-site to survive local disasters. The other options misstate the rule's meaning.",
+    "reversal": {
+  "text": "Which backup best practice recommends three copies of data, on two different media types, with one copy off-site?",
+  "answers": [
+    "Three copies of data, on two different media types, with one copy off-site",
+    "Three backups per day, two per week, one per month",
+    "Three drives, two servers, one cloud login",
+    "Three passwords, two admins, one key"
+  ],
+  "correctIndex": 0,
+  "explanation": "The 3-2-1 rule means three copies, on two media types, with one off-site, protecting against most failure and disaster scenarios. The other options misstate the rule as backup frequencies, hardware counts, or credentials."
+}
   },
   {
     "id": "aplus2-d4-002",
@@ -530,7 +849,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "A differential backup captures all changes since the last full backup, so differentials grow larger over time but simplify restores (full + latest differential). An incremental captures changes since the last backup of any type, and a full backs up everything."
+    "explanation": "A differential backup captures all changes since the last full backup, so differentials grow larger over time but simplify restores (full + latest differential). An incremental captures changes since the last backup of any type, and a full backs up everything.",
+    "reversal": {
+  "text": "Which backup type copies all data changed since the last FULL backup and does not reset the archive marker?",
+  "answers": [
+    "Differential",
+    "Incremental",
+    "Synthetic full",
+    "Full"
+  ],
+  "correctIndex": 0,
+  "explanation": "A differential backup captures everything changed since the last full backup and leaves the archive bit set, so it grows until the next full. Incremental copies only changes since the last backup of any type, a synthetic full is assembled from existing backups, and a full copies everything."
+}
   },
   {
     "id": "aplus2-d4-003",
@@ -543,7 +873,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "An incremental backup saves only what changed since the previous backup of any type, making each backup small and quick but requiring the full plus every incremental to restore. Differentials grow larger, and a full copies everything each time."
+    "explanation": "An incremental backup saves only what changed since the previous backup of any type, making each backup small and quick but requiring the full plus every incremental to restore. Differentials grow larger, and a full copies everything each time.",
+    "reversal": {
+  "text": "Which backup type copies only data changed since the last backup of ANY type, producing the smallest, fastest backups?",
+  "answers": [
+    "Incremental",
+    "Differential",
+    "Full",
+    "Synthetic full"
+  ],
+  "correctIndex": 0,
+  "explanation": "An incremental backup saves only what changed since the previous backup of any kind, making each run small and fast but requiring the full chain to restore. A differential grows from the last full, a full copies everything, and a synthetic full is built from prior backups."
+}
   },
   {
     "id": "aplus2-d4-004",
@@ -556,7 +897,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "An ESD wrist strap connected to ground safely dissipates static charge, protecting components from electrostatic discharge. Latex gloves don't prevent ESD, low humidity increases static, and leaving the PSU powered on poses an electrical hazard."
+    "explanation": "An ESD wrist strap connected to ground safely dissipates static charge, protecting components from electrostatic discharge. Latex gloves don't prevent ESD, low humidity increases static, and leaving the PSU powered on poses an electrical hazard.",
+    "reversal": {
+  "text": "Which safety practice best protects sensitive electronics from static damage before opening a computer case?",
+  "answers": [
+    "Wear an ESD wrist strap connected to ground",
+    "Wear latex gloves",
+    "Keep the humidity as low as possible",
+    "Leave the PSU plugged in and powered on"
+  ],
+  "correctIndex": 0,
+  "explanation": "A grounded ESD wrist strap safely dissipates static charge. Latex gloves do not prevent ESD, low humidity increases static risk, and leaving the PSU powered poses a shock and short-circuit hazard."
+}
   },
   {
     "id": "aplus2-d4-005",
@@ -569,7 +921,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "Change management governs how changes are requested, reviewed, approved, implemented, and rolled back if needed, reducing risk from unplanned changes. Incident response handles security events, asset disposal covers retiring equipment, and social engineering is an attack method."
+    "explanation": "Change management governs how changes are requested, reviewed, approved, implemented, and rolled back if needed, reducing risk from unplanned changes. Incident response handles security events, asset disposal covers retiring equipment, and social engineering is an attack method.",
+    "reversal": {
+  "text": "Which process requires that changes to production systems be formally requested, reviewed, approved, and given a documented rollback plan?",
+  "answers": [
+    "Change management",
+    "Incident response",
+    "Asset disposal",
+    "Social engineering"
+  ],
+  "correctIndex": 0,
+  "explanation": "Change management governs how changes are proposed, reviewed, approved, and rolled back to reduce risk. Incident response handles security events, asset disposal covers retiring hardware, and social engineering is an attack method."
+}
   },
   {
     "id": "aplus2-d4-006",
@@ -582,7 +945,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "An Acceptable Use Policy (AUP) defines how employees may use company IT resources. A chain of custody tracks evidence handling, an SDS covers hazardous materials safety, and an NDA governs confidentiality of information."
+    "explanation": "An Acceptable Use Policy (AUP) defines how employees may use company IT resources. A chain of custody tracks evidence handling, an SDS covers hazardous materials safety, and an NDA governs confidentiality of information.",
+    "reversal": {
+  "text": "Which document defines acceptable ways employees may use company computers, networks, and internet access?",
+  "answers": [
+    "Acceptable Use Policy (AUP)",
+    "Chain of custody form",
+    "Material Safety Data Sheet (SDS)",
+    "Non-disclosure agreement (NDA)"
+  ],
+  "correctIndex": 0,
+  "explanation": "An AUP sets rules for acceptable use of company IT resources. A chain of custody form tracks evidence handling, an SDS covers hazardous material safety, and an NDA governs confidentiality of information."
+}
   },
   {
     "id": "aplus2-d4-007",
@@ -595,7 +969,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "A Safety Data Sheet (SDS) details safe handling, storage, and disposal of hazardous materials. An AUP governs resource use, an EULA covers software licensing terms, and an SLA defines service expectations."
+    "explanation": "A Safety Data Sheet (SDS) details safe handling, storage, and disposal of hazardous materials. An AUP governs resource use, an EULA covers software licensing terms, and an SLA defines service expectations.",
+    "reversal": {
+  "text": "Which document provides guidance on safely handling and disposing of hazardous materials like old batteries or toner?",
+  "answers": [
+    "Safety Data Sheet (SDS)",
+    "Acceptable Use Policy",
+    "End User License Agreement",
+    "Service Level Agreement"
+  ],
+  "correctIndex": 0,
+  "explanation": "A Safety Data Sheet details safe handling, storage, and disposal of hazardous materials. An AUP governs IT resource use, an EULA covers software licensing terms, and an SLA defines service commitments."
+}
   },
   {
     "id": "aplus2-d4-008",
@@ -621,7 +1006,18 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "Grandfather-father-son (GFS) rotates backups across daily (son), weekly (father), and monthly (grandfather) sets on a defined schedule. The 3-2-1 rule addresses copies and locations, a synthetic full is a backup type, and in-place recovery is a restore method."
+    "explanation": "Grandfather-father-son (GFS) rotates backups across daily (son), weekly (father), and monthly (grandfather) sets on a defined schedule. The 3-2-1 rule addresses copies and locations, a synthetic full is a backup type, and in-place recovery is a restore method.",
+    "reversal": {
+  "text": "Which backup rotation scheme uses daily, weekly, and monthly sets promoted on a schedule?",
+  "answers": [
+    "Grandfather-father-son (GFS)",
+    "3-2-1 rule",
+    "Synthetic full",
+    "In-place recovery"
+  ],
+  "correctIndex": 0,
+  "explanation": "Grandfather-father-son rotates daily (son), weekly (father), and monthly (grandfather) backup sets. The 3-2-1 rule describes copy/media/off-site distribution, a synthetic full is an assembled backup, and in-place recovery restores to the original location."
+}
   },
   {
     "id": "aplus2-d4-010",
@@ -647,6 +1043,17 @@
     ],
     "correctIndex": 0,
     "domain": 4,
-    "explanation": "Proper disposal requires sanitizing (secure wipe) or physically destroying the drives so sensitive data cannot be recovered before hardware leaves the organization. Deleting shortcuts, signing out, or emptying the Recycle Bin leave the underlying data fully recoverable."
+    "explanation": "Proper disposal requires sanitizing (secure wipe) or physically destroying the drives so sensitive data cannot be recovered before hardware leaves the organization. Deleting shortcuts, signing out, or emptying the Recycle Bin leave the underlying data fully recoverable.",
+    "reversal": {
+  "text": "Before donating retired workstations that held sensitive data, which step is essential before the machines leave the building?",
+  "answers": [
+    "Sanitize or destroy the drives so no recoverable data remains",
+    "Delete the desktop shortcuts",
+    "Sign out of the user accounts",
+    "Empty the Recycle Bin"
+  ],
+  "correctIndex": 0,
+  "explanation": "Sanitizing (secure wipe) or physically destroying the drives ensures no data can be recovered. Deleting shortcuts, signing out, and emptying the Recycle Bin all leave the underlying data intact and recoverable."
+}
   }
 ]
