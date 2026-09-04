@@ -10,7 +10,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "The Network layer (Layer 3) handles logical addressing (IP) and routing between networks. Layer 2 handles physical (MAC) addressing on a local segment, Layer 4 manages end-to-end delivery, and Layer 1 moves raw bits."
+    "explanation": "The Network layer (Layer 3) handles logical addressing (IP) and routing between networks. Layer 2 handles physical (MAC) addressing on a local segment, Layer 4 manages end-to-end delivery, and Layer 1 moves raw bits.",
+    "reversal": {
+  "text": "Logical addressing and routing are the responsibility of which OSI layer?",
+  "answers": [
+    "Network (Layer 3)",
+    "Data Link (Layer 2)",
+    "Transport (Layer 4)",
+    "Physical (Layer 1)"
+  ],
+  "correctIndex": 0,
+  "explanation": "Layer 3 (Network) handles logical addressing (IP) and routing between networks. Data Link handles local MAC addressing and framing, Transport handles end-to-end delivery and ports, and Physical transmits raw bits over the medium."
+}
   },
   {
     "id": "netplus-d1-002",
@@ -23,7 +34,18 @@
     ],
     "correctIndex": 2,
     "domain": 1,
-    "explanation": "HTTPS uses port 443 by default. Port 80 is plain HTTP, port 22 is SSH, and port 53 is DNS."
+    "explanation": "HTTPS uses port 443 by default. Port 80 is plain HTTP, port 22 is SSH, and port 53 is DNS.",
+    "reversal": {
+  "text": "Which protocol uses port 443 by default?",
+  "answers": [
+    "HTTPS",
+    "HTTP",
+    "SSH",
+    "DNS"
+  ],
+  "correctIndex": 0,
+  "explanation": "HTTPS uses port 443 for encrypted web traffic. HTTP uses port 80, SSH uses port 22, and DNS uses port 53."
+}
   },
   {
     "id": "netplus-d1-003",
@@ -36,7 +58,18 @@
     ],
     "correctIndex": 2,
     "domain": 1,
-    "explanation": "A router forwards traffic between separate networks using IP addresses. A switch forwards frames within a network using MAC addresses, a hub simply repeats signals to all ports, and a repeater extends a signal's range."
+    "explanation": "A router forwards traffic between separate networks using IP addresses. A switch forwards frames within a network using MAC addresses, a hub simply repeats signals to all ports, and a repeater extends a signal's range.",
+    "reversal": {
+  "text": "Which device forwards traffic between different networks based on IP addresses?",
+  "answers": [
+    "Router",
+    "Switch",
+    "Hub",
+    "Repeater"
+  ],
+  "correctIndex": 0,
+  "explanation": "A router forwards traffic between networks using IP (Layer 3) addresses. A switch forwards within a network using MAC addresses, a hub repeats signals to all ports, and a repeater regenerates a signal to extend distance."
+}
   },
   {
     "id": "netplus-d2-001",
@@ -140,7 +173,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "DHCP (Dynamic Host Configuration Protocol) automatically leases IP configuration — address, subnet mask, gateway, and DNS servers — to hosts. DNS resolves names to addresses, SNMP monitors and manages devices, and ICMP carries diagnostic and error messages like those used by ping."
+    "explanation": "DHCP (Dynamic Host Configuration Protocol) automatically leases IP configuration — address, subnet mask, gateway, and DNS servers — to hosts. DNS resolves names to addresses, SNMP monitors and manages devices, and ICMP carries diagnostic and error messages like those used by ping.",
+    "reversal": {
+  "text": "Which protocol automatically assigns IP addresses, subnet masks, and default gateways to hosts?",
+  "answers": [
+    "DHCP",
+    "DNS",
+    "SNMP",
+    "ICMP"
+  ],
+  "correctIndex": 0,
+  "explanation": "DHCP automatically assigns IP configuration to hosts. DNS resolves names to addresses, SNMP monitors and manages devices, and ICMP handles diagnostic and error messaging such as ping."
+}
   },
   {
     "id": "netplus-d2-003",
@@ -205,7 +249,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "The Session layer (Layer 5) sets up, coordinates, and tears down the dialogue between applications on two hosts. Layer 4 handles reliable delivery, Layer 6 handles translation and encryption formatting, and Layer 7 is where user-facing application protocols operate."
+    "explanation": "The Session layer (Layer 5) sets up, coordinates, and tears down the dialogue between applications on two hosts. Layer 4 handles reliable delivery, Layer 6 handles translation and encryption formatting, and Layer 7 is where user-facing application protocols operate.",
+    "reversal": {
+  "text": "Establishing, managing, and terminating sessions between two hosts is the role of which OSI layer?",
+  "answers": [
+    "Session (Layer 5)",
+    "Transport (Layer 4)",
+    "Presentation (Layer 6)",
+    "Application (Layer 7)"
+  ],
+  "correctIndex": 0,
+  "explanation": "Layer 5 (Session) establishes, manages, and terminates sessions between hosts. Transport handles reliable delivery and ports, Presentation handles formatting and encryption, and Application provides network services to programs."
+}
   },
   {
     "id": "netplus-d1-007",
@@ -218,7 +273,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "An AAAA (quad-A) record maps a hostname to a 128-bit IPv6 address. An A record maps to an IPv4 address, MX identifies a mail server for a domain, and CNAME creates an alias pointing one name to another."
+    "explanation": "An AAAA (quad-A) record maps a hostname to a 128-bit IPv6 address. An A record maps to an IPv4 address, MX identifies a mail server for a domain, and CNAME creates an alias pointing one name to another.",
+    "reversal": {
+  "text": "Which DNS record type maps a hostname to an IPv6 address?",
+  "answers": [
+    "AAAA",
+    "A",
+    "MX",
+    "CNAME"
+  ],
+  "correctIndex": 0,
+  "explanation": "An AAAA record maps a hostname to an IPv6 address. An A record maps to an IPv4 address, an MX record identifies a mail server, and a CNAME record aliases one name to another."
+}
   },
   {
     "id": "netplus-d1-008",
@@ -231,7 +297,18 @@
     ],
     "correctIndex": 1,
     "domain": 1,
-    "explanation": "RDP uses TCP port 3389 by default to provide graphical remote access to Windows systems. Port 22 is SSH, port 443 is HTTPS, and port 23 is Telnet."
+    "explanation": "RDP uses TCP port 3389 by default to provide graphical remote access to Windows systems. Port 22 is SSH, port 443 is HTTPS, and port 23 is Telnet.",
+    "reversal": {
+  "text": "Which protocol uses port 3389 by default?",
+  "answers": [
+    "Remote Desktop Protocol (RDP)",
+    "SSH",
+    "HTTPS",
+    "Telnet"
+  ],
+  "correctIndex": 0,
+  "explanation": "RDP uses port 3389 for remote graphical access to Windows systems. SSH uses port 22, HTTPS uses port 443, and Telnet uses port 23."
+}
   },
   {
     "id": "netplus-d1-009",
@@ -244,7 +321,18 @@
     ],
     "correctIndex": 0,
     "domain": 1,
-    "explanation": "Network Time Protocol (NTP) synchronizes device clocks and uses UDP port 123. SNMP (161) manages devices, Syslog (514) centralizes log messages, and LDAP (389) provides directory lookups — none of which handle time synchronization."
+    "explanation": "Network Time Protocol (NTP) synchronizes device clocks and uses UDP port 123. SNMP (161) manages devices, Syslog (514) centralizes log messages, and LDAP (389) provides directory lookups — none of which handle time synchronization.",
+    "reversal": {
+  "text": "Which protocol synchronizes clocks across network devices, and on which port?",
+  "answers": [
+    "NTP on port 123",
+    "SNMP on port 161",
+    "Syslog on port 514",
+    "LDAP on port 389"
+  ],
+  "correctIndex": 0,
+  "explanation": "NTP synchronizes device clocks over port 123. SNMP monitors and manages devices on port 161, Syslog collects log messages on port 514, and LDAP provides directory services on port 389."
+}
   },
   {
     "id": "netplus-d1-010",
@@ -270,7 +358,18 @@
     ],
     "correctIndex": 2,
     "domain": 1,
-    "explanation": "APIPA assigns an address from 169.254.0.0/16 when a host cannot reach a DHCP server, allowing limited local communication. The other three ranges are the RFC 1918 private blocks that DHCP or static assignment would normally use."
+    "explanation": "APIPA assigns an address from 169.254.0.0/16 when a host cannot reach a DHCP server, allowing limited local communication. The other three ranges are the RFC 1918 private blocks that DHCP or static assignment would normally use.",
+    "reversal": {
+  "text": "Which IPv4 range is reserved for automatic private addressing (APIPA) when a host cannot reach a DHCP server?",
+  "answers": [
+    "169.254.0.0/16",
+    "10.0.0.0/8",
+    "172.16.0.0/12",
+    "192.168.0.0/16"
+  ],
+  "correctIndex": 0,
+  "explanation": "APIPA uses 169.254.0.0/16 when a host fails to obtain a DHCP lease. The 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16 ranges are RFC 1918 private address blocks used for normal internal addressing."
+}
   },
   {
     "id": "netplus-d1-012",
@@ -283,7 +382,18 @@
     ],
     "correctIndex": 2,
     "domain": 1,
-    "explanation": "Multicast delivers traffic to a defined group of subscribed receivers at once, efficient for things like streaming media. Unicast is one-to-one, broadcast reaches every host on a segment, and anycast routes to the nearest of several possible destinations."
+    "explanation": "Multicast delivers traffic to a defined group of subscribed receivers at once, efficient for things like streaming media. Unicast is one-to-one, broadcast reaches every host on a segment, and anycast routes to the nearest of several possible destinations.",
+    "reversal": {
+  "text": "Which transmission type sends a single data stream to a specific group of interested receivers simultaneously?",
+  "answers": [
+    "Multicast",
+    "Unicast",
+    "Broadcast",
+    "Anycast"
+  ],
+  "correctIndex": 0,
+  "explanation": "Multicast delivers one stream to a group of subscribed receivers. Unicast sends to a single destination, broadcast sends to all hosts on a segment, and anycast sends to the nearest of several possible receivers sharing an address."
+}
   },
   {
     "id": "netplus-d2-004",
