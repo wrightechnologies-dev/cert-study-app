@@ -475,7 +475,8 @@ function renderResources(resources) {
     a.href = r.url;
     a.target = "_blank";
     a.rel = "noopener";                              // new tab can't touch window.opener
-    const typeTag = r.type ? "[" + r.type + "] " : "";
+    const icons = { video: "\uD83C\uDFA5 ", article: "\uD83D\uDCC4 " };
+    const typeTag = icons[r.type] || "";
     a.textContent = typeTag + (r.label || r.url);
     li.appendChild(a);
     list.appendChild(li);

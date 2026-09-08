@@ -110,15 +110,15 @@
     "domain": 1,
     "explanation": "Security cameras are a physical control (a tangible, real-world safeguard) and function as a detective control, because they record activity for later review rather than blocking it. They don't prevent an intruder from entering, which is what a preventive control would do.",
     "reversal": {
-      "text": "Which capability does the SSH protocol provide?",
+      "text": "A detective control's defining purpose is BEST described as which of the following?",
       "answers": [
-        "Encrypted remote command-line access to a device",
-        "Unencrypted remote terminal access",
-        "File transfer without built-in encryption",
-        "Monitoring and management of network devices"
+        "Recording or identifying activity so it can be reviewed after it occurs",
+        "Stopping an event from happening in the first place",
+        "Restoring systems to a normal state after an incident",
+        "Providing an alternative safeguard when a primary control isn't feasible"
       ],
       "correctIndex": 0,
-      "explanation": "SSH provides encrypted remote command-line access. Unencrypted terminal access describes Telnet, unencrypted file transfer describes FTP, and device monitoring/management describes SNMP.",
+      "explanation": "A detective control records or identifies activity for later review, such as a security camera or an audit log. Stopping an event beforehand is a preventive control, restoring systems afterward is a corrective control, and an alternative safeguard used when a primary control isn't feasible is a compensating control.",
       "resources": [
         {
           "label": "Read: NIST SP 800-53 security control families",
@@ -206,15 +206,15 @@
     "domain": 1,
     "explanation": "Accounting tracks and records what an authenticated user does, such as files accessed and actions taken, supporting auditing and accountability. Authentication verifies identity, authorization determines permitted actions, and availability is a CIA triad property, not part of AAA.",
     "reversal": {
-      "text": "Which security model assumes no user or device is trusted by default and verifies every access request?",
+      "text": "Recording which files a user accessed and when, for later auditing, is handled by which component of the AAA framework?",
       "answers": [
-        "Zero trust",
-        "Defense in depth",
-        "Perimeter-based security",
-        "Implicit allow"
+        "Accounting",
+        "Authentication",
+        "Authorization",
+        "Auditing"
       ],
       "correctIndex": 0,
-      "explanation": "Zero trust assumes no user or device is trusted by default, even inside the network, and verifies every access request. Defense in depth layers multiple controls, perimeter-based security trusts internal traffic once inside, and implicit allow permits traffic not explicitly denied.",
+      "explanation": "Accounting tracks and records what an authenticated user does, such as files accessed and actions taken, supporting later auditing. Authentication verifies identity, authorization determines what the user is permitted to do, and 'auditing' is not one of the three AAA components.",
       "resources": [
         {
           "label": "Read: what AAA security is",
@@ -279,15 +279,15 @@
     "domain": 1,
     "explanation": "A digital signature provides authenticity (verifying the sender's identity) and integrity (confirming the message was not altered). It does not by itself provide confidentiality, since the message content is not necessarily encrypted, nor does it address availability.",
     "reversal": {
-      "text": "Which security model assumes no user or device is trusted by default and verifies every access request?",
+      "text": "Which mechanism allows an email recipient to verify BOTH the sender's identity and that the message was not altered?",
       "answers": [
-        "Zero trust",
-        "Defense in depth",
-        "Perimeter-based security",
-        "Implicit allow"
+        "A digital signature",
+        "Symmetric encryption with a shared key",
+        "A message authentication code using a shared secret",
+        "Base64 encoding of the message body"
       ],
       "correctIndex": 0,
-      "explanation": "Zero trust assumes no user or device is trusted by default, even inside the network, and verifies every access request. Defense in depth layers multiple controls, perimeter-based security trusts internal traffic once inside, and implicit allow permits traffic not explicitly denied.",
+      "explanation": "A digital signature provides authenticity (verifying the sender's identity via their private key) and integrity (confirming the message was not altered). Symmetric encryption provides confidentiality but not sender authenticity to a third party, a shared-secret MAC gives integrity but not non-repudiable identity, and Base64 is an encoding scheme with no security properties at all.",
       "resources": [
         {
           "label": "Read: digital signatures and certificates",
@@ -360,7 +360,19 @@
         "Insider threat"
       ],
       "correctIndex": 0,
-      "explanation": "An APT is a skilled, well-resourced (often nation-state) actor that maintains covert, long-term access to steal intelligence. A script kiddie relies on existing tools without deep skill, a hacktivist is politically or socially motivated, and an insider threat originates from someone with authorized access."
+      "explanation": "An APT is a skilled, well-resourced (often nation-state) actor that maintains covert, long-term access to steal intelligence. A script kiddie relies on existing tools without deep skill, a hacktivist is politically or socially motivated, and an insider threat originates from someone with authorized access.",
+      "resources": [
+        {
+          "label": "Read: what an advanced persistent threat is",
+          "url": "https://www.cloudflare.com/learning/security/glossary/advanced-persistent-threat-apt/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Threat Actors (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/threat-actors-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -421,7 +433,19 @@
         "Buffer overflow"
       ],
       "correctIndex": 0,
-      "explanation": "Vishing is voice-based social engineering, using a phone call to manipulate a victim into revealing information. SQL injection and cross-site scripting are code/input attacks against applications, and a buffer overflow exploits memory handling."
+      "explanation": "Vishing is voice-based social engineering, using a phone call to manipulate a victim into revealing information. SQL injection and cross-site scripting are code/input attacks against applications, and a buffer overflow exploits memory handling.",
+      "resources": [
+        {
+          "label": "Read: what vishing is",
+          "url": "https://www.cloudflare.com/learning/security/what-is-vishing/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Phishing (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/phishing-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -457,7 +481,19 @@
         "Buffer overflow"
       ],
       "correctIndex": 0,
-      "explanation": "Vishing is voice-based social engineering, using a phone call to manipulate a victim into revealing information. SQL injection and cross-site scripting are code/input attacks against applications, and a buffer overflow exploits memory handling."
+      "explanation": "Vishing is voice-based social engineering, using a phone call to manipulate a victim into revealing information. SQL injection and cross-site scripting are code/input attacks against applications, and a buffer overflow exploits memory handling.",
+      "resources": [
+        {
+          "label": "Read: what vishing is",
+          "url": "https://www.cloudflare.com/learning/security/what-is-vishing/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Phishing (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/phishing-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -493,7 +529,19 @@
         "Race condition"
       ],
       "correctIndex": 0,
-      "explanation": "A zero-day vulnerability is a flaw with no available vendor patch at the time it is discovered or exploited. Weak configuration is an insecure setting, an end-of-life vulnerability stems from unsupported software, and a race condition arises from timing-dependent behavior."
+      "explanation": "A zero-day vulnerability is a flaw with no available vendor patch at the time it is discovered or exploited. Weak configuration is an insecure setting, an end-of-life vulnerability stems from unsupported software, and a race condition arises from timing-dependent behavior.",
+      "resources": [
+        {
+          "label": "Read: what a zero-day exploit is",
+          "url": "https://www.cloudflare.com/learning/security/threats/zero-day-exploit/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Zero-day Vulnerabilities (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/zero-day-vulnerabilities-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -529,7 +577,19 @@
         "Injection flaw"
       ],
       "correctIndex": 0,
-      "explanation": "Unsupported software that no longer receives security updates is a legacy/end-of-life vulnerability. A zero-day has no patch yet at discovery, a cryptographic weakness involves flawed encryption, and an injection flaw comes from unvalidated input."
+      "explanation": "Unsupported software that no longer receives security updates is a legacy/end-of-life vulnerability. A zero-day has no patch yet at discovery, a cryptographic weakness involves flawed encryption, and an injection flaw comes from unvalidated input.",
+      "resources": [
+        {
+          "label": "Read: what end-of-life (EOL) means for security",
+          "url": "https://www.fortinet.com/resources/cyberglossary/end-of-life-eol",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Zero-day Vulnerabilities (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/zero-day-vulnerabilities-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -565,7 +625,19 @@
         "Privilege escalation"
       ],
       "correctIndex": 0,
-      "explanation": "A DDoS attack overwhelms a service with traffic from many compromised devices, denying access to legitimate users. An on-path attack intercepts communications, SQL injection targets databases through input, and privilege escalation gains higher access rights."
+      "explanation": "A DDoS attack overwhelms a service with traffic from many compromised devices, denying access to legitimate users. An on-path attack intercepts communications, SQL injection targets databases through input, and privilege escalation gains higher access rights.",
+      "resources": [
+        {
+          "label": "Read: what a DDoS attack is",
+          "url": "https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Denial of Service (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/denial-of-service-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -601,7 +673,19 @@
         "Phishing"
       ],
       "correctIndex": 0,
-      "explanation": "Privilege escalation raises an attacker's access rights on a system, such as from user to administrator. Lateral movement spreads to other systems, data exfiltration steals data out of the network, and phishing is a social-engineering technique."
+      "explanation": "Privilege escalation raises an attacker's access rights on a system, such as from user to administrator. Lateral movement spreads to other systems, data exfiltration steals data out of the network, and phishing is a social-engineering technique.",
+      "resources": [
+        {
+          "label": "Read: what privilege escalation is",
+          "url": "https://www.cloudflare.com/learning/access-management/privilege-escalation/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Application Attacks (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/application-attacks-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -637,7 +721,19 @@
         "Logic bomb"
       ],
       "correctIndex": 0,
-      "explanation": "An on-path (man-in-the-middle) attack intercepts and can modify traffic between two parties in real time. A brute-force attack guesses credentials, a watering hole compromises a site the target visits, and a logic bomb triggers malicious code on a condition."
+      "explanation": "An on-path (man-in-the-middle) attack intercepts and can modify traffic between two parties in real time. A brute-force attack guesses credentials, a watering hole compromises a site the target visits, and a logic bomb triggers malicious code on a condition.",
+      "resources": [
+        {
+          "label": "Read: what an on-path (MITM) attack is",
+          "url": "https://www.cloudflare.com/learning/security/threats/on-path-attack/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Replay Attacks (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/replay-attacks-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -673,7 +769,19 @@
         "Full-disk encryption"
       ],
       "correctIndex": 0,
-      "explanation": "Network segmentation divides a network into isolated segments to limit access and contain threats. Patch management fixes known flaws, input validation prevents injection attacks, and full-disk encryption protects data at rest."
+      "explanation": "Network segmentation divides a network into isolated segments to limit access and contain threats. Patch management fixes known flaws, input validation prevents injection attacks, and full-disk encryption protects data at rest.",
+      "resources": [
+        {
+          "label": "Read: what network segmentation is",
+          "url": "https://www.cloudflare.com/learning/access-management/what-is-network-segmentation/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Segmentation and Access Control (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/segmentation-and-access-control-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -709,7 +817,19 @@
         "Full-disk encryption"
       ],
       "correctIndex": 0,
-      "explanation": "Network segmentation divides a network into isolated segments to limit access and contain threats. Patch management fixes known flaws, input validation prevents injection attacks, and full-disk encryption protects data at rest."
+      "explanation": "Network segmentation divides a network into isolated segments to limit access and contain threats. Patch management fixes known flaws, input validation prevents injection attacks, and full-disk encryption protects data at rest.",
+      "resources": [
+        {
+          "label": "Read: what network segmentation is",
+          "url": "https://www.cloudflare.com/learning/access-management/what-is-network-segmentation/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Segmentation and Access Control (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/segmentation-and-access-control-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -770,7 +890,19 @@
         "CASB"
       ],
       "correctIndex": 0,
-      "explanation": "A SIEM aggregates and correlates logs from many sources for centralized monitoring and alerting. A VPN encrypts remote connections, DLP prevents data leakage, and a CASB enforces policy between users and cloud services."
+      "explanation": "A SIEM aggregates and correlates logs from many sources for centralized monitoring and alerting. A VPN encrypts remote connections, DLP prevents data leakage, and a CASB enforces policy between users and cloud services.",
+      "resources": [
+        {
+          "label": "Read: what a SIEM is",
+          "url": "https://www.fortinet.com/resources/cyberglossary/what-is-siem",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Security Tools (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/security-tools-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -806,7 +938,19 @@
         "Lessons learned"
       ],
       "correctIndex": 0,
-      "explanation": "Containment stops an active threat from spreading, such as by isolating affected hosts. Preparation readies the team beforehand, recovery restores systems to normal operation, and lessons learned reviews the incident afterward to improve future response."
+      "explanation": "Containment stops an active threat from spreading, such as by isolating affected hosts. Preparation readies the team beforehand, recovery restores systems to normal operation, and lessons learned reviews the incident afterward to improve future response.",
+      "resources": [
+        {
+          "label": "Read: incident response containment (NIST SP 800-61)",
+          "url": "https://csrc.nist.gov/pubs/sp/800/61/r2/final",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Incident Response (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/incident-response-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -867,7 +1011,19 @@
         "PKI"
       ],
       "correctIndex": 0,
-      "explanation": "SOAR automates repetitive tasks and orchestrates responses across tools via playbooks. A SIEM aggregates and correlates logs, an IDS detects intrusions, and PKI manages keys and certificates."
+      "explanation": "SOAR automates repetitive tasks and orchestrates responses across tools via playbooks. A SIEM aggregates and correlates logs, an IDS detects intrusions, and PKI manages keys and certificates.",
+      "resources": [
+        {
+          "label": "Read: what SOAR is",
+          "url": "https://www.fortinet.com/resources/cyberglossary/what-is-soar",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Security Tools (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/security-tools-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -903,7 +1059,19 @@
         "MITRE ATT&CK"
       ],
       "correctIndex": 0,
-      "explanation": "CVSS assigns numerical severity scores to vulnerabilities for prioritization. CVE is an identifier catalog for known vulnerabilities, OWASP is an organization known for web-security guidance, and MITRE ATT&CK is a framework of adversary tactics and techniques."
+      "explanation": "CVSS assigns numerical severity scores to vulnerabilities for prioritization. CVE is an identifier catalog for known vulnerabilities, OWASP is an organization known for web-security guidance, and MITRE ATT&CK is a framework of adversary tactics and techniques.",
+      "resources": [
+        {
+          "label": "Read: the CVSS scoring system (FIRST.org)",
+          "url": "https://www.first.org/cvss/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Analyzing Vulnerabilities (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/analyzing-vulnerabilities-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -939,7 +1107,19 @@
         "Tokenization"
       ],
       "correctIndex": 0,
-      "explanation": "System hardening reduces the attack surface by removing unnecessary services, closing ports, and changing defaults. Threat hunting proactively searches for threats, fuzzing tests software with malformed input, and tokenization substitutes sensitive data with tokens."
+      "explanation": "System hardening reduces the attack surface by removing unnecessary services, closing ports, and changing defaults. Threat hunting proactively searches for threats, fuzzing tests software with malformed input, and tokenization substitutes sensitive data with tokens.",
+      "resources": [
+        {
+          "label": "Read: what systems hardening is",
+          "url": "https://www.fortinet.com/resources/cyberglossary/systems-hardening",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Hardening Techniques (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/hardening-techniques-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -975,7 +1155,19 @@
         "SMTP headers"
       ],
       "correctIndex": 0,
-      "explanation": "NetFlow records traffic metadata (source, destination, ports, volume) without capturing packet payloads, making it efficient for spotting unusual flows. Full packet capture records complete contents, BIOS logs concern firmware, and SMTP headers relate to email routing."
+      "explanation": "NetFlow records traffic metadata (source, destination, ports, volume) without capturing packet payloads, making it efficient for spotting unusual flows. Full packet capture records complete contents, BIOS logs concern firmware, and SMTP headers relate to email routing.",
+      "resources": [
+        {
+          "label": "Read: what NetFlow is",
+          "url": "https://www.fortinet.com/resources/cyberglossary/netflow",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Monitoring Data (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/monitoring-data-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1047,7 +1239,19 @@
         ],
         "correctIndex": 0,
         "explanation": "PAM controls and monitors elevated access, often granting time-limited privileges with approval. SSO lets users authenticate once for many services, a CAPTCHA distinguishes humans from bots, and a honeypot is a decoy to attract attackers."
-      }
+      },
+      "resources": [
+        {
+          "label": "Read: what privileged access management is",
+          "url": "https://www.fortinet.com/resources/cyberglossary/privileged-access-management",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Identity and Access Management (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/identity-and-access-management-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1083,7 +1287,19 @@
         "Load balancing"
       ],
       "correctIndex": 0,
-      "explanation": "Deprovisioning, part of identity lifecycle management, promptly disables accounts when access is no longer needed. Penetration testing simulates attacks, data masking obscures sensitive data, and load balancing distributes traffic across servers."
+      "explanation": "Deprovisioning, part of identity lifecycle management, promptly disables accounts when access is no longer needed. Penetration testing simulates attacks, data masking obscures sensitive data, and load balancing distributes traffic across servers.",
+      "resources": [
+        {
+          "label": "Read: identity lifecycle and deprovisioning",
+          "url": "https://www.fortinet.com/resources/cyberglossary/identity-and-access-management",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Identity and Access Management (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/identity-and-access-management-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1119,7 +1335,19 @@
         "A detective-only control"
       ],
       "correctIndex": 0,
-      "explanation": "A compensating control provides an alternative safeguard when the primary control is not feasible. A corrective control restores systems after an incident, risk acceptance takes no action, and a detective-only control identifies issues without mitigating them."
+      "explanation": "A compensating control provides an alternative safeguard when the primary control is not feasible. A corrective control restores systems after an incident, risk acceptance takes no action, and a detective-only control identifies issues without mitigating them.",
+      "resources": [
+        {
+          "label": "Read: compensating controls (NIST glossary)",
+          "url": "https://csrc.nist.gov/glossary/term/compensating_security_control",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Analyzing Vulnerabilities (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/analyzing-vulnerabilities-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1180,7 +1408,19 @@
         "Editing timestamps for clarity"
       ],
       "correctIndex": 0,
-      "explanation": "Chain of custody documents everyone who handled evidence and when, preserving its integrity and admissibility. Encrypting with a personal key, deleting copies, or editing timestamps would all undermine evidentiary reliability."
+      "explanation": "Chain of custody documents everyone who handled evidence and when, preserving its integrity and admissibility. Encrypting with a personal key, deleting copies, or editing timestamps would all undermine evidentiary reliability.",
+      "resources": [
+        {
+          "label": "Read: chain of custody (NIST glossary)",
+          "url": "https://csrc.nist.gov/glossary/term/chain_of_custody",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Digital Forensics (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/digital-forensics-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1216,7 +1456,19 @@
         "Archived email on a remote server"
       ],
       "correctIndex": 0,
-      "explanation": "The order of volatility prioritizes the most transient data first — RAM and running processes are lost on power-off. Backup tapes, powered-off disks, and remote archives are far more persistent and collected later."
+      "explanation": "The order of volatility prioritizes the most transient data first — RAM and running processes are lost on power-off. Backup tapes, powered-off disks, and remote archives are far more persistent and collected later.",
+      "resources": [
+        {
+          "label": "Read: order of volatility (RFC 3227)",
+          "url": "https://www.rfc-editor.org/rfc/rfc3227",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Digital Forensics (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/digital-forensics-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1252,7 +1504,19 @@
         "Implicit trust"
       ],
       "correctIndex": 0,
-      "explanation": "Zero trust verifies every access request regardless of origin, trusting nothing by default. Perimeter-based security trusts internal traffic once inside, a flat network lacks segmentation, and implicit trust grants access without verification."
+      "explanation": "Zero trust verifies every access request regardless of origin, trusting nothing by default. Perimeter-based security trusts internal traffic once inside, a flat network lacks segmentation, and implicit trust grants access without verification.",
+      "resources": [
+        {
+          "label": "Read: what zero trust security is",
+          "url": "https://www.cloudflare.com/learning/security/glossary/what-is-zero-trust/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Zero Trust (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/zero-trust-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1313,7 +1577,19 @@
         "Digital signatures"
       ],
       "correctIndex": 0,
-      "explanation": "Symmetric encryption uses one shared key for both operations, making it fast and suited to bulk data. Asymmetric encryption uses a public/private key pair, hashing is one-way and produces no decryptable output, and digital signatures verify authenticity and integrity."
+      "explanation": "Symmetric encryption uses one shared key for both operations, making it fast and suited to bulk data. Asymmetric encryption uses a public/private key pair, hashing is one-way and produces no decryptable output, and digital signatures verify authenticity and integrity.",
+      "resources": [
+        {
+          "label": "Read: symmetric vs. asymmetric encryption",
+          "url": "https://www.cloudflare.com/learning/ssl/what-is-encryption/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Public Key Infrastructure (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/public-key-infrastructure-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1374,7 +1650,19 @@
         "Proxy server"
       ],
       "correctIndex": 0,
-      "explanation": "A Certificate Authority issues and digitally signs certificates, vouching for the binding between an identity and its public key. A DNS server resolves names to addresses, a load balancer distributes traffic, and a proxy server forwards requests on behalf of clients."
+      "explanation": "A Certificate Authority issues and digitally signs certificates, vouching for the binding between an identity and its public key. A DNS server resolves names to addresses, a load balancer distributes traffic, and a proxy server forwards requests on behalf of clients.",
+      "resources": [
+        {
+          "label": "Read: what a certificate authority is",
+          "url": "https://www.cloudflare.com/learning/ssl/what-is-a-certificate-authority/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Certificates (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/certificates-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1410,7 +1698,19 @@
         "SNMP"
       ],
       "correctIndex": 0,
-      "explanation": "OCSP allows real-time queries about a certificate's revocation status. DHCP assigns IP addresses, NTP synchronizes time, and SNMP monitors and manages network devices."
+      "explanation": "OCSP allows real-time queries about a certificate's revocation status. DHCP assigns IP addresses, NTP synchronizes time, and SNMP monitors and manages network devices.",
+      "resources": [
+        {
+          "label": "Read: OCSP and certificate revocation",
+          "url": "https://www.cloudflare.com/learning/ssl/what-is-ocsp/",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Certificates (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/certificates-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1446,7 +1746,19 @@
         "Compression"
       ],
       "correctIndex": 0,
-      "explanation": "Tokenization substitutes a non-sensitive token for sensitive data, keeping the real value in a separate secure vault. Hashing is a one-way transformation, data masking obscures data for display, and compression reduces data size."
+      "explanation": "Tokenization substitutes a non-sensitive token for sensitive data, keeping the real value in a separate secure vault. Hashing is a one-way transformation, data masking obscures data for display, and compression reduces data size.",
+      "resources": [
+        {
+          "label": "Read: what tokenization is",
+          "url": "https://www.fortinet.com/resources/cyberglossary/tokenization",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Public Key Infrastructure (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/public-key-infrastructure-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1507,7 +1819,19 @@
         "Steganography"
       ],
       "correctIndex": 0,
-      "explanation": "Geographic redundancy across data centers supports high availability and resilience by removing a single point of failure. Least privilege limits permissions, non-repudiation prevents denial of an action, and steganography hides data within other data."
+      "explanation": "Geographic redundancy across data centers supports high availability and resilience by removing a single point of failure. Least privilege limits permissions, non-repudiation prevents denial of an action, and steganography hides data within other data.",
+      "resources": [
+        {
+          "label": "Read: what high availability is",
+          "url": "https://www.fortinet.com/resources/cyberglossary/high-availability",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Secure Infrastructures (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/secure-infrastructures-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1543,7 +1867,19 @@
         "Risk mitigation"
       ],
       "correctIndex": 0,
-      "explanation": "Risk transference shifts the financial impact of a risk to a third party, such as through insurance. Risk avoidance eliminates the activity causing the risk, risk acceptance takes no action and absorbs the impact, and risk mitigation reduces likelihood or impact through controls."
+      "explanation": "Risk transference shifts the financial impact of a risk to a third party, such as through insurance. Risk avoidance eliminates the activity causing the risk, risk acceptance takes no action and absorbs the impact, and risk mitigation reduces likelihood or impact through controls.",
+      "resources": [
+        {
+          "label": "Read: risk transference and treatment options",
+          "url": "https://www.fortinet.com/resources/cyberglossary/risk-management",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Risk Management (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/risk-management-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1579,7 +1915,19 @@
         "Mean Time to Repair (MTTR)"
       ],
       "correctIndex": 0,
-      "explanation": "SLE is the expected loss from one occurrence of a risk event. ARO is how often it is expected per year, ALE is SLE multiplied by ARO (annual expected loss), and MTTR measures average repair time."
+      "explanation": "SLE is the expected loss from one occurrence of a risk event. ARO is how often it is expected per year, ALE is SLE multiplied by ARO (annual expected loss), and MTTR measures average repair time.",
+      "resources": [
+        {
+          "label": "Read: SLE, ARO, and ALE quantitative risk",
+          "url": "https://www.fortinet.com/resources/cyberglossary/risk-assessment",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Risk Management (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/risk-management-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1615,7 +1963,19 @@
         "Fuzzing"
       ],
       "correctIndex": 0,
-      "explanation": "A third-party audit is an independent external evaluation of compliance with a standard or regulation. Penetration testing simulates attacks to find exploitable weaknesses, threat modeling anticipates attack paths during design, and fuzzing tests software with malformed input."
+      "explanation": "A third-party audit is an independent external evaluation of compliance with a standard or regulation. Penetration testing simulates attacks to find exploitable weaknesses, threat modeling anticipates attack paths during design, and fuzzing tests software with malformed input.",
+      "resources": [
+        {
+          "label": "Read: internal vs. external security audits",
+          "url": "https://www.fortinet.com/resources/cyberglossary/security-audit",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Third-party Risk Assessment (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/third-party-risk-assessment-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1651,7 +2011,19 @@
         "Incident response"
       ],
       "correctIndex": 0,
-      "explanation": "Vendor due diligence assesses a third party's risk before entering a relationship. Change management controls modifications to systems, data classification labels data by sensitivity, and incident response handles security events after they occur."
+      "explanation": "Vendor due diligence assesses a third party's risk before entering a relationship. Change management controls modifications to systems, data classification labels data by sensitivity, and incident response handles security events after they occur.",
+      "resources": [
+        {
+          "label": "Read: vendor due diligence and third-party risk",
+          "url": "https://www.fortinet.com/resources/cyberglossary/third-party-risk-management",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Third-party Risk Assessment (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/third-party-risk-assessment-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1687,7 +2059,19 @@
         "Business Impact Analysis (BIA)"
       ],
       "correctIndex": 0,
-      "explanation": "An SLA is a binding contract specifying measurable service commitments like uptime and response times. An MOU is a less formal statement of intent, an AUP governs acceptable use of systems, and a BIA identifies critical processes and tolerable downtime."
+      "explanation": "An SLA is a binding contract specifying measurable service commitments like uptime and response times. An MOU is a less formal statement of intent, an AUP governs acceptable use of systems, and a BIA identifies critical processes and tolerable downtime.",
+      "resources": [
+        {
+          "label": "Read: what a service level agreement is",
+          "url": "https://www.fortinet.com/resources/cyberglossary/service-level-agreement-sla",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Agreement Types (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/agreement-types-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
@@ -1723,7 +2107,19 @@
         "Access review"
       ],
       "correctIndex": 0,
-      "explanation": "A BIA identifies critical processes and the maximum tolerable disruption for each, informing continuity planning. A penetration test simulates attacks, a vulnerability scan finds known weaknesses, and an access review verifies who has which permissions."
+      "explanation": "A BIA identifies critical processes and the maximum tolerable disruption for each, informing continuity planning. A penetration test simulates attacks, a vulnerability scan finds known weaknesses, and an access review verifies who has which permissions.",
+      "resources": [
+        {
+          "label": "Read: what a business impact analysis is (CISA)",
+          "url": "https://www.ready.gov/business-impact-analysis",
+          "type": "article"
+        },
+        {
+          "label": "Watch: Risk Management (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/risk-management-sy0-701/",
+          "type": "video"
+        }
+      ]
     },
     "resources": [
       {
