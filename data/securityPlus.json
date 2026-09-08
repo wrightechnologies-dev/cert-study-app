@@ -361,7 +361,19 @@
       ],
       "correctIndex": 0,
       "explanation": "An APT is a skilled, well-resourced (often nation-state) actor that maintains covert, long-term access to steal intelligence. A script kiddie relies on existing tools without deep skill, a hacktivist is politically or socially motivated, and an insider threat originates from someone with authorized access."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what an advanced persistent threat is",
+        "url": "https://www.cloudflare.com/learning/security/glossary/advanced-persistent-threat-apt/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Threat Actors (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/threat-actors-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-002",
@@ -374,7 +386,19 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "The defining trait of a script kiddie is using pre-built tools and scripts they did not create and do not fully understand. Nation-state funding describes APTs, political motivation describes hacktivists, and authorized internal access describes insider threats."
+    "explanation": "The defining trait of a script kiddie is using pre-built tools and scripts they did not create and do not fully understand. Nation-state funding describes APTs, political motivation describes hacktivists, and authorized internal access describes insider threats.",
+    "resources": [
+      {
+        "label": "Read: what a script kiddie is",
+        "url": "https://www.fortinet.com/resources/cyberglossary/script-kiddie-hacker",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Threat Actors (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/threat-actors-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-003",
@@ -398,7 +422,19 @@
       ],
       "correctIndex": 0,
       "explanation": "Vishing is voice-based social engineering, using a phone call to manipulate a victim into revealing information. SQL injection and cross-site scripting are code/input attacks against applications, and a buffer overflow exploits memory handling."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what vishing is",
+        "url": "https://www.cloudflare.com/learning/security/what-is-vishing/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Phishing (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/phishing-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-004",
@@ -422,7 +458,19 @@
       ],
       "correctIndex": 0,
       "explanation": "Vishing is voice-based social engineering, using a phone call to manipulate a victim into revealing information. SQL injection and cross-site scripting are code/input attacks against applications, and a buffer overflow exploits memory handling."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what typosquatting is",
+        "url": "https://www.cloudflare.com/learning/security/glossary/typosquatting/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: DNS Attacks (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/dns-attacks-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-005",
@@ -446,7 +494,19 @@
       ],
       "correctIndex": 0,
       "explanation": "A zero-day vulnerability is a flaw with no available vendor patch at the time it is discovered or exploited. Weak configuration is an insecure setting, an end-of-life vulnerability stems from unsupported software, and a race condition arises from timing-dependent behavior."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what a zero-day exploit is",
+        "url": "https://www.cloudflare.com/learning/security/threats/zero-day-exploit/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Zero-day Vulnerabilities (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/zero-day-vulnerabilities-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-006",
@@ -470,7 +530,19 @@
       ],
       "correctIndex": 0,
       "explanation": "Unsupported software that no longer receives security updates is a legacy/end-of-life vulnerability. A zero-day has no patch yet at discovery, a cryptographic weakness involves flawed encryption, and an injection flaw comes from unvalidated input."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what end-of-life (EOL) means for security",
+        "url": "https://www.fortinet.com/resources/cyberglossary/end-of-life-eol",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Zero-day Vulnerabilities (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/zero-day-vulnerabilities-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-007",
@@ -494,7 +566,19 @@
       ],
       "correctIndex": 0,
       "explanation": "A DDoS attack overwhelms a service with traffic from many compromised devices, denying access to legitimate users. An on-path attack intercepts communications, SQL injection targets databases through input, and privilege escalation gains higher access rights."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what a DDoS attack is",
+        "url": "https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Denial of Service (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/denial-of-service-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-008",
@@ -518,7 +602,19 @@
       ],
       "correctIndex": 0,
       "explanation": "Privilege escalation raises an attacker's access rights on a system, such as from user to administrator. Lateral movement spreads to other systems, data exfiltration steals data out of the network, and phishing is a social-engineering technique."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what privilege escalation is",
+        "url": "https://www.cloudflare.com/learning/access-management/privilege-escalation/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Application Attacks (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/application-attacks-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-009",
@@ -542,7 +638,19 @@
       ],
       "correctIndex": 0,
       "explanation": "An on-path (man-in-the-middle) attack intercepts and can modify traffic between two parties in real time. A brute-force attack guesses credentials, a watering hole compromises a site the target visits, and a logic bomb triggers malicious code on a condition."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what an on-path (MITM) attack is",
+        "url": "https://www.cloudflare.com/learning/security/threats/on-path-attack/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Replay Attacks (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/replay-attacks-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-010",
@@ -566,7 +674,19 @@
       ],
       "correctIndex": 0,
       "explanation": "Network segmentation divides a network into isolated segments to limit access and contain threats. Patch management fixes known flaws, input validation prevents injection attacks, and full-disk encryption protects data at rest."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what network segmentation is",
+        "url": "https://www.cloudflare.com/learning/access-management/what-is-network-segmentation/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Segmentation and Access Control (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/segmentation-and-access-control-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-011",
@@ -590,7 +710,19 @@
       ],
       "correctIndex": 0,
       "explanation": "Network segmentation divides a network into isolated segments to limit access and contain threats. Patch management fixes known flaws, input validation prevents injection attacks, and full-disk encryption protects data at rest."
-    }
+    },
+    "resources": [
+      {
+        "label": "Read: what systems hardening is",
+        "url": "https://www.fortinet.com/resources/cyberglossary/systems-hardening",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Hardening Techniques (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/hardening-techniques-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d2-012",
@@ -603,7 +735,19 @@
     ],
     "correctIndex": 1,
     "domain": 2,
-    "explanation": "Unexpected outbound traffic to an unknown external address, especially at unusual hours, is a classic indicator of compromise suggesting command-and-control communication or data exfiltration. Scheduled updates go to known vendor endpoints, and hardware failures or certificate errors do not generate covert outbound connections to unfamiliar IPs."
+    "explanation": "Unexpected outbound traffic to an unknown external address, especially at unusual hours, is a classic indicator of compromise suggesting command-and-control communication or data exfiltration. Scheduled updates go to known vendor endpoints, and hardware failures or certificate errors do not generate covert outbound connections to unfamiliar IPs.",
+    "resources": [
+      {
+        "label": "Read: what indicators of compromise are",
+        "url": "https://www.cloudflare.com/learning/security/what-are-indicators-of-compromise/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: Indicators of Compromise (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/indicators-of-compromise-sy0-701/",
+        "type": "video"
+      }
+    ]
   },
   {
     "id": "secplus-d4-001",
