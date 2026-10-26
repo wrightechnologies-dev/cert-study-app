@@ -486,7 +486,21 @@
     { "label": "Read: what typosquatting is", "url": "https://www.cloudflare.com/learning/security/glossary/typosquatting/", "type": "article" },
     { "label": "Watch: DNS Attacks (Professor Messer)", "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/dns-attacks-sy0-701/", "type": "video" }
   ]
-}
+},
+    "resources": [
+      {
+        "label": "Read: what typosquatting is",
+        "url": "https://www.cloudflare.com/learning/security/glossary/typosquatting/",
+        "type": "article"
+      },
+      {
+        "label": "Watch: DNS Attacks (Professor Messer)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/dns-attacks-sy0-701/",
+        "type": "video"
+      }
+    ]
+  },
+  {
     "id": "secplus-d2-005",
     "text": "A vulnerability scan reveals that a production server is running software with a publicly known flaw for which the vendor has released no fix. What type of exposure is the UNPATCHABLE nature of this flaw BEST associated with when no patch yet exists at time of discovery?",
     "answers": [
@@ -787,24 +801,24 @@
     "domain": 2,
     "explanation": "Reducing a system's attack surface by removing unneeded services, ports, and default accounts is system hardening. Threat hunting proactively searches for hidden threats, social engineering is an attack method, and data classification labels information by sensitivity — none describe reducing the attack surface.",
     "reversal": {
-      "text": "Which mitigation technique isolates systems (such as placing finance systems on a separate segment from general workstations) to limit exposure?",
+      "text": "What does system hardening involve?",
       "answers": [
-        "Network segmentation",
-        "Patch management",
-        "Input validation",
-        "Full-disk encryption"
+        "Removing unnecessary services, closing unused ports, and disabling default accounts to reduce attack surface",
+        "Proactively searching for threats that evaded existing defenses",
+        "Manipulating people into revealing information or taking unsafe actions",
+        "Labeling data by sensitivity to drive how it is handled"
       ],
       "correctIndex": 0,
-      "explanation": "Network segmentation divides a network into isolated segments to limit access and contain threats. Patch management fixes known flaws, input validation prevents injection attacks, and full-disk encryption protects data at rest.",
+      "explanation": "System hardening shrinks the attack surface by stripping unneeded services, ports, and default accounts before deployment. The other options describe threat hunting, social engineering, and data classification.",
       "resources": [
         {
-          "label": "Read: what network segmentation is",
-          "url": "https://www.cloudflare.com/learning/access-management/what-is-network-segmentation/",
+          "label": "Read: what systems hardening is",
+          "url": "https://www.fortinet.com/resources/cyberglossary/systems-hardening",
           "type": "article"
         },
         {
-          "label": "Watch: Segmentation and Access Control (Professor Messer)",
-          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/segmentation-and-access-control-sy0-701/",
+          "label": "Watch: Hardening Techniques (Professor Messer)",
+          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/hardening-techniques-sy0-701/",
           "type": "video"
         }
       ]
