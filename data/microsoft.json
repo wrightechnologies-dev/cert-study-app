@@ -856,15 +856,15 @@
     "domain": 1,
     "explanation": "Defense in depth layers multiple security controls so a single failure doesn't compromise the asset. Single sign-on streamlines authentication, Zero Trust is a verification model, and least privilege limits access rights — none describe layered redundancy of controls.",
     "reversal": {
-  "text": "Which three principles make up the CIA triad?",
+  "text": "Which statement best describes defense in depth?",
   "answers": [
-    "Confidentiality, Integrity, Availability",
-    "Control, Identity, Access",
-    "Compliance, Insurance, Auditing",
-    "Cryptography, Integrity, Authorization"
+    "Layering multiple overlapping controls so a single failure doesn't compromise the asset",
+    "Authenticating once to access many connected applications",
+    "Verifying every access request explicitly and assuming breach",
+    "Granting users only the access their role requires"
   ],
   "correctIndex": 0,
-  "explanation": "The CIA triad is Confidentiality, Integrity, and Availability, the foundational goals of information security. The other options are plausible-sounding but incorrect expansions of the acronym."
+  "explanation": "Defense in depth layers overlapping controls so one failure doesn't expose the asset. The other options describe single sign-on, Zero Trust, and least privilege."
 }
   },
   {

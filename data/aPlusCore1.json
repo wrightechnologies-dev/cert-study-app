@@ -614,17 +614,16 @@
     ],
     "correctIndex": 0,
     "domain": 3,
-    "explanation": "Uniformly faded output on a laser printer typically means the toner cartridge is running low. The paper tray holds media, and the USB cable and network card affect connectivity, not print density.",
     "reversal": {
-  "text": "Faint, evenly faded print across an entire laser-printed page most likely points to which failing consumable?",
+  "text": "What does Startup Repair in the Windows Recovery Environment do?",
   "answers": [
-    "The toner cartridge",
-    "The paper tray",
-    "The USB cable",
-    "The network card"
+    "Automatically diagnoses and fixes common problems that prevent Windows from booting",
+    "Frees disk space by removing temporary and unneeded files",
+    "Runs programs or scripts automatically on a schedule",
+    "Tracks system performance metrics over time"
   ],
   "correctIndex": 0,
-  "explanation": "Uniformly faded output indicates low toner. The paper tray only holds media, and a USB cable or network card affects connectivity, not print density."
+  "explanation": "Startup Repair automatically diagnoses and repairs common boot failures. The other options describe Disk Cleanup, Task Scheduler, and Performance Monitor."
 }
   },
   {

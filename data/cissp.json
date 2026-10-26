@@ -243,15 +243,15 @@
     "domain": 2,
     "explanation": "A data processor handles personal data on behalf of, and per the instructions of, the controller. The data controller determines the purposes and means of processing, the data owner is an internal accountability role, and the data subject is the individual the personal data is about.",
     "reversal": {
-      "text": "Which description best matches the 'data in transit' state?",
+      "text": "Under common data protection frameworks, which description best fits a data processor?",
       "answers": [
-        "Data stored on disk or other media",
-        "Data actively being processed in memory",
-        "Data moving across a network between systems",
-        "Data held in long-term archive storage"
+        "An entity that processes personal data on behalf of, and per the instructions of, the controller",
+        "The entity that determines the purposes and means of processing",
+        "The internal official accountable for classifying data and defining access",
+        "The individual the personal data is about"
       ],
-      "correctIndex": 2,
-      "explanation": "Data in transit is data moving across a network between systems, typically protected with TLS. Data at rest sits on storage, data in use is being processed in memory, and archived data is retained in long-term storage."
+      "correctIndex": 0,
+      "explanation": "A data processor handles personal data on the controller's behalf and per its instructions. The controller decides the purposes and means of processing, the data owner is an internal accountability role, and the data subject is the person the data describes."
     }
   },
   {
@@ -883,19 +883,8 @@
     ],
     "correctIndex": 0,
     "domain": 7,
-    "explanation": "RPO (Recovery Point Objective) measures the maximum acceptable amount of data loss, expressed as a point in time to which data must be restored, while RTO (Recovery Time Objective) measures the maximum acceptable downtime. Confusing the two is a common error: one is about data, the other about time to restore service.",
-    "reversal": {
-      "text": "In business continuity planning, what does the Recovery Time Objective (RTO) measure?",
-      "answers": [
-        "The maximum acceptable amount of data loss, measured in time",
-        "The maximum acceptable time a system can be down before unacceptable harm",
-        "The average time between hardware failures",
-        "The expected number of times a threat occurs per year"
-      ],
-      "correctIndex": 1,
-      "explanation": "RTO is the maximum tolerable downtime before harm becomes unacceptable. RPO measures tolerable data loss, MTBF is average time between failures, and ARO is the expected yearly frequency of a threat."
-    }
-  },
+    "explanation": "RPO (Recovery Point Objective) measures the maximum acceptable amount of data loss, expressed as a point in time to which data must be restored, while RTO (Recovery Time Objective) measures the maximum acceptable downtime. Confusing the two is a common error: one is about data, the other about time to restore service."
+    },
   {
     "id": "cissp-d7-006",
     "text": "An organization enforces mandatory vacations and job rotation for employees in sensitive financial roles. What is the PRIMARY security purpose of these practices?",

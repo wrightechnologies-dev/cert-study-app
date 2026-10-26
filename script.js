@@ -20,14 +20,16 @@ function activeView(q, isReview) {
       text: q.reversal.text,
       answers: q.reversal.answers,
       correctIndex: q.reversal.correctIndex,
-      explanation: q.reversal.explanation || ""
+      explanation: q.reversal.explanation || "",
+      resources: q.reversal.resources || q.resources
     };
   }
   return {
     text: q.text,
     answers: q.answers,
     correctIndex: q.correctIndex,
-    explanation: q.explanation || ""
+    explanation: q.explanation || "",
+    resources: q.resources
   };
 }
 // ---- localStorage helpers: wrap the stringify/parse so we don't repeat it ----
@@ -445,7 +447,7 @@ answerButtons.forEach(function (button, index) {
       button.style.background = "#fed7d7";
       answerButtons[currentView.correctIndex].style.background = "#c6f6d5";
       recordMiss(currentTrack, q.id);  // record the miss (both modes; a review miss resets the streak)
-      renderResources(q.resources);
+      renderResources(currentView.resources);
     }
     explanationEl.textContent = currentView.explanation;
     if (currentView.explanation) {
