@@ -473,42 +473,20 @@
     "domain": 2,
     "explanation": "Registering a lookalike domain that relies on misreading or mistyping is typosquatting (a form of URL hijacking). A watering hole attack compromises a site the target already visits, privilege escalation gains higher rights on a system, and pretexting invents a false scenario to extract information.",
     "reversal": {
-      "text": "Which attack vector uses a phone call in which the attacker impersonates a trusted party to pressure a victim into revealing information?",
-      "answers": [
-        "Social engineering (vishing)",
-        "SQL injection",
-        "Cross-site scripting",
-        "Buffer overflow"
-      ],
-      "correctIndex": 0,
-      "explanation": "Vishing is voice-based social engineering, using a phone call to manipulate a victim into revealing information. SQL injection and cross-site scripting are code/input attacks against applications, and a buffer overflow exploits memory handling.",
-      "resources": [
-        {
-          "label": "Read: what vishing is",
-          "url": "https://www.cloudflare.com/learning/security/what-is-vishing/",
-          "type": "article"
-        },
-        {
-          "label": "Watch: Phishing (Professor Messer)",
-          "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/phishing-sy0-701/",
-          "type": "video"
-        }
-      ]
-    },
-    "resources": [
-      {
-        "label": "Read: what typosquatting is",
-        "url": "https://www.cloudflare.com/learning/security/glossary/typosquatting/",
-        "type": "article"
-      },
-      {
-        "label": "Watch: DNS Attacks (Professor Messer)",
-        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/dns-attacks-sy0-701/",
-        "type": "video"
-      }
-    ]
-  },
-  {
+  "text": "What is typosquatting?",
+  "answers": [
+    "Registering look-alike domain names that exploit typing mistakes to trick users",
+    "Compromising a website the target group is known to visit",
+    "Gaining higher-level permissions than originally granted",
+    "Inventing a believable scenario to manipulate a victim into sharing information"
+  ],
+  "correctIndex": 0,
+  "explanation": "Typosquatting registers domains that resemble legitimate ones, catching users who mistype or misread a URL. The other options describe a watering hole attack, privilege escalation, and pretexting.",
+  "resources": [
+    { "label": "Read: what typosquatting is", "url": "https://www.cloudflare.com/learning/security/glossary/typosquatting/", "type": "article" },
+    { "label": "Watch: DNS Attacks (Professor Messer)", "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/dns-attacks-sy0-701/", "type": "video" }
+  ]
+}
     "id": "secplus-d2-005",
     "text": "A vulnerability scan reveals that a production server is running software with a publicly known flaw for which the vendor has released no fix. What type of exposure is the UNPATCHABLE nature of this flaw BEST associated with when no patch yet exists at time of discovery?",
     "answers": [

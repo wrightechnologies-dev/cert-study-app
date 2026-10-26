@@ -766,15 +766,15 @@
     "domain": 3,
     "explanation": "Startup Repair in the Windows Recovery Environment automatically diagnoses and fixes common boot problems. Disk Cleanup frees space, Task Scheduler automates tasks, and Performance Monitor tracks system metrics — none repair the boot process.",
     "reversal": {
-  "text": "Which Windows tool reverts system files and settings to an earlier point without affecting personal documents?",
+  "text": "What does Startup Repair in the Windows Recovery Environment do?",
   "answers": [
-    "System Restore",
-    "Disk Cleanup",
-    "chkdsk",
-    "Task Manager"
+    "Automatically diagnoses and fixes common problems that prevent Windows from booting",
+    "Frees disk space by removing temporary and unneeded files",
+    "Runs programs or scripts automatically on a schedule",
+    "Tracks system performance metrics over time"
   ],
   "correctIndex": 0,
-  "explanation": "System Restore rolls back system files, drivers, and registry settings to a restore point while leaving personal files intact. Disk Cleanup frees space, chkdsk checks disks for errors, and Task Manager manages processes."
+  "explanation": "Startup Repair automatically diagnoses and repairs common boot failures. The other options describe Disk Cleanup, Task Scheduler, and Performance Monitor."
 }
   },
   {

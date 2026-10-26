@@ -668,15 +668,15 @@
     "domain": 4,
     "explanation": "MAC flooding overwhelms a switch's MAC address table so it fails open and floods frames out all ports, letting the attacker capture traffic. ARP poisoning corrupts IP-to-MAC mappings, DNS spoofing falsifies name resolution, and DHCP starvation exhausts the address pool.",
     "reversal": {
-  "text": "Which tool filters traffic on a router by permitting or denying packets based on source/destination IP addresses and ports?",
+  "text": "What does a MAC flooding attack do?",
   "answers": [
-    "An access control list (ACL)",
-    "A DHCP reservation",
-    "An NTP server",
-    "A DNS zone"
+    "Overwhelms a switch's MAC address table so it floods frames out all ports",
+    "Corrupts IP-to-MAC mappings so traffic is sent to the attacker",
+    "Falsifies name resolution responses to redirect users",
+    "Exhausts the DHCP address pool so legitimate clients can't get addresses"
   ],
   "correctIndex": 0,
-  "explanation": "An ACL permits or denies traffic based on criteria like addresses and ports. A DHCP reservation assigns a fixed IP to a device, an NTP server provides time synchronization, and a DNS zone holds name records."
+  "explanation": "MAC flooding fills a switch's MAC table with fake entries so it fails open and floods frames everywhere, exposing traffic to the attacker. The other options describe ARP poisoning, DNS spoofing, and DHCP starvation."
 }
   },
   {
